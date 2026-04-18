@@ -161,10 +161,58 @@
     .footer-logo { font-size: 1.3rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.4rem; }
     .footer-copy { font-size: 0.78rem; color: var(--text); opacity: 0.35; }
 
+    /* Hamburger & mobile drawer — hidden on desktop */
+    .nav-hamburger {
+      display: none; background: none; border: none; cursor: pointer;
+      padding: 0.5rem; margin-left: auto; flex-shrink: 0;
+      color: var(--gold); font-size: 1.5rem; line-height: 1;
+    }
+    .sidebar-backdrop {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.55); z-index: 150;
+    }
+    .sidebar-backdrop.open { display: block; }
+    .mobile-browse-btn {
+      display: none; background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1rem; position: sticky; top: 0; z-index: 10;
+    }
+    .mobile-browse-btn button {
+      background: none; border: 1px solid var(--border);
+      border-radius: 4px; color: var(--gold);
+      font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 0.45rem 1rem; cursor: pointer; font-family: inherit;
+    }
+    .mobile-browse-btn button:hover { border-color: var(--gold); }
+
     @media (max-width: 700px) {
-      .help-layout { grid-template-columns: 1fr; }
-      .help-sidebar { position: static; height: auto; }
+      nav { z-index: 300; }
+      .nav-hamburger { display: flex; align-items: center; }
       .nav-links { display: none; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: fixed; top: 62px; left: 0; right: 0;
+        background: rgba(10,10,15,0.98);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 1.5rem; gap: 0.5rem; z-index: 299;
+      }
+      .nav-links.open a { font-size: 0.95rem; padding: 0.4rem 0; display: block; }
+      /* Override desktop collapse layout for mobile drawer */
+      .help-layout { grid-template-columns: 1fr !important; }
+      .help-sidebar {
+        position: fixed !important; left: -290px; top: 62px;
+        width: 280px; height: calc(100vh - 62px);
+        z-index: 200; transition: left 0.25s ease;
+        overflow-y: auto; overflow-x: hidden;
+        padding: 1rem 0 !important;
+      }
+      .help-sidebar.drawer-open { left: 0; box-shadow: 4px 0 24px rgba(0,0,0,0.5); }
+      .sidebar-toggle { display: none; }
+      .mobile-browse-btn { display: flex; }
+      .sidebar-link { padding: 0.6rem 1.5rem; font-size: 0.88rem; }
+      .sidebar-section-title { padding: 0.7rem 1rem; }
+      .help-main { position: static; height: auto; padding: 1rem; }
+      .map-display pre { font-size: 0.7rem; touch-action: pan-x pan-y; }
     }
   </style>
 </head>
@@ -188,8 +236,11 @@
         <li><a href="crafting.html">Crafting</a></li>
         <li><a href="index.html#play" class="nav-play-btn">Play Now</a></li>
       </ul>
+      <button class="nav-hamburger" onclick="navToggle()" aria-label="Menu">&#9776;</button>
     </div>
   </nav>
+
+  <div class="sidebar-backdrop" id="sidebar-backdrop" onclick="closeDrawer()"></div>
 
   <div class="help-layout">
     <div class="help-sidebar">
@@ -342,6 +393,9 @@
     </div>
 
     <div class="help-main">
+      <div class="mobile-browse-btn">
+        <button onclick="openDrawer()">&#9776; Browse Areas</button>
+      </div>
       <div class="map-landing" id="map-landing">
         <h2>World Maps</h2>
         <p>Select an area from the sidebar to view its map and directions from recall.</p>
@@ -364,6 +418,19 @@
   </footer>
 
   <script>
+    function navToggle() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    }
+    function isMobile() { return window.innerWidth <= 700; }
+    function openDrawer() {
+      document.querySelector('.help-sidebar').classList.add('drawer-open');
+      document.getElementById('sidebar-backdrop').classList.add('open');
+    }
+    function closeDrawer() {
+      document.querySelector('.help-sidebar').classList.remove('drawer-open');
+      document.getElementById('sidebar-backdrop').classList.remove('open');
+    }
+
     const areas = {
       'terra-overview':     { name: 'Terra',                level: 'All',   directions: '2s, 6e, 4s, 2e, s, 2e, d (charter)',                                                                                                                                                                url: 'maps/terra.gif',             type: 'image' },
       'abandoned-chateau':  { name: 'Abandoned Chateau',    level: '40-51', directions: '2s, 43e, 2n, 4w, n',                                                                                                                                                                                url: 'maps/abandoned_chateau.txt', type: 'text'  },
@@ -524,7 +591,7 @@
       document.querySelectorAll('.sidebar-link').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.help-sidebar details').forEach(el => el.removeAttribute('open'));
       document.querySelector('.help-main').scrollTo({ top: 0, behavior: 'smooth' });
-      expandSidebar();
+      if (!isMobile()) expandSidebar();
     }
 
     function showMapEntry(id) {
@@ -548,7 +615,7 @@
       if (area.type === 'image') {
         display.innerHTML = '<img src="' + area.url + '" alt="' + area.name + ' map" />';
       } else if (area.type === 'text') {
-        collapseSidebar();
+        if (isMobile()) closeDrawer(); else collapseSidebar();
         display.innerHTML = '<p class="map-loading">Loading map...</p>';
         fetch(area.url)
           .then(r => r.text())
@@ -562,7 +629,7 @@
             display.innerHTML = '<div class="map-none">Map could not be loaded.</div>';
           });
       } else if (area.type === 'html') {
-        collapseSidebar();
+        if (isMobile()) closeDrawer(); else collapseSidebar();
         display.innerHTML = '<p class="map-loading">Loading map...</p>';
         fetch(area.url)
           .then(r => r.text())

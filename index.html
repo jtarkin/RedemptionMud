@@ -487,9 +487,26 @@
     .footer-links a:hover { opacity: 1; color: var(--gold); text-decoration: none; }
     .footer-copy { font-size: 0.78rem; color: var(--text); opacity: 0.35; }
 
+    /* ── Hamburger ── */
+    .nav-hamburger {
+      display: none;
+      background: none; border: none; cursor: pointer;
+      padding: 0.5rem; margin-left: auto; flex-shrink: 0;
+      color: var(--gold); font-size: 1.5rem; line-height: 1;
+    }
+
     /* ── Responsive ── */
     @media (max-width: 768px) {
+      .nav-hamburger { display: flex; align-items: center; }
       .nav-links { display: none; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: fixed; top: 62px; left: 0; right: 0;
+        background: rgba(10,10,15,0.98);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 1.5rem; gap: 0.5rem; z-index: 99;
+      }
+      .nav-links.open a { font-size: 0.95rem; padding: 0.4rem 0; display: block; }
       .lore-grid { grid-template-columns: 1fr; }
       .connect-grid { grid-template-columns: 1fr; }
     }
@@ -519,6 +536,7 @@
         <li><a href="crafting.html">Crafting</a></li>
         <li><a href="#play" class="nav-play-btn">Play Now</a></li>
       </ul>
+      <button class="nav-hamburger" onclick="navToggle()" aria-label="Menu">&#9776;</button>
     </div>
   </nav>
 
@@ -832,6 +850,17 @@
   </footer>
 
   <script>
+    function navToggle() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.nav-links a').forEach(function(a) {
+        a.addEventListener('click', function() {
+          document.querySelector('.nav-links').classList.remove('open');
+        });
+      });
+    });
+
     // Smooth active nav highlighting
     const sections = document.querySelectorAll('section[id], div[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
