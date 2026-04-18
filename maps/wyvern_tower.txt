@@ -1,0 +1,38 @@
+Wyvern Tower (By Cigam)
+ 
+
+                                             The         On the       Turret of the     On the      Turret of the
+                                           Chamber --- Other Side --- Western Tower --- Catwalk --- Eastern Tower
+                                                                                                    up/
+                                                                            The armory               /
+                                                                                 |                  /down
+                                                          Third level      it's too Dark     Third Level 
+                   up N                                    of Western --- to say anything --- of Eastern
+                     \|                                       Tower              |               Tower
+                  W --|-- E                                       \up       The office's 
+                      |\                                       down\          Quarter
+                      S down                                    The Spiral  
+                                                                  Stairs       Shaman's 
+                                                                     \up         Room
+                                                                  down\           |
+                                                                 Second level     |      Second level
+                                                      Balcony --- of Western --- Hall --- of Eastern
+                                           Empty                     Tower        |           Tower\
+                                           Room \up                               |                 \
+                                             |   \down                           The              On the first 
+                                             | Minotaur's Room                 Library              Staircase
+                                             |                                                         \
+                              Old store  Cluster of    House of                                         \down
+                                Room  --- Building --> Pankakes                                         (1)
+                                             |                                                              The Common
+                                             |                                                                 Room \
+                                        Path north  Northern                                   The Dinning       |   \up
+                                          of Moat     Moat                           Kitchen      Hall      (1)  |down\ A large
+                                             |          |                               |           |       up\  |    Murky Cellar
+                                             |          |                               |           |          \ | 
+   Rough      Rough Path  Path through   West Side   Western   Tower     The Grand   Base of    The musty     Base of   Toward
+ East-West --- Between ---- an Open ----  of Moat --- Moat --- Foyer ----  Lobby --- Western --- Corridor --- Eastern -- Ivory
+   Park       the  Hill      Area                       |                             Tower         |          Tower   Stronghold
+                                                        |                               |           |            |
+                                                    Southern                       Conservatory    Art        Servent
+                                                      Moat                                       Gallery      Coridor
