@@ -1,0 +1,95 @@
+XX-------------XX----------------XX	  N U
+|              |                 |	  |/
+|              |       22        |	W-x-E
+|              |      /          |       /|
+|              |    XX           |      D S
+|              |     |           |
+|              |    XX           |
+|              |   / |           |
+|    11        | XX 23    13     |
+|     |        |/          |     |
+| 10-XX-------12----------XX-14  |
+|     |      /             |     |
+|     |    XX 28-29 XX-31  |     |
+|     |   /    |     |     |     |
+|     | 24-26-27-XX-XX     |     |
+|     |  |     |  |        |     |
+|     | 25    XX 30        |     |
+|     |  |                 |     |
+|     | 25 20-XX-21 17-XX  |     |
+|     |     |        |  |  |     |
+|     | 19-XX----XX-XX XX  |     |
+|     |     |   /    |  |  |     |
+|     | 19-XX XX    XX 18  |     |
+|     |        |           |     |
+4   9-XX-------7-----------XX-15 4
+|     |        |           |     |
+|   8-XX-------6-----------XX-16 |
+|              |                 |
+|              XX                |
+|             /                  |
+|           XX                   |
+|           |                    |
+|           5                    |
+|           |                    |
+XX----------XX-------------------XX
+			    |
+		    2-XX XX-3
+		      |  |
+		   XX-XX-XX
+		   |  |
+		   1  XX-2
+
+Legend:
+1. Entrance   - Recite Phrase That Is On Sign
+2. Animals    - Carry Animal Growth Pills (Fresh Meat)
+3. Mud
+4. Leaves     - Enter To Get To Phoenix Maze
+5. Croquet    - Practice Things On These
+6. Dancing    - Practice Things On These
+7. Fountain   - Antimatter Fountain
+8. Closet
+9. Rec Room
+10. Dining
+11. Kitchen
+12. Back Door
+13. Sugar Bag - Warp Stone To Kitchen
+14. Freezy    - Warp Stone To Gremlin
+15. Toilet    - Warp Stone To Altar Of Light (Phoenix Maze)
+16. Rocket    - Warp Stone To Technician
+17. Gingerbread Man
+18. Hampsters
+19. Maids
+20. Gremlin
+21. Mouse
+22. Glider    - Warp Stone To Glider Room
+23. Statue
+24. Basement
+25. Drunk Cookie
+26. Buff Cookie
+27. Guards
+28. Corpses
+29. Cookies
+30. Technician
+31. Mutant Cookie
+
+
+	*** Phoenix Maze *** To exit, say: "I give up! I'm lost!"
+
+      XX-------XX-------XX	<--easy
+     / |      / |      / |
+   XX--+----XX--+----XX  |	<--medium
+  / |  |   / |  |   / |  |
+XX--+--+-XX--+--+-XX  |  |	<--hard
+ |  |  |  |  |  |  |  |  |
+ |  | XX--+--+-XX--+--+-XX	<--easy
+ |  |/ |  |  |/ |  |  |/ |
+ | XX--+--+-AoL-+--+-XX  |	<--medium
+ |/ |  |  |/ |  |  |/ |  |
+XX--+--+-XX--+--+-XX  |  |	<--hard
+ |  |  |  |  |  |  |  |  |
+ |  | XX--+--+-XX--+--+-XX	<--easy
+ |  |/    |  |/    |  |/
+ | XX-----+-XX-----+-XX		<--medium
+ |/       |/       |/
+XX-------XX-------XX		<--hard

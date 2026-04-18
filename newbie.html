@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Players Guide — Redemption MUD</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #c9a84c; --gold-lt: #e8c96a;
+      --red: #8b1a1a; --red-lt: #b03030;
+      --bg: #0a0a0f; --bg2: #10101a; --bg3: #161626;
+      --border: #2a2a3a; --text: #d4d0c8; --text-lt: #f0ece0;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Georgia', serif; line-height: 1.7; }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { color: var(--gold-lt); text-decoration: underline; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,15,0.95); backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--border); padding: 0 1.5rem;
+    }
+    .nav-inner {
+      max-width: 1400px; margin: 0 auto;
+      display: flex; align-items: center; gap: 2rem; height: 62px;
+    }
+    .nav-logo {
+      font-size: 1.5rem; font-weight: bold; color: var(--gold);
+      letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none;
+    }
+    .nav-logo span { color: var(--text-lt); font-weight: normal; font-size: 0.75rem; display: block; letter-spacing: 0.2em; }
+    .nav-links { display: flex; gap: 1.2rem; list-style: none; }
+    .nav-links a { color: var(--text); font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); text-decoration: none; }
+    .nav-play-btn { background: var(--red); color: #fff !important; padding: 0.4rem 1.1rem; border-radius: 3px; border: 1px solid var(--red-lt); transition: background 0.2s; }
+    .nav-play-btn:hover { background: var(--red-lt) !important; }
+
+    .page-hero {
+      padding: 5rem 1.5rem 3rem;
+      background: linear-gradient(180deg, #08080e 0%, var(--bg2) 100%);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    .page-eyebrow { font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+    .page-title { font-size: clamp(2rem, 5vw, 3.5rem); color: var(--text-lt); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .page-sub { font-size: 1rem; font-style: italic; color: var(--text); opacity: 0.8; max-width: 600px; margin: 0 auto; }
+
+    .page-body { padding: 4rem 1.5rem; }
+    .step { display: flex; gap: 1.5rem; margin-bottom: 2.5rem; align-items: flex-start; }
+    .step-num {
+      flex-shrink: 0;
+      width: 48px; height: 48px;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; font-weight: bold; color: var(--gold);
+    }
+    .step-title { font-size: 1.1rem; color: var(--gold); margin-bottom: 0.4rem; letter-spacing: 0.04em; }
+    .step p { font-size: 0.95rem; }
+    code {
+      font-family: 'Courier New', monospace;
+      background: rgba(201,168,76,0.08);
+      color: var(--gold);
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+
+    .tip-box {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 6px 6px 0;
+      padding: 1.2rem 1.5rem;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .tip-box strong { color: var(--gold); }
+
+    .section-label {
+      font-size: 1.4rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+      margin: 3rem 0 1.5rem;
+    }
+
+    .cmd-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 1rem 0; }
+    .cmd-item { background: var(--bg3); border: 1px solid var(--border); border-radius: 4px; padding: 0.8rem 1rem; }
+    .cmd-name { font-family: 'Courier New', monospace; color: var(--gold-lt); font-size: 0.9rem; margin-bottom: 0.2rem; }
+    .cmd-desc { font-size: 0.82rem; color: var(--text); opacity: 0.8; }
+
+    .cta-bar {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .cta-bar p { margin-bottom: 1.2rem; font-style: italic; }
+    .btn { display: inline-block; padding: 0.75rem 1.8rem; font-size: 0.88rem; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 3px; }
+    .btn-primary { background: var(--red); color: #fff; border: 1px solid var(--red-lt); }
+    .btn-primary:hover { background: var(--red-lt); color: #fff; text-decoration: none; }
+    .btn-secondary { background: transparent; color: var(--gold); border: 1px solid var(--gold); margin-left: 1rem; }
+    .btn-secondary:hover { background: rgba(201,168,76,0.1); color: var(--gold-lt); text-decoration: none; }
+
+    footer {
+      background: var(--bg2); border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem; text-align: center;
+    }
+    .footer-logo { font-size: 1.3rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .footer-copy { font-size: 0.78rem; color: var(--text); opacity: 0.35; }
+
+    @media (max-width: 600px) {
+      .cmd-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+    <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        Redemption
+        <span>A World at War</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#lore">Lore</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#updates">Updates</a></li>
+        <li><a href="index.html#play">Play</a></li>
+        <li><a href="maps.html">Maps</a></li>
+        <li><a href="newbie.html">New Players</a></li>
+        <li><a href="helpfiles.html">Help Files</a></li>
+        <li><a href="crafting.html">Crafting</a></li>
+        <li><a href="index.html#play" class="nav-play-btn">Play Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <p class="page-eyebrow">Welcome to Redemption</p>
+    <h1 class="page-title">New Player Guide</h1>
+    <p class="page-sub">Everything you need to go from your first login to your first adventure — step by step.</p>
+  </div>
+
+  <div class="page-body">
+    <div class="container">
+
+      <h2 class="section-label">Getting Connected</h2>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <div class="step-title">Choose how to connect</div>
+          <p>You have two options: play directly in your browser with no downloads, or install a dedicated MUD client for the best experience.</p>
+          <div class="tip-box" style="margin-top:0.8rem;">
+            <strong>In Browser:</strong> Visit <a href="index.html#play">our Play page</a> and click "Open via MudPortal" or "Open via Mudslinger". Enter <code>mud.redemptionmud.com</code> and port <code>4000</code> when prompted.<br><br>
+            <strong>Desktop Client:</strong> Download <a href="https://www.mudlet.org" target="_blank" rel="noopener">Mudlet</a> (free, all platforms). Create a new profile with host <code>mud.redemptionmud.com</code> and port <code>4000</code>.
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <div class="step-title">Create your character</div>
+          <p>When you connect, you'll be greeted by the login screen. Type <code>new</code> to begin character creation. You'll choose a name, password, race, and class. Don't stress over this — you can change your class later without losing progress.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <div class="step-title">Start in the newbie area</div>
+          <p>New characters begin in a safe starting area designed to teach you the basics. Read the signs, talk to the NPCs, and explore. You won't be attacked by other players here.</p>
+          <div class="tip-box">
+            <strong>Tip:</strong> Type <code>help newbie</code> in-game for a quick reference guide. Type <code>help commands</code> for a full list of available commands.
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-label">Essential Commands</h2>
+      <p style="margin-bottom:1rem;">These are the commands you'll use most in your first hours:</p>
+
+      <div class="cmd-grid">
+        <div class="cmd-item"><div class="cmd-name">look</div><div class="cmd-desc">Describe your current room</div></div>
+        <div class="cmd-item"><div class="cmd-name">north / south / east / west / up / down</div><div class="cmd-desc">Move in a direction (can abbreviate: n, s, e, w, u, d)</div></div>
+        <div class="cmd-item"><div class="cmd-name">score</div><div class="cmd-desc">See your character's stats and info</div></div>
+        <div class="cmd-item"><div class="cmd-name">inventory</div><div class="cmd-desc">List everything you're carrying</div></div>
+        <div class="cmd-item"><div class="cmd-name">equipment</div><div class="cmd-desc">See what you're wearing and wielding</div></div>
+        <div class="cmd-item"><div class="cmd-name">kill &lt;target&gt;</div><div class="cmd-desc">Attack a mob (monster)</div></div>
+        <div class="cmd-item"><div class="cmd-name">say &lt;message&gt;</div><div class="cmd-desc">Speak to players in your room</div></div>
+        <div class="cmd-item"><div class="cmd-name">gossip &lt;message&gt;</div><div class="cmd-desc">Chat with all players on the server</div></div>
+        <div class="cmd-item"><div class="cmd-name">help &lt;topic&gt;</div><div class="cmd-desc">Look up any topic in the in-game help system</div></div>
+        <div class="cmd-item"><div class="cmd-name">who</div><div class="cmd-desc">See who else is online right now</div></div>
+        <div class="cmd-item"><div class="cmd-name">recall</div><div class="cmd-desc">Return to your home town if you're lost</div></div>
+        <div class="cmd-item"><div class="cmd-name">quit</div><div class="cmd-desc">Save and log off safely</div></div>
+      </div>
+
+      <h2 class="section-label">Understanding the World</h2>
+
+      <div class="tip-box">
+        <strong>PK (Player Killing):</strong> Redemption has a player-vs-player system. New characters start protected. When you're ready, you can flag yourself for PK — but be warned, the stakes are real. Hardcore mode raises them even higher.
+      </div>
+
+      <div class="tip-box" style="margin-top:1rem;">
+        <strong>Classes &amp; Remort:</strong> Your class defines your abilities. You can switch classes later without losing experience. Once you reach a high enough level, the remort system lets you transcend your current limits and start a new path with additional power.
+      </div>
+
+      <div class="tip-box" style="margin-top:1rem;">
+        <strong>Quests:</strong> Talk to NPCs with an exclamation mark (!) or question mark (?) in their title — these indicate quest givers. Quests reward experience, gold, and sometimes unique items.
+      </div>
+
+      <div class="tip-box" style="margin-top:1rem;">
+        <strong>Crafting:</strong> Materials can be gathered from monsters and the world. Visit our <a href="crafting.html">Crafting page</a> to see what can be made and what you need to make it.
+      </div>
+
+      <h2 class="section-label">Tips for Survival</h2>
+
+      <div class="step">
+        <div class="step-num">💡</div>
+        <div>
+          <div class="step-title">Don't fight what you can't handle</div>
+          <p>Type <code>consider &lt;target&gt;</code> before attacking a mob. It will tell you how tough the fight will be. If it says "You would need considerable help" — back away.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">💡</div>
+        <div>
+          <div class="step-title">Rest to recover</div>
+          <p>Type <code>rest</code> to recover hit points and mana faster. Type <code>sleep</code> to recover even faster. Type <code>wake</code> to stand back up.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">💡</div>
+        <div>
+          <div class="step-title">Ask for help</div>
+          <p>The Redemption community is welcoming. Type <code>gossip Hey, I'm new — any tips?</code> and players will likely respond. You're not alone in the world.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">💡</div>
+        <div>
+          <div class="step-title">Read the in-game help files</div>
+          <p>Redemption has a comprehensive help system. Type <code>help &lt;anything&gt;</code> — skills, spells, commands, lore — if it exists, there's probably a help file for it. You can also browse them on our <a href="helpfiles.html">Help Files page</a>.</p>
+        </div>
+      </div>
+
+      <div class="cta-bar">
+        <p>Ready to begin? The world is waiting — and it needs adventurers.</p>
+        <a href="index.html#play" class="btn btn-primary">Play Now</a>
+        <a href="helpfiles.html" class="btn btn-secondary">Browse Help Files</a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Redemption MUD</div>
+    <div class="footer-copy">&copy; Redemption MUD. Free to play.</div>
+  </footer>
+
+</body>
+</html>

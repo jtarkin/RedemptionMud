@@ -1,0 +1,99 @@
+Map by Hexnar
+Legend
++   : door
+/+/ : locked door											Air Fleet Invasion
+|+| : locked no passdoor												\
+															 \		
+														     Hanging by a Thread
+																\
+															         \
+											      Deadly	Deadly       Rock	 Edge of
+									     Deadly Desert -- Desert -- Desert -- Outcropping -- Desert
+									       /				   /	|
+									      /					  /	|
+									 Deadly					(1)   Deadly		  Deadly
+									 Desert					      Desert ------------ Desert
+									    |								     |
+									    |								     |
+									 Deadly								  Deadly
+									 Desert								  Desert
+									    |								     |
+									    |								     |
+									 Deadly								  Deadly
+									 Desert								  Desert
+									    |								     |
+									    |								     |
+									  Stone								  Deadly
+									 Crevice							  Desert
+									    |				      (2)			     |
+									    |				       |			     |
+									Mountain    Jaeger's     Peak's	       |	   Door		    Rock
+								        Foothills --- Peak --- Edge View --- Two-Tiers --- to Death 	   Stairs
+									    |						   /		     /
+									    |						  /		    /
+									Rocky Bluff				   Round Granite --- Preparation 
+									    |					      Room		Room
+									    |					      /
+Shandalar -- Among the --- Surrounded --- Dusty --- Dusty --- Rolling --- Silent				     /
+  River    Rolling Hills    By Hills	  Trail	    Trail      Hills     Hillside				Tomb of the Fallen
+
+															
+												(1)
+												/
+											       /
+									     Mirrnath	  Mirrnath
+		    Herb Closet --- Shaman Hut --- Shaman Hut		      Tribe ------ Tribe
+					 |		|			|	     |
+					 |		|			|	     |
+		     Shaman Hut	--- Shaman Hut	      White	River of     Mirrnath	  Mirrnath
+						   Stone Path	  Lyfe ------ Tribe	   Tribe
+							|	   |			     |
+							|	   |			     |
+	Mirrnath      Garrisoned      Mirrnath	    Mirrnath	River of		   Foyer ------ Elder's Hut
+	 Tribe ------- Clearing ------ Tribe ------- Tribe ----- Lyfe			     |		     |	    Elder's Hut
+			   |					   |			     |		     |     /
+			   |					   |			Elder's Hut --- Elder's Hut
+	Mirrnath       Mirrnath	      Mirrnath			River of
+	 Tribe -------- Tribe -------- Tribe			  Lyfe
+	   |				 |			   |
+	   |				 |			   |
+	Mirrnath		    Battle Peak			River of
+	 Tribe			     /				  Lyfe
+				    /				   |
+			          (3)				   |
+								River of
+								  Lyfe
+								  /
+								(4)	 Gwenuvar
+									  Tribe	
+									    |
+									    |
+									 Gwenuvar
+									  Tribe
+									    |
+									    |
+									 Gwenuvar
+									  Tribe
+				   (3)					    |					Rebel House
+				   /					    |					   /
+			  Clash Grounds					 Gwenuvar   Gwenuvar			  /
+				|					  Tribe ---- Tribe ---- Gwenuvar   Gwenuvar
+Firrnath Tribe			|								 Tribe ---- Tribe 
+     |				|				 		(4)		   |
+     |				|				 		/		   |
+  Firrnath     Firrnath	     Firrnath	 Firrnath   Firrnath   Firrnath	  River of   River of	Stepping   River of
+   Tribe ------ Tribe ------- Tribe	  Tribe	---- Tribe ---- Tribe	   Lyfe ------ Lyfe ---- Stones ---- Lyfe
+				|	    |			  |				   |	      |
+				|	    |			  |				   |	      |
+			     Firrnath    Firrnath   Firrnath   Firrnath	  Gwenuvar   Gwenuvar   Gwenuvar   River of
+			      Tribe ----- Tribe ---- Tribe	Tribe ---- Tribe ---- Tribe ---- Tribe	     Lyfe
+			    /   |		       |				|		      |
+			  /+/   |		       |				|		      |
+			  /  Firrnath   	    Firrnath		   Rock      Football   Gwenuvar   River of
+	     Secret Weapon    Tribe		     Tribe		  Stands ---- Field ---- Tribe	     Lyfe
+		Chamber							    |
+									    |
+									   (2)
+
+
+

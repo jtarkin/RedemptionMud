@@ -1,0 +1,120 @@
+
+                                                                                         
+                                                                                      
+     _______________________________________________________________                      
+    |                                                              |                     
+    |                                                              |                      
+    |              Muddy-----------Muddy----Sewer----->Round Rm----+----->Room--Edge of---Bend 
+    |              Sewer            Pipe      |                    |       |      Sewer     | 
+    |                |                |    Another-------3-Way---Room     Pipe            Sewer 
+    |      Sewer   Sewer-----Bend     |     Inter        Junc      |       |                |
+    |         |                |     To       |            |       |       |                |
+    |      Muddy---Muddy     Muddy  Quiet   Junc         Store   Sewer   Grand----Dark    Sewer 
+    |       Junc    Bend     Inter   Inter    |           Room    Room   Sewer    Hall      |
+    |         |      |         |              |                    |       |        |       |  
+    |       Mud    Muddy-----Muddy    Well--Sewer-------Bend in   Pool---South   Passage  Sewer----------Ledge 
+    |      Hole    Inter     Sewer    /      Junc         Pipe            End       |     Junct            |   
+    |     /          |         |    *6*                    |                        |       |              |
+    |   *4*          |     Ordinary--Quiet--Triple--------Pipe                   Passage  Sewer            | 
+    |                |         |     Inter   Junc         Bend                      |       |              |
+    |                |         |              |        Dump                         |       |              |
+    |                |         |              |       /      Shaft                Passage  Junct---------Ledge 
+    |        Pit---Junc------Junc    Odd<---Quad-- Pit     /     |                  |       |            / 
+    |       /        |         |     /      Junct  /    *5*  Entrance  Sewers       |     Sewer      Fissure
+    |     *3*        |         |   *1*        |  *2*             |         |        |       |         /
+    |            Bend in---Ordinary --------Triple------------Junct-----Junc------Dark----Sewer    Edge
+    |              Pipe      Junc            Junc             3-ways             Passage   Bend    Water 
+    |________________|   
+
+
+
+                                                                               NE  
+                                                 Ledge----------Ledge--------Corner
+                                                   |              |         /   |  
+                                                   |              |       *9*   |
+                                   *6* /         Ledge-Air       Air    Air---Ledge
+                                  Down             |                            |  
+                                Old Well         Ledge-Air              Air---Ledge
+                                                   |                            |  
+                                                 Ledge-Air              Air---Ledge 
+                                                   |                            |       *5*
+                                                 Ledge-Air        Air   Air---Ledge----Under
+                                *4*                |               |            |      Shaft
+                               Under----Muddy      SW------------Ledge--------Corner        
+                              Mudhole    Bend    Corner            |                        
+                                           |    /  |             Sewer                      
+                                   *3*     |  *8*  |              Line                      
+                                   /       |      *1*     *2*     /                         
+                               Under----Junct-----Odd----Under  *10*                         
+                                Pit              Inter    Pit                               
+                              /                                                             
+                            *7*                                                             
+
+                                      End of   Glittering----Secret
+            Stair<--------------------Tunnel       |        /
+              |                                    |   Lair of Jher
+              |                                    |
+              |      L-Shaped--Circular--Dusty--Crossing--Wind--Burned
+            Dark       Room      Room     Room     |     Tunnel  Room
+              |          |                         |               |
+           Entrance----North                    L-Shaped----------Lair
+              |       Tunnel                                     /
+       NW    NE          |                                   Hell
+      Cave  Cave         |
+        |     |        Square---Square---Tunnel---Cave--T-Cross--Turning 
+        |     |         Lair     Lair             Room     |      Point
+       SW----SE           |       |                |       |        |
+      Cave  Cave       Square---Square Treasure  Tunnel Tunnel   Secret
+        |               Lair     Lair    Room      |       |       Room
+      Cave                        |       |        |  /    |        |
+        |                       T-Cross--Blind    Cave   Tunnel--Mudhole
+      North                       |      Room     *7*      | 
+       End     Pool               |                        |
+        |        |               Cave------------Small----Hot  
+        |        |                |              Room     Room
+      South----Pool----Spongy---Tunnel
+       End              Room       
+                          
+         
+
+                 
+                                                                                            
+                *8*  /
+              Wall of                                     Torture
+               Abyss                                       Room
+             /                        The                    |
+       On the                      Firedeath--T-Crossing---Hell's
+        Walls                          DT?        |        Yard
+                                                  |
+                                      Corridor--Realm
+                                         |
+                                         |    /
+                                      Entrance
+                                        *9*
+
+ 
+
+  Treasury--Inner
+             Lair
+              |        
+             Lair---Lair
+              |      |
+             Lair---Lair
+              |      |
+             Lair---Lair     Cave    Drain--End of
+              |                |       |     Drain
+            Lair--Crawlway---4-way---Drain
+          Entrance             |
+                            Half Wet  Drain--Lair  
+                             Drain      | 
+                               |        | 
+                             Under    Sewer---Strange---Damp---Strange---Sewer
+                             Water            Sewer                       |
+                               |                                          |
+                    Dry----Half Dry--Very Small                         Junct
+                   Drain     Drain     Room                               |
+                     |                                                    |
+                     |       *10* /                                       |
+                   Boring----Drain-----------------------------Drain---Bend in
+                    Drain                                               Drain
+

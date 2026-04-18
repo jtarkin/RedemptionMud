@@ -1,0 +1,54 @@
+Directions to "the Temple of Stupra"---- 7E , 5N , 7W , 3N , E , N , W , 4N , W , 3N , U
+Mapped by:  Magik
+
+
+Level 1:
+
+
+NW corner----Hallway----Hallway----Crossroads----Hallway----Hallway----NE corner
+   |                                    |                                 |
+   |                                    |                                 |
+Hallway                          Hallway to the                        Hallway
+   |                                   pit                                |
+   |                                    |                                 |
+Hallway                              Pit Area                          Hallway
+   |                                                                      |
+   |                                                                      |
+Hallway                                                                Hallway
+   |                                                                      |
+   |                                                                      |
+SW corner----Hallway----Hallway----Inside the----Hallway----Hallway----SE corner
+		                 Temple of Stupra
+                                       /
+                       Entrance to the Temple of Stupra
+                                       /
+                        Close to the Temple of Stupra
+                                       /
+                     On the steps to the Temple of Stupra
+                                       /
+                     On the steps to the Temple of Stupra
+                                       /
+                      On the steps to the Temple of Stupra
+                                       /
+                         Steps to the Temple of Stupra
+
+Level 2:
+
+
+Corner of----NR----NR----NR----Crossroads----NR----NR----NR----Corner of
+the Rafter                   in the rafters                    the Rafter
+    |                              |                              |
+    |                              MB                             |
+    WR                             |                              ER
+    |                              MB                             |
+    |                              |                              |
+    WR------WSB---WSB---WSB----Crossbeam----ESB----ESB---ESB------ER
+    |                              |                              |
+    |                              MB                             |
+    WB                             |                              EB
+    |                              MB                             |
+    |                              |                              |
+    |                         In the Rafters                      |
+Corner of---In----In----In----of the Temple----In----In----In----Corner of
+the Rafter the   the   the                     the   the   the   of the Rafter
+       rafters rafters rafters             rafters rafters rafters

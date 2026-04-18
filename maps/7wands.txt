@@ -1,0 +1,103 @@
+SEVEN WANDS - MAPPED BY ALPHABETA
+* - indicates a nopassdoor locked door
+[p] - indicates a room is private
+
+           An Abandoned ==> To get into this room, go to The Confession Room and
+               Room         say Zinzanna
+                 |      (2)
+                 *        \                                   A Prison
+                 |         The Stairway                        Eatery
+  An Old-+-The Confession     |  \              Arie Dehri's     |        A Small
+  Vault        Room           | (1)                 Cell-----The Prison-----Cell
+    +            |            |                                  |
+ Dead End  The Praying-----A Long------A Bedroom   A Small---The Prison---A Small
+[private]      Room       Corridor                   Cell        |          Cell
+                              |                              (1) +
+                         The Entrance---A Small                \ |
+                         to the Temple   Shrine              The Cellar
+                              |
+                          Before the
+                        Ancient Temple
+                              |
+            DOMINIA-----The Temple of
+                       the Seven Wands
+                             (4)
+
+
+  Tower Roof
+       \
+        +
+         \
+     The Top of
+      the temple
+            \               At the top of
+        The Stairway         the Ladder
+            |   \       (6)   |      \
+            +  The Stairway   |       \
+            |      |  \       |        \
+            v      |  The Stairway   At the bottom---Along a Garden
+            |     (3)      \          of a Ladder       Path
+            |              (2)                           |
+            |                                        Before a
+         Falling                                     Minature-+-The Burial-+-The Grand
+         Down...                                     Pyramid      Chamber     Gallery
+            \                                                       |
+             v                                                  The High
+          Still                      A Caved In              Priest's Room
+        Falling...                     Study                      |    \
+             \                           +                        +     +
+              v                          |                    The Tomb Another
+          Falling...                    (5)           (4)      Chapel  secret Room
+              \                                        /
+               \                (4)         (4)     In an Escape    (4)          (4)         (4)
+                \                /           /       Hatch [p]       /            /           /
+                 v        In an Escape In an Escape   /          In an Escape In an Escape strange
+                  \        Hatch [p]    Hatch [p]    /  (5)       Hatch [p]    Hatch [p]   room [p]
+                   \           /           /        /    |         /             /           /
+              A Treasure--A Treasure--A Treasure--A Treasure--A Treasure--A Treasure--A Treasure---(4)
+                 Room        Room        Room        Room        Room        Room        Room
+                                                                 /
+                                                                *
+                                                               /
+                                               A Dark----*--a dark
+                                              Corridor     corridor
+                                                 |
+                                 The ancient     |
+                                treasure room    *
+                                           \     |
+                                            *    |
+                                             \ A Dark
+                                              Corridor
+
+===(3)===MAZE===(3)===MAZE===(3)===MAZE===(3)===MAZE===(3)===MAZE=========
+
+Quick walkthrough: S, N, S, S, E  --There's nothing of use in the maze anyway.
+
+
+ G--Maze--F         D          Maze--Maze                     I
+     (3)            |           (D)   (B)        I            |
+     |         C--Maze--B       |      |         |            |
+     A             (A)          |    Maze    V--Maze      W--Maze--H
+                    |           |     (C)        (F)          (G)
+                    V           |                             |
+                            C--Maze--B                        S
+                                (E)
+                                |
+     H     I              N     Y                     T        P
+     |     |              |                           |        |
+ W--Maze--Maze--Maze  P--Maze--M   Maze--Maze--L  R--Maze--Q  Maze
+     (H)   (I)   (J)      (L)       (N)   (O)         (P)      (U)
+     |     |     |        |         |                 |        |
+     H     I L--Maze      U        Maze               E       Maze--Maze--R
+                 (K)                (M)                        (T)   (Q)
+                                    |
+                                    P
+     D           E           R           K
+     |           |           |           |
+ C--Maze--B  Y--Maze--O  G--Maze--I  L--Maze--J  Y--End of--6
+     (R)         (S)         (V)         (W)       the Maze
+     |           |           |           |
+     Y           S           V           O
+
+
+

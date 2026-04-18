@@ -1,0 +1,183 @@
+Time - Mapped by Scrambler - Corrected by Alphabeta
+. - not an actual room, used to demonstrate link
+
+    Tuesday's-+-In a Hallway---In a Hallway-+-Monday's
+      Room           |              |           Room
+                In a Hallway        |
+                     +              |        Friday's Room   Saturday's Room
+                 Wednesday's        |              +              +       
+                    Room            |         In a Hallway---In a Hallway
+                                    |              |
+                    Sunday's-+-In a Hallway---In a Hallway-+-Thursday's Room
+                      Room          +
+                               Misty Portal
+                                    ^
+                                    +                       (2)
+                                    |                        |
+(1)---At a strange-+-Accessway---AccessWay---Accessway-+-At a wierd
+      Intersection     West                    East      Intersection 
+           |                         (3)                     |
+           |                         +                       |
+    Further inside                  /                Further inside
+       The Clock               In a tiny room            The Clock
+           |                        +                        |
+           |                        |                        |
+      In a Tunnel--In the Tunnel--Inside--In the Tunnel--In a Tunnel
+                                   the
+                                  Clock's
+                                  Entrance
+                                 /       /
+                             On the     /
+                           Pendulum    v
+                               ^      /
+                              /      /
+                          At the Pendulum
+                                 |
+                          Entrance to the
+                           Plane of Time
+                                 |
+                               TERRA
+=================================================================================
+                                     I
+                   .---Among the     I      .---B
+                  /      gears       I      |       - means that A is west from B,
+                 /         |         I      |         but B is north from A
+            Among the      |         I      A
+              gears        .         I___________________________________________
+               |          /
+               |         /
+               .    Among the                                     .---Amid the
+              /       gears                                      /     gears
+             /         /                                        /        /
+    .---Among the     /                                     Amid the    /
+    |     gears      .                                        gears    .
+    |                |                                        /        |
+ Among the           |                                       /         |
+   gears      Straight tunnel----Middle of an----Straight tunnel   Amid the
+    |          leading east    east/west tunnel   leading west       gears
+    |                                                                 |
+    .---(1)                                                           |
+                                                           Amid the---.
+                                                             gears
+                                                              /
+                                                             /
+                                                     .---Amid the
+                                                     |     gears
+                                                     |
+                                                  Amid the
+                                                   gears
+                                                     |
+                                                    (2)
+
+===================================================================================
+
+         Time Warp!
+             ^     (4)
+             +     ^
+             |    +
+       A tiny room
+        +    |
+      (3)    +
+             |
+ (5)--On the Carousel---The Roan---OtCoT---The Clydesdale---OtCoT---The Dappled--(6)
+           of Time          Colt                                       Grey Mare
+             |
+            (9)
+
+ (6)--OtCoT---The Black---OtCoT---The Mustang---OtCoT---The Bob-Tail---OtCoT---(7)
+                                                            Nag          +       
+                                                                       (10)
+
+ (7)--The Golden---OtCoT---The Sad-Eyed---OtCoT---Little Grey---OtCoT---The Shetland--(8)
+                             Gelding                 Filly                  Pony
+
+ (8)--OtCoT---The Blood---OtCoT---The White Stallion--(5)
+              Bay Mare
+
+===================================================================================================
+          (10)
+           |
+    Tunnel Entrance
+           |
+    Inside a tunnel
+           |                           (12)
+       A dead end                       /
+          /                       Small Cubicle
+         +                             /
+  Somewhere Under           Month of Sundays' Room
+   the Carousel
+        /
+       +
+     (11)
+                           A clearing.
+                                |
+             A clearing.--Spring's Area--A clearing.
+                                |
+           A clearing.          | (11)     A clearing.
+                |               |  /            |
+A clearing.---Winter----Calendar Reception---Summer's Area--A clearing.
+                |          /  Room              |
+           A clearing.    +     |          A clearing.
+                        (12)    |
+                                |
+            A clearing.--Autumn's Area---A clearing.
+                                |
+                          A clearing.
+=========================================================================================
+
+                                              In a blinding light!
+										
+                                            Into a blinding light
+                                                   /
+                                             In the light
+                                                 /
+                                        Climbling into the light
+                                               /
+                                    Climbling into a light
+											
+                                      In a carpeted
+                                     /   hallway
+                                    +       |
+                          A Pocket of       |
+                              Time    In a carpeted   In a darkened   In a darkened
+                                         hallway          bedroom         bedroom
+                                            |               +               +
+                                      In a carpeted---In a carpeted---In a carpeted
+                                         hallway         hallway         hallway
+      At the fridge----At the stove         |               +               +
+            |               |               |         In a darkened   In a darkened
+   At the kitchen sink      |               |             bedroom         bedroom
+            |               |               |
+     At the kitchen--In the kitchen---In a carpeted   In the  In the
+         counter                         hallway      lounge  lounge
+                                            |           |       |
+                                      In a carpeted---In the--In the
+                                         hallway      lounge  lounge
+                                            |           |       |
+                                      In a carpeted   In the  In the
+                                         hallway.     lounge  lounge
+                                            |
+                      End of Hallway--In a Hallway
+                                            |
+                                          A Tiny
+                                         Room (4)
+                                            +
+                                    On the Upper Rim of
+                                     the Clock's Face
+                                           /
+                                  On the Clock's Face
+                                          /
+                                 On the Clock's Face
+ On The West                              /                                                 On the East
+  Rim of the---On the Clock's---On the Clock's Face--On the Clock's---On the Clock's Face---Rim of the
+ Clock's Face      Face                  /               Face                       /      Clock's Face
+          /       /            On the Clock's Face          /                      /      /
+         v       v                     /                   v                      v      v
+        Time Warp!           On the Bottom Rim of      Time Warp!                Time Warp!
+                        (9)   the Clock's Face
+                         |            /
+                        Cuckoo Cuckoo's Roost
+
+
+
+

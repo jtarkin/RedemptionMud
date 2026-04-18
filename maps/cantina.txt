@@ -1,0 +1,35 @@
+Cantina - Remapped by Lhuust
+
+                                                                                (6)
+                                                                             A Dead End
+                                                        (5)--Public(3)           |
+                                                             Restrooms       The Path to
+                                                                   \         the Cantina                       (7)
+                                                                    \            |                              |
+                                                                 The Break---The Path to                  A Quiet Corner
+                                                                   Room      the Cantina                  of the Cantina
+                                                                    ^            |                             /
+                                      A Quiet(1)                    |         Northern                        /
+                                       Corner of----The Canned---The Stock---Entrance to---The Pig Pen   Alisa's Sweets
+                                     /the Cantina   Goods Aisle   Room(2)    the Cantina        |        and Confections
+                                    (2)    |            |           |            |              |            |
+                                        Western         |           v            v              |          Eastern
+DWARVEN---The Path to---The Path to---Entrance to----Produce->-The Fountain The Fountain-<-The Butcher---Entrance to---The Path to---The Path to---STONE
+KINGDOM   the Cantina   the Cantina   the Cantina     Aisle         ^ \          ^ \          Shop       the Cantina   the Cantina   the Cantina   RIDGE
+                                           |            |           | (4)        | (4)          |            |
+                                    (1)    v            |           |            |              |           (7)
+                                     \The Antique-<-The Dairy----Concession---Concession---The Cattle
+                                         Store        Aisle        Stand        Stand         Yard
+                                                                    |            |
+                                                                Southern(5)      v
+                                                                Entrance to-----(3)
+                                                                the Cantina           (4)   (3)         (3)
+                                                                    |                   \    ^           ^
+                                                                The Path to              v  /           /
+                                                                the Cantina          Deeper in      Deeper in
+                                                                    |               the Fountain->-the Fountain
+                                                                The Path to                             |
+                                                                the Cantina         (6)                 v     (3)
+                                                                    |                ^                  |      ^
+                                                                HOLY GROVE            \Angel's--<---Deeper in /
+                                                                                        Place      the Fountain

@@ -1,0 +1,64 @@
+
+                                  Astral Plane
+                       Path s(fly)3un6un(From Recall Midgaard)
+                             Written  by Igorwar, modified by Wakizasta
+
+
+
+
+  
+
+                                    Before the Altar
+                                   /      |
+                                  /       |
+                                 =  Altar Chamber
+                                /         |
+                               /          =
+                          A Gateway       |
+                    to the Underwold  North End
+                         /             of Hall
+                        =                 |
+                       /                  |
+                       _                  |
+                Utter darkness        South End
+                  and despair          of Hall                     A large dwelling
+                                          |                             |
+                                          =                             =
+                                          |                             |
+                            A grey-----A grey-------A grey-----------A grey
+  A cramped                  road       road         road             road
+     cell                      |                      |                 |
+       |                       |                      =                 |
+       =                       |                A large dwelling   A grey road-=-A Githyanki
+       |        A guard     A grey    A small                           |         Armory          [i]
+The cellblock---stantion--=--road--=--building                          |           |              |
+       |                       |                A small building   A grey road    Forge-----=---Inside[i]
+       =                       |                      =                 |           |          the furnace
+       |                       |                      |                 |           |              |      
+    A tiny                  A gray-=--A guard----=--A grey-----------A grey-=--A Githyanki         |
+     cell                    road     stantion       road             road        Weapory         [i]
+                                         |
+                                         = 
+                                         |
+                                  Inside Githyanki Keep
+                                         /
+                                        /                  
+                             Deep Within the Astral Plane
+                                     /                              (1)---Walking the Silvery Strand
+                                    /                                    / ^
+                                   ...        (*)                      (*) |
+                                                                          Walking the Silvery Strand(1)
+                                   ...                                     |
+                                    |                                     (*)
+                                    =
+                                    |
+                             The Astral Gate
+
+
+1."Exploring the Astral Plane"
+2."Roaming the Astral Plane"
+3."Wandering the Astral Plane"
+4."Lost in the Astral Plane"
+5."Travelling the Astral Plane"
+6."Traversing the Astral Plane"
+7."Deep Within the Astral Plane"

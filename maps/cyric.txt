@@ -1,0 +1,80 @@
+CYRIC'S REALM - MAPPED BY ALPHABETA
+* - indicates a no passdoorable locked door
+
+                        Priests Room
+                             |
+ DOMINIA                Left wing of
+    |                    the temple
+A path to    The Temple      |
+the temple----of Cyric---Inside the---The Altar---The statue
+                           temple                 (gate->1)
+                                                        \     Avatar's
+                                                         +     Room
+                                                          \     |
+                                                          Down the
+                                                            statue
+
+RUNNING AWAY PLAIN--(To go through: e,w,n,e,n)---------------------------------
+
+      5           1              4
+      |           |              |
+ 2--RAP(1)--6   RAP(2)--3   1--RAP(3)
+
+      1
+      |
+ 5--RAP(4)      RAP(5)--6   7--RAP(6)--5
+      |           |              |
+      5           2              4
+
+      8           5            (10)
+      |           |              |
+ 3--RAP(7)--1   RAP(8)--9   1--RAP(9)
+      |           |              |
+      2           6              6
+
+---------------------------------------------------------------------------------------------------
+                                                               |PANDEMONIUM
+                  The Portal---The Throne                      |To go through: e,s,w,n
+                (portal->13)      Room                         |
+                                    |                          |    13
+                                 Entrance                      |     |
+                                  Hall                         |   P(13)--14    P(14)--13
+                                    +                          |                  |
+                                 Center                        |                 15
+                    West Wing---Courtyard---West Wing [sic]    |
+                                    |                          |             Kezef's Prison
+                               Entrance to                     |      13          +
+                                the Palace                     |       |          ^
+The Cavern                          |                          | 16--P(15)   15--P(16)
+    |                  River----The Bridge---River             |                  |
+The Swamp---The Swamp  Slith        |        Slith             |                 14
+                |                   |          \               |--------------------------------------------------------
+              A Path                |         (12)             |                         A Passage
+10th Floor      |                   |                          |                         Under the\
+      \    Wall of the---A Dark---Avenue---A Dark---Wall of the|                           Water   *(Horror)
+5th Floor    Infidels    Street     |      Street     Infidels |                             |      \
+        \                           |                          | A Passage   A Passage   A Passage  A Change---A Chamber
+         Inside the               Avenue                       | Under the---Under the---Under the
+           building                 |                          |   Water        Water      Water
+               +                    |                          |     |                 (12)  |
+             A Dark------A Dark---Avenue---A Dark---A Dark     |  Horror's               \   |
+             Street      Street     |      Street   Street     |    Lair                 Under the
+                                    |                   \      |                            Water
+                               Gates of the              +     |
+                            City of Conflicts             \    |--------------------------------------------------------
+                                    |                    (11)  |
+                                  A path                       |  Translucent---Translucent
+                                    |                          |     Room          Room
+                                  (10)                         |       |             |
+----------------------------------------------------------------  Translucent---Translucent
+                                                        (11)         Room          Room
+                                                          \            +
+                                                    The Pink-red  A Corridor
+                                                        Room   v      |
+                                                                +     |
+                                                                 \    |
+                                                                  A Corridor
+
+
+
+

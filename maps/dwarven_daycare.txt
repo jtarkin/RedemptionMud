@@ -1,0 +1,29 @@
+Dwarwen Daycare (By Cigam)                    Up
+                                                \  N
+                                                  \|
+                                |              W---|---E
+                           The Dwarven             |\
+                            Drop Off               S  \
+                                |                    Down
+                                |                     
+  The Messy    Day Care      Day Care   The Messy      The           The
+  Bathroom --  Center ------ Center ---- Kitchen    Playground -- Playground
+                  |       (linen robe)                  |             |
+                  |             |                       |             |
+     The       Day Care      Day Care                  The           The
+   Staircase -- Center ------ Center -------------- Playground -- Playground
+       \    (pink ice ring)
+         \
+      Entrance   Mini-      Mini-
+       to the -- Maze ----- Maze
+      Mini-Maze   |          |
+                  |          |
+                 Mini-      Mini-
+                 Maze ----- Maze 
+                             |
+                             |
+                         End of the
+                          Mini-Maze
+                             |
+                             |
+                          The End

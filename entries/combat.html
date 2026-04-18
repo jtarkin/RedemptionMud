@@ -1,0 +1,183 @@
+      <div class="help-entry" id="entry-combat-death">
+        <div class="help-entry-title">Death</div>
+        <hr>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;">DEATH</div>
+        <p>When your character dies on Terra, you are reincarnated back at the Altar of the Temple of Midgaard. If you die on Dominia, you are reincarnated at the Temple of Selina in Shandalar. If you joined a clan, you will be reincarnated inside your clan hall or outpost. Your corpse is left behind in the room where you were killed, together with all of your equipment.</p>
+        <p>Any spells which were affecting you are canceled by death.</p>
+        <p>You lose experience points for dying. The amount you lose is one-quarter of the way back to the beginning of your level.</p>
+        <p>Corpses decay after time, and the objects inside corpses decay with them. Player corpses last 25 to 40 real-time minutes. Half of your carried gold is left in your corpse; the other half is lost.</p>
+        <p>Only the player who died, or someone in the same group, can retrieve objects from a corpse. Clanners may loot other clanners' corpses. If the game crashed after you died, it's a good bet that you lost it. Please do not go begging to an immortal to help you get your equipment back — it is not their duty to get it back for you.</p>
+      </div>
+
+      <div class="help-entry" id="entry-combat-equip-damage">
+        <div class="help-entry-title">Equipment Damage</div>
+        <hr>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;">ITEM DAMAGE EQUIPMENT DAMAGE DAMAGED</div>
+        <p>Many spells and element effects can damage or destroy your worn equipment. There are two outcomes: temporary damage and permanent destruction.</p>
+        <p><strong style="color:var(--text-lt);">Temporarily damaged</strong> items are unequipped and cannot be reworn until the effect wears off (1–3 ticks). This affects clothing hit by acid-based attacks, and jewelry hit by shock/lightning-based attacks.</p>
+        <p><strong style="color:var(--text-lt);">Destroyed</strong> items are consumed outright and cannot be recovered. This affects containers, wands, and scrolls hit by acid; potions and drinks hit by cold or earth; containers, potions, scrolls, staves, wands, food, and pills hit by fire; and wands and staves hit by shock/lightning.</p>
+        <p>Wind-based effects can fling potions and pills to an adjacent room. Items with the BURN_PROOF flag are immune to most element-based destruction.</p>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">ELEMENT DEBUFFS</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">Acid</td><td style="padding:0.2rem 0;color:var(--text);">Armor class penalty.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">Cold</td><td style="padding:0.2rem 0;color:var(--text);">Strength -1, movement drained.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">Earth</td><td style="padding:0.2rem 0;color:var(--text);">Dexterity -1, fly stripped, movement drained.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">Fire</td><td style="padding:0.2rem 0;color:var(--text);">Possible blindness, causes thirst.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">Shock</td><td style="padding:0.2rem 0;color:var(--text);">Daze and wait.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">Wind</td><td style="padding:0.2rem 0;color:var(--text);">Stacking armor class penalty (increases with repeated hits).</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">Shadow</td><td style="padding:0.2rem 0;color:var(--text);">Random effect — blindness, hit/dam penalty, daze, or mana drain.</td></tr>
+          </tbody>
+        </table>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">SPELLS THAT DAMAGE EQUIPMENT</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">Detonation</td><td style="padding:0.2rem 0;color:var(--text);">Targets your opponent's weapon; deals fire damage and may temporarily damage it. Hardcore: drops it to the ground instead.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">Attraction</td><td style="padding:0.2rem 0;color:var(--text);">30% chance per worn item to temporarily damage and unequip it. ITEM_SOUND_PROOF items are immune.</td></tr>
+          </tbody>
+        </table>
+        <p>Hardcore characters: when a hardcore character is the source, temporarily damaged items are dropped to the ground rather than merely unequipped.</p>
+      </div>
+
+      <div class="help-entry" id="entry-combat-escaping">
+        <div class="help-entry-title">Escaping</div>
+        <hr>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;">FLEE RESCUE</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">flee</td><td style="padding:0.2rem 0;color:var(--text);">Attempts to escape from combat in a random direction. Success is not guaranteed.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">rescue &lt;character&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Pulls another character out of combat, redirecting the enemy's attention to you.</td></tr>
+          </tbody>
+        </table>
+        <p>Once a fight starts you cannot simply walk away. Use <code>flee</code> to escape, or ask another player to <code>rescue</code> you. You can also use <code>recall</code>, but it is less likely to succeed and costs more experience points than fleeing.</p>
+        <p>If you lose your link during a fight, your character will keep fighting and attempt to recall from time to time — with reduced chances and much greater experience loss.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">WIMPY</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">wimpy</td><td style="padding:0.2rem 0;color:var(--text);">Sets your wimpy value to 20% of your maximum hit points.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">wimpy &lt;number&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Sets a specific wimpy threshold. Cannot exceed 50% of your total hit points.</td></tr>
+          </tbody>
+        </table>
+        <p>When your hit points drop below your wimpy value, your character will automatically attempt to flee. This only triggers when you are not in a wait state — combat commands like <code>cast</code>, <code>trip</code>, and <code>bash</code>, or being tripped or bashed, will suppress the auto-flee. Wimpy is not a guarantee of escape. Setting wimpy to 1hp will not save you; you will die.</p>
+        <p>See also: <code>recall</code> can sometimes get you out of a fight as an alternative to fleeing — however, recall will fail if you are <span onclick="showEntry('spells-maledictions', 'CURSE')" style="color:var(--gold);cursor:pointer;">cursed</span>. Curse is a malediction spell; see <span onclick="showEntry('spells-maledictions')" style="color:var(--gold);cursor:pointer;">Maledictions</span> for the full list of debuffs that can affect your ability to escape. Spellcasters may also use <span onclick="showEntry('spells-general', 'BLINK')" style="color:var(--gold);cursor:pointer;">blink</span> as a quick escape option, or <span onclick="showEntry('spells-general', 'GATE')" style="color:var(--gold);cursor:pointer;">gate</span> to teleport directly to another character on the continent.</p>
+      </div>
+
+      <div class="help-entry" id="entry-combat-recovery">
+        <div class="help-entry-title">Recovery</div>
+        <hr>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;">REST SLEEP STAND WAKE SIT</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">rest</td><td style="padding:0.2rem 0;color:var(--text);">Rests — regenerates HP, mana, and movement faster than standing. You are more vulnerable to attack.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">sit</td><td style="padding:0.2rem 0;color:var(--text);">Middle ground between standing and resting.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">sleep</td><td style="padding:0.2rem 0;color:var(--text);">Sleeps — fastest regeneration, but you won't hear most things happen and are most vulnerable.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">stand / wake</td><td style="padding:0.2rem 0;color:var(--text);">Returns you to a standing position. <code>wake</code> can also wake other sleeping characters.</td></tr>
+          </tbody>
+        </table>
+        <p>See also: <span onclick="showEntry('skills-passive')" style="color:var(--gold);cursor:pointer;">Skills › Passive Skills</span> for fast healing and meditation, which passively accelerate your regeneration rates.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">HEALER HEAL</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">heal</td><td style="padding:0.2rem 0;color:var(--text);">Lists all healing services the healer offers, with their prices.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">heal &lt;spell&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Receives the specified healing service. Bring plenty of gold.</td></tr>
+          </tbody>
+        </table>
+        <p>Healers charge for their services. Some services are free for characters level 10 and below. Type <span style="color:#66ccff;">heal</span> at the healer's location to see the full listing.</p>
+      </div>
+
+      <div class="help-entry" id="entry-combat-damage">
+        <div class="help-entry-title">Damage</div>
+        <hr>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;">DAMAGE UNSPEAKABLE MISSES</div>
+        <p>The following lists all damage messages in order from least to greatest. The left column applies to melee combat; the right column applies to spells.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;">
+          <thead>
+            <tr><th style="padding:0.2rem 2rem 0.4rem 0;color:var(--gold);font-weight:normal;text-align:left;">Melee</th><th style="padding:0.2rem 0 0.4rem 0;color:var(--gold);font-weight:normal;text-align:left;">Spells</th></tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:#66ccff;">misses</td><td style="padding:0.1rem 0;color:#66ccff;">misses</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:#66ccff;">bruises</td><td style="padding:0.1rem 0;color:#66ccff;">scratches</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:#66ccff;">scrapes</td><td style="padding:0.1rem 0;color:#66ccff;">grazes</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:#66ccff;">scratches</td><td style="padding:0.1rem 0;color:#66ccff;">injures</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:#66ccff;">lightly wounds</td><td style="padding:0.1rem 0;color:#66ccff;">wounds</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:#66ccff;">injures</td><td style="padding:0.1rem 0;color:#66ccff;">mauls</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:#66ccff;">harms</td><td style="padding:0.1rem 0;color:#66ccff;">decimates</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:#66ccff;">thrashes</td><td style="padding:0.1rem 0;color:#66ccff;">devastates</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:#66ccff;">mauls</td><td style="padding:0.1rem 0;color:#66ccff;">MUTILATES</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:#66ccff;">maims</td><td style="padding:0.1rem 0;color:#66ccff;">DISEMBOWELS</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:#66ccff;">decimates</td><td style="padding:0.1rem 0;color:#66ccff;">DISMEMBERS</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:#66ccff;">devastates</td><td style="padding:0.1rem 0;color:#66ccff;">MANGLES</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:#66ccff;">mutilates</td><td style="padding:0.1rem 0;color:#66ccff;">** DEMOLISHES **</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:var(--text-lt);">cripples / GAPING</td><td style="padding:0.1rem 0;color:var(--text-lt);">*** CRIPPLES ***</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:var(--text-lt);">DISEMBOWELS</td><td style="padding:0.1rem 0;color:var(--text-lt);">*= WRECKS =*</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:var(--text-lt);">DISMEMBERS</td><td style="padding:0.1rem 0;color:var(--text-lt);">=*= BLASTS =*=</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:var(--text-lt);">ANNIHILATES!</td><td style="padding:0.1rem 0;color:var(--text-lt);">=== ANNIHILATES ===</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:var(--text-lt);">OBLITERATES!</td><td style="padding:0.1rem 0;color:var(--text-lt);">=== OBLITERATES ===</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:var(--text-lt);">EVISCERATES!!</td><td style="padding:0.1rem 0;color:var(--text-lt);">&gt;&gt; DESTROYS &lt;&lt;</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:var(--text-lt);">DESTROYS!!</td><td style="padding:0.1rem 0;color:var(--text-lt);">&gt;&gt;&gt; MASSACRES &lt;&lt;&lt;</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:var(--text-lt);">MASSACRES!!!</td><td style="padding:0.1rem 0;color:var(--text-lt);">&gt;&gt;! VAPORIZES !&lt;&lt;</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:var(--text-lt);">!ERADICATES!</td><td style="padding:0.1rem 0;color:var(--text-lt);">&lt;&lt;&lt; ERADICATES &gt;&gt;&gt;</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:var(--text-lt);">!DECAPITATES!</td><td style="padding:0.1rem 0;color:var(--text-lt);"></td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:var(--text-lt);">!!SHATTERS!!</td><td style="padding:0.1rem 0;color:var(--red-lt);">UNSPEAKABLE</td></tr>
+            <tr><td style="padding:0.1rem 2rem 0.1rem 0;color:var(--red-lt);">UNSPEAKABLE</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="help-entry" id="entry-consider">
+        <div class="help-entry-title">General</div>
+        <hr>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;">CONSIDER</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">consider &lt;character&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Tells you your chances of killing a character relative to your own level and stats.</td></tr>
+          </tbody>
+        </table>
+        <p>CONSIDER gives you a rough estimate of how dangerous a target is. Results range from easiest to hardest:</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;">
+          <tbody>
+            <tr><td style="padding:0.1rem 0;color:#66ccff;">You can kill him naked and weaponless.</td></tr>
+            <tr><td style="padding:0.1rem 0;color:#66ccff;">He is no match for you.</td></tr>
+            <tr><td style="padding:0.1rem 0;color:#66ccff;">He looks like an easy kill.</td></tr>
+            <tr><td style="padding:0.1rem 0;color:#66ccff;">Is a perfect match!</td></tr>
+            <tr><td style="padding:0.1rem 0;color:#66ccff;">Do you feel lucky, punk?</td></tr>
+            <tr><td style="padding:0.1rem 0;color:#66ccff;">He laughs at you mercilessly.</td></tr>
+            <tr><td style="padding:0.1rem 0;color:#66ccff;">Death will thank you for your gift.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">NOSUMMON</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">nosummon</td><td style="padding:0.2rem 0;color:var(--text);">Toggles whether other players can summon you. Useful for clan members — check your <strong>auto</strong> settings to see current state.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">KILLER THIEF</div>
+        <p>A <span style="color:#66ccff;">(KILLER)</span> flag marks someone who was aggressive toward another player. Guards and protectors will be aggressive toward flagged characters.</p>
+        <p>A <span style="color:#66ccff;">(THIEF)</span> flag marks someone who attempted to steal from another player and failed. Anyone with only a THIEF flag will receive a KILLER flag if attacked.</p>
+        <p>To remove either flag, you must die to another player other than a fellow clan mate. In unusual circumstances an immortal may pardon the flag, provided there is a compelling reason.</p>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">EXOTIC WEAPONS WEAPONSMASTER AXE DAGGER FLAIL MACE POLEARM SPEAR SWORD WHIP MARKSMANSHIP</div>
+        <p>Each weapon skill applies to a specific group of armaments and determines how well a character fights with that weapon. The weaponsmaster group provides talent in all weapons (save exotics and marksmanship). If the character has the parry skill, they can parry incoming attacks.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">axe</td><td style="padding:0.2rem 0;color:var(--text);">The use of axes, ranging from hand to great (but not halberds).</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">dagger</td><td style="padding:0.2rem 0;color:var(--text);">The use of knives, daggers, and other stabbing weapons.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">flail</td><td style="padding:0.2rem 0;color:var(--text);">Skill in ball-and-chain type weapons.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">mace</td><td style="padding:0.2rem 0;color:var(--text);">Includes clubs and hammers as well as maces.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">polearm</td><td style="padding:0.2rem 0;color:var(--text);">The use of pole weapons (except spears), including halberds.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">spear</td><td style="padding:0.2rem 0;color:var(--text);">Covers both spears and staves, but not polearms.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">sword</td><td style="padding:0.2rem 0;color:var(--text);">The warrior's standby, from rapier to claymore.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">whip</td><td style="padding:0.2rem 0;color:var(--text);">The use of whips, chains, and bullwhips.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">weaponsmaster</td><td style="padding:0.2rem 0;color:var(--text);">Skill group covering all weapons listed above.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">exotic *</td><td style="padding:0.2rem 0;color:var(--text);">Strange magical weapons. Cannot be purchased — dependent solely upon level.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">marksmanship **</td><td style="padding:0.2rem 0;color:var(--text);">Ranged weapons. Can only be learned by rangers.</td></tr>
+          </tbody>
+        </table>
+        <p>Learned by: All</p>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">SHIELD BLOCK</div>
+        <p>Shield block is the art of parrying with a shield. Characters without this skill will not defend themselves well with a shield. All classes may learn shield block, but only warriors and clerics are particularly good at it.</p>
+        <p>Learned by: All</p>
+      </div>

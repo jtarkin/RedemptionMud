@@ -1,0 +1,57 @@
+The Shire (By Cigam)
+
+
+
+         Chicken Bedroom - Bag --- Pantry                   up N
+          Coop             End           \down                \|   
+            |               |            (2)                W--|--E
+            |               |                                  |\
+            A            Delving                               S down
+           Barn           Lane
+            |               |
+            |               |      Shiriff 
+ Gamgee  A Gracy         Delving   Post of
+Residence Field ---------- Lane --- Delving 
+    |       |               |       Lane      The Inn of  
+    |       |               |                / The Green
+  Stomy    Pig           Delving   The green/   Dragon
+  Path --- Pen            Lane ---  Dragon /up
+                            |
+       Northern end         |                                  The     The  
+         of Gracy       Brandywine                           General  House
+          Field           Bridge                              Store   of Arm
+            |               |                                   |       |
+            |               |                                   |       |               Shiriff
+Western  A Gracy   Took   Bywater  Bywater  Bywater Entrance  Bywater Bywater  A bend   Post of   Thain
+end of -- Field -- Hill -- Road --- Road --- Road -- to the -- Road -- Road -- in the-the Eastern-Office
+Gracy       |                |        |        |      Shire              |      road     Shire
+Field       |                |        |        |        |                |       |
+         Southern         Entrance   The    Shiriff  A Dimly           Kid'n   Bywater  Shiriff 
+          end of           to the  Grocer's Post of  Lit Path          Keep     Road -- Training
+          Gracy           Watermil Delight    the       |                        |       Ground
+          Field              |               Bridge     |                        |
+                            The                      A Dimly            A      Bywater    A
+                          Watermil                   Lit Path         smial --- Road -- smial
+                             |                          |                        |
+                             |                          |                        |
+                          Rear of                    A Dimly                  The Ivy
+                          Watermil                   Lit Path                   Bush
+                                   \down  (2)           |
+                                   (1)      \up
+                                            End of
+                                            A dark
+                                            tunnel
+                                   A          |
+                                Halfilng    A dark
+                                  Hole  --- tunnel
+                                              |
+                                Shiriff       |          A  
+                                Post of     A dark    Halfling
+                               the Lower -- tunnel ---  Hole
+       (1)                       Shire        |                    Recall
+       up\                                    |                     /up 
+        A dark     A dark     A dark      A tree way        End of /
+        tunnel --- tunnel --- tunnel --- intersection --- dark tunnel
+
+
+

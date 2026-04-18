@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Help Files — Redemption MUD</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #c9a84c; --gold-lt: #e8c96a;
+      --red: #8b1a1a; --red-lt: #b03030;
+      --bg: #0a0a0f; --bg2: #10101a; --bg3: #161626;
+      --border: #2a2a3a; --text: #d4d0c8; --text-lt: #f0ece0;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Georgia', serif; line-height: 1.7; }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { color: var(--gold-lt); text-decoration: underline; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,15,0.95); backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--border); padding: 0 1.5rem;
+    }
+    .nav-inner {
+      max-width: 1400px; margin: 0 auto;
+      display: flex; align-items: center; gap: 2rem; height: 62px;
+    }
+    .nav-logo {
+      font-size: 1.5rem; font-weight: bold; color: var(--gold);
+      letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none;
+    }
+    .nav-logo span { color: var(--text-lt); font-weight: normal; font-size: 0.75rem; display: block; letter-spacing: 0.2em; }
+    .nav-links { display: flex; gap: 1.2rem; list-style: none; }
+    .nav-links a { color: var(--text); font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); text-decoration: none; }
+    .nav-play-btn { background: var(--red); color: #fff !important; padding: 0.4rem 1.1rem; border-radius: 3px; border: 1px solid var(--red-lt); transition: background 0.2s; }
+    .nav-play-btn:hover { background: var(--red-lt) !important; }
+
+    .page-hero {
+      padding: 5rem 1.5rem 3rem;
+      background: linear-gradient(180deg, #08080e 0%, var(--bg2) 100%);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    .page-eyebrow { font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+    .page-title { font-size: clamp(2rem, 5vw, 3.5rem); color: var(--text-lt); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .page-sub { font-size: 1rem; font-style: italic; color: var(--text); opacity: 0.8; max-width: 600px; margin: 0 auto 1.5rem; }
+
+    /* Search */
+    .search-bar {
+      max-width: 500px; margin: 0 auto;
+      display: flex; gap: 0;
+    }
+    .search-bar input {
+      flex: 1;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-right: none;
+      border-radius: 4px 0 0 4px;
+      padding: 0.7rem 1rem;
+      color: var(--text-lt);
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+      outline: none;
+    }
+    .search-bar input:focus { border-color: var(--gold); }
+    .search-bar button {
+      background: var(--red);
+      border: 1px solid var(--red-lt);
+      border-radius: 0 4px 4px 0;
+      padding: 0.7rem 1.2rem;
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    .search-bar button:hover { background: var(--red-lt); }
+
+    .search-controls {
+      max-width: 500px; margin: 0.8rem auto 0;
+      display: flex; align-items: center; justify-content: center; gap: 1.2rem;
+    }
+    .search-controls label {
+      font-size: 0.82rem; color: var(--text); cursor: pointer;
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .search-controls input[type="checkbox"] { accent-color: var(--gold); }
+
+    /* Layout */
+    .help-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 0;
+    }
+    .help-sidebar {
+      background: var(--bg2);
+      border-right: 1px solid var(--border);
+      padding: 1rem 0;
+      position: sticky;
+      top: 62px;
+      height: calc(100vh - 62px);
+      overflow-y: auto;
+    }
+
+    .sidebar-filter {
+      padding: 0.5rem 1rem 0.8rem;
+    }
+    .sidebar-filter input {
+      width: 100%;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.45rem 0.7rem;
+      color: var(--text-lt);
+      font-family: 'Courier New', monospace;
+      font-size: 0.8rem;
+      outline: none;
+    }
+    .sidebar-filter input:focus { border-color: var(--gold); }
+
+    .sidebar-section {
+      margin-bottom: 0.2rem;
+    }
+    .sidebar-section details { }
+    .sidebar-section-title {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .sidebar-section-title::-webkit-details-marker { display: none; }
+    .sidebar-section-title::after {
+      content: '\25B6';
+      font-size: 0.6rem;
+      transition: transform 0.2s;
+    }
+    details[open] > .sidebar-section-title::after {
+      transform: rotate(90deg);
+    }
+
+    .sidebar-subsection {
+      margin-bottom: 0.3rem;
+    }
+    .sidebar-subsection-title {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text);
+      opacity: 0.5;
+      padding: 0.3rem 1.2rem;
+    }
+    .badge {
+      background: rgba(201,168,76,0.15);
+      color: var(--gold);
+      font-size: 0.65rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 8px;
+      margin-left: 0.4rem;
+    }
+    .sidebar-link {
+      display: block;
+      padding: 0.25rem 1.5rem;
+      font-size: 0.82rem;
+      color: var(--text);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      border-left: 2px solid transparent;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .sidebar-link:hover, .sidebar-link.active {
+      background: rgba(201,168,76,0.08);
+      color: var(--gold);
+      border-left-color: var(--gold);
+      text-decoration: none;
+    }
+
+    .entry-back {
+      display: block; font-size: 0.8rem; color: var(--gold); cursor: pointer;
+      margin-bottom: 1.2rem; letter-spacing: 0.05em;
+    }
+    .entry-back:hover { color: var(--gold-lt); }
+    .help-main {
+      padding: 2rem;
+      position: sticky;
+      top: 62px;
+      height: calc(100vh - 62px);
+      overflow-y: auto;
+    }
+    .help-entry {
+      display: none;
+      max-width: 760px;
+    }
+    .help-entry.active { display: block; }
+    .help-entry-title {
+      font-size: 2.2rem;
+      color: var(--gold);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+    .help-entry-aliases {
+      font-size: 1.05rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text);
+      opacity: 0.5;
+      margin-bottom: 0.5rem;
+      font-family: 'Courier New', monospace;
+    }
+    .help-entry-level {
+      font-size: 0.75rem;
+      color: var(--red-lt);
+      font-family: 'Courier New', monospace;
+      margin-bottom: 0.5rem;
+    }
+    .help-entry hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin-bottom: 1rem;
+    }
+    .help-entry p { margin-bottom: 1rem; font-size: 0.95rem; }
+    .help-entry pre {
+      background: rgba(0,0,0,0.3);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1rem;
+      font-family: 'Courier New', monospace;
+      font-size: 0.85rem;
+      color: var(--text-lt);
+      overflow-x: auto;
+      margin-bottom: 1rem;
+      white-space: pre-wrap;
+      line-height: 1.5;
+    }
+    code {
+      font-family: 'Courier New', monospace;
+      background: rgba(201,168,76,0.08);
+      color: var(--gold);
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+
+    /* Landing panel */
+    .help-landing {
+      max-width: 760px;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .help-landing.hidden { display: none; }
+    .help-landing h2 {
+      font-size: 1.5rem;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .help-landing p {
+      font-size: 0.95rem;
+      color: var(--text);
+      opacity: 0.7;
+      margin-bottom: 2rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .landing-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      text-align: left;
+    }
+    .landing-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.2rem;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .landing-card:hover {
+      border-color: var(--gold);
+      background: rgba(201,168,76,0.05);
+    }
+    .landing-card-title {
+      font-size: 0.85rem;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .landing-card-desc {
+      font-size: 0.82rem;
+      color: var(--text);
+      opacity: 0.6;
+      line-height: 1.5;
+    }
+
+    /* Race/Class browser */
+    .rc-browser { display: none; max-width: 760px; }
+    .rc-browser.active { display: block; }
+    .rc-browser h2 {
+      font-size: 1.4rem; color: var(--gold); letter-spacing: 0.08em;
+      text-transform: uppercase; margin-bottom: 0.3rem;
+    }
+    .rc-browser .rc-sub { font-size: 0.9rem; color: var(--text); opacity: 0.6; margin-bottom: 1.5rem; }
+    .rc-back {
+      display: inline-block; font-size: 0.8rem; color: var(--gold); cursor: pointer;
+      margin-bottom: 1.2rem; letter-spacing: 0.05em;
+    }
+    .rc-back:hover { color: var(--gold-lt); }
+    .rc-section-label {
+      font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--text); opacity: 0.4; margin: 1.8rem 0 0.8rem; padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .rc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+      gap: 0.8rem;
+    }
+    .rc-card {
+      background: var(--bg3); border: 1px solid var(--border); border-radius: 6px;
+      padding: 1rem 0.8rem; cursor: pointer; text-align: center;
+      transition: border-color 0.2s, background 0.2s, transform 0.15s;
+      position: relative; overflow: hidden;
+    }
+    .rc-card:hover {
+      border-color: var(--gold); background: rgba(201,168,76,0.06);
+      transform: translateY(-2px);
+    }
+    .rc-card-icon {
+      font-size: 2.2rem; margin-bottom: 0.4rem; line-height: 1;
+      filter: drop-shadow(0 0 6px rgba(201,168,76,0.3));
+    }
+    .rc-card-name {
+      font-size: 0.82rem; color: var(--text-lt); letter-spacing: 0.06em;
+      text-transform: uppercase; font-weight: bold; margin-bottom: 0.2rem;
+    }
+    .rc-card-tag {
+      font-size: 0.68rem; color: var(--text); opacity: 0.45;
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .rc-card-accent {
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    }
+
+    /* Dragon color sub-page */
+    .rc-dragon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+    .rc-dragon-card {
+      background: var(--bg3); border: 1px solid var(--border); border-radius: 8px;
+      padding: 1.2rem 1rem; cursor: pointer; text-align: center;
+      transition: border-color 0.2s, background 0.2s, transform 0.15s, box-shadow 0.2s;
+      position: relative; overflow: hidden;
+    }
+    .rc-dragon-card:hover {
+      transform: translateY(-3px);
+    }
+    .rc-dragon-card .rc-card-icon { font-size: 2.6rem; }
+    .rc-dragon-card-breath {
+      font-size: 0.72rem; color: var(--text); opacity: 0.5;
+      margin-top: 0.3rem; font-style: italic;
+    }
+    /* Per-color accents */
+    .dragon-red    { --dc: #b03030; } .dragon-red:hover    { border-color: #b03030; box-shadow: 0 4px 20px rgba(176,48,48,0.25); }
+    .dragon-blue   { --dc: #3060c0; } .dragon-blue:hover   { border-color: #3060c0; box-shadow: 0 4px 20px rgba(48,96,192,0.25); }
+    .dragon-green  { --dc: #2a8a2a; } .dragon-green:hover  { border-color: #2a8a2a; box-shadow: 0 4px 20px rgba(42,138,42,0.25); }
+    .dragon-black  { --dc: #666; }    .dragon-black:hover  { border-color: #888; box-shadow: 0 4px 20px rgba(100,100,100,0.25); }
+    .dragon-white  { --dc: #ccc; }    .dragon-white:hover  { border-color: #ddd; box-shadow: 0 4px 20px rgba(200,200,200,0.2); }
+    .dragon-gold   { --dc: #c9a84c; } .dragon-gold:hover   { border-color: #c9a84c; box-shadow: 0 4px 20px rgba(201,168,76,0.3); }
+    .dragon-plat   { --dc: #a0b8d0; } .dragon-plat:hover   { border-color: #a0b8d0; box-shadow: 0 4px 20px rgba(160,184,208,0.25); }
+    .dragon-silver { --dc: #a0a8b0; } .dragon-silver:hover { border-color: #b0b8c0; box-shadow: 0 4px 20px rgba(160,168,176,0.25); }
+    .dragon-copper { --dc: #b87333; } .dragon-copper:hover { border-color: #b87333; box-shadow: 0 4px 20px rgba(184,115,51,0.3); }
+    .dragon-iron   { --dc: #6a6a7a; } .dragon-iron:hover   { border-color: #8a8a9a; box-shadow: 0 4px 20px rgba(106,106,122,0.25); }
+    .rc-dragon-card .rc-card-accent { background: var(--dc, var(--border)); }
+    .rc-dragon-card .rc-card-icon { color: var(--dc, var(--text)); }
+
+    /* search results */
+    #search-results {
+      display: none;
+      max-width: 760px;
+    }
+    #search-results h2 { font-size: 1.2rem; color: var(--gold); margin-bottom: 1rem; }
+    .search-result-item {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.8rem 1rem;
+      margin-bottom: 0.6rem;
+      cursor: pointer;
+      transition: border-color 0.15s;
+    }
+    .search-result-item:hover { border-color: var(--gold); }
+    .search-result-name { color: var(--gold); font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .search-result-preview { font-size: 0.82rem; color: var(--text); opacity: 0.7; }
+    .search-result-best { border-color: var(--gold); background: #1a1608; }
+    .search-result-best:hover { background: #221d0a; }
+
+    /* Immortal toggle */
+    .imm-entry { display: none !important; }
+    .imm-entry.active { display: none !important; }
+    body.show-imm .imm-entry { display: none; }
+    body.show-imm .imm-entry.active { display: block !important; }
+    body.show-imm .imm-section { display: block; }
+    .imm-section { display: none; }
+
+    footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 2rem 1.5rem; text-align: center; }
+    .footer-logo { font-size: 1.3rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .footer-copy { font-size: 0.78rem; color: var(--text); opacity: 0.35; }
+
+    @media (max-width: 700px) {
+      .help-layout { grid-template-columns: 1fr; }
+      .help-sidebar { position: static; height: auto; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+    <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        Redemption
+        <span>A World at War</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#lore">Lore</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#updates">Updates</a></li>
+        <li><a href="index.html#play">Play</a></li>
+        <li><a href="maps.html">Maps</a></li>
+        <li><a href="newbie.html">New Players</a></li>
+        <li><a href="helpfiles.html">Help Files</a></li>
+        <li><a href="crafting.html">Crafting</a></li>
+        <li><a href="index.html#play" class="nav-play-btn">Play Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  
+
+  <div class="help-layout">
+    <div class="help-sidebar">
+      <div class="sidebar-filter">
+        <input type="text" id="help-search" placeholder="Search help..." autocomplete="off" oninput="filterSidebar()" />
+      </div>
+
+      <div class="sidebar-section">
+        <details>
+          <summary class="sidebar-section-title">Getting Started</summary>
+          <span class="sidebar-link" onclick="showEntry('gs-communication')">Communication</span>
+          <span class="sidebar-link" onclick="showEntry('gs-inventory')">Inventory</span>
+          <span class="sidebar-link" onclick="showEntry('gs-macros')">Macros &amp; Aliases</span>
+          <span class="sidebar-link" onclick="showEntry('gs-newbie')">Newbie</span>
+          <span class="sidebar-link" onclick="showEntry('gs-levels')">Levels</span>
+          <span class="sidebar-link" onclick="showEntry('gs-pets')">Pets &amp; Charmed Mobs</span>
+          <span class="sidebar-link" onclick="showEntry('gs-quest')">Questing</span>
+        </details>
+      </div>
+
+      <div class="sidebar-section">
+        <details>
+          <summary class="sidebar-section-title">Combat</summary>
+          <span class="sidebar-link" onclick="showEntry('consider')">General</span>
+          <span class="sidebar-link" onclick="showEntry('combat-death')">Death</span>
+          <span class="sidebar-link" onclick="showEntry('combat-damage')">Damage</span>
+          <span class="sidebar-link" onclick="showEntry('combat-equip-damage')">Equipment Damage</span>
+          <span class="sidebar-link" onclick="showEntry('combat-escaping')">Escaping</span>
+          <span class="sidebar-link" onclick="showEntry('combat-recovery')">Recovery</span>
+        </details>
+      </div>
+
+      <div class="sidebar-section">
+        <details>
+          <summary class="sidebar-section-title">Skills</summary>
+          <span class="sidebar-link" onclick="showEntry('skills-aggressive')">Aggressive Skills</span>
+          <span class="sidebar-link" onclick="showEntry('skills-general')">General Skills</span>
+          <span class="sidebar-link" onclick="showEntry('skills-combat')">Combat Skills</span>
+          <span class="sidebar-link" onclick="showEntry('skills-passive')">Passive Skills</span>
+          <span class="sidebar-link" onclick="showEntry('skills-remort')">Remort Skills</span>
+          <span class="sidebar-link" onclick="showEntry('skills-reclass')">Reclass Skills</span>
+        </details>
+      </div>
+
+      <div class="sidebar-section">
+        <details>
+          <summary class="sidebar-section-title">Spells</summary>
+          <span class="sidebar-link" onclick="showEntry('spells-aggressive')">Aggressive Spells</span>
+          <span class="sidebar-link" onclick="showEntry('spells-buffing')">Buffing Spells</span>
+          <span class="sidebar-link" onclick="showEntry('spells-general')">General Spells</span>
+          <span class="sidebar-link" onclick="showEntry('spells-maledictions')">Maledictions</span>
+          <span class="sidebar-link" onclick="showEntry('spells-restorative')">Restorative Spells</span>
+          <span class="sidebar-link" onclick="showEntry('spells-remort')">Remort Spells</span>
+          <span class="sidebar-link" onclick="showEntry('spells-reclass')">Reclass Spells</span>
+        </details>
+      </div>
+
+      <div class="sidebar-section">
+        <details>
+          <summary class="sidebar-section-title">Character</summary>
+          <span class="sidebar-link" onclick="showEntry('character-equipment')">Equipment</span>
+          <span class="sidebar-link" onclick="showEntry('character-worship')">Worship</span>
+          <span class="sidebar-link" onclick="showEntry('character-wealth')">Wealth</span>
+          <span class="sidebar-link" onclick="showEntry('character-general')">General</span>
+          <span class="sidebar-link" onclick="showEntry('character-description')">Description</span>
+          <span class="sidebar-link" onclick="showEntry('character-creation')">Creation</span>
+        </details>
+      </div>
+
+      <div class="sidebar-section">
+        <details>
+          <summary class="sidebar-section-title">World</summary>
+          <span class="sidebar-link" onclick="showEntry('world-general')">General</span>
+          <span class="sidebar-link" onclick="showEntry('world-areas')">Areas</span>
+          <span class="sidebar-link" onclick="showEntry('world-story')">Story</span>
+          <span class="sidebar-link" onclick="showEntry('world-continents')">Continents</span>
+          <span class="sidebar-link" onclick="showEntry('world-travel')">Travel</span>
+          <span class="sidebar-link" onclick="showEntry('world-doors')">Doors</span>
+        </details>
+      </div>
+
+      <div class="sidebar-section">
+        <details>
+          <summary class="sidebar-section-title">Clans</summary>
+          <span class="sidebar-link" onclick="showEntry('clans-general')">General</span>
+          <span class="sidebar-link" onclick="showEntry('clans-addrecruiter')">Leadership Commands</span>
+          <span class="sidebar-link" onclick="showEntry('clans-clanstats')">Clanstats</span>
+          <span class="sidebar-link" onclick="showEntry('clans-loner')">Loner</span>
+          <span class="sidebar-link" onclick="showEntry('clans-upgrades')">Upgrades</span>
+          <span class="sidebar-link" onclick="showEntry('clans-lore')">Clan Lore</span>
+        </details>
+      </div>
+
+      <div class="sidebar-section">
+        <details>
+          <summary class="sidebar-section-title">Races</summary>
+          <span class="sidebar-link" onclick="showEntry('race-general')">General</span>
+          <span class="sidebar-link" onclick="showEntry('race-human')">Human</span>
+          <span class="sidebar-link" onclick="showEntry('race-elf')">Elf</span>
+          <span class="sidebar-link" onclick="showEntry('race-dwarf')">Dwarf</span>
+          <span class="sidebar-link" onclick="showEntry('race-gargoyle')">Gargoyle</span>
+          <span class="sidebar-link" onclick="showEntry('race-giant')">Giant</span>
+          <span class="sidebar-link" onclick="showEntry('race-hatchling')">Hatchling</span>
+          <span class="sidebar-link" onclick="showEntry('race-marid')">Marid</span>
+          <span class="sidebar-link" onclick="showEntry('race-kirre')">Kirre</span>
+          <span class="sidebar-link" onclick="showEntry('race-sliver')">Sliver</span>
+          <span class="sidebar-link" onclick="showEntry('race-troll')">Troll</span>
+          <span class="sidebar-link" onclick="showEntry('race-remort')">Remort Options</span>
+        </details>
+      </div>
+
+      <div class="sidebar-section">
+        <details>
+          <summary class="sidebar-section-title">Classes</summary>
+          <span class="sidebar-link" onclick="showEntry('class-general')">General</span>
+          <span class="sidebar-link" onclick="showEntry('class-mage')">Mage</span>
+          <span class="sidebar-link" onclick="showEntry('class-invoker')">Invoker</span>
+          <span class="sidebar-link" onclick="showEntry('class-conjurer')">Conjurer</span>
+          <span class="sidebar-link" onclick="showEntry('class-enchanter')">Enchanter</span>
+          <span class="sidebar-link" onclick="showEntry('class-warrior')">Warrior</span>
+          <span class="sidebar-link" onclick="showEntry('class-paladin')">Paladin</span>
+          <span class="sidebar-link" onclick="showEntry('class-ranger')">Ranger</span>
+          <span class="sidebar-link" onclick="showEntry('class-thief')">Thief</span>
+          <span class="sidebar-link" onclick="showEntry('class-cleric')">Cleric</span>
+          <span class="sidebar-link" onclick="showEntry('class-druid')">Druid</span>
+          <span class="sidebar-link" onclick="showEntry('class-runist')">Runist</span>
+          <span class="sidebar-link" onclick="showEntry('class-monk')">Monk</span>
+          <span class="sidebar-link" onclick="showEntry('class-reclass')">Reclass Options</span>
+          <span class="sidebar-link" onclick="showEntry('class-classchange')">Class Change</span>
+        </details>
+      </div>
+
+      <div class="sidebar-section">
+        <details>
+          <summary class="sidebar-section-title">Miscellaneous</summary>
+          <span class="sidebar-link" onclick="showEntry('misc-bard')">Bard / Jukebox</span>
+          <span class="sidebar-link" onclick="showEntry('misc-games')">Games</span>
+          <span class="sidebar-link" onclick="showEntry('misc-other')">Other Commands</span>
+          <span class="sidebar-link" onclick="showEntry('misc-punishments')">Punishments</span>
+        </details>
+      </div>
+
+      <div class="sidebar-section">
+        <details>
+          <summary class="sidebar-section-title">Immortals</summary>
+          <span class="sidebar-link" onclick="showEntry('imm-commands')">Immortal Commands</span>
+          <span class="sidebar-link" onclick="showEntry('imm-hierarchy')">Hierarchy</span>
+          <span class="sidebar-link" onclick="showEntry('imm-duty')">Duty</span>
+          <span class="sidebar-link" onclick="showEntry('imm-building')">Building</span>
+          <span class="sidebar-link" onclick="showEntry('imm-penalties')">Penalties</span>
+          <span class="sidebar-link" onclick="showEntry('imm-tournaments')">Tournaments</span>
+        </details>
+      </div>
+
+    </div>
+
+    <div class="help-main">
+      <div id="search-results">
+        <h2 id="search-heading"></h2>
+        <div id="search-list"></div>
+      </div>
+
+      <div class="help-landing" id="help-landing">
+        <h2>Help Files</h2>
+        <p>Browse categories in the sidebar or search to find what you need.</p>
+      </div>
+
+      <!-- entries loaded dynamically by JS loader below -->
+
+    </div>
+  </div>
+
+  <script>
+    function hideBrowsers() {
+      document.querySelectorAll('.rc-browser').forEach(el => el.classList.remove('active'));
+    }
+
+    function showBrowser(id) {
+      document.querySelectorAll('.help-entry').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.sidebar-link').forEach(el => el.classList.remove('active'));
+      document.getElementById('search-results').style.display = 'none';
+      
+      hideBrowsers();
+      document.getElementById(id).classList.add('active');
+      setTimeout(() => { document.querySelector('.help-main').scrollTop = 0; }, 0);
+    }
+
+    function showLanding() {
+      document.querySelectorAll('.help-entry').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.sidebar-link').forEach(el => el.classList.remove('active'));
+      document.getElementById('search-results').style.display = 'none';
+      hideBrowsers();
+      document.querySelectorAll('.help-sidebar details').forEach(el => el.removeAttribute('open'));
+      document.getElementById('help-landing').classList.remove('hidden');
+      setTimeout(() => { document.querySelector('.help-main').scrollTop = 0; }, 0);
+    }
+
+    function showEntry(id, keyword) {
+      document.querySelectorAll('.help-entry').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.sidebar-link').forEach(el => el.classList.remove('active'));
+      document.getElementById('search-results').style.display = 'none';
+      document.getElementById('help-landing').classList.add('hidden');
+      hideBrowsers();
+
+      // Clear search input and restore all sidebar links before highlighting
+      const searchInput = document.getElementById('help-search');
+      if (searchInput) { searchInput.value = ''; filterSidebar(); }
+
+      const entry = document.getElementById('entry-' + id);
+      if (entry) {
+        entry.classList.add('active');
+        const helpMain = document.querySelector('.help-main');
+        if (keyword) {
+          // Find the alias block whose text contains the keyword and scroll it into view
+          const aliases = entry.querySelectorAll('.help-entry-aliases');
+          let target = null;
+          for (const a of aliases) {
+            if (a.textContent.toLowerCase().includes(keyword.toLowerCase())) {
+              target = a;
+              break;
+            }
+          }
+          if (target) {
+            // Scroll so the matching alias is near the top of the panel
+            setTimeout(() => {
+              const entryTop = entry.getBoundingClientRect().top;
+              const targetTop = target.getBoundingClientRect().top;
+              const mainTop = helpMain.getBoundingClientRect().top;
+              helpMain.scrollTo({ top: helpMain.scrollTop + (targetTop - mainTop) - 16, behavior: 'smooth' });
+            }, 0);
+          } else {
+            setTimeout(() => { helpMain.scrollTop = 0; }, 0);
+          }
+        } else {
+          setTimeout(() => { helpMain.scrollTop = 0; }, 0);
+        }
+      }
+
+      // Close all sidebar sections, then open the one containing the active entry
+      document.querySelectorAll('.help-sidebar details').forEach(el => el.removeAttribute('open'));
+
+      document.querySelectorAll('.sidebar-link').forEach(el => {
+        if (el.getAttribute('onclick') === "showEntry('" + id + "')") {
+          el.classList.add('active');
+          const details = el.closest('details');
+          if (details) details.setAttribute('open', '');
+        }
+      });
+    }
+
+    const searchSynonyms = {
+      'dragon': ['hatchling'],
+      'hatchling': ['dragon'],
+    };
+
+    function doSearch() {
+      const q = document.getElementById('help-search').value.toLowerCase().trim();
+      if (!q) return;
+
+      const terms = [q, ...(searchSynonyms[q] || [])];
+
+      document.querySelectorAll('.help-entry').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.sidebar-link').forEach(el => el.classList.remove('active'));
+
+      const best = [], other = [];
+      document.querySelectorAll('.help-entry').forEach(el => {
+        // Skip imm entries if toggle is off
+        if (el.classList.contains('imm-entry') && !document.body.classList.contains('show-imm')) return;
+        const text = el.textContent.toLowerCase();
+        if (!terms.some(t => text.includes(t))) return;
+        const id = el.id.replace('entry-', '');
+        const title = el.querySelector('.help-entry-title').textContent;
+        const preEl = el.querySelector('pre');
+        const preText = preEl ? preEl.textContent.trim() : '';
+        const preIsTabular = preEl && !/[.,;]/.test(preText.slice(0, 80));
+        const preview = (preEl && !preIsTabular) ? preText.slice(0, 120) : '';
+        // Check if any alias header contains the term
+        const aliasText = Array.from(el.querySelectorAll('.help-entry-aliases')).map(a => a.textContent.toLowerCase()).join(' ');
+        const isAlias = terms.some(t => aliasText.includes(t));
+        (isAlias ? best : other).push({ id, title, preview });
+      });
+
+      const total = best.length + other.length;
+      const sr = document.getElementById('search-results');
+      const sl = document.getElementById('search-list');
+      document.getElementById('search-heading').textContent = total + ' result' + (total !== 1 ? 's' : '') + ' for "' + q + '"';
+      sl.innerHTML = '';
+      const qEsc = q.replace(/'/g, "\\'");
+      if (best.length) {
+        sl.innerHTML += '<div style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);opacity:0.7;margin-bottom:0.4rem;">Best match</div>';
+        best.forEach(r => {
+          sl.innerHTML += '<div class="search-result-item search-result-best" onclick="showEntry(\'' + r.id + '\', \'' + qEsc + '\')">' +
+            '<div class="search-result-name">' + r.title + '</div>' +
+            '<div class="search-result-preview">' + r.preview + '</div>' +
+            '</div>';
+        });
+      }
+      if (other.length) {
+        sl.innerHTML += '<div style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text);opacity:0.4;margin:' + (best.length ? '0.8rem' : '0') + ' 0 0.4rem;">Also mentions \u201c' + q + '\u201d</div>';
+        other.forEach(r => {
+          sl.innerHTML += '<div class="search-result-item" onclick="showEntry(\'' + r.id + '\', \'' + qEsc + '\')">' +
+            '<div class="search-result-name">' + r.title + '</div>' +
+            '<div class="search-result-preview">' + r.preview + '</div>' +
+            '</div>';
+        });
+      }
+      sr.style.display = 'block';
+    }
+
+
+    function toggleImm() {
+      if (document.getElementById('imm-toggle').checked) {
+        document.body.classList.add('show-imm');
+      } else {
+        document.body.classList.remove('show-imm');
+        // If current active entry is imm, deactivate it
+        const active = document.querySelector('.help-entry.active.imm-entry');
+        if (active) active.classList.remove('active');
+      }
+    }
+
+    // Load entry fragments then inject back-to-help links
+    const _sections = ['getting-started','combat','skills','spells','character',
+                       'world','clans','races','classes','misc','immortals'];
+    const _helpMain = document.querySelector('.help-main');
+    function _injectBackLinks() {
+      document.querySelectorAll('.help-entry').forEach(el => {
+        if (el.querySelector('.entry-back')) return;
+        const back = document.createElement('div');
+        back.className = 'entry-back';
+        back.textContent = '\u2190 Back to Help';
+        back.onclick = showLanding;
+        el.prepend(back);
+      });
+    }
+    Promise.all(_sections.map(s =>
+      fetch('entries/' + s + '.html').then(r => r.text()).catch(() => '')
+    )).then(chunks => {
+      chunks.forEach(html => _helpMain.insertAdjacentHTML('beforeend', html));
+      _injectBackLinks();
+    });
+
+    document.getElementById('help-search').addEventListener('keydown', e => {
+      if (e.key === 'Enter') doSearch();
+    });
+
+    function filterSidebar() {
+      const q = document.getElementById('help-search').value.toLowerCase().trim();
+      document.querySelectorAll('.sidebar-link').forEach(el => {
+        if (!q || el.textContent.toLowerCase().includes(q)) {
+          el.style.display = '';
+        } else {
+          el.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

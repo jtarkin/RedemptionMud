@@ -1,0 +1,44 @@
+FERRY TO TERRA (there may be some doors missing)
+
+         U N
+          \|
+        W--+--E    -=+MAPPED BY WAKIZASTA+=-
+           |\
+           S D
+
+
+  The Aft Deck-----The Port Side-----The Port Side-----The Port Side-----The Port Side-----The Port Side-----The Fore Deck
+       | \           Walkway            Walkway           Walkway           Walkway           Walkway          Port Side
+       | (2)                                                                                                       |
+       |                               The Ferry       The Main Cabin----The Main Cabin----The Main Cabin          |
+   (1) |                                Casino               |                 |                 |                 |
+     \ |                                   |                 |                 |                 |                 |
+  The Aft Deck     The----The Dining-+-The Ferry---+---The Main Cabin----The Main Cabin----The Main Cabin--+---The Fore-------The Fore Deck
+       |         Galley     Cabin       Casino               |                 |                 |               Deck            Landing
+       |                                                     |                 |                 |                 |
+       |                                               The Main Cabin----The Main Cabin----The Main Cabin          |
+       |                                                                                                           |
+       |                                                                                                           |
+  The Aft Deck-----The Starboard-----The Starboard-----The Starboard-----The Starboard-----The Starboard-----The Fore Deck
+                   Side Walkway      Side Walkway      Side Walkway      Side Walkway      Side Walkway      Starboard Side
+                                                                                                                   \
+     (2)                                                                                                            (3)
+       \
+  Below the Aft----The Aft Row                         The Forward
+     Deck             Room                              Row Room         The Cargo Hold
+                       |                                    |                   |
+                       |                                    |                   |
+                       |                                    |                   |
+                   The Aft Row-------A Dark Passage----The Forward-------The Cargo Hold
+                      Room                              Row Room                |                (3)
+                                                                                |                  \
+   The Captain's                                                         The Cargo Hold-----The Cargo Hold
+      Cabin        The Port Lookout
+        |                 |
+        |                 |
+   Outside the-----The Wheel House
+   Wheel House            |
+        |    \            |
+        |    (1)          |
+   The Wheel       The Starboard
+    House             Lookout

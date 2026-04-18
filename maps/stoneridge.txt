@@ -1,0 +1,101 @@
+STONERIDGE    * - The Old City Centre  --  Room names in {} indicate an inaccessible private room
+              @ - The Four Corners
+                                                                                                                                                              The Western Spire
+             A  L  O  N  G           G  R  A  N  D           R  O  U  T  E                                                                                           /
+       0-----0-----0-----0-----0-----0-----0-----0-----0-----0-----0-----0-----0                                                                             The Western Spire                             By the               The Eastern Spire
+       |           |                       |                       |           |                                                                                    /                                      Bells                      /
+       |          P|                      V|                       |           |                                                                            The Western Spire                               /                  The Eastern Spire
+       |          A|                      I|                      P|           |            (11)                                                                   /                                       /                         /
+      A0          R0                      C|                      A|           0A             |                                                            The Western Spire                          In the Bell            The Eastern Spire
+      L|          A|                      T|                (1)   R|           |L       The Cathedral---The Cathedral---The Cathedral---The Cathedral             /                                     Tower                       /
+      O|          L|                      O|                 |    A|           |O         Catacombs       Catacombs       Catacombs       Catacombs          The Western                                /                      The Eastern
+      N|          L|  THE STONEROAD OF    R|   THE STONEROAD |OF  L|           |N            /                                               /                 Spire                                   /                         Spire
+      G0-----0-----0-----0-----0-----0-----0-----0-----0-----0-----0-----0-----0G           +                                               +                   /                                     /                           /
+       |          E|   THE CATHEDRAL      Y|    THE CATHEDRAL     L|           |    The Cathedral                                   The Cathedral          The Western-+---A Tiny------A Tiny-----]  /  [-------A Tiny---+--The Eastern
+       |          L|                       |                      E|           |      Catacombs                                       Catacombs               Spire      Crawlspace  Crawlspace     /         Crawlspace       Spire
+      G|           |                       |                      L|           |G         |                                               |                     +                                  /
+      R0           0                      B0                       0           0R   The Cathedral                                   The Cathedral           The Stone--The Stone--The Stone-+-The Bell Tower
+      A|          W|                      O|                       |           |A     Catacombs                                        Catacombs             Catwalk    Catwalk    Catwalk     Landing    |
+      N|          E|                      U|                      E|           |N         |                                               |                     |                                /        +
+      D|          S|  FOREST AVENUE       L|    FOREST AVENUE     A|           |D   The Cathedral                   The Cathedral---The Cathedral           The Stone                     In the Bell  The Stone
+       0-----0-----0-----0-----0-----0-----0-----0-----0-----0-----0-----0-----0      Catacombs                     / Catacombs        Catacombs             Catwalk                         Tower      Catwalk
+       |          T|     |                E|           |          S|           |          |                        +      |               |                     |                              /          |
+      R|           |     |        Linder'sV|Melahat's (3)         T|           |R         |          The Tomb of Wasabi   |               |                 The Stone                   In the Bell    The Stone
+      O|  Tragar's |    (2)         Hall  A|Metalworks             |           |O         |                               |               |                  Catwalk                       Tower        Catwalk
+      U0   Potion  0        The Blue |    R0     |  Raif's  (5)    0           0U         |                               |               |                     |                            /            |
+      T|    Shop   |    (4) Diamond  |    D|     |Magic Shop |     |           |T   The Cathedral---The Cathedral---The Cathedral---The Cathedral           The Stone                  In the Bell     The Stone
+      E|     |     |     |     |     |     |     |     |     |     |           |E     Catacombs       Catacombs       Catacombs       Catacombs              Catwalk                      Tower         Catwalk
+       |     |     | CALL|E DE |SANTS|     |    C|ALLE |DE SA|NTS  |           |                                                                                |                          /              |
+       0-----0-----@-----0-----0-----0-----*-----0-----0-----0-----0-----0-----0                                                                                v                   The Base of           |
+       |     |     |     |     |     |     |     |                 |           |           The Sacristy------West Side of---The Altar-------East Side of--+--------------------------The Bell             |
+       |     |     |     |  Ailee's  |     |     |                 |           |            /                  The Altar        |             The Altar         ^                     Tower               |
+      A| A Chest  P|    (6) Armory   |    V| Lonnigan's           P|           |A          +                                    |                               |                                         |
+      L0 of Gold  A0             Liesbet'sI0                      A0           0L         /      The Alcove----Among----------Among------------Among        The Stone--The Stone--The Stone------------The Stone
+      O|          R|               Place  C|                      R|           |O    A Storage    of Hope     the Pews       the Pews         the Pews       Catwalk    Catwalk    Catwalk              Catwalk
+      N|          A|                      T|                      A|           |N      Room                      |              |                |
+      G|          L|  RAVENHURST ROAD     O|    RAVENHURST ROAD   L|           |G   (Enter Mural->(11))        Among----------Among------------Among
+       0-----0-----0-----0-----0-----0-----0-----0-----0-----0-----0-----0-----0                              the Pews       the Pews         the Pews        Top of a
+       |          L|                      R|                      L|           |                                 |              |                |     (10)-+--Spiral
+      G|          E|                      Y|                      E|           |G                              Among----------Among------------Among          Staircase
+      R|          L|                       |                      L|           |R                             the Pews       the Pews         the Pews          /
+      A0           0                       0                       0           0A                                |              |                |             /
+      N|           |                (7)   B|    (8)                |           |N                          The Entrance   The Entrance     The Entrance    Bottom of
+      D|           |                 |    O|     +                 |           |D                          Hall of the-----Hall of the-----Hall of the--+--a Spiral
+       |          W|     MANOR ROAD  |    U|     | MANOR ROAD     E|           |                            Cathedral       Cathedral       Cathedral      Staircase
+       0-----0-----0-----0-----0-----0-----0-----0-----0-----0-----0-----0-----0                                                +
+      R|          E|                      L|                      A|           |R                                               |
+      O|          S|                      E|                      S|           |O                                           Before the     The Choir---The Choir---The Choir--+--(10)
+      U|          T|                      V|                      T|           |U                                            Cathedral        Loft       Loft        Loft
+      T0           0         PALANKCAREN---0                       0           0T                                               /
+      E|           |                      A|    (9)                |           |E                                              /
+       |           |     Rendalth's Home  R|     +                 |           |                                        The Steps of
+       |           |                 +    D|     |                 |           |                                       the Cathedral
+       0-----0-----0-----0-----0-----0-----0-----0-----0-----0-----0-----0-----0                                             |
+             A  L  O  N  G          G  R  A| N  D            R  O  U  T  E                                                  (1)                                                                                    The Back
+                                           |                                                                                                                                                                          Room
+                                           +                                                                                                                                                                           |
+                                           |                                                                                                           (6)           {The Sanctum}-+-The Study       {The Study}---The Castle---The Workshop
+                                      Before the            The King's Arms                      The Black----The Black----The Black                    |                               +                          of Strahd
+                                    Grand Gates of             Main Hall                            Fox          Fox          Fox                Entrance to the                   The Entrance                        +
+                                      Stoneridge                   |      The King's Arms            |                         |                  Laughing Mage                    to Grimstone                       (8)
+                                           |                       |      /   Reception Room         |      The Courtyard      |                        |                              Keep
+                                       The Path to          The King's Arms                      The Black+-of the Black-+-The Black               The Laughing                         |
+                                       Stoneridge            Welcome Room                           Fox          Fox          Fox                    Mage                              (7)
+                                           |                       |                                              |                     Beneath the   /                                                             A Comfy
+      A dirt path-----A dirt path------A dirt path                (4)                                       The Entrance              Laughing Mage  +                                              A Cozy Corner-+-Sitting-+-A Quiet Corner
+           |                                                                                              to the Black Fox                   |      /                                               of the Castle    Room     of the Castle
+     A dusty path                                                                                                 |                          Beneath the                                                               +
+           |                                                                                                     (5)                        Laughing Mage                                                             (9)
+     A dusty trail
+           |
+       ALONG THE
+      EASTERN ROAD
+                                                                                                            (3)
+                                                                                                             |
+                                                                                    CHIBI'S HOUSE      A Tree Covered
+                                                                                          +                Path
+                                                                                        In The               |
+                                                                                        Forest           A Small Path
+                                                                                        /   |            in the Forest
+                                                                                       +    |                |
+       (2)                                                                            /    In The--In The--In The
+        |                                                               A Dark---A Rat's   Forest  Forest  Forest
+    A Covered                                                           Tunnel    Nest      |        |       |
+   Stone Bridge                                                           |                In The--In The--In The
+        |                                                               A Dark             Forest  Forest  Forest
+     A Small                                                            Tunnel
+   Wooded Path                                                            |
+        |                                                                 |
+   Amidst the-----A Small------A Small------A Small         CHIBI'S HOUSE |
+      Trees      Clearing     Clearing     Clearing                 /     |
+        |            |            |            |                   /      |
+   Amidst the-----A Small------A Small------A Small----Amidst the +       |
+      Trees      Clearing     Clearing     Clearing       Trees  /        |
+        |            |            |            |            |   /         |
+   Amidst the---Amidst the---Amidst the---Amidst the---Amidst the         |
+      Trees        Trees        Trees        Trees        Trees           |
+                                                            /             |
+                                                           +              |
+                                                          /               |
+                                                      A Small-----------A Dark
+                                                      Rathole           Tunnel

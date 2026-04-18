@@ -1,0 +1,93 @@
+Map by Hexnar
+Legend
++   : Door
+|+| : no passdoor
+\+\ : Locked
+\=\ : Locked no passdoor
+
+
+
+
+			 NW Corner     Northern side		       Northern side	 NE Corner			(1)
+			of the Yard --- of the Yard -- The Back Yard -- of the Yard --- of the Yard			  \
+			     |				     |				     |		 Pipework -\=\- Beneath the -\=\- Graveyard
+			     |				     +				     |				  Shack			\
+			Western side			     |				Eastern side			     |			 \
+			of the Yard		     Back of the Shack			of the Yard			     |		   Above the Casket
+			     |				     |				     |				Damp corner		   \
+			     |				     |				     |			      of the basement		The Casket
+			Western side		     Front of the Shack			Eastern side		   (Cricket has the key)
+			of the Yard			     |	    \			of the Yard
+			     |				     +	    (1)			     |
+			     |				     |				     |
+			 SW Corner --- Southern side --- Front Yard --- Southern side -- SE Corner
+			of the Yard	of the Yard	     |		 of the Yard	of the Yard
+							     +
+							     |
+							 Gates to
+							 the Shack
+							     |
+			  Deep into the			     |			     Deep into the
+			   West Jungle ---- Around the --- Before --- Around the ---- East Jungle
+				|	      Shack	  the Gates	Shack		   |
+				|							   |
+			  Deep into the				Western half         Eastern half
+	    Atop a tree	     Jungle ----- Near a small		of the River ------- of the River
+		 |     \		    stream		    |
+		 |  Hanging from a Vine	       |		    |
+		 |		\	       |		    |
+		 |	 Bottom of the Vine    |		    |	  Eastern Entrance
+	   Jungle Canopy		\      |       Jungle	    |	    /	|
+		  \		       Jungle Floor -- Floor -- Jungle Floor	|
+		   \					 |			|
+		  Western Entrance			 |		    A Jungle
+			 |			Trapped in the Vines	      Path
+			 |							|
+	Abandoned -+- Main St -+- Abandoned					|
+	  Bank		 |      General Store				    A Jungle
+			 |						      Path
+	Abandoned -+- Main St -+- Abandoned					|
+	Gemologist	 |	   Armory					|
+			 |						    A Jungle
+	Abandoned -+- Main St -+- Abandoned				      Path
+	 Bakery		 |	 Weaponsmith					|
+			 |							|
+	Abandoned -+- Main St -+- Abandoned				    A Jungle
+	Workshop	 |	  Warehouse				      Path
+			 |							|
+		   South Main St						|
+			 |							|
+			 |							|
+		     A Spooky						    A Spooky
+		       Path -----  The Split -------------------------------- Path
+				      |
+				      |
+	A Spooky --- A Spooky --- A Spooky
+	  Path	       Path	    Path
+				      |
+				     |+|
+				      |
+				   Behind
+				 The Trees
+				 /
+				/
+			Under The
+			 Jungle
+			   |
+			   |
+			Boneyard
+			of Ay'Twa
+			  /
+			\+\
+			/
+		Ancient Invoker's
+		     Crypt
+			|
+		       \+\
+			|
+		     Airlock
+			|
+		       \+\
+			|
+		     Inside
+		    the Tomb

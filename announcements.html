@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Announcements — Redemption MUD</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #c9a84c; --gold-lt: #e8c96a;
+      --red: #8b1a1a; --red-lt: #b03030;
+      --bg: #0a0a0f; --bg2: #10101a; --bg3: #161626;
+      --border: #2a2a3a; --text: #d4d0c8; --text-lt: #f0ece0;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Georgia', serif; line-height: 1.7; }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { color: var(--gold-lt); text-decoration: underline; }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,15,0.95); backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--border); padding: 0 1.5rem;
+    }
+    .nav-inner {
+      max-width: 1400px; margin: 0 auto;
+      display: flex; align-items: center; gap: 2rem; height: 62px;
+    }
+    .nav-logo {
+      font-size: 1.5rem; font-weight: bold; color: var(--gold);
+      letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none;
+    }
+    .nav-logo span { color: var(--text-lt); font-weight: normal; font-size: 0.75rem; display: block; letter-spacing: 0.2em; }
+    .nav-links { display: flex; gap: 1.2rem; list-style: none; }
+    .nav-links a { color: var(--text); font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); text-decoration: none; }
+    .nav-play-btn { background: var(--red); color: #fff !important; padding: 0.4rem 1.1rem; border-radius: 3px; border: 1px solid var(--red-lt); transition: background 0.2s; }
+    .nav-play-btn:hover { background: var(--red-lt) !important; }
+
+    .page-hero {
+      padding: 5rem 1.5rem 3rem;
+      background: linear-gradient(180deg, #08080e 0%, var(--bg2) 100%);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    .page-eyebrow { font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+    .page-title { font-size: clamp(2rem, 5vw, 3.5rem); color: var(--text-lt); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .page-sub { font-size: 1rem; font-style: italic; color: var(--text); opacity: 0.8; max-width: 600px; margin: 0 auto; }
+
+    .page-body { padding: 4rem 1.5rem; }
+
+    /* Tags */
+    .tag {
+      display: inline-block;
+      font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.2rem 0.6rem; border-radius: 3px;
+      font-family: 'Courier New', monospace;
+    }
+    .tag-major   { background: rgba(139,26,26,0.2); color: #e07070; border: 1px solid rgba(139,26,26,0.4); }
+    .tag-update  { background: rgba(201,168,76,0.1); color: var(--gold); border: 1px solid rgba(201,168,76,0.3); }
+    .tag-patch   { background: rgba(26,60,139,0.15); color: #70a0e0; border: 1px solid rgba(26,60,139,0.3); }
+    .tag-event   { background: rgba(26,100,26,0.15); color: #70c070; border: 1px solid rgba(26,100,26,0.3); }
+    .tag-relaunch { background: rgba(180,100,0,0.2); color: #e0b070; border: 1px solid rgba(180,100,0,0.4); }
+
+    /* Post */
+    .post {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+    .post.pinned { border-color: rgba(201,168,76,0.5); }
+    .post-header {
+      background: rgba(0,0,0,0.2);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+      display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;
+    }
+    .post-pin {
+      font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--gold); opacity: 0.7;
+    }
+    .post-title {
+      font-size: 1.2rem;
+      color: var(--text-lt);
+      flex: 1;
+    }
+    .post-meta {
+      font-size: 0.78rem; color: var(--text); opacity: 0.5;
+      font-family: 'Courier New', monospace;
+      white-space: nowrap;
+    }
+    .post-body { padding: 1.5rem; }
+    .post-body p { margin-bottom: 1rem; font-size: 0.95rem; }
+    .post-body p:last-child { margin-bottom: 0; }
+    .post-body ul { margin: 0.5rem 0 1rem 1.5rem; }
+    .post-body li { font-size: 0.92rem; margin-bottom: 0.3rem; }
+    .post-body li::marker { color: var(--gold); }
+    .post-body strong { color: var(--gold); }
+    .post-body h3 { color: var(--gold); font-size: 1rem; margin: 1rem 0 0.4rem; letter-spacing: 0.04em; }
+
+    footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 2rem 1.5rem; text-align: center; }
+    .footer-logo { font-size: 1.3rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .footer-copy { font-size: 0.78rem; color: var(--text); opacity: 0.35; }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .post-title { font-size: 1.05rem; }
+    }
+  </style>
+</head>
+<body>
+
+    <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        Redemption
+        <span>A World at War</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#lore">Lore</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#updates">Updates</a></li>
+        <li><a href="index.html#play">Play</a></li>
+        <li><a href="maps.html">Maps</a></li>
+        <li><a href="newbie.html">New Players</a></li>
+        <li><a href="helpfiles.html">Help Files</a></li>
+        <li><a href="crafting.html">Crafting</a></li>
+        <li><a href="index.html#play" class="nav-play-btn">Play Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <p class="page-eyebrow">Redemption MUD</p>
+    <h1 class="page-title">Announcements</h1>
+    <p class="page-sub">News, updates, patch notes, and events from the development team.</p>
+  </div>
+
+  <div class="page-body">
+    <div class="container">
+
+      <!-- PINNED: Relaunch -->
+      <div class="post pinned">
+        <div class="post-header">
+          <span class="post-pin">📌 Pinned</span>
+          <div class="post-title">Redemption Has Relaunched!</div>
+          <span class="tag tag-relaunch">Relaunch</span>
+          <div class="post-meta">2026-03-31 &nbsp;|&nbsp; Admin</div>
+        </div>
+        <div class="post-body">
+          <p>
+            After a period of downtime, <strong>Redemption is back online and actively developed</strong>. The server is live, the world is open, and new content is already in place.
+          </p>
+          <p>
+            Whether you're a returning veteran or a brand new player, now is the best time to log in. The relaunch has brought with it a wave of updates including a full overhaul of the metallic dragon population and a completely rebuilt elemental wheel system.
+          </p>
+          <p>
+            The development team is committed to regular updates. Expect balance changes, new content, and ongoing improvements. Check this page regularly — or keep an eye on the in-game <strong>news</strong> board for real-time updates.
+          </p>
+          <p>Connect now: <strong>mud.redemptionmud.com port 4000</strong></p>
+        </div>
+      </div>
+
+      <!-- Metallic Dragon Overhaul -->
+      <div class="post">
+        <div class="post-header">
+          <div class="post-title">Metallic Dragon Overhaul</div>
+          <span class="tag tag-major">Major Update</span>
+          <div class="post-meta">2026-03-28 &nbsp;|&nbsp; Admin</div>
+        </div>
+        <div class="post-body">
+          <p>The metallic dragons have been completely rebuilt. Previously placeholder-level content, they are now fully realized threats — and allies, depending on your choices.</p>
+          <h3>What Changed</h3>
+          <ul>
+            <li>All metallic dragon types (Gold, Silver, Bronze, Copper, Brass) have been revamped with new stat profiles</li>
+            <li>New ability sets — each dragon type now has distinct, lore-appropriate abilities</li>
+            <li>Updated loot tables with unique metallic dragon drops</li>
+            <li>New dialogue and quest hooks tied to the metallic dragon faction</li>
+            <li>Metallic dragon lairs redesigned for better encounter flow</li>
+          </ul>
+          <p>These dragons are connected to the larger lore of the Dragon resurgence in Dominia. Expect them to play a bigger role in upcoming content.</p>
+        </div>
+      </div>
+
+      <!-- Elemental Wheel -->
+      <div class="post">
+        <div class="post-header">
+          <div class="post-title">New Elemental Wheel System</div>
+          <span class="tag tag-major">System Rework</span>
+          <div class="post-meta">2026-03-25 &nbsp;|&nbsp; Admin</div>
+        </div>
+        <div class="post-body">
+          <p>The elemental system powering all magical combat in Redemption has been rebuilt from the ground up. This is one of the most significant mechanical changes to the game in years.</p>
+          <h3>Key Changes</h3>
+          <ul>
+            <li>All elemental types have been rebalanced with true strengths and weaknesses</li>
+            <li>Element interactions are now consistent and documented — see <code>help elements</code> in-game</li>
+            <li>Shadow element added as a distinct damage type (previously folded into other categories)</li>
+            <li>Holy element has been reworked — interactions with Shadow are now a meaningful strategic axis</li>
+            <li>New resist and vulnerability messaging in combat to help players learn the system</li>
+          </ul>
+          <p>If you played before the relaunch, your existing knowledge of the elemental system may be outdated. We recommend reviewing <a href="helpfiles.html">the help files</a> for the current element chart.</p>
+        </div>
+      </div>
+
+      <!-- Patch: Balance -->
+      <div class="post">
+        <div class="post-header">
+          <div class="post-title">Balance Pass — Warrior &amp; Mage Paths</div>
+          <span class="tag tag-patch">Balance</span>
+          <div class="post-meta">2026-03-20 &nbsp;|&nbsp; Admin</div>
+        </div>
+        <div class="post-body">
+          <p>A targeted balance pass was applied to several warrior-path skills and mage-path spells following the elemental wheel rework.</p>
+          <ul>
+            <li>Bash skill cooldown slightly reduced at high proficiency</li>
+            <li>Fireball base damage adjusted upward to match the new elemental scaling</li>
+            <li>Mana cost for several low-level spells reduced to be more new-player friendly</li>
+            <li>Several mob resistances adjusted to align with the new elemental wheel</li>
+          </ul>
+          <p>Further balance adjustments will follow as we gather player feedback. Reach out in-game via gossip or tell an immortal if you notice something that feels off.</p>
+        </div>
+      </div>
+
+      <!-- How to submit news -->
+      <div style="background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:1.5rem;text-align:center;margin-top:1rem;">
+        <p style="font-size:0.9rem;font-style:italic;color:var(--text);opacity:0.7;">
+          More updates will appear here as development continues.<br>
+          For real-time news, check the in-game <strong style="color:var(--gold)">news</strong> board after logging in.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Redemption MUD</div>
+    <div class="footer-copy">&copy; Redemption MUD. Free to play.</div>
+  </footer>
+
+</body>
+</html>

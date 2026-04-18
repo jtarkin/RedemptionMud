@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redemption MUD — A World at War</title>
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold:    #c9a84c;
+      --gold-lt: #e8c96a;
+      --red:     #8b1a1a;
+      --red-lt:  #b03030;
+      --bg:      #0a0a0f;
+      --bg2:     #10101a;
+      --bg3:     #161626;
+      --border:  #2a2a3a;
+      --text:    #d4d0c8;
+      --text-lt: #f0ece0;
+      --shadow:  rgba(0,0,0,0.6);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Georgia', 'Times New Roman', serif;
+      line-height: 1.7;
+    }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { color: var(--gold-lt); text-decoration: underline; }
+    img { max-width: 100%; display: block; }
+
+    /* ── Utility ── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+    .section-title {
+      font-size: 2rem;
+      color: var(--gold);
+      text-align: center;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .section-subtitle {
+      text-align: center;
+      color: var(--text);
+      font-style: italic;
+      margin-bottom: 3rem;
+      font-size: 1.05rem;
+      opacity: 0.8;
+    }
+    .divider {
+      width: 120px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0.6rem auto 0.8rem;
+    }
+
+    /* ── Navigation ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(10,10,15,0.92);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+    }
+    .nav-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2rem;
+      height: 62px;
+    }
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .nav-logo span { color: var(--text-lt); font-weight: normal; font-size: 0.75rem; display: block; letter-spacing: 0.2em; }
+    .nav-links { display: flex; gap: 1.2rem; list-style: none; }
+    .nav-links a {
+      color: var(--text);
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); text-decoration: none; }
+    .nav-play-btn {
+      background: var(--red);
+      color: #fff !important;
+      padding: 0.4rem 1.1rem;
+      border-radius: 3px;
+      border: 1px solid var(--red-lt);
+      transition: background 0.2s;
+    }
+    .nav-play-btn:hover { background: var(--red-lt) !important; }
+
+    /* ── Hero ── */
+    #hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding: 6rem 1.5rem 2rem;
+      background:
+        radial-gradient(ellipse at 20% 60%, rgba(139,26,26,0.18) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 40%, rgba(30,20,80,0.35) 0%, transparent 60%),
+        linear-gradient(180deg, #06060e 0%, #0e0e1c 50%, #080810 100%);
+    }
+    /* Animated star field */
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 40%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 40% 10%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 55% 55%, rgba(255,255,255,0.2) 0%, transparent 100%),
+        radial-gradient(1px 1px at 70% 25%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 85% 70%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 15% 80%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 60% 85%, rgba(255,255,255,0.2) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 10%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 35% 65%, rgba(201,168,76,0.4) 0%, transparent 100%);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 1; }
+    .hero-eyebrow {
+      font-size: 0.85rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+      opacity: 0.9;
+    }
+    .hero-title {
+      font-size: clamp(3.5rem, 10vw, 7rem);
+      color: var(--text-lt);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      line-height: 1;
+      text-shadow: 0 0 60px rgba(201,168,76,0.3), 0 4px 20px rgba(0,0,0,0.8);
+      margin-bottom: 0.3rem;
+    }
+    .hero-title-accent {
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      letter-spacing: 0.4em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+    .hero-tagline {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--text);
+      max-width: 640px;
+      margin: 0 auto 2.5rem;
+      font-style: italic;
+      line-height: 1.8;
+      opacity: 0.9;
+    }
+    .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 2rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-family: inherit;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: var(--red);
+      color: #fff;
+      border: 1px solid var(--red-lt);
+    }
+    .btn-primary:hover { background: var(--red-lt); color: #fff; text-decoration: none; }
+    .btn-secondary {
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+    }
+    .btn-secondary:hover { background: rgba(201,168,76,0.1); color: var(--gold-lt); text-decoration: none; }
+    .hero-connect {
+      margin-top: 2.5rem;
+      font-size: 0.85rem;
+      color: var(--text);
+      opacity: 0.6;
+      letter-spacing: 0.05em;
+    }
+    .relaunch-badge {
+      display: inline-block;
+      margin-bottom: 1.8rem;
+      padding: 0.5rem 1.2rem;
+      background: rgba(201,168,76,0.12);
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 30px;
+      font-size: 0.88rem;
+      letter-spacing: 0.08em;
+      color: var(--gold-lt);
+    }
+    .hero-connect code {
+      font-family: 'Courier New', monospace;
+      color: var(--gold);
+      background: rgba(201,168,76,0.08);
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      font-size: 0.9rem;
+    }
+
+    /* ── War Banner ── */
+    #war-banner {
+      background: linear-gradient(135deg, rgba(139,26,26,0.25) 0%, rgba(16,16,26,0) 50%, rgba(30,20,80,0.25) 100%);
+      border-top: 1px solid rgba(139,26,26,0.4);
+      border-bottom: 1px solid rgba(60,40,120,0.4);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .war-banner-text {
+      font-size: 0.95rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+    .war-banner-text strong { color: var(--gold); }
+    .war-sep { margin: 0 1.5rem; color: var(--border); }
+
+    /* ── Lore ── */
+    #lore {
+      padding: 6rem 1.5rem;
+      background: var(--bg2);
+    }
+    .lore-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .lore-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .lore-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+    .lore-card.terra::before { background: linear-gradient(90deg, transparent, #4a7c59, transparent); }
+    .lore-card.dominia::before { background: linear-gradient(90deg, transparent, #7c3a4a, transparent); }
+    .lore-card-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .lore-card-name {
+      font-size: 1.4rem;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+    .lore-card-sub {
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text);
+      opacity: 0.6;
+      margin-bottom: 1rem;
+    }
+    .lore-full {
+      margin-top: 3rem;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2.5rem;
+      text-align: center;
+    }
+    .lore-full p {
+      max-width: 760px;
+      margin: 0 auto 1rem;
+      font-style: italic;
+      font-size: 1.05rem;
+      line-height: 1.9;
+    }
+    .lore-full p:last-child { margin-bottom: 0; }
+
+    /* ── Features ── */
+    #features {
+      padding: 6rem 1.5rem;
+      background: var(--bg);
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.5rem;
+    }
+    .feature-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.8rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .feature-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-3px);
+    }
+    .feature-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+    .feature-title {
+      font-size: 1.1rem;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .feature-desc { font-size: 0.95rem; line-height: 1.7; color: var(--text); }
+    .feature-tag {
+      display: inline-block;
+      margin-top: 0.8rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: rgba(201,168,76,0.12);
+      color: var(--gold);
+      padding: 0.2rem 0.6rem;
+      border-radius: 3px;
+      border: 1px solid rgba(201,168,76,0.25);
+    }
+    .feature-tag.new { background: rgba(139,26,26,0.2); color: #e07070; border-color: rgba(139,26,26,0.4); }
+
+    /* ── Updates ── */
+    #updates {
+      padding: 6rem 1.5rem;
+      background: var(--bg2);
+    }
+    .updates-list { display: flex; flex-direction: column; gap: 1rem; max-width: 760px; margin: 0 auto; }
+    .update-item {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 6px 6px 0;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+    }
+    .update-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .update-title {
+      font-size: 1rem;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.3rem;
+    }
+    .update-desc { font-size: 0.92rem; color: var(--text); }
+    .update-badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: rgba(139,26,26,0.25);
+      color: #e07070;
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      border: 1px solid rgba(139,26,26,0.4);
+      margin-bottom: 0.4rem;
+    }
+
+    /* ── Play / Connect ── */
+    #play {
+      padding: 6rem 1.5rem;
+      background: var(--bg);
+    }
+    .connect-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .connect-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2rem;
+    }
+    .connect-card-title {
+      font-size: 1.2rem;
+      color: var(--gold);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .connect-card p { font-size: 0.95rem; margin-bottom: 1rem; }
+    .connect-detail {
+      background: rgba(0,0,0,0.3);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+    }
+    .connect-detail .label {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-family: Georgia, serif;
+      margin-bottom: 0.25rem;
+    }
+    .connect-detail .value { color: var(--text-lt); }
+    .client-options { display: flex; flex-direction: column; gap: 0.7rem; }
+    .client-option {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: rgba(0,0,0,0.25);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.8rem 1rem;
+      font-size: 0.9rem;
+    }
+    .client-option-icon { font-size: 1.3rem; flex-shrink: 0; }
+    .client-option-name { color: var(--text-lt); font-size: 0.9rem; }
+    .client-option-link { margin-left: auto; font-size: 0.8rem; }
+    .webclient-frame {
+      margin-top: 3rem;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .webclient-header {
+      background: rgba(0,0,0,0.3);
+      border-bottom: 1px solid var(--border);
+      padding: 0.8rem 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .webclient-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .webclient-dot.red   { background: #8b1a1a; }
+    .webclient-dot.amber { background: #8b6a1a; }
+    .webclient-dot.green { background: #1a6a1a; }
+    .webclient-title { margin-left: 0.5rem; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); opacity: 0.6; }
+    .webclient-body {
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .webclient-body p { font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .webclient-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 3rem 1.5rem 2rem;
+      text-align: center;
+    }
+    .footer-logo {
+      font-size: 1.6rem;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .footer-tagline {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--text);
+      opacity: 0.6;
+      margin-bottom: 2rem;
+    }
+    .footer-links { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
+    .footer-links a { font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text); opacity: 0.6; transition: opacity 0.2s, color 0.2s; }
+    .footer-links a:hover { opacity: 1; color: var(--gold); text-decoration: none; }
+    .footer-copy { font-size: 0.78rem; color: var(--text); opacity: 0.35; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .lore-grid { grid-template-columns: 1fr; }
+      .connect-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 500px) {
+      .hero-buttons { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">
+        Redemption
+        <span>A World at War</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#lore">Lore</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#updates">Updates</a></li>
+        <li><a href="#play">Play</a></li>
+        <li><a href="maps.html">Maps</a></li>
+        <li><a href="newbie.html">New Players</a></li>
+        <li><a href="helpfiles.html">Help Files</a></li>
+        <li><a href="crafting.html">Crafting</a></li>
+        <li><a href="#play" class="nav-play-btn">Play Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Enter the World of</p>
+      <h1 class="hero-title">Redemption</h1>
+      <p class="hero-title-accent">A Multi-User Dungeon</p>
+      <p class="hero-tagline">
+        Two continents locked in eternal war. Two races on the edge of annihilation.<br>
+        The age of the Dragon has returned — will you choose a side?
+      </p>
+      <div class="relaunch-badge">⚡ Redemption is Back — The Server Has Relaunched!</div>
+      <div class="hero-buttons">
+        <a href="#play" class="btn btn-primary">Play Now — Free</a>
+        <a href="#lore" class="btn btn-secondary">Discover the Lore</a>
+      </div>
+      <p class="hero-connect">Connect directly: <code>mud.redemptionmud.com</code> port <code>4000</code></p>
+    </div>
+  </section>
+
+  <!-- Announcements Banner -->
+  <div id="announcements-bar" style="background:linear-gradient(135deg,rgba(139,26,26,0.35),rgba(30,20,80,0.35));border-bottom:1px solid rgba(201,168,76,0.3);padding:0.9rem 1.5rem;text-align:center;margin-bottom:3rem;">
+    <span style="font-size:0.78rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-right:0.8rem;">📢 Latest</span>
+    <span style="font-size:0.92rem;color:var(--text-lt);">Redemption has officially relaunched! Metallic dragon overhaul &amp; new elemental wheel now live.</span>
+    <a href="announcements.html" style="margin-left:1rem;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);">All Announcements →</a>
+  </div>
+
+  <!-- Lore -->
+  <section id="lore">
+    <div id="war-banner">
+      <p class="war-banner-text">
+        <strong>Terra</strong> — Birthplace of the Dragons
+        <span class="war-sep">⚔</span>
+        <strong>Dominia</strong> — Home of the Ancient Slivers
+        <span class="war-sep">⚔</span>
+        The Second War Has Begun
+      </p>
+    </div>
+    <div class="container">
+      <h2 class="section-title">The World</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Two continents. One war. No neutral ground.</p>
+
+      <div class="lore-grid">
+        <div class="lore-card terra">
+          <div class="lore-card-icon">🐉</div>
+          <div class="lore-card-name">Terra</div>
+          <div class="lore-card-sub">Birthplace of the Dragons</div>
+          <p>
+            Terra burns. Scorched peaks, molten rivers, and skies perpetually choked with ash — this is the domain of dragonkind. Defeated in the First War, the Dragons retreated into shadow, nursing their wounds and their rage. They have not forgotten. They have not forgiven. And now, they are ready.
+          </p>
+        </div>
+        <div class="lore-card dominia">
+          <div class="lore-card-icon">🌿</div>
+          <div class="lore-card-name">Dominia</div>
+          <div class="lore-card-sub">Continent of the Slivers</div>
+          <p>
+            Dominia is a land shaped by ancient power — dense forests, crumbling battlefields, and the ruins of a civilization that survived the First War. The Slivers, a hive-minded race of terrifying adaptive warriors, rose to dominance through relentless evolution. No two Slivers are alike; no army has ever broken their unity. 
+          </p>
+        </div>
+      </div>
+
+      <div class="lore-full">
+        <p>
+          The First War ended with the Slivers standing victorious over a shattered Dragon empire. It was meant to be the last war — an age of uneasy peace settled across both continents. But peace is a fragile thing, and the Dragons are anything but broken.
+        </p>
+        <p>
+          Scouts report Dragon sightings in numbers not seen in a generation. Metallic dragons, once thought to be myth, have reemerged — reborn, remade, and more dangerous than ever. The elemental forces themselves seem to be shifting, as though the world is choosing a side.
+        </p>
+        <p>
+          In the middle of all of this stands you. Adventurer. Warrior. Mage. Whatever name the world gives you — the war does not care. It only asks: whose banner will you carry?
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features">
+    <div class="container">
+      <h2 class="section-title">What Awaits You</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">A living world with systems that reward your choices.</p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚔️</div>
+          <div class="feature-title">Player vs Player Combat</div>
+          <p class="feature-desc">
+            Choose your path — engage in full player killing or enter structured player duels. A hardcore mode raises the stakes even higher, with real consequences for those who fall. Glory awaits the bold; death awaits the reckless.
+          </p>
+          <span class="feature-tag">Hardcore Mode</span>
+          <span class="feature-tag">Dueling System</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔨</div>
+          <div class="feature-title">Crafting</div>
+          <p class="feature-desc">
+            Forge your own legend — literally. Redemption's crafting system lets you create weapons, armor, and items that carry your mark. Master the forge, source rare materials, and build equipment no merchant could ever sell you.
+          </p>
+          <span class="feature-tag">Tradeskills</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📜</div>
+          <div class="feature-title">Questing</div>
+          <p class="feature-desc">
+            From simple errands to world-altering sagas, Redemption's quest system spans the full breadth of both continents. Follow the threads of the war, uncover ancient secrets, and earn rewards that shape your character's path.
+          </p>
+          <span class="feature-tag">Story Quests</span>
+          <span class="feature-tag">Repeatable Content</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔄</div>
+          <div class="feature-title">Class Change System</div>
+          <p class="feature-desc">
+            Change your class without losing your hard-earned progress. Redemption's class change system preserves what you've built — skills, experience, and growth — while letting you explore a new path when the mood strikes.
+          </p>
+          <span class="feature-tag">Progress Preserved</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🌟</div>
+          <div class="feature-title">Remort &amp; Reclass</div>
+          <p class="feature-desc">
+            Reach the pinnacle of power and then transcend it. The remort and reclass system lets endgame characters evolve into something greater — new abilities, new identities, and access to paths unavailable to those who haven't earned them.
+          </p>
+          <span class="feature-tag">Endgame Progression</span>
+          <span class="feature-tag">Multiple Paths</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🌐</div>
+          <div class="feature-title">Elemental Wheel</div>
+          <p class="feature-desc">
+            A fully realized system of elemental forces — fire, water, earth, air, shadow, and more — governs magic, combat, and the world itself. Elements interact, counter, and amplify each other. Master the wheel to master the battlefield.
+          </p>
+          <span class="feature-tag new">Recently Overhauled</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Updates -->
+  <section id="updates">
+    <div class="container">
+      <h2 class="section-title">Recent Updates</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Redemption is actively developed — new content arrives regularly.</p>
+
+      <div class="updates-list">
+        <div class="update-item">
+          <div class="update-icon">🐉</div>
+          <div>
+            <div class="update-badge">New Content</div>
+            <div class="update-title">Metallic Dragon Overhaul</div>
+            <p class="update-desc">
+              The metallic dragons have been completely rebuilt from the ground up. New abilities, new behaviors, new lore — these ancient creatures are no longer background scenery. They are forces of nature, and they remember the First War.
+            </p>
+          </div>
+        </div>
+
+        <div class="update-item">
+          <div class="update-icon">🌀</div>
+          <div>
+            <div class="update-badge">System Rework</div>
+            <div class="update-title">New Elemental Wheel</div>
+            <p class="update-desc">
+              Magic in Redemption now flows through a fully redesigned elemental system. Every element has strengths, weaknesses, and interactions — making magical combat a strategic contest as much as a raw power struggle.
+            </p>
+          </div>
+        </div>
+
+        <div class="update-item">
+          <div class="update-icon">⚙️</div>
+          <div>
+            <div class="update-badge">Ongoing</div>
+            <div class="update-title">Active Development</div>
+            <p class="update-desc">
+              Redemption is a living MUD with a dedicated development team. Balance updates, new races, new classes, and world expansions are in regular development. Log in, explore, and be part of what comes next.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Play / Connect -->
+  <section id="play">
+    <div class="container">
+      <h2 class="section-title">Enter the World</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Free to play. No downloads required to get started.</p>
+
+      <div class="connect-grid">
+        <div class="connect-card">
+          <div class="connect-card-title">Connection Details</div>
+          <p>Connect using any MUD client, or play directly in your browser below. No account needed — just connect and begin your adventure.</p>
+          <div class="connect-detail">
+            <div class="label">Host</div>
+            <div class="value">mud.redemptionmud.com</div>
+          </div>
+          <div class="connect-detail">
+            <div class="label">Port</div>
+            <div class="value">4000</div>
+          </div>
+        </div>
+
+        <div class="connect-card">
+          <div class="connect-card-title">Recommended Clients</div>
+          <p>For the best experience, we recommend a dedicated MUD client:</p>
+          <div class="client-options">
+            <div class="client-option">
+              <div class="client-option-icon">🖥️</div>
+              <div>
+                <div class="client-option-name">Mudlet</div>
+                <div style="font-size:0.8rem;color:var(--text);opacity:0.7;">Feature-rich, scriptable, free</div>
+              </div>
+              <a href="https://www.mudlet.org" target="_blank" rel="noopener" class="client-option-link">Download →</a>
+            </div>
+            <div class="client-option">
+              <div class="client-option-icon">🖥️</div>
+              <div>
+                <div class="client-option-name">MUSHclient</div>
+                <div style="font-size:0.8rem;color:var(--text);opacity:0.7;">Windows, lightweight, powerful</div>
+              </div>
+              <a href="http://www.gammon.com.au/mushclient/" target="_blank" rel="noopener" class="client-option-link">Download →</a>
+            </div>
+            <div class="client-option">
+              <div class="client-option-icon">🌐</div>
+              <div>
+                <div class="client-option-name">Play in Browser</div>
+                <div style="font-size:0.8rem;color:var(--text);opacity:0.7;">No install needed</div>
+              </div>
+              <a href="#webclient" class="client-option-link">See below →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web Client -->
+      <div class="webclient-frame" id="webclient">
+        <div class="webclient-header">
+          <div class="webclient-dot red"></div>
+          <div class="webclient-dot amber"></div>
+          <div class="webclient-dot green"></div>
+          <div class="webclient-title">Browser Client — Redemption MUD</div>
+        </div>
+        <div class="webclient-body">
+          <p>
+            Play directly in your browser using one of these web-based MUD clients.<br>
+            Enter <strong style="color:var(--gold)">mud.redemptionmud.com</strong> and port <strong style="color:var(--gold)">4000</strong> when prompted.
+          </p>
+          <div class="webclient-btns">
+            <a href="https://www.mudportal.com/play?host=mud.redemptionmud.com&port=4000"
+               target="_blank" rel="noopener" class="btn btn-primary">
+              Open via MudPortal
+            </a>
+            <a href="https://mudslinger.net/play/?host=mud.redemptionmud.com&port=4000"
+               target="_blank" rel="noopener" class="btn btn-secondary">
+              Open via Mudslinger
+            </a>
+          </div>
+          <p style="margin-top:1.2rem;font-size:0.82rem;opacity:0.5;">
+            Both clients are free third-party services. For the best experience, download Mudlet.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Welcome Back / Relaunch -->
+  <section id="relaunch" style="padding:6rem 1.5rem;background:linear-gradient(135deg,rgba(139,26,26,0.15) 0%,var(--bg2) 40%,rgba(30,20,80,0.15) 100%);border-top:1px solid var(--border);">
+    <div class="container">
+      <h2 class="section-title">Redemption Returns</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">After a period of silence, the world breathes again.</p>
+      <div style="max-width:760px;margin:0 auto;text-align:center;">
+        <p style="font-size:1.1rem;font-style:italic;line-height:1.9;margin-bottom:1.5rem;color:var(--text-lt);">
+          Redemption went quiet for a time. The servers were dark, the world held its breath. But a world this rich — with this much story left to tell — doesn't stay silent for long.
+        </p>
+        <p style="font-size:1rem;line-height:1.9;margin-bottom:1.5rem;">
+          The MUD has been relaunched with renewed commitment to active development. Whether you played before and remember the world, or you're discovering it for the first time, now is the best moment to log in. New content is already live. More is on the way.
+        </p>
+        <p style="font-size:1rem;line-height:1.9;margin-bottom:2.5rem;">
+          Veterans: your world is back. Newcomers: you picked the perfect time. The Second War is just beginning — and it needs players like you.
+        </p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="#play" class="btn btn-primary">Jump Back In</a>
+          <a href="newbie.html" class="btn btn-secondary">New? Start Here</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">Redemption</div>
+    <div class="footer-tagline">A World at War — Enter, if you dare.</div>
+    <div class="footer-links">
+      <a href="#lore">Lore</a>
+      <a href="#features">Features</a>
+      <a href="#updates">Updates</a>
+      <a href="#play">Play</a>
+    </div>
+    <div class="footer-copy">Redemption MUD &copy; All rights reserved. Free to play.</div>
+  </footer>
+
+  <script>
+    // Smooth active nav highlighting
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.style.color = '';
+            if (link.getAttribute('href') === '#' + entry.target.id) {
+              link.style.color = 'var(--gold)';
+            }
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+    sections.forEach(s => observer.observe(s));
+
+    // Feature cards: subtle entrance animation on scroll
+    const cards = document.querySelectorAll('.feature-card, .lore-card, .update-item');
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+    cards.forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      cardObserver.observe(card);
+    });
+  </script>
+
+</body>
+</html>

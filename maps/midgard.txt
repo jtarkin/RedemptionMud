@@ -1,0 +1,73 @@
+                        * * * MIDGAARD * * *
+                         = = ========== = =
+ 
+                                     VALHALLA
+                                    /
+          North            Temple Altar   Mud School
+            |   /Up        (Healer, Pit)      |
+            | /                  |       /Entrance to
+     West---+---East             |     /  Mud School
+          / |                 Temple of       |
+    Down/   |                  Bosco        Arena
+          South               (Recall)
+                                 |
+                                 |   /IN THE AIR   /Defunct Reception
+                                 | /             /
+       Northern            Temple Square---Grunting---Bar    Northern
+       Midgaard                  |         Boar Inn          Midgaard
+           |     Magic           |                              |
+           |     Shop   Bakery   |    Grocer    Weaponsmith     |
+           |       |      |      |       |           |          |
+To    <---West---Main-Street---Market----Main-Street-+--------East--->Cross
+Shire,    Gate     |      |    Square    |           |        Gate    Roads
+Forest of  |     Mage  Armoury   |     Jeweler    Warrior       |
+Haon-Dor   |     Guild           |                 Guild     Wall Road
+          Wall                   |                              |
+          Road  Leather  Map     |  Maugrim's  Pet   Apothecary |
+           |     Shop    Shop    |     Bar     Shop     |       |
+           |      |       |    Common   |       |       |       |
+          Wall---Poor-Alley----Square---Dark-Alley------+----Wall Road
+          Road    |       |      |              |       |       |
+           |   Temple   Grubby   |            Levee   Warehouse |
+           |  Of Stupid  Inn     |              |               |
+           |                    Dump            |               |
+          Wall  Mob      Sewers/ |              |             Wall
+          Road--Factory          |              |             Road
+           |                   South         Midgaard           |         To the
+         Bridge                Bridge         River---------> Bridge <--> Sands
+           |                     |                              |           of
+           |                     |                               |
+           |                     |              Valan's            |
+          |                      |                Diner              |
+         |                       |                 |                  |
+Northwest                        |              Austral                Northeast
+Concourse---Promenade--------Promenade----------Square-----------------Concourse
+    |           |                |                 |                       |
+    |           |                |                 |          Fountain     |
+    |           |                |              Emerald           |        |
+Concourse     Park              Park-----Park     Ave----Penny--Penny--Concourse
+    |         Road            Entrance   Cafe      |     Lane   Lane       |
+    |           |                |              Emerald                    |
+    |           |                |                Ave                      |
+    |           |                |                 |                       |
+    |  Guard  Park     Park     The      Park   Emerald   Town             |
+    |   HQ----Road---Entrance---Park---Entrance---Ave-----Hall             |
+    |           |                                  |                       |
+    |         Park              Emerald---------Emerald--------------Gang  |
+    |         Road                Ave             Ave                |  |  |
+    |           |                  |                                 |  |  |
+    |         Park----------------Road----------Park            Elm--Land  |
+    |         Road             /Crossing        Road           Street      |
+    |                     Chain    |              |              |         |
+Concourse                /         |            Park----Elm-----Elm----Concourse
+    |       (Redferne's, Harpies)  |            Road   Street  Street      |
+    |                              |              |              |         |
+    |                Emerald--Emerald            Park        Graveyard     |
+    |                  Ave      Ave             Road    (Church Catacombs) |
+    |                   |                         |                        |
+    |                Emerald                    Park                       |
+    |                  Ave                      Road                       |
+    |                   |                         |                        |
+Concourse-----------Concourse------Inside-----Concourse----------------Concourse
+                                 South Gate
+                                     |
