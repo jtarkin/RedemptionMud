@@ -23,20 +23,12 @@
       background: rgba(10,10,15,0.95); backdrop-filter: blur(6px);
       border-bottom: 1px solid var(--border); padding: 0 1.5rem;
     }
-    .nav-inner {
-      max-width: 1400px; margin: 0 auto;
-      display: flex; align-items: center; gap: 2rem; height: 62px;
-    }
-    .nav-logo {
-      font-size: 1.5rem; font-weight: bold; color: var(--gold);
-      letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none;
-    }
-    .nav-logo span { color: var(--text-lt); font-weight: normal; font-size: 0.75rem; display: block; letter-spacing: 0.2em; }
-    .nav-links { display: flex; gap: 1.2rem; list-style: none; }
-    .nav-links a { color: var(--text); font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 62px; }
+    .nav-logo { font-size: 1.3rem; font-weight: bold; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { color: var(--text); font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; }
     .nav-links a:hover { color: var(--gold); text-decoration: none; }
-    .nav-play-btn { background: var(--red); color: #fff !important; padding: 0.4rem 1.1rem; border-radius: 3px; border: 1px solid var(--red-lt); transition: background 0.2s; }
-    .nav-play-btn:hover { background: var(--red-lt) !important; }
+    .nav-play-btn { background: var(--red); color: #fff !important; padding: 0.35rem 1rem; border-radius: 3px; border: 1px solid var(--red-lt); }
 
     .page-hero {
       padding: 5rem 1.5rem 3rem;
@@ -105,47 +97,24 @@
     .footer-logo { font-size: 1.3rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.4rem; }
     .footer-copy { font-size: 0.78rem; color: var(--text); opacity: 0.35; }
 
-    .nav-hamburger {
-      display: none; background: none; border: none; cursor: pointer;
-      padding: 0.5rem; margin-left: auto; flex-shrink: 0;
-      color: var(--gold); font-size: 1.5rem; line-height: 1;
-    }
     @media (max-width: 600px) {
-      .nav-hamburger { display: flex; align-items: center; }
       .nav-links { display: none; }
-      .nav-links.open {
-        display: flex; flex-direction: column;
-        position: fixed; top: 62px; left: 0; right: 0;
-        background: rgba(10,10,15,0.98);
-        border-bottom: 1px solid var(--border);
-        padding: 1rem 1.5rem; gap: 0.5rem; z-index: 99;
-      }
-      .nav-links.open a { font-size: 0.95rem; padding: 0.4rem 0; display: block; }
       .post-title { font-size: 1.05rem; }
     }
   </style>
 </head>
 <body>
 
-    <nav>
+  <nav>
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        Redemption
-        <span>A World at War</span>
-      </a>
+      <a href="index.html" class="nav-logo">Redemption</a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#lore">Lore</a></li>
-        <li><a href="index.html#features">Features</a></li>
-        <li><a href="index.html#updates">Updates</a></li>
-        <li><a href="index.html#play">Play</a></li>
-        <li><a href="maps.html">Maps</a></li>
         <li><a href="newbie.html">New Players</a></li>
         <li><a href="helpfiles.html">Help Files</a></li>
         <li><a href="crafting.html">Crafting</a></li>
         <li><a href="index.html#play" class="nav-play-btn">Play Now</a></li>
       </ul>
-      <button class="nav-hamburger" onclick="this.closest('nav').querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
     </div>
   </nav>
 
@@ -177,6 +146,41 @@
             The development team is committed to regular updates. Expect balance changes, new content, and ongoing improvements. Check this page regularly — or keep an eye on the in-game <strong>news</strong> board for real-time updates.
           </p>
           <p>Connect now: <strong>mud.redemptionmud.com port 4000</strong></p>
+        </div>
+      </div>
+
+      <!-- Aasimar, Elemental, Note System -->
+      <div class="post">
+        <div class="post-header">
+          <div class="post-title">New Race, Class &amp; Note System</div>
+          <span class="tag tag-major">Major Update</span>
+          <div class="post-meta">2026-04-30 &nbsp;|&nbsp; Admin</div>
+        </div>
+        <div class="post-body">
+          <p>Three significant additions are now live on Redemption. Read on for the highlights — full details are in the <a href="helpfiles.html">help files</a>.</p>
+          <h3>Aasimar — New Race</h3>
+          <ul>
+            <li>Descendants of celestial bloodlines with natural <strong>flight</strong> and <strong>dark vision</strong></li>
+            <li>Resist light damage; vulnerable to energy damage</li>
+            <li>Begin with sword, flurry, and guide</li>
+            <li>Two remort paths: <strong>Risen</strong> (angelic, good-aligned) and <strong>Fallen</strong> (demonic, evil-aligned)</li>
+            <li>Remort unlocks Transform war form, Glare beam attack, a bound Guide companion, and either Angelic Restore or Demonic Drain</li>
+          </ul>
+          <h3>Elemental — New Class</h3>
+          <ul>
+            <li>A channeler of raw elemental forces built around a single active <strong>affinity</strong></li>
+            <li>Base affinities: fire, ice, lightning, acid, poison</li>
+            <li>Core skills: elemental bolt, elemental strike, elemental shield</li>
+            <li>Two reclasses: <strong>Forgeborn</strong> (melee, gains elemental surge and temper) and <strong>Channeler</strong> (magic, gains elemental overload)</li>
+            <li>Both reclasses unlock extended affinities: water, earth, wind, shadow, divine</li>
+          </ul>
+          <h3>Board &amp; Note System</h3>
+          <ul>
+            <li>Multiple boards are now available, each with its own purpose (news, clan, general, etc.)</li>
+            <li>Use <strong>board</strong> to list or switch boards; <strong>note write</strong> to post; <strong>note read</strong> to read</li>
+            <li>Notes can be forwarded, replied to, and removed; unread tracking is per-board</li>
+            <li>A new <strong>note editor</strong> command toggles between the modern and classic editors</li>
+          </ul>
         </div>
       </div>
 

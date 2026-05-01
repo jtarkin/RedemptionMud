@@ -168,6 +168,32 @@
         <p><strong style="color:var(--text-lt);">Note:</strong> All claimed equipment will not be adjusted to reflect the new names — all claimed equipment will be lootable. This is considered a penalty for trading.</p>
       </div>
 
+      <div class="help-entry" id="entry-misc-note">
+        <div class="help-entry-title">Note &amp; Board System</div>
+        <div class="help-entry-aliases">HELP NOTE, HELP BOARD, HELP NOTE WRITE, HELP NOTE READ</div>
+        <hr>
+        <p>The note system uses multiple boards, each with its own purpose. Use <span style="color:#66ccff;">board</span> to list all boards and switch between them. Unread counts are shown per board.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">board</td><td style="padding:0.2rem 0;color:var(--text);">List all boards with unread counts.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">board &lt;number|name&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Switch to a specific board by number or name.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">note</td><td style="padding:0.2rem 0;color:var(--text);">Read the next unread note. If no unread notes remain, shifts to the next board with unread messages.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">note read &lt;number&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Read a specific note by number. Numbers match those shown in the list.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">note list</td><td style="padding:0.2rem 0;color:var(--text);">Show all notes in the current board.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">note list &lt;number&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Show only the last &lt;number&gt; notes in the current board.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">note write</td><td style="padding:0.2rem 0;color:var(--text);">Post a new note. Enters interactive mode with prompts for To, Subject, and body. You are automatically flagged AFK while writing.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">note reply &lt;number&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Begin a reply with the original note quoted. Add <span style="color:#66ccff;">all</span> to send to all original recipients.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">note forward &lt;number&gt; &lt;player&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Forward a note to another player.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">note remove &lt;number&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Remove a note you wrote. Implementors may remove any note.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">note catchup</td><td style="padding:0.2rem 0;color:var(--text);">Mark all notes in the current board as read.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">note update</td><td style="padding:0.2rem 0;color:var(--text);">Mark all notes on all boards as read.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">note editor</td><td style="padding:0.2rem 0;color:var(--text);">Toggle between the new note editor and the classic editor.</td></tr>
+          </tbody>
+        </table>
+        <p>To address a note to immortals only, use <span style="color:#66ccff;">imm</span> as the recipient. To restrict to a minimum level, use that level number as the recipient.</p>
+        <p>Old notes are not deleted — they are archived at bootup automatically after their set retention period.</p>
+      </div>
+
       <div class="help-entry" id="entry-misc-bard">
         <div class="help-entry-title">Bard / Jukebox</div>
         <hr>

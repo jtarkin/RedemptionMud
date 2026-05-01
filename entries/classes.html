@@ -16,6 +16,7 @@
             <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;"><span onclick="showEntry('class-cleric')" style="color:var(--gold);cursor:pointer;">Cleric</span></td><td style="padding:0.2rem 0;color:var(--text);">Priests of the land. Powerful healers with strong blessings and overall magical utility.</td></tr>
             <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;"><span onclick="showEntry('class-druid')" style="color:var(--gold);cursor:pointer;">Druid</span></td><td style="padding:0.2rem 0;color:var(--text);">At one with nature. Fight for the right of others to live — angering one is not advised.</td></tr>
             <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;"><span onclick="showEntry('class-runist')" style="color:var(--gold);cursor:pointer;">Runist</span></td><td style="padding:0.2rem 0;color:var(--text);">Learned their strange magic from Kirre travellers. Specialize in magical symbols to power equipment, protect bodies, and guard rooms. Also possess some thief stealth and wizardly magic.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;"><span onclick="showEntry('class-elemental')" style="color:var(--gold);cursor:pointer;">Elemental</span></td><td style="padding:0.2rem 0;color:var(--text);">Attune to a single elemental force and bend it to your will. A versatile hybrid with melee and magic reclasses.</td></tr>
           </tbody>
         </table>
         <p>See also: <span onclick="showEntry('race-general')" style="color:var(--gold);cursor:pointer;">help race</span></p>
@@ -365,6 +366,7 @@
             <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">Invoker</td><td style="padding:0.2rem 0;color:var(--text);">Necromancer or Diviner</td></tr>
             <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">Runist</td><td style="padding:0.2rem 0;color:var(--text);">Psion or Zealot</td></tr>
             <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">Monk</td><td style="padding:0.2rem 0;color:var(--text);">Samurai or Ninja</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">Elemental</td><td style="padding:0.2rem 0;color:var(--text);">Forgeborn or Channeler</td></tr>
           </tbody>
         </table>
         <p>You may find out more by typing <span style="color:#66ccff;">help &lt;subclass&gt;</span>.</p>
@@ -710,4 +712,39 @@
           </tbody>
         </table>
       </div>
+
+      <div class="help-entry" id="entry-class-elemental">
+        <div class="help-entry-title">Elemental</div>
+        <hr>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;">ELEMENTAL DEFAULT</div>
+        <p>The Elemental is a class built around channeling raw elemental forces in combat. Rather than mastering a broad range of spells or weapon styles, elementals attune to a single element and bend it to their will. All elemental abilities draw from your active affinity — you must set it before using skills.</p>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">Affinity System</div>
+        <p style="font-family:'Courier New',monospace;font-size:0.85rem;color:var(--text);margin:0.25rem 0;">Base affinities (all elementals): <span style="color:#66ccff;">fire &nbsp; ice &nbsp; lightning &nbsp; acid &nbsp; poison</span><br>Extended affinities (Forgeborn &amp; Channeler reclasses only): <span style="color:#66ccff;">water &nbsp; earth &nbsp; wind &nbsp; shadow &nbsp; divine</span></p>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1rem;">Core Skills</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">affinity</td><td style="padding:0.2rem 0;color:var(--text);">Set your active element. Free command, instant, no cost.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">elemental bolt</td><td style="padding:0.2rem 0;color:var(--text);">Targeted elemental spell scaling with level. Mana cost: 15. Available at level 5.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">elemental strike</td><td style="padding:0.2rem 0;color:var(--text);">Melee attack enhanced by your affinity. 25% chance for an element-specific secondary effect. Available at level 10.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">elemental shield</td><td style="padding:0.2rem 0;color:var(--text);">Wraps target in a protective field granting resistance to the chosen element. Mana cost: 25. Available at level 20.</td></tr>
+          </tbody>
+        </table>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">FORGEBORN RECLASS</div>
+        <p>Melee-focused reclass. Forgeborn temper their elemental power into weapon strikes and physical combat.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">elemental surge</td><td style="padding:0.2rem 0;color:var(--text);">Temporarily boosts hitroll and damroll. Duration and cooldown scale with level.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">elemental temper</td><td style="padding:0.2rem 0;color:var(--text);">Imbues your wielded weapon with your active element for 10 rounds.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">berserk</td><td style="padding:0.2rem 0;color:var(--text);">Standard berserk ability.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">third attack</td><td style="padding:0.2rem 0;color:var(--text);">An additional attack per round.</td></tr>
+          </tbody>
+        </table>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">CHANNELER RECLASS</div>
+        <p>Magic-focused reclass. Channelers amplify elemental power through high-impact spells, at the cost of some physical prowess. Elemental strike deals <span style="color:#66ccff;">40% reduced</span> physical damage for Channelers.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">elemental overload</td><td style="padding:0.2rem 0;color:var(--text);">Devastating surge of elemental energy scaling with level. Supports all 11 affinities. CON save for half. Mana cost: 80.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">delayed blast fireball</td><td style="padding:0.2rem 0;color:var(--text);">Standard delayed blast fireball.</td></tr>
+          </tbody>
+        </table>
       </div>
