@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redemption MUD — Lore</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold:    #c9a84c;
+      --gold-lt: #e8c96a;
+      --red:     #8b1a1a;
+      --red-lt:  #b03030;
+      --bg:      #0a0a0f;
+      --bg2:     #10101a;
+      --bg3:     #161626;
+      --border:  #2a2a3a;
+      --text:    #d4d0c8;
+      --text-lt: #f0ece0;
+      --shadow:  rgba(0,0,0,0.6);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Georgia', 'Times New Roman', serif;
+      line-height: 1.7;
+    }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { color: var(--gold-lt); text-decoration: underline; }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+    .section-title {
+      font-size: 2rem;
+      color: var(--gold);
+      text-align: center;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .section-subtitle {
+      text-align: center;
+      color: var(--text);
+      font-style: italic;
+      margin-bottom: 3rem;
+      font-size: 1.05rem;
+      opacity: 0.8;
+    }
+    .divider {
+      width: 120px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0.6rem auto 0.8rem;
+    }
+
+    /* ── Navigation ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,15,0.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(6px);
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-size: 1.25rem; font-weight: bold;
+      color: var(--gold); letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .nav-logo span { color: var(--text-lt); font-weight: normal; font-size: 0.75rem; display: block; letter-spacing: 0.2em; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: var(--text); font-size: 0.88rem;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); text-decoration: none; }
+    .nav-play-btn {
+      background: var(--red) !important; color: #fff !important;
+      padding: 0.4rem 1.1rem; border-radius: 3px;
+      transition: background 0.2s !important;
+    }
+    .nav-play-btn:hover { background: var(--red-lt) !important; }
+
+    /* ── Hero ── */
+    .lore-hero {
+      padding: 6rem 1.5rem 4rem;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(30,15,5,0.6) 0%, var(--bg) 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .lore-hero h1 {
+      font-size: 3rem;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .lore-hero p {
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--text-lt);
+      max-width: 640px;
+      margin: 0 auto;
+      opacity: 0.85;
+    }
+
+    /* ── Sidebar nav ── */
+    .lore-layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 3rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+      align-items: start;
+    }
+    .lore-sidebar {
+      position: sticky;
+      top: 80px;
+    }
+    .lore-sidebar ul {
+      list-style: none;
+      border-left: 2px solid var(--border);
+      padding-left: 1rem;
+    }
+    .lore-sidebar ul li { margin-bottom: 0.6rem; }
+    .lore-sidebar ul a {
+      color: var(--text);
+      font-size: 0.88rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .lore-sidebar ul a:hover,
+    .lore-sidebar ul a.active { color: var(--gold); text-decoration: none; }
+    .lore-sidebar-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.6;
+      margin-bottom: 0.75rem;
+    }
+
+    /* ── Lore entries ── */
+    .lore-entries { }
+    .lore-entry {
+      margin-bottom: 4rem;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .lore-entry:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .lore-entry-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .lore-entry-icon {
+      font-size: 2rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .lore-entry-title {
+      font-size: 1.6rem;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .lore-entry-sub {
+      font-size: 0.85rem;
+      color: var(--text);
+      opacity: 0.6;
+      font-style: italic;
+      letter-spacing: 0.04em;
+    }
+    .lore-entry-accent {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      margin-bottom: 1.5rem;
+      opacity: 0.4;
+    }
+    .lore-entry p {
+      margin-bottom: 1.1rem;
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--text);
+    }
+    .lore-entry p:last-child { margin-bottom: 0; }
+    .lore-entry p.lore-closing {
+      font-style: italic;
+      color: var(--gold);
+      opacity: 0.85;
+      margin-top: 1.5rem;
+    }
+
+    /* faction color accents */
+    .lore-entry.terra .lore-entry-accent { background: linear-gradient(90deg, #4a7c59, transparent); }
+    .lore-entry.dominia .lore-entry-accent { background: linear-gradient(90deg, #7c3a4a, transparent); }
+    .lore-entry.remnant .lore-entry-accent { background: linear-gradient(90deg, #8b1a1a, transparent); }
+    .lore-entry.warden .lore-entry-accent { background: linear-gradient(90deg, #1a4a6a, transparent); }
+    .lore-entry.bosco .lore-entry-accent { background: linear-gradient(90deg, #7a5a1a, transparent); }
+    .lore-entry.selina .lore-entry-accent { background: linear-gradient(90deg, #3a2a6a, transparent); }
+
+    /* ── Gods section ── */
+    .gods-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .god-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      padding: 1.25rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .god-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.5;
+    }
+    .god-name {
+      font-size: 1rem;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.2rem;
+    }
+    .god-favor {
+      font-size: 0.8rem;
+      color: #66ccff;
+      font-family: 'Courier New', monospace;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.05em;
+    }
+    .god-desc {
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.65;
+      opacity: 0.85;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+    }
+    .footer-logo { font-size: 1.4rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.3rem; }
+    .footer-tagline { font-size: 0.85rem; font-style: italic; color: var(--text); opacity: 0.6; margin-bottom: 1rem; }
+    .footer-links { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+    .footer-links a { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text); opacity: 0.7; }
+    .footer-links a:hover { opacity: 1; color: var(--gold); text-decoration: none; }
+    .footer-copy { font-size: 0.75rem; color: var(--text); opacity: 0.4; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .lore-layout { grid-template-columns: 1fr; }
+      .lore-sidebar { display: none; }
+      .lore-hero h1 { font-size: 2rem; }
+      .gods-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">
+        Redemption
+        <span>A World at War</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="lore.html" class="active">Lore</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#updates">Updates</a></li>
+        <li><a href="newbie.html">New Players</a></li>
+        <li><a href="helpfiles.html">Help Files</a></li>
+        <li><a href="crafting.html">Crafting</a></li>
+        <li><a href="index.html#play" class="nav-play-btn">Play Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="lore-hero">
+    <h1>The Lore of Redemption</h1>
+    <p>Two gods. Two continents. One war that never truly ended. This is the world you are entering.</p>
+  </div>
+
+  <div class="lore-layout">
+
+    <!-- Sidebar -->
+    <aside class="lore-sidebar">
+      <div class="lore-sidebar-label">On This Page</div>
+      <ul>
+        <li><a href="#redemption">Redemption</a></li>
+        <li><a href="#story">The Story</a></li>
+        <li><a href="#terra">Terra</a></li>
+        <li><a href="#dominia">Dominia</a></li>
+        <li><a href="#remnant">Remnant</a></li>
+        <li><a href="#warden">Warden</a></li>
+        <li><a href="#bosco">Bosco</a></li>
+        <li><a href="#selina">Selina</a></li>
+        <li><a href="#gods">The Seven Gods</a></li>
+      </ul>
+    </aside>
+
+    <!-- Entries -->
+    <main class="lore-entries">
+
+      <div class="lore-entry" id="redemption">
+        <div class="lore-entry-header">
+          <div class="lore-entry-icon">⚖️</div>
+          <div>
+            <div class="lore-entry-title">Redemption</div>
+            <div class="lore-entry-sub">The name of this world, and what it means</div>
+          </div>
+        </div>
+        <div class="lore-entry-accent"></div>
+        <p>Redemption is the name of this world, and it means something.</p>
+        <p>Two gods who were once lovers now wage a cold war across the Dragon Sea. Bosco rules Terra in the west. Selina rules Dominia in the east. Between them lies a history of fire and ruin neither will speak of plainly, and seven children whose names mortals whisper in prayer.</p>
+        <p>The last war nearly ended everything. Bosco's dragons crossed the sea. Selina's slivers broke them and the tide of destruction rolled back onto Terra, leaving most of the continent in ash. It was restored. The wound was not.</p>
+        <p>Both sides are preparing for what comes next.</p>
+        <p>You arrive in the middle of all of it — after the ruin, before the reckoning. The choices you make, the god you worship, the clan you join, the continent you call home — all of it feeds into a question this world has been asking since the day Bosco and Selina stopped speaking.</p>
+        <p>Can any of this be undone?</p>
+        <p class="lore-closing">That is what redemption means here. Not absolution handed down from above. The hard kind — earned, uncertain, and never guaranteed.</p>
+      </div>
+
+      <div class="lore-entry" id="story">
+        <div class="lore-entry-header">
+          <div class="lore-entry-icon">📜</div>
+          <div>
+            <div class="lore-entry-title">The Story</div>
+            <div class="lore-entry-sub">In the beginning there were two</div>
+          </div>
+        </div>
+        <div class="lore-entry-accent"></div>
+        <p>In the beginning there were two — Bosco and Selina. Equal in power, bound by love, each given dominion over half of a world still young. Bosco ruled Terra in the west, where dragons soared free and mortals built their kingdoms under his watch. Selina ruled Dominia in the east, where the sliver hive mind thrummed beneath the earth and her children grew in ways his never could.</p>
+        <p>For a time, the Dragon Sea between them was enough. Two worlds, two gods, one love to hold them together.</p>
+        <p>It did not last.</p>
+        <p>On Dominia, a mortal clan called Venari turned extermination into religion. They hunted Bosco's dragons to the edge of extinction, and when Bosco moved to save what remained of his children — empowering them, strengthening them — the dragons did not wait for his blessing. They saw divine mandate where there was only mercy. They crossed the Dragon Sea, destroyed Venari, and marched on Dominia in Bosco's name.</p>
+        <p>Selina's response was absolute. The sliver hive mind rose as one and broke the dragon host. The tide of war rolled back across the sea and did not stop until most of Terra lay in ruin.</p>
+        <p>The world was nearly lost.</p>
+        <p>It was restored — but not healed. Bosco and Selina have not spoken since. He arms his children with new steel and new fire, forging metallic dragons from his grief and fury. She raises Elementals and calls down Aasimar from heaven itself, celestial beings of free will she trusts more than any army.</p>
+        <p>Mortals now choose sides. Remnant holds the bones of Terra, growing stronger in Bosco's name. Warden guards Dominia's shores, sworn to Selina and the memory of what was nearly taken.</p>
+        <p>Above it all, seven gods walk among the prayers of the faithful — children of Bosco and Selina both — each carrying a piece of what their parents lost.</p>
+        <p>Somewhere in that wreckage is the possibility that this does not have to end in fire. That is what this world is named for.</p>
+        <p class="lore-closing">Redemption.</p>
+      </div>
+
+      <div class="lore-entry terra" id="terra">
+        <div class="lore-entry-header">
+          <div class="lore-entry-icon">🐉</div>
+          <div>
+            <div class="lore-entry-title">Terra</div>
+            <div class="lore-entry-sub">Birthplace of the Dragons — Bosco's Continent</div>
+          </div>
+        </div>
+        <div class="lore-entry-accent"></div>
+        <p>Terra is Bosco's continent — built on strength, shaped by conflict, and scarred by a war that nearly erased it from existence.</p>
+        <p>Bosco does not forgive easily. When the clan Venari hunted his dragons to near extinction on Dominia's shores, he answered not with armies but with power — gifts poured into the survivors, his children made harder and fiercer than before. That the dragons took his mercy as a war cry is a wound he carries quietly. That Terra almost burned for it is one he does not.</p>
+        <p>The continent was destroyed. Bosco restored it.</p>
+        <p>It stands now as it always has — rough, proud, and unyielding. Dragons claim its skies. Mortals of every kind crowd its cities and wild places, many of them soldiers of Remnant, the army that endured when everything else fell.</p>
+        <p>Bosco has not forgiven Selina for what the slivers did to his land. In answer to her Elementals and her Aasimar, he has turned his hand to new creation — metallic dragons, forged from ancient bloodlines, carrying elements the world has not yet seen. His patience is spent. His children are ready.</p>
+        <p class="lore-closing">Terra is not a continent at peace. It is a continent preparing.</p>
+      </div>
+
+      <div class="lore-entry dominia" id="dominia">
+        <div class="lore-entry-header">
+          <div class="lore-entry-icon">🌿</div>
+          <div>
+            <div class="lore-entry-title">Dominia</div>
+            <div class="lore-entry-sub">Continent of the Slivers — Selina's Domain</div>
+          </div>
+        </div>
+        <div class="lore-entry-accent"></div>
+        <p>Dominia is Selina's continent — older in its ways, quieter in its power, and harder to break than anything Bosco has ever sent against it.</p>
+        <p>The slivers were her first children, a race born from the hive mind of the land itself. They do not fight as individuals. They do not break as individuals. When the dragon host crossed the Dragon Sea and destroyed Venari, it was the hive mind that met them — patient, vast, and without mercy for those who came to conquer.</p>
+        <p>The dragons were driven back. Terra nearly fell in the aftermath.</p>
+        <p>Selina did not celebrate. She does not arm for conquest. She arms because she remembers, and because the silence from the other side of the Dragon Sea does not sound like peace — it sounds like preparation.</p>
+        <p>Her answer to Bosco's metallic dragons has come in two forms. The first are her Elementals, ancient forces of the natural world now bound in service to Dominia's defense. The second are the Aasimar — celestial beings drawn down from heaven itself, free-willed and luminous, given life and choice in equal measure. Some will stand with her. Some will not. Selina accepts this. It is the difference between her and Bosco.</p>
+        <p>Warden holds her shores — soldiers, slivers, and a handful of dragons who have chosen conscience over blood. Their hall is a hive, their purpose clear: no Terra force sets foot on Dominia soil again. And somewhere in their ranks burns a quieter ambition — to resurrect the memory of Venari, and finish what that clan began.</p>
+        <p class="lore-closing">Dominia endures. It always has.</p>
+      </div>
+
+      <div class="lore-entry remnant" id="remnant">
+        <div class="lore-entry-header">
+          <div class="lore-entry-icon">🔥</div>
+          <div>
+            <div class="lore-entry-title">Remnant</div>
+            <div class="lore-entry-sub">The army that endured when everything else fell</div>
+          </div>
+        </div>
+        <div class="lore-entry-accent"></div>
+        <p>When the dragonwar ended and most of Terra lay in ruins, it was not the dragons who held the line. It was the soldiers — the mortals, the faithful, the ones who had nowhere else to go.</p>
+        <p>They called themselves Remnant. Because that is what they were.</p>
+        <p>What began as scattered survivors has grown into an army. Remnant claims the western reaches of Terra as its base, a fortress built from the bones of a war they did not start and refuse to lose. They answer to Bosco's name and carry his cause: that Dominia's aggression will not go unanswered, that the sliver hive mind will face a reckoning, and that Terra will one day strike back across the Dragon Sea.</p>
+        <p class="lore-closing">Remnant welcomes anyone willing to fight for that purpose. Dragon, mortal, remort — rank is earned through dedication and commitment to the cause.</p>
+      </div>
+
+      <div class="lore-entry warden" id="warden">
+        <div class="lore-entry-header">
+          <div class="lore-entry-icon">🛡️</div>
+          <div>
+            <div class="lore-entry-title">Warden</div>
+            <div class="lore-entry-sub">The line that does not move</div>
+          </div>
+        </div>
+        <div class="lore-entry-accent"></div>
+        <p>Warden was born in the silence after the sliver hive mind broke the dragon host and sent it bleeding back across the Dragon Sea.</p>
+        <p>The war was over. But no one who lived through it believed it was finished.</p>
+        <p>Those who had fought beneath Selina's banner — soldiers, slivers, the scattered survivors of Venari's line — looked west at a rebuilding Terra and understood that what had come once would come again. They took a name that said plainly what they intended to be: Wardens. Guardians of Dominia's shores. The line that does not move.</p>
+        <p>Their hall is a hive. The slivers who dwell there do not distinguish between wall and soldier, between stone and will — the hall itself is alive with Selina's purpose. No Terra force breaches it easily, and none has ever held it.</p>
+        <p>Warden's ranks are leaner than Remnant's. They do not grow through recruitment drives and gold — they grow through conviction. And in a pragmatic acknowledgment of what survival requires, they have opened their doors to a rare few: dragons who have turned from Bosco, who chose Selina's truth over their god's war. These dragons are not trusted easily. But they are used.</p>
+        <p class="lore-closing">The longer ambition that lives in Warden's core is the resurrection of Venari — not the clan as it was, but the idea it carried. That Dominia should never again tremble at the sound of wings from the west.</p>
+      </div>
+
+      <div class="lore-entry bosco" id="bosco">
+        <div class="lore-entry-header">
+          <div class="lore-entry-icon">⚡</div>
+          <div>
+            <div class="lore-entry-title">Bosco</div>
+            <div class="lore-entry-sub">God of Terra — Father of Dragons</div>
+          </div>
+        </div>
+        <div class="lore-entry-accent"></div>
+        <p>Bosco is not a gentle god. He is a god of fire and will, of creation through force and order through strength. He built Terra in his image — vast, scorched, alive with the power of dragons whose wings darken the sky.</p>
+        <p>He loved Selina once, across the Dragon Sea, before the world broke between them. He does not speak of it. Neither does he forgive it.</p>
+        <p>When his dragons were hunted to near extinction by the mortal clan Venari, Bosco answered with power — gifts of strength and flame poured into his surviving children. He did not order the war. He did not have to. The dragons saw in his mercy the permission they wanted, and crossed the sea in his name.</p>
+        <p>Terra burned for it. Bosco restored the land. He has not yet restored his regard for Selina.</p>
+        <p>He is silent now, but silence is not stillness. In his forge he shapes something new — metallic dragons, ancient bloodlines reborn with elements the world has not faced before. He has not spoken because he is not finished yet.</p>
+        <p class="lore-closing">You cannot worship Bosco directly. He is too vast, too absolute. But his children hear prayers, and his name carries weight on Terra that no mortal word can match.</p>
+      </div>
+
+      <div class="lore-entry selina" id="selina">
+        <div class="lore-entry-header">
+          <div class="lore-entry-icon">🌙</div>
+          <div>
+            <div class="lore-entry-title">Selina</div>
+            <div class="lore-entry-sub">Goddess of Dominia — Mother of the Hive</div>
+          </div>
+        </div>
+        <div class="lore-entry-accent"></div>
+        <p>Selina is the older power, in the way that patience is older than force. She built Dominia not as a monument to herself but as a living thing — the sliver hive mind is her first expression, a race born from the land's own will, thinking with one thought, impossible to break from the outside because there is no outside.</p>
+        <p>She loved Bosco once. She does not hate him now. That is the wound — she simply cannot trust what he builds in grief and rage. Mercy that arms a blade is mercy she cannot accept.</p>
+        <p>When the dragons came to Dominia in Bosco's name, Selina did not call for vengeance. She called for endurance. The hive rose. The dragons broke. The tide rolled back across the sea. She watched Terra burn and felt nothing she will name.</p>
+        <p>Her answer to the next war comes in two forms. The first are her Elementals — ancient natural forces, patient and vast. The second are the Aasimar, celestial beings she has drawn down from heaven and given the one thing she prizes above all others: choice. Some will stand with her. Some will cross to Bosco. Selina opens her hands and lets them go. This is the difference between her and Bosco, and she knows it.</p>
+        <p>She built warp gates between the continents once, at her own hand, and lit them herself. She thought if there was passage there would be no need for fire. They still stand. They still burn. No one uses them.</p>
+        <p class="lore-closing">You cannot worship Selina directly. But her daughters Kallana and Myena walk among her faithful, and her purpose shapes every shore on Dominia.</p>
+      </div>
+
+      <div class="lore-entry" id="gods">
+        <div class="lore-entry-header">
+          <div class="lore-entry-icon">✨</div>
+          <div>
+            <div class="lore-entry-title">The Seven Gods</div>
+            <div class="lore-entry-sub">Children of Bosco and Selina — Hear the prayers of mortals</div>
+          </div>
+        </div>
+        <div class="lore-entry-accent"></div>
+        <p>Seven gods walk the space between Bosco and Selina — children of both, carrying pieces of what their parents once shared. You cannot worship Bosco or Selina directly. They are too vast, too absolute. But their children hear prayers.</p>
+        <p>Worship lets you offer sacrifices to a god of your choice. Each time you sacrifice a corpse you gain deity points, which you can spend to claim your god's favors. If you change gods you lose all accumulated deity points.</p>
+        <div class="gods-grid">
+          <div class="god-card">
+            <div class="god-name">Gabriel</div>
+            <div class="god-favor">Favor: surge</div>
+            <div class="god-desc">Extends the life of your active spells. Only the surge timer counts down while it is active.</div>
+          </div>
+          <div class="god-card">
+            <div class="god-name">Carnas</div>
+            <div class="god-favor">Favor: injustice</div>
+            <div class="god-desc">Lets you attack players without receiving a KILLER flag. Others may strike back without flagging either.</div>
+          </div>
+          <div class="god-card">
+            <div class="god-name">Taelisan</div>
+            <div class="god-favor">Favor: gullivers travel</div>
+            <div class="god-desc">Allows you to recall to either continent. The only inter-continental ability granted by the gods.</div>
+          </div>
+          <div class="god-card">
+            <div class="god-name">Sky</div>
+            <div class="god-favor">Favor: detect all</div>
+            <div class="god-desc">Reveals the hidden, invisible, and sneaking. Only wizi and incog remain beyond its reach.</div>
+          </div>
+          <div class="god-card">
+            <div class="god-name">Bhaal</div>
+            <div class="god-favor">Favor: pacifism</div>
+            <div class="god-desc">While active, you are safe from player attacks. KILLERS, THIEVES, and clanners alike walk without fear of other players.</div>
+          </div>
+          <div class="god-card">
+            <div class="god-name">Kallana</div>
+            <div class="god-favor">Favor: hatred</div>
+            <div class="god-desc">Channels divine hatred for bonus damage against your racial enemy. Daughter of Selina.</div>
+          </div>
+          <div class="god-card">
+            <div class="god-name">Myena</div>
+            <div class="god-favor">Favor: promise</div>
+            <div class="god-desc">Myena's promise to the races of Dominia. Each race receives a boon suited to what they do best. Daughter of Selina.</div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Redemption</div>
+    <div class="footer-tagline">A World at War — Enter, if you dare.</div>
+    <div class="footer-links">
+      <a href="lore.html">Lore</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#updates">Updates</a>
+      <a href="index.html#play">Play</a>
+    </div>
+    <div class="footer-copy">Redemption MUD &copy; All rights reserved. Free to play.</div>
+  </footer>
+
+  <script>
+    // Highlight active sidebar link on scroll
+    const entries = document.querySelectorAll('.lore-entry');
+    const sideLinks = document.querySelectorAll('.lore-sidebar a');
+    const observer = new IntersectionObserver((obs) => {
+      obs.forEach(entry => {
+        if (entry.isIntersecting) {
+          sideLinks.forEach(l => {
+            l.classList.remove('active');
+            if (l.getAttribute('href') === '#' + entry.target.id) {
+              l.classList.add('active');
+            }
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+    entries.forEach(e => observer.observe(e));
+  </script>
+
+</body>
+</html>
