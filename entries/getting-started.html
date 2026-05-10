@@ -1,0 +1,466 @@
+      <div class="help-entry" id="entry-gs-communication">
+        <div class="help-entry-title">Communication</div>
+        <hr>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;">BRIEF COMPACT</div>
+        <p>Brief and compact set your display options for the game. Typing <code>brief</code> toggles on and off the showing of room descriptions when you move around (considerably reducing the text to be processed), and typing <code>compact</code> removes the extra blank line before your prompt.</p>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">DEAF</div>
+        <p>The deaf toggle turns off incoming tells, helpful if you are being bombarded by messages from other players. You can still use <code>reply</code> (see <code>help reply</code>) to reply to people who were telling you before you went deaf, although you cannot reply to a deaf person unless you or they are a deity (it's mostly useful for sending a quick "I'm being spammed so I went deaf" message to a person).</p>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">AFK</div>
+        <p>Typing <code>afk</code> puts your character in a tell-saving mode: any tell sent to you is stored in a special buffer and can be seen later by typing <code>replay</code>. This is useful when you need to leave the mud for a few minutes but don't want to miss tells. AFK shows up in your prompt until it is turned off. You may also type <code>replay</code> while AFK.</p>
+        <p>Tells to link-dead players are stored in a similar fashion, and can also be seen by typing <code>replay</code> when they reconnect (unless the character logs off before reading them).</p>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">REPLAY</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;white-space:nowrap;vertical-align:top;"><code>replay</code></td><td style="padding:0.2rem 0;color:var(--text);">Shows all tells stored while you were AFK or link-dead. The buffer is cleared after you view it.</td></tr>
+          </tbody>
+        </table>
+        <p>See also: <code>help afk</code></p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">GTELL REPLY SAY TELL RETELL</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">say &lt;message&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Sends a message to all awake players in your room. <code>'</code> is a synonym.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">tell &lt;character&gt; &lt;message&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Sends a private message to one awake player anywhere in the world.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">reply &lt;message&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Replies to the last player who sent you a tell. Works even if you can't see them, without revealing their identity.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">retell &lt;message&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Sends a message to the last player you sent a tell to. <code>-</code> is a synonym.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">gtell &lt;message&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Sends a message to all characters in your group wherever they are, even if sleeping or stunned. <code>;</code> is a synonym.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">NOTE BOARDS</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">note</td><td style="padding:0.2rem 0;color:var(--text);">Displays your current note in progress.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">note list</td><td style="padding:0.2rem 0;color:var(--text);">Lists all notes on the current board.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">note read &lt;number&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Reads a specific note by number.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">note read next</td><td style="padding:0.2rem 0;color:var(--text);">Reads the next unread note on the board.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">note write</td><td style="padding:0.2rem 0;color:var(--text);">Opens the editor to compose a new note.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">note to &lt;recipient&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Sets the recipient(s) of your note. Use <code>all</code> for everyone, or a name/group.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">note subject &lt;subject&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Sets the subject line of your note.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">note post</td><td style="padding:0.2rem 0;color:var(--text);">Posts your completed note to the current board.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">note remove &lt;number&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Removes one of your own notes from the board.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">board</td><td style="padding:0.2rem 0;color:var(--text);">Switches to a different note board (general, personal, guild, immortal, etc.).</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">CHANNEL GOSSIP SHOUT MUSIC QUESTION ANSWER</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">gossip &lt;message&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Broadcasts a message to all players in the game. <code>,</code> is a synonym.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">shout &lt;message&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Broadcasts to all players in the same area.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">music &lt;message&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Sends a message on the music channel. <code>~</code> is a synonym.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">question &lt;message&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Asks a question on the question channel, visible to all players.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">answer &lt;message&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Replies on the question channel.</td></tr>
+          </tbody>
+        </table>
+        <p>Use <code>channels</code> to see a list of all available channels and their current toggle state.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">QUIET</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">quiet</td><td style="padding:0.2rem 0;color:var(--text);">Toggles off all channels at once, silencing all broadcast communication. Toggle again to restore your previous channel settings.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">HUSH</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">hush &lt;character&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Prevents you from hearing a specific player's channel messages. Toggles on and off.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">EMOTE PMOTE POSE</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">emote &lt;action&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Performs a free-form emote. Your name is prepended. <code>:</code> is a synonym.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">pmote &lt;action&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Like emote, but uses <code>$n</code> as a placeholder — others see the emote with your name inserted at the <code>$n</code> position, and you see it with "you" substituted.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">pose</td><td style="padding:0.2rem 0;color:var(--text);">Displays a random class-appropriate pose to your room.</td></tr>
+          </tbody>
+        </table>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">SPOUSE</div>
+        <p>Syntax: <code>spouse &lt;message&gt;</code></p>
+        <p>The spouse channel is available only to characters married by an Immortal. Use it to speak privately with your partner.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">UNHUSH</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">unhush &lt;player&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Removes the player from your hush list, allowing you to hear them again.</td></tr>
+          </tbody>
+        </table>
+        <p>See also: <code>help hush</code></p>
+      </div>
+
+      <div class="help-entry" id="entry-gs-newbie">
+        <div class="help-entry-title">Newbie</div>
+        <hr>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;">PROMPT</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">prompt</td><td style="padding:0.2rem 0;color:var(--text);">Toggles your prompt on or off.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">prompt all</td><td style="padding:0.2rem 0;color:var(--text);">Sets the standard <code>&lt;hits mana moves&gt;</code> prompt.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">prompt &lt;%*&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Sets a custom prompt using the variables below.</td></tr>
+          </tbody>
+        </table>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:#66ccff;white-space:nowrap;">%h</td><td style="padding:0.15rem 0;color:var(--text);">Current hits</td><td style="padding:0.15rem 1.5rem 0.15rem 2rem;color:#66ccff;white-space:nowrap;">%H</td><td style="padding:0.15rem 0;color:var(--text);">Maximum hits</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:#66ccff;white-space:nowrap;">%m</td><td style="padding:0.15rem 0;color:var(--text);">Current mana</td><td style="padding:0.15rem 1.5rem 0.15rem 2rem;color:#66ccff;white-space:nowrap;">%M</td><td style="padding:0.15rem 0;color:var(--text);">Maximum mana</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:#66ccff;white-space:nowrap;">%v</td><td style="padding:0.15rem 0;color:var(--text);">Current moves</td><td style="padding:0.15rem 1.5rem 0.15rem 2rem;color:#66ccff;white-space:nowrap;">%V</td><td style="padding:0.15rem 0;color:var(--text);">Maximum moves</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:#66ccff;white-space:nowrap;">%L</td><td style="padding:0.15rem 0;color:var(--text);">Graphic life meter (yours)</td><td style="padding:0.15rem 1.5rem 0.15rem 2rem;color:#66ccff;white-space:nowrap;">%l</td><td style="padding:0.15rem 0;color:var(--text);">Graphic life meter (opponent)</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:#66ccff;white-space:nowrap;">%x</td><td style="padding:0.15rem 0;color:var(--text);">Current experience</td><td style="padding:0.15rem 1.5rem 0.15rem 2rem;color:#66ccff;white-space:nowrap;">%X</td><td style="padding:0.15rem 0;color:var(--text);">Experience to next level</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:#66ccff;white-space:nowrap;">%b</td><td style="padding:0.15rem 0;color:var(--text);">Current breaths</td><td style="padding:0.15rem 1.5rem 0.15rem 2rem;color:#66ccff;white-space:nowrap;">%B</td><td style="padding:0.15rem 0;color:var(--text);">Maximum breaths</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:#66ccff;white-space:nowrap;">%i</td><td style="padding:0.15rem 0;color:var(--text);">Items carried</td><td style="padding:0.15rem 1.5rem 0.15rem 2rem;color:#66ccff;white-space:nowrap;">%I</td><td style="padding:0.15rem 0;color:var(--text);">Max items carried</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:#66ccff;white-space:nowrap;">%w</td><td style="padding:0.15rem 0;color:var(--text);">Weight carried</td><td style="padding:0.15rem 1.5rem 0.15rem 2rem;color:#66ccff;white-space:nowrap;">%W</td><td style="padding:0.15rem 0;color:var(--text);">Max weight carried</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:#66ccff;white-space:nowrap;">%g</td><td style="padding:0.15rem 0;color:var(--text);">Gold held</td><td style="padding:0.15rem 1.5rem 0.15rem 2rem;color:#66ccff;white-space:nowrap;">%s</td><td style="padding:0.15rem 0;color:var(--text);">Silver carried</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:#66ccff;white-space:nowrap;">%a</td><td style="padding:0.15rem 0;color:var(--text);">Alignment</td><td style="padding:0.15rem 1.5rem 0.15rem 2rem;color:#66ccff;white-space:nowrap;">%q</td><td style="padding:0.15rem 0;color:var(--text);">Quest points earned</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:#66ccff;white-space:nowrap;">%Q</td><td style="padding:0.15rem 0;color:var(--text);">Ticks to next quest</td><td style="padding:0.15rem 1.5rem 0.15rem 2rem;color:#66ccff;white-space:nowrap;">%d</td><td style="padding:0.15rem 0;color:var(--text);">Deity points earned</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:#66ccff;white-space:nowrap;">%t</td><td style="padding:0.15rem 0;color:var(--text);">Hour of the day</td><td style="padding:0.15rem 1.5rem 0.15rem 2rem;color:#66ccff;white-space:nowrap;">%r</td><td style="padding:0.15rem 0;color:var(--text);">Name of current room</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:#66ccff;white-space:nowrap;">%e</td><td style="padding:0.15rem 0;color:var(--text);">Exits in NESWDU style</td><td style="padding:0.15rem 1.5rem 0.15rem 2rem;color:#66ccff;white-space:nowrap;">%c</td><td style="padding:0.15rem 0;color:var(--text);">Carriage return (multi-line prompt)</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:#66ccff;white-space:nowrap;">%R</td><td style="padding:0.15rem 0;color:var(--text);">Vnum of current room <em style="opacity:0.5;">(Immortal only)</em></td><td style="padding:0.15rem 1.5rem 0.15rem 2rem;color:#66ccff;white-space:nowrap;">%z</td><td style="padding:0.15rem 0;color:var(--text);">Area name <em style="opacity:0.5;">(Immortal only)</em></td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:#66ccff;white-space:nowrap;">%o</td><td style="padding:0.15rem 0;color:var(--text);">Editor mode <em style="opacity:0.5;">(Immortal only)</em></td><td style="padding:0.15rem 1.5rem 0.15rem 2rem;color:#66ccff;white-space:nowrap;">%O</td><td style="padding:0.15rem 0;color:var(--text);">Vnum being edited <em style="opacity:0.5;">(Immortal only)</em></td></tr>
+          </tbody>
+        </table>
+        <p>Example: <code>prompt &lt;%hhp %mm %vmv&gt;</code> will display as <code>&lt;10hp 100m 100mv&gt;</code></p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">TICK</div>
+        <p>Many of the game actions are based upon interval timers, including combat, most autonomous monster actions, hp/mana/move regeneration, spell duration, weather, and area resetting.</p>
+        <p>Of these timers, the hp/mana/move regeneration timer is popularly called the 'tick'. Ticks on this mud average 70 seconds of real time, but the actual amount varies randomly from 65 seconds to 75 seconds.</p>
+        <p>Area resetting happens roughly every 3 minutes if no one is in the area; less often (15 minutes) if someone is. Because areas take so long to reset if someone is in the area, it is generally considered bad etiquette to sleep in an area, or sit in a popular leveling area doing nothing. Also note that objects lying on the ground will not be regenerated if anyone is in the area when it resets.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">NORTH SOUTH EAST WEST UP DOWN</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">north (n)</td><td style="padding:0.2rem 0;color:var(--text);">Move north.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">south (s)</td><td style="padding:0.2rem 0;color:var(--text);">Move south.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">east (e)</td><td style="padding:0.2rem 0;color:var(--text);">Move east.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">west (w)</td><td style="padding:0.2rem 0;color:var(--text);">Move west.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">up (u)</td><td style="padding:0.2rem 0;color:var(--text);">Move up.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">down (d)</td><td style="padding:0.2rem 0;color:var(--text);">Move down.</td></tr>
+          </tbody>
+        </table>
+        <p>Use these commands to walk in a particular direction. They can all be used by typing the first letter of each word.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">EXITS</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">exits</td><td style="padding:0.2rem 0;color:var(--text);">Tells you the visible exits of the room you are in. Not all exits are visible — try walking in a direction to find hidden ones.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">CAST</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">cast &lt;spell&gt; &lt;target&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Casts a spell at a target. The target is optional — many spells use an appropriate default, especially during combat.</td></tr>
+          </tbody>
+        </table>
+        <p>It is easier to cast a spell after you have practiced it. The more you practice, the higher chance you have of success. You may practice any spell up to 75%. Mana cost decreases as your level increases.</p>
+        <p>If the spell name is more than one word, you must quote it. Example: <code style="color:#66ccff;">cast 'cure critic' target</code>. Quoting is optional for single-word spells. You can abbreviate: <code style="color:#66ccff;">c heal self</code></p>
+        <p>When you cast an offensive spell, the victim usually gets a saving throw. The effect is reduced or eliminated if the saving throw succeeds.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">EXAMINE LOOK PEER READ</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">look</td><td style="padding:0.2rem 0;color:var(--text);">Looks at your surroundings, an object, a character, a direction, or a keyword.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">look in &lt;container&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Looks inside a container or corpse.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">examine &lt;container&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Shorthand for <code>look container</code> followed by <code>look in container</code>.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">peer &lt;direction&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Lets you see into the adjoining room.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">read &lt;object&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Alias for look — useful for reading books, signs, and inscribed items.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">WHO</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">who</td><td style="padding:0.2rem 0;color:var(--text);">Lists all players currently logged in, showing their level, class, race, and name.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">who &lt;name&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Searches the who list for a specific player by name.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">who &lt;level&gt; &lt;level&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Filters the who list by level range.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">WHOIS</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">whois &lt;name&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Identifies any player whose name matches the string given. For example, <code>whois a</code> shows all characters whose name begins with A.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">WHERE</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">where</td><td style="padding:0.2rem 0;color:var(--text);">Shows the location of all visible players in the same area as you.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">where &lt;character&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Shows the location of one specific character (player or monster) within your current area.</td></tr>
+          </tbody>
+        </table>
+        <p>See also: <code>help farsight</code></p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">WEB PAGE WWW SITE</div>
+        <p>The official Redemption web site is located at <a href="http://www.redemptionmud.com/" style="color:var(--gold);">www.redemptionmud.com</a>. The site includes forums, news, and additional resources. Forum accounts require approval — sign up on the site and then send a note in-game to Avacar, Cauthon, or Starcrossed.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">AFFECTS AFFECT</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">affects</td><td style="padding:0.2rem 0;color:var(--text);">Shows all spells currently affecting your character. At higher levels also shows the effect magnitude and remaining duration.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">SKILLS SPELLS</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">skills</td><td style="padding:0.2rem 0;color:var(--text);">Lists all skills available to your character in level order, with your current percentage shown for each.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">spells</td><td style="padding:0.2rem 0;color:var(--text);">Lists all spells available to your character in level order, with mana cost shown for each.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">OUTFIT</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">outfit</td><td style="padding:0.2rem 0;color:var(--text);">Equips your character with a free set of starter gear (banner, weapon, helmet, shield, and vest) courtesy of the Mayor's warehouses. Only empty equipment slots are filled. Available to characters level 5 and below.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">GROUPS PREMISE</div>
+        <p>The Redemption skill system lets you fully customize your character. Skills are paid for with creation points — the more points you spend, the slower you gain levels. Skill groups are package deals: sets of related skills learned as a unit at a reduced cost.</p>
+        <pre>points   exp/level     points   exp/level
+40        1000         90        6000
+50        1500         100       8000
+60        2000         110      12000
+70        3000         120      16000
+80        4000         130      24000</pre>
+        <p>Note: the table above reflects exp/level for humans. Each race and class combination will vary.</p>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">WHOREM</div>
+        <p>Use <code>whorem</code> to see which remorted and reclassed characters are currently online.</p>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">VOTE VOTE INFO</div>
+        <p>Use <code>vote info</code> to check if a vote is currently ongoing. Cast your vote with <code>vote &lt;#&gt;</code>.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">INFO</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">info</td><td style="padding:0.2rem 0;color:var(--text);">Displays the skill and spell groups your character currently has, along with the total creation points for the character.</td></tr>
+          </tbody>
+        </table>
+        <p>See also: <code>help creation points</code>, <code>help gain</code></p>
+      </div>
+
+      <div class="help-entry" id="entry-gs-levels">
+        <div class="help-entry-title">Levels</div>
+        <hr>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;">EXPERIENCE LEVEL XP</div>
+        <p>Your character advances in power by gaining experience. You need a set amount of experience points for each level based on your creation points.</p>
+        <p>You gain experience by:</p>
+        <ul style="margin:0 0 1rem 1.5rem;color:var(--text);font-size:0.95rem;line-height:1.9;">
+          <li>Killing a creature on your own.</li>
+          <li>Being part of a group that kills a monster.</li>
+          <li>Getting better at a skill or spell.</li>
+        </ul>
+        <p>You lose experience by:</p>
+        <ul style="margin:0 0 1rem 1.5rem;color:var(--text);font-size:0.95rem;line-height:1.9;">
+          <li>Fleeing out of combat. (10 exp)</li>
+          <li>Recalling out of combat. (25 exp)</li>
+          <li>Being the target of energy drain spells.</li>
+          <li>Dying.</li>
+        </ul>
+        <p>The experience you get from a kill depends on several things: how many players are in your group; your level versus the level of the monster; your alignment versus the monster's alignment; how many of this monster have been killed lately; your total hours; and some random variation.</p>
+        <p>Once you level, several things happen. You gain hit points, mana points, and practices depending on various factors. You also gain movement points and one training session. Your experience until next level is reset. You will also be able to wear new equipment and gain access to new skills and spells.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">PRACTICE</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">practice</td><td style="padding:0.2rem 0;color:var(--text);">Shows your current ability level in all skills and spells available to you. Can be used anywhere.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">practice &lt;skill|spell&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Practices a skill or spell. Must be at a guild master to use.</td></tr>
+          </tbody>
+        </table>
+        <p>Practice raises a skill up to a cap, after which it can only improve further through use in combat or casting. Most races and classes cap at 75%; Humans cap at 85%. Reclasses who specialize in a skill can exceed 100%, up to 130%.</p>
+        <p>The higher your Intelligence, the more you learn per session. The higher your Wisdom, the more practice sessions you gain per level. Unused sessions are saved until you use them.</p>
+        <p>See also: <code>help specialize</code></p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">TRAIN</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">train &lt;str|int|wis|dex|con|hp|mana&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Spends one training session to increase the chosen attribute, or to increase hp or mana by 10.</td></tr>
+          </tbody>
+        </table>
+        <p>TRAIN increases one of your attributes. When you start the game, your character has standard attributes based on your class, and several initial training sessions. You can increase your attributes by using these sessions at a trainer (there are several in town). It takes one training session to improve an attribute, or to increase mana or hp by 10. You receive one session per level.</p>
+        <p>The best attributes to train first are WIS and CON. WIS gives you more practices when you gain a level. CON gives you more hit points. In the long run, your character will be most powerful if you train WIS and CON both before practicing or training anything else.</p>
+        <p>Dragons and slivers have additional train options. See also: <span style="color:var(--gold);">help 'train dragon'</span>, <span style="color:var(--gold);">help 'train sliver'</span>.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">GAIN</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">gain list</td><td style="padding:0.2rem 0;color:var(--text);">Lists all skill groups and individual skills that can be learned, with their costs.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">gain points</td><td style="padding:0.2rem 0;color:var(--text);">Lowers your creation points by 1 (costs two training sessions).</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">gain &lt;name&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Adds a skill or skill group at the listed training session cost.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">gain convert</td><td style="padding:0.2rem 0;color:var(--text);">Converts 10 practices into one training session.</td></tr>
+          </tbody>
+        </table>
+        <p>GAIN uses training sessions, not practices. Gained skills and groups do <strong>not</strong> increase your experience per level or total creation points until you remort or reclass. See also: <span style="color:var(--gold);">help creation points</span>, <span style="color:var(--gold);">help remort</span>.</p>
+      </div>
+
+      <div class="help-entry" id="entry-gs-pets">
+        <div class="help-entry-title">Pets &amp; Charmed Mobs</div>
+        <hr>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;">PET PETS</div>
+        <p>You can buy pets in the pet shop. You may own only one pet at a time. After the old one dies you may purchase a replacement. Your pet will follow you everywhere you go and help you in your adventures.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">ORDER</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">order &lt;mob&gt; &lt;command&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Orders one of your charmed followers or pets to perform any command.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">order all &lt;command&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Orders all charmed followers and pets to perform the command simultaneously.</td></tr>
+          </tbody>
+        </table>
+        <p>You are responsible for the actions of your followers. Others who attack your followers incur the same penalty as if they attacked you directly. All charmed creatures lose their aggressive nature while charmed. If you charm a creature and then attack it, the charm will break. The more charmed creatures under your control, the harder it is to maintain control over them.</p>
+      </div>
+
+      <div class="help-entry" id="entry-gs-macros">
+        <div class="help-entry-title">Macros &amp; Aliases</div>
+        <hr>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;">ALIAS UNALIAS</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">alias &lt;word&gt; &lt;command&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Creates a shortcut that substitutes &lt;command&gt; whenever you type &lt;word&gt;. For example: <code>alias k kill $*</code> lets you type <code>k goblin</code> instead of <code>kill goblin</code>.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">alias</td><td style="padding:0.2rem 0;color:var(--text);">Lists all your current aliases.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">unalias &lt;word&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Removes a previously defined alias.</td></tr>
+          </tbody>
+        </table>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">MACRO</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">macro list</td><td style="padding:0.2rem 0;color:var(--text);">Lists your existing macros and their definitions.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">macro define &lt;name&gt; &lt;commands&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Defines a macro. Commands are separated by semicolons. Supports up to 9 commands and 10 variables (%0–%9).</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">macro undefine &lt;name&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Deletes the named macro. Use <code>macro undefine all</code> to delete all macros.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">macro trace &lt;name&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Prints the execution path of the macro without running it.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">macro join &lt;macro1&gt; &lt;macro2&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Joins macro2 to macro1 and undefines macro2.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">macro remove &lt;name&gt; &lt;x&gt; [y]</td><td style="padding:0.2rem 0;color:var(--text);">Removes commands numbered x through y from the macro. Use <code>first</code> or <code>last</code> instead of a number.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">macro rename &lt;old&gt; &lt;new&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Renames a macro. Use <code>macro renameu</code> to also update any macros that call the old name.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">macro insert &lt;name&gt; &lt;x&gt; &lt;commands&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Inserts commands before position x. Use <code>first</code> or <code>last</code> as position.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">macro append &lt;name&gt; &lt;x&gt; &lt;commands&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Appends commands after position x. Use <code>first</code> or <code>last</code> as position.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">macro replace &lt;name&gt; &lt;x&gt; [y] &lt;commands&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Replaces commands x through y with new commands.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">macro kill &lt;name&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Stops a running macro. Use <code>macro kill all</code> to stop all.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">macro running</td><td style="padding:0.2rem 0;color:var(--text);">Lists all currently running macros.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">MACROBASICS</div>
+        <p>A macro is an extended alias with variables. Unlike aliases, macros support multiple commands separated by semicolons, and they can call other macros (including themselves). When a macro is running, any commands typed by the player take precedence over the macro's commands.</p>
+        <p>Commands in a macro can contain variables identified as <span style="color:#66ccff;">%0</span> through <span style="color:#66ccff;">%9</span>. Arguments typed after the macro name fill the variables in order.</p>
+        <p>Example — define a macro that recalls and buys food:</p>
+        <p style="font-family:'Courier New',monospace;font-size:0.85rem;color:#66ccff;margin-left:1rem;">macro define food recall; s; s; w; n; buy 10*pie</p>
+        <p>Example — define a grats macro with a variable:</p>
+        <p style="font-family:'Courier New',monospace;font-size:0.85rem;color:#66ccff;margin-left:1rem;">macro define congrat grats Congratulations, %0, on your level!!!</p>
+        <p>Then typing <code>congrat KillerBob</code> sends: <code>grats Congratulations, KillerBob, on your level!!!</code></p>
+      </div>
+
+      <div class="help-entry" id="entry-gs-inventory">
+        <div class="help-entry-title">Inventory</div>
+        <hr>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;">TRASH</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">trash &lt;object&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Permanently destroys an object lying on the ground in your room. The object must be takeable and not flagged as no-sacrifice. Unlike sacrifice, you receive no reward for trashing items.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">DROP GET GIVE PUT TAKE</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">drop &lt;object&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Drops an object on the ground. Objects with melt_drop will dissolve.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">drop &lt;amount&gt; coins</td><td style="padding:0.2rem 0;color:var(--text);">Drops some coins on the ground.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">get &lt;object&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Gets an object from the ground, a container, or a corpse. <code>take</code> is a synonym.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">get &lt;object&gt; &lt;container&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Gets an object from a specific container.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">get all</td><td style="padding:0.2rem 0;color:var(--text);">Gets all objects from the ground.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">give &lt;object&gt; &lt;character&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Gives an object to another character.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">give &lt;amount&gt; coins &lt;character&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Gives coins to another character. Example: <code>give 100 gold target</code></td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">put &lt;object&gt; &lt;container&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Puts an object into a container.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">put all.&lt;object&gt; &lt;container&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Puts all objects with the same name into a container.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">EQUIPMENT INVENTORY</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">equipment</td><td style="padding:0.2rem 0;color:var(--text);">Lists your worn equipment — armor, weapons, float and held items.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">inventory</td><td style="padding:0.2rem 0;color:var(--text);">Lists your held inventory.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">COMPARE</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">compare &lt;object-1&gt; &lt;object-2&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Compares two objects in your inventory. For weapons, reports the one with better average damage. For armor, reports the one with better armor class.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">compare &lt;object&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Compares an inventory item to what you currently wear or wield of the same type. Does not consider special modifiers.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">HOLD REMOVE WEAR WIELD</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">wear &lt;object&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Puts on a piece of equipment.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">wear all</td><td style="padding:0.2rem 0;color:var(--text);">Attempts to wear all wearable items in your inventory.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">wield &lt;weapon&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Equips a weapon in your primary hand.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">hold &lt;object&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Holds an item in your off-hand slot (shields, wands, staves, etc.).</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">remove &lt;object&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Removes a piece of worn equipment and places it in your inventory.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">remove all</td><td style="padding:0.2rem 0;color:var(--text);">Removes all worn equipment.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">DRINK EAT FILL POUR</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">drink &lt;object&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Drinks from a container. <code>drink</code> alone will drink from a fountain or magical spring in your room.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">eat &lt;object&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Eats a food item to reduce hunger.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">fill &lt;object&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Fills a drink container with water from a nearby fountain.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">pour &lt;object&gt; out</td><td style="padding:0.2rem 0;color:var(--text);">Empties a drink container.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">pour &lt;object&gt; &lt;container&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Transfers liquid from one container to another.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">pour &lt;object&gt; &lt;character&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Pours into a container that a character is holding.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">SACRIFICE</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">sacrifice &lt;object&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Offers an object to your deity, who may reward you. The nature of the reward depends on the type of object sacrificed.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">BRANDISH QUAFF RECITE ZAP STAFF STAVES POTION SCROLL WAND</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">brandish</td><td style="padding:0.2rem 0;color:var(--text);">Brandishes a magical staff you are holding.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">quaff &lt;potion&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Quaffs a magical potion. Unlike DRINK, which handles mundane liquids, QUAFF is specifically for magical potions.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">recite &lt;scroll&gt; &lt;target&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Reads a scroll on yourself or a target. The scroll must be in your inventory.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">zap &lt;target&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Zaps a magical wand at a target. If no target is specified and you are in combat, your current opponent is used.</td></tr>
+          </tbody>
+        </table>
+        <p>You must HOLD a wand or staff before using BRANDISH or ZAP. All of these commands consume their objects — potions and scrolls have a single charge; wands and staves have multiple charges. When a magical object has no more charges, it is destroyed. The mage spell <code>recharge</code> may be used to restore charges.</p>
+        <p>These commands may require an item skill to be successful. See the help entries on the skills scrolls, staves, and wands for more information.</p>
+        <p><strong style="color:var(--text-lt);">Learned by:</strong> All</p>
+      </div>
+
+      <div class="help-entry" id="entry-gs-quest">
+        <div class="help-entry-title">Quest Master</div>
+        <hr>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;">QUEST MASTER</div>
+        <p>The quest master is a mob that distributes quests on request. Level <span style="color:#66ccff;">51</span>+ questers are awarded cash and quest/experience points. From level <span style="color:#66ccff;">1</span> to <span style="color:#66ccff;">50</span>, successfully completed quests receive the standard reward with a lessened amount of quest points. Quest points can be turned in for special equipment and other designated opportunities.</p>
+        <p>You must wait <span style="color:#66ccff;">8–12</span> minutes between solo quests (item or villain), or <span style="color:#66ccff;">15–20</span> minutes between group assault quests.</p>
+        <p>There are three kinds of quests: <strong style="color:var(--text-lt);">item quests</strong> (retrieve an item), <strong style="color:var(--text-lt);">villain quests</strong> (kill a monster), and <strong style="color:var(--text-lt);">assault quests</strong> (you and a group kill multiple monsters in an area). When typing <code>quest request</code> you can specify <code>item</code>, <code>villain</code>, or <code>assault</code> to get that kind of quest.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">quest points</td><td style="padding:0.2rem 0;color:var(--text);">Shows your current number of quest points.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">quest list</td><td style="padding:0.2rem 0;color:var(--text);">Lists the items the quest master sells and their cost.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">quest buy &lt;item&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Buys an item from the quest master.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">quest reset</td><td style="padding:0.2rem 0;color:var(--text);">Cancels your current quest and reduces your remaining cooldown timer by one third.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">quest request</td><td style="padding:0.2rem 0;color:var(--text);">Gives you a quest to complete.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">quest info</td><td style="padding:0.2rem 0;color:var(--text);">Lists what must be accomplished to complete the quest.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">quest complete</td><td style="padding:0.2rem 0;color:var(--text);">Type this after finishing the quest to receive your prize.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">quest time</td><td style="padding:0.2rem 0;color:var(--text);">Shows the time remaining to complete your current quest, or the cooldown before you can quest again.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">RPTITLE TITLE RECOGNITION ROLE PLAY</div>
+        <p>Recognition titles are titles which appear before your name, but after your clan affiliation on the who list. They are always used to recognize a social status, accomplishment, or title, and can be awarded in the following ways:</p>
+        <p><strong style="color:var(--gold);">1.</strong> Ask an Immortal to evaluate your claim — usually through a quest more strenuous than typical quests.</p>
+        <p><strong style="color:var(--gold);">2.</strong> Prove through a petition or list that you are commonly recognized by a given title. The Immortal will evaluate and either announce your new title or decline your claim.</p>
+        <p><strong style="color:var(--gold);">3.</strong> Most recognition titles are unique. To claim a held title, a challenge must be issued simultaneously by note to both the Immortal and the current title holder.</p>
+        <p>All recognition titles require role-play justification. Retaining a title is an honour — every action of the bearer should reflect it. Titles which no longer apply will be removed. They can also be lost by failing to defend a challenge, holding an inappropriate title, or failing to live up to the title for an extended period.</p>
+        <p><em>Guidelines:</em> Recognition titles should ideally read before your name — short, usually one or two words. Weaving your title subtly into your character's personality is highly recommended.</p>
+      </div>

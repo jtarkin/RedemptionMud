@@ -1,0 +1,63 @@
+SMUGGLERS' DEN
+
+
+         -=+MAPPED BY WAKIZASTA+=-                                            (2)
+                                                                               ^
+                                                                               |
+                 U N                                             (3)-----(4) Inside the-->--(3)
+                  \|                                                     smugglers cave.
+                W--+--E                                                    (two rats)
+                   |\                                                        |    v
+                   S D                                                       ^   (6)
+                                                                             |
+                                                                 (2)-----(3) Inside the-----(4)
+                                                                         smugglers cave
+                                                                             |    v
+                                                                             ^   (5)
+                                                                             |
+                                                                         (2) Inside the-----(3)
+                                                                         smugglers cave
+                                                                               |                   (3)                (4)
+                                                                               |                    ^                  |
+                                                                               |                    |                  |
+  TO HAON DOR---+--A narrow path-------The path-------The mouth of-------(1) Inside the-------(5) Inside the-----(6) Inside the
+    FOREST         in the forest.      widens.          the cave         smugglers cave       smugglers cave     smugglers cave
+                                                                         (two rats)                 |
+                                                                                                    |
+                                                                                                    |
+                                                                                              A small alcove
+                                                                                                    |
+                                                                                                    |
+                                                                                                    |
+                                                                                                A tunnel
+                                                                                                    |
+                                                                                                    |
+                                                                                                    |
+                                                                                                The end of
+                                                                                                the tunnel
+                                                                                                    |
+                                                                                                    +
+                                                                                                    |
+                                                                         A small shack        The back door      A small shack    A well worn tent
+                                                                            |                       |               |                |       \
+                                                                            |                       |               |                |        \
+                                                                            |                       |               |                |         \
+                                                      The camp-----------The camp----------------The camp--------The camp---------The camp      A comfortable den
+                                                         |                                          |                                           (private, summon)
+                                                         |                                       A spit on
+                                                         |                                       the river
+                                                         |                                          |
+                   Waterfall-----------On the river---On the river-------On the river------------On the river----On the river-----On the river
+                    (forced                                                 |                                                        |
+                    recall)                                                 |                                                        |
+                                                                            |                                                        |
+                                                                         A small bank                                             A wider spot
+                                                                         for two                                                  on the river
+                                                                         (private, nosummon)                                      (forced recall)
+
+
+
+
+
+
+

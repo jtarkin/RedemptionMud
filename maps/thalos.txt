@@ -1,0 +1,56 @@
+******************         N U
+* Map of Thalos  *         |/
+* (C) Sir Cloudy *      W-- --E
+* (U) Saboteur   *        /|
+******************       D S
+
+        The North-west                                        The North-East
+        Watchtower                                              Watchtower
+       /                                                           /
+      /                                                           /
+ Under a      B   A   C   K         A   L   L   E   Y        Under a
+ Watchtower------*---------------*-------------*-------------Watchtower
+   |                             |             |                  |
+   |              Simple         |   Resting   |                  |B
+ Back             Claw-----------*----Room---Bash                 |
+ Alley            dwelling      S|           House                *a
+   |                            i|                                |
+Tapestry       Jewelery         d|                                |c
+ Stand----------stand           e|S          Second floor         |
+   |             |               |t         /of the Library       |k
+   |             |               |r        /                      |
+   |             |    A Stone    |e   Public     Library          |A
+   |             |    dwelling---*----Library----Addition         |
+   | The market  |               |e                               |l
+   |   place     |               |t                               |
+   *-------------*               |                                *l
+   |             |    Garden   Garden   An Impressive             |
+   |             |    Path-----Path      house                    |e
+   |             |     |         |         |                      |
+   |             |     |         |         |                      |y   The
+   |             | The Temple  Garden    Main                   Main   Grand
+   |             | of Thalos---Path-----Street-----------------Street--Gate of
+   |             |               |         |                      |    Thalos
+   |             |             Garden      |                     B|
+   |             |             Path        |                      |
+   |             |      The      |        City      East wings   a|
+   |             |      Smithy---*--------Hall-----of City Hall   |
+   |             |               |S        |            |        c|
+The Meat      The produce        |i        |            |         |
+ Stand---------stand             |d  South wings     Courtyard   k|
+   |                             |e  of City hall----of Thalos    |
+   |                             |               (Private garden) |
+   |                             |S                              A|
+   |                             |t                               |
+ Back                            |r                A Small       l|
+ Alley                           |e                guard house----*
+   |                             |e                              l|
+   |  The South-West     The     |t                               | South-East
+   |  Watchtower        Guild----*-----The Tavern                e| Watchtower
+   | /                  House    |       of Sun                   * /
+   |/                            |                               y|/
+Under another     Back           |            Back             Under a
+Watchtower-------Alley-----------*------------Alley------------Watchtower
+                                 |
+                               A Busy
+                                shop

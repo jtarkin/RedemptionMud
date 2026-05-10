@@ -1,0 +1,682 @@
+      <div class="help-entry" id="entry-race-general">
+        <div class="help-entry-title">Races</div>
+        <div class="help-entry-aliases">HELP RACES, HELP RACE</div>
+        <hr>
+        <p>This is the maximum stats you can have as each race. They do not reflect any bonuses which might be affected by your particular class.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.9rem;margin-bottom:1rem;">
+          <tbody>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-hatchling')" style="color:var(--gold);cursor:pointer;">Hatchling</span></td>  <td style="padding:0.15rem 0.6rem;color:var(--text);">Str</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">25</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Dex</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">25</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Int</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">25</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Wis</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">25</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Con</td><td style="padding:0.15rem 0;color:#66ccff;">25</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-dwarf')" style="color:var(--gold);cursor:pointer;">Dwarf</span></td>   <td style="padding:0.15rem 0.6rem;color:var(--text);">Str</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">24</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Dex</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">20</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Int</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">20</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Wis</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">23</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Con</td><td style="padding:0.15rem 0;color:#66ccff;">25</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-elf')" style="color:var(--gold);cursor:pointer;">Elf</span></td>     <td style="padding:0.15rem 0.6rem;color:var(--text);">Str</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">21</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Dex</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">25</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Int</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">24</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Wis</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">23</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Con</td><td style="padding:0.15rem 0;color:#66ccff;">19</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-gargoyle')" style="color:var(--gold);cursor:pointer;">Gargoyle</span></td><td style="padding:0.15rem 0.6rem;color:var(--text);">Str</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">25</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Dex</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">22</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Int</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">23</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Wis</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">25</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Con</td><td style="padding:0.15rem 0;color:#66ccff;">22</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-giant')" style="color:var(--gold);cursor:pointer;">Giant</span></td>   <td style="padding:0.15rem 0.6rem;color:var(--text);">Str</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">25</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Dex</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">21</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Int</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">19</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Wis</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">22</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Con</td><td style="padding:0.15rem 0;color:#66ccff;">25</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-human')" style="color:var(--gold);cursor:pointer;">Human</span></td>   <td style="padding:0.15rem 0.6rem;color:var(--text);">Str</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">23</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Dex</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">23</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Int</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">23</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Wis</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">23</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Con</td><td style="padding:0.15rem 0;color:#66ccff;">23</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-kirre')" style="color:var(--gold);cursor:pointer;">Kirre</span></td>   <td style="padding:0.15rem 0.6rem;color:var(--text);">Str</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">23</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Dex</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">24</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Int</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">25</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Wis</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">21</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Con</td><td style="padding:0.15rem 0;color:#66ccff;">24</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-marid')" style="color:var(--gold);cursor:pointer;">Marid</span></td>   <td style="padding:0.15rem 0.6rem;color:var(--text);">Str</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">19</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Dex</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">22</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Int</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">23</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Wis</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">25</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Con</td><td style="padding:0.15rem 0;color:#66ccff;">25</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-sliver')" style="color:var(--gold);cursor:pointer;">Sliver</span></td>  <td style="padding:0.15rem 0.6rem;color:var(--text);">Str</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">25</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Dex</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">25</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Int</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">25</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Wis</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">25</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Con</td><td style="padding:0.15rem 0;color:#66ccff;">25</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-troll')" style="color:var(--gold);cursor:pointer;">Troll</span></td>   <td style="padding:0.15rem 0.6rem;color:var(--text);">Str</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">24</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Dex</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">22</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Int</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">21</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Wis</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">22</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Con</td><td style="padding:0.15rem 0;color:#66ccff;">24</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-aasimar')" style="color:var(--gold);cursor:pointer;">Aasimar</span></td> <td style="padding:0.15rem 0.6rem;color:var(--text);">Str</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">23</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Dex</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">25</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Int</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">25</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Wis</td><td style="padding:0.15rem 0.8rem 0.15rem 0;color:#66ccff;">25</td><td style="padding:0.15rem 0.6rem;color:var(--text);">Con</td><td style="padding:0.15rem 0;color:#66ccff;">25</td></tr>
+          </tbody>
+        </table>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-top:1rem;margin-bottom:1rem;">
+          <tbody>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-human')" style="color:var(--gold);cursor:pointer;">Human</span></td><td style="padding:0.15rem 0;color:var(--text);">0 cp — most versatile, excellent at every class, trains stats highest of all races</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-elf')" style="color:var(--gold);cursor:pointer;">Elf</span></td><td style="padding:0.15rem 0;color:var(--text);">8 cp — good thieves, excellent invokers and enchanters</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-troll')" style="color:var(--gold);cursor:pointer;">Troll</span></td><td style="padding:0.15rem 0;color:var(--text);">6 cp — good at any class, excellent regeneration</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-dwarf')" style="color:var(--gold);cursor:pointer;">Dwarf</span></td><td style="padding:0.15rem 0;color:var(--text);">8 cp — good warriors and clerics, highly magic resistant</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-giant')" style="color:var(--gold);cursor:pointer;">Giant</span></td><td style="padding:0.15rem 0;color:var(--text);">6 cp — excellent warriors, largest race</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-sliver')" style="color:var(--gold);cursor:pointer;">Sliver</span></td><td style="padding:0.15rem 0;color:var(--text);">12 cp — good at any class, powerful in group cooperation</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-gargoyle')" style="color:var(--gold);cursor:pointer;">Gargoyle</span></td><td style="padding:0.15rem 0;color:var(--text);">12 cp — excellent paladins, largely weapon resistant</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-hatchling')" style="color:var(--gold);cursor:pointer;">Hatchling</span></td><td style="padding:0.15rem 0;color:var(--text);">20 cp — excellent at any class, hard to play</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-kirre')" style="color:var(--gold);cursor:pointer;">Kirre</span></td><td style="padding:0.15rem 0;color:var(--text);">12 cp — good non-spellcasters, excellent runists</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-marid')" style="color:var(--gold);cursor:pointer;">Marid</span></td><td style="padding:0.15rem 0;color:var(--text);">14 cp — excellent mages, durable with strong elemental magic</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;"><span onclick="showEntry('race-aasimar')" style="color:var(--gold);cursor:pointer;">Aasimar</span></td><td style="padding:0.15rem 0;color:var(--text);">6 cp — divine-blooded celestials, remort into angelic or demonic war forms</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="help-entry" id="entry-race-giant">
+        <div class="help-entry-title">Giant</div>
+        <div class="help-entry-aliases">HELP GIANT</div>
+        <hr>
+        <p>Giants are one of the largest races, ranging from <span style="color:#66ccff;">8</span> to <span style="color:#66ccff;">11</span> feet in height. They are well-suited for warriors, though any class may be a giant. Giants are strong and tough but not particularly bright or nimble. Their huge frames grant them natural resistance to both cold and fire, though they are vulnerable to lightning.</p>
+        <p>Giants begin with the <strong style="color:var(--text-lt);">fast healing</strong>, <strong style="color:var(--text-lt);">bash</strong>, and <strong style="color:var(--text-lt);">bashdoor</strong> skills.</p>
+        <p style="color:var(--gold);font-style:italic;">Creation cost: <span style="color:#66ccff;">6</span> points</p>
+      </div>
+
+      <div class="help-entry" id="entry-race-human">
+        <div class="help-entry-title">Human</div>
+        <div class="help-entry-aliases">HELP HUMAN</div>
+        <hr>
+        <p>Humans are the most common race and the most versatile. They have no special resistances or innate abilities, but they excel in every class and can train their primary stats higher than any other race.</p>
+        <p style="color:var(--gold);font-style:italic;">Creation cost: <span style="color:#66ccff;">0</span> points</p>
+      </div>
+
+      <div class="help-entry" id="entry-race-elf">
+        <div class="help-entry-title">Elf</div>
+        <div class="help-entry-aliases">HELP ELF</div>
+        <hr>
+        <p>Elves are nimble and magically attuned, with infravision from their glowing red eyes. Their magical nature grants them resistance to charm and mental effects, but their slender builds make them vulnerable to iron. Elves begin with the <strong style="color:var(--text-lt);">sword</strong> and <strong style="color:var(--text-lt);">sneak</strong> skills and excel in magic-based classes.</p>
+        <p style="color:var(--gold);font-style:italic;">Creation cost: <span style="color:#66ccff;">8</span> points</p>
+      </div>
+
+      <div class="help-entry" id="entry-race-dwarf">
+        <div class="help-entry-title">Dwarf</div>
+        <div class="help-entry-aliases">HELP DWARF</div>
+        <hr>
+        <p>Dwarves are short, stocky demi-humans known for their foul temper and glowing red eyes from their infravision. They are highly resilient, with a natural resistance to both poison and disease. However, their dense frames make them vulnerable to drowning. Dwarves have high strength and constitution. They start with the <strong style="color:var(--text-lt);">berserk</strong> and <strong style="color:var(--text-lt);">axe</strong> skills.</p>
+        <p style="color:var(--gold);font-style:italic;">Creation cost: <span style="color:#66ccff;">8</span> points</p>
+      </div>
+
+      <div class="help-entry" id="entry-race-troll">
+        <div class="help-entry-title">Troll</div>
+        <div class="help-entry-aliases">HELP TROLL</div>
+        <hr>
+        <p>Trolls are a medium-sized, stocky race descended from dwarves corrupted by chaos magic ages ago. They possess surprising strength but lack patience and strategy. Their infravision allows them to see in the dark. Trolls have an improved immune system granting disease resistance and fast regeneration. As a trade-off, fire disrupts their healing abilities. All trolls favor the axe as their totem weapon and begin with the <strong style="color:var(--text-lt);">regeneration</strong> and <strong style="color:var(--text-lt);">axe</strong> skills.</p>
+        <p style="color:var(--gold);font-style:italic;">Creation cost: <span style="color:#66ccff;">6</span> points</p>
+      </div>
+
+      <div class="help-entry" id="entry-race-gargoyle">
+        <div class="help-entry-title">Gargoyle</div>
+        <div class="help-entry-aliases">HELP GARGOYLE</div>
+        <hr>
+        <p>Gargoyles are large, xenophobic beings native to the mountains of Dominia. They are powerful fighters who take to the air and dive upon their prey, favoring polearm weapons that mirror their fearsome limbs. Gargoyles have infravision. All gargoyles can invoke the earth to become living stone, boosting their durability in combat. However, their magical nature leaves them vulnerable to both poison and disease. Gargoyles begin with the <strong style="color:var(--text-lt);">living stone</strong>, <strong style="color:var(--text-lt);">polearm</strong>, and <strong style="color:var(--text-lt);">enhanced damage</strong> skills.</p>
+        <p style="color:var(--gold);font-style:italic;">Creation cost: <span style="color:#66ccff;">12</span> points</p>
+      </div>
+
+      <div class="help-entry" id="entry-race-sliver">
+        <div class="help-entry-title">Sliver</div>
+        <div class="help-entry-aliases">HELP SLIVER</div>
+        <hr>
+        <p>Slivers are an insect-like breed that hunts in packs, approximately the size of humans. Their mandibles extend into long jagged arms used in hand-to-hand combat. Slivers are resistant to charm but vulnerable to acid. All slivers begin with the <strong style="color:var(--text-lt);">hand to hand</strong> skill.</p>
+        <p>When reaching level <span style="color:#66ccff;">10</span>, a sliver matures into an adult form. Each adult form generates a group aura that benefits fellow slivers in the same group — the sliver does not keep the ability for itself, but gains the abilities of every other mature sliver in the group. A mature sliver can trade their ability for a different one at a trainer.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;margin-top:0.5rem;">
+          <tbody>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);">Vorlath Sliver</td><td style="padding:0.15rem 0;color:var(--text);">Affects mana by <span style="color:#66ccff;">+70</span></td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);">Muscle Sliver</td><td style="padding:0.15rem 0;color:var(--text);">Affects hit points by <span style="color:#66ccff;">+70</span></td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);">Enraged Sliver</td><td style="padding:0.15rem 0;color:var(--text);">Affects hitroll by <span style="color:#66ccff;">+8</span></td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);">Savage Sliver</td><td style="padding:0.15rem 0;color:var(--text);">Affects damroll by <span style="color:#66ccff;">+8</span></td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);">Shielded Sliver</td><td style="padding:0.15rem 0;color:var(--text);">Affects saves by <span style="color:#66ccff;">-10</span></td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);">Guardian Sliver</td><td style="padding:0.15rem 0;color:var(--text);">Affects AC by <span style="color:#66ccff;">-40</span></td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);">Pain Sliver</td><td style="padding:0.15rem 0;color:var(--text);">Affects Damage Reduction by <span style="color:#66ccff;">+3</span></td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);">Bladed Sliver</td><td style="padding:0.15rem 0;color:var(--text);">Affects Attack Speed by <span style="color:#66ccff;">+3</span></td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);">Merlin Sliver</td><td style="padding:0.15rem 0;color:var(--text);">Affects Spell Damage by <span style="color:#66ccff;">+3</span></td></tr>
+          </tbody>
+        </table>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1rem;">TRAIN SLIVER</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">train sliver</td><td style="padding:0.2rem 0;color:var(--text);">At a trainer, trade in your current sliver ability for a new random one. Costs <span style="color:#66ccff;">3</span> trains. There is no guarantee of receiving a desired ability.</td></tr>
+          </tbody>
+        </table>
+        <p style="color:var(--gold);font-style:italic;">Creation cost: <span style="color:#66ccff;">12</span> points</p>
+      </div>
+
+      <div class="help-entry" id="entry-race-hatchling">
+        <div class="help-entry-title">Hatchling / Dragon</div>
+        <div class="help-entry-aliases">HELP HATCHLING, HELP DRAGON</div>
+        <hr>
+        <p>Dragons cost <span style="color:#66ccff;">20</span> creation points and are among the most powerful races in the game. You begin as a Hatchling — a young dragon learning to harness its power, without natural flight and with limited abilities. At level <span style="color:#66ccff;">10</span> your hatchling transforms into a random color dragon, gaining that color's breath weapon, a unique skill or spell, natural flight, and its elemental resistance and vulnerability. All dragons also gain enhanced damage and hand-to-hand combat.</p>
+        <p>Each color has two remort options that grant further specialized abilities.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;margin-top:0.5rem;">
+          <tbody>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);">Black</td><td style="padding:0.15rem 0;color:var(--text);">Acid breath</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);">Blue</td><td style="padding:0.15rem 0;color:var(--text);">Lightning breath</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);">Green</td><td style="padding:0.15rem 0;color:var(--text);">Gas breath</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);">Red</td><td style="padding:0.15rem 0;color:var(--text);">Fire breath</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);">White</td><td style="padding:0.15rem 0;color:var(--text);">Frost breath</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);">Platinum</td><td style="padding:0.15rem 0;color:var(--text);">Divine breath</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);">Gold</td><td style="padding:0.15rem 0;color:var(--text);">Wind breath</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);">Silver</td><td style="padding:0.15rem 0;color:var(--text);">Water breath</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);">Copper</td><td style="padding:0.15rem 0;color:var(--text);">Earth breath</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);">Iron</td><td style="padding:0.15rem 0;color:var(--text);">Shadow breath</td></tr>
+          </tbody>
+        </table>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1rem;">BREATH</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">breath</td><td style="padding:0.2rem 0;color:var(--text);">All dragons can breathe out an element depending on their color. As dragons age their lung capacity increases, allowing them to store more breath than before.</td></tr>
+          </tbody>
+        </table>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1rem;">TRAIN DRAGON</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">train dragon</td><td style="padding:0.2rem 0;color:var(--text);">Base chromatic dragons (Black, Blue, Green, Red, White) who have not remoorted can spend <span style="color:#66ccff;">3</span> training sessions at a trainer to randomly change their color to a different chromatic color. Requires at least level <span style="color:#66ccff;">10</span>, cannot be grouped with anyone. All stats, resistances, vulnerabilities, and skills for the new color are applied immediately.</td></tr>
+          </tbody>
+        </table>
+        <p style="color:var(--gold);font-style:italic;">Creation cost: <span style="color:#66ccff;">20</span> points</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">BLACK DRAGON</div>
+        <p>Black dragons are cunning and malevolent, masters of acid and shadow. They can shroud an area in magical darkness, and their acid breath corrodes both armor and flesh.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Resistances</td><td style="padding:0.15rem 0;color:var(--text);">Acid, Charm</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Vulnerability</td><td style="padding:0.15rem 0;color:var(--text);">Poison</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Affinity</td><td style="padding:0.15rem 0;color:var(--text);">Dark vision, Flight</td></tr>
+          </tbody>
+        </table>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">acid breath</td><td style="padding:0.2rem 0;color:var(--text);">Breathes corrosive acid at all foes in the room</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">darkness</td><td style="padding:0.2rem 0;color:var(--text);">Shrouds the room in magical darkness</td></tr>
+          </tbody>
+        </table>
+        <p>Remort options: <span style="color:var(--gold);">Onyx Dragon</span> — Gains tail attack, cloud of poison, retreat. <span style="color:var(--gold);">Shadow Dragon</span> — Gains tail attack, create shadow, hide.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">BLUE DRAGON</div>
+        <p>Blue dragons are aggressive and self-reliant, at home in storms and open sky. Their lightning breath is devastating and they can establish a lair to recover in safety.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Resistances</td><td style="padding:0.15rem 0;color:var(--text);">Lightning, Charm</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Vulnerability</td><td style="padding:0.15rem 0;color:var(--text);">Acid</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Affinity</td><td style="padding:0.15rem 0;color:var(--text);">Infravision, Flight</td></tr>
+          </tbody>
+        </table>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">lightning breath</td><td style="padding:0.2rem 0;color:var(--text);">Breathes crackling lightning at all foes in the room</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">lair</td><td style="padding:0.2rem 0;color:var(--text);">Creates a temporary dragon lair</td></tr>
+          </tbody>
+        </table>
+        <p>Remort options: <span style="color:var(--gold);">Sapphire Dragon</span> — Gains tail attack, cone of fear, gemology. <span style="color:var(--gold);">Sky Dragon</span> — Gains tail attack, lightning spear, presence.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">GREEN DRAGON</div>
+        <p>Green dragons are treacherous and manipulative, poisoning everything around them. Their gas breath fills an entire room with lethal vapors, and their cloudkill lingers long after they leave.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Resistances</td><td style="padding:0.15rem 0;color:var(--text);">Poison, Charm</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Vulnerability</td><td style="padding:0.15rem 0;color:var(--text);">Lightning</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Affinity</td><td style="padding:0.15rem 0;color:var(--text);">Infravision, Flight</td></tr>
+          </tbody>
+        </table>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">gas breath</td><td style="padding:0.2rem 0;color:var(--text);">Breathes a cloud of poisonous gas at all foes in the room</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">cloudkill</td><td style="padding:0.2rem 0;color:var(--text);">Summons a lingering cloud of killing vapors</td></tr>
+          </tbody>
+        </table>
+        <p>Remort options: <span style="color:var(--gold);">Emerald Dragon</span> — Gains tail attack, wail, loneliness. <span style="color:var(--gold);">Malachite Dragon</span> — Gains tail attack, drakor, acid rain.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">RED DRAGON</div>
+        <p>Red dragons are fierce and greedy, obsessed with treasure and fire. Their breath weapon can knock foes off-balance, and their sharp eye for value makes them natural appraisers.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Resistances</td><td style="padding:0.15rem 0;color:var(--text);">Fire, Charm</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Vulnerability</td><td style="padding:0.15rem 0;color:var(--text);">Cold</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Affinity</td><td style="padding:0.15rem 0;color:var(--text);">Infravision, Flight</td></tr>
+          </tbody>
+        </table>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">fire breath</td><td style="padding:0.2rem 0;color:var(--text);">Breathes a cone of fire at all foes in the room</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">appraise</td><td style="padding:0.2rem 0;color:var(--text);">Accurately judges the value of items</td></tr>
+          </tbody>
+        </table>
+        <p>Remort options: <span style="color:var(--gold);">Ruby Dragon</span> — Gains tail attack, thrust, loneliness. <span style="color:var(--gold);">Fire Dragon</span> — Gains tail attack, dragon bite, scalemail.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">WHITE DRAGON</div>
+        <p>White dragons are solitary arctic hunters, fierce in battle despite a reputation for benevolence. Their frost breath chills enemies to the bone, and their karma ability can shift the fortune of those around them.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Resistances</td><td style="padding:0.15rem 0;color:var(--text);">Cold, Charm</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Vulnerability</td><td style="padding:0.15rem 0;color:var(--text);">Fire</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Affinity</td><td style="padding:0.15rem 0;color:var(--text);">Infravision, Flight</td></tr>
+          </tbody>
+        </table>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">frost breath</td><td style="padding:0.2rem 0;color:var(--text);">Breathes freezing cold at all foes in the room</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">karma</td><td style="padding:0.2rem 0;color:var(--text);">Bestows fortune or misfortune upon a target</td></tr>
+          </tbody>
+        </table>
+        <p>Remort options: <span style="color:var(--gold);">Mist Dragon</span> — Gains tail attack, melior, discordance, misty cloak. <span style="color:var(--gold);">Pearl Dragon</span> — Gains tail attack, presence, shedding, aurora.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">PLATINUM DRAGON</div>
+        <p>Platinum dragons are the most regal of all, created by Bosco as paragons of divine power. They draw energy directly from sunlight, making them devastating in the open and less effective in darkness.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Resistances</td><td style="padding:0.15rem 0;color:var(--text);">Divine, Charm</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Vulnerability</td><td style="padding:0.15rem 0;color:var(--text);">Shadow</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Affinity</td><td style="padding:0.15rem 0;color:var(--text);">Dark vision, Flight</td></tr>
+          </tbody>
+        </table>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">divine breath</td><td style="padding:0.2rem 0;color:var(--text);">Breathes divine energy at all foes in the room</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">brilliance</td><td style="padding:0.2rem 0;color:var(--text);">Imbues scales with sunlight, enhancing physical abilities</td></tr>
+          </tbody>
+        </table>
+        <p>Remort options: <span style="color:var(--gold);">Diamond Dragon</span> — Gains tail attack, nova, defiance. <span style="color:var(--gold);">Adamantite Dragon</span> — Gains tail attack, dullness, judgement.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">GOLD DRAGON</div>
+        <p>Gold dragons are the most intellectually gifted of all dragons, born with an insatiable curiosity. They command the wind and can buffet entire rooms of enemies with their powerful wings.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Resistances</td><td style="padding:0.15rem 0;color:var(--text);">Wind, Charm</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Vulnerability</td><td style="padding:0.15rem 0;color:var(--text);">Earth</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Affinity</td><td style="padding:0.15rem 0;color:var(--text);">Infravision, Flight</td></tr>
+          </tbody>
+        </table>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">wind breath</td><td style="padding:0.2rem 0;color:var(--text);">Breathes a cutting blast of wind at all foes in the room</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">wingblast</td><td style="padding:0.2rem 0;color:var(--text);">Blasts foes with a gust from their wings, blinding and stunning</td></tr>
+          </tbody>
+        </table>
+        <p>Remort options: <span style="color:var(--gold);">Amber Dragon</span> — Gains tail attack, encase, gale. <span style="color:var(--gold);">Mithril Dragon</span> — Gains tail attack, shear, cyclone.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">SILVER DRAGON</div>
+        <p>Silver dragons are noble and just, equally at home underwater or in the highest skies. They breathe torrents of water and radiate an aura that calms aggressive creatures around them.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Resistances</td><td style="padding:0.15rem 0;color:var(--text);">Drowning, Charm</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Vulnerability</td><td style="padding:0.15rem 0;color:var(--text);">Wind</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Affinity</td><td style="padding:0.15rem 0;color:var(--text);">Infravision, Flight</td></tr>
+          </tbody>
+        </table>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">water breath</td><td style="padding:0.2rem 0;color:var(--text);">Breathes pressurized water at all foes in the room</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">aura of peace</td><td style="padding:0.2rem 0;color:var(--text);">Radiates a calming aura that discourages combat</td></tr>
+          </tbody>
+        </table>
+        <p>Remort options: <span style="color:var(--gold);">Crystal Dragon</span> — Gains tail attack, absorption, water walk, water breathing. <span style="color:var(--gold);">Mercury Dragon</span> — Gains tail attack, reduce, quicksilver.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">COPPER DRAGON</div>
+        <p>Copper dragons make their homes in harsh desert terrain. Their earth breath cracks stone and armor alike, and their ability to hibernate lets them recover from nearly any wound given time.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Resistances</td><td style="padding:0.15rem 0;color:var(--text);">Earth, Charm</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Vulnerability</td><td style="padding:0.15rem 0;color:var(--text);">Drowning</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Affinity</td><td style="padding:0.15rem 0;color:var(--text);">Infravision, Flight</td></tr>
+          </tbody>
+        </table>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">earth breath</td><td style="padding:0.2rem 0;color:var(--text);">Breathes a blast of stone and grit at all foes in the room</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">hibernate</td><td style="padding:0.2rem 0;color:var(--text);">Enters a deep recuperative sleep to recover rapidly</td></tr>
+          </tbody>
+        </table>
+        <p>Remort options: <span style="color:var(--gold);">Bronze Dragon</span> — Gains tail attack, burrow, battleroar. <span style="color:var(--gold);">Jade Dragon</span> — Gains tail attack, jade mantle, stoneguard.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">IRON DRAGON</div>
+        <p>Iron dragons are slow, ponderous mountain-dwellers feared for their near-impenetrable scales and mastery of shadow. They can harden their already-formidable scales to shrug off almost any blow.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Resistances</td><td style="padding:0.15rem 0;color:var(--text);">Shadow, Charm</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Vulnerability</td><td style="padding:0.15rem 0;color:var(--text);">Divine</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;vertical-align:top;">Affinity</td><td style="padding:0.15rem 0;color:var(--text);">Infravision, Flight</td></tr>
+          </tbody>
+        </table>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">shadow breath</td><td style="padding:0.2rem 0;color:var(--text);">Breathes shadow energy at all foes in the room</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">harden</td><td style="padding:0.2rem 0;color:var(--text);">Temporarily hardens scales to greatly reduce incoming damage</td></tr>
+          </tbody>
+        </table>
+        <p>Remort options: <span style="color:var(--gold);">Obsidian Dragon</span> — Gains tail attack, consume, edge. <span style="color:var(--gold);">Steel Dragon</span> — Gains tail attack, umbral shell, umbral resilience.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">METALLIC DRAGON DRAGONCHANGE</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.75rem;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;">dragonchange</td><td style="color:var(--text);">Preview the transformation.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;">dragonchange confirm</td><td style="color:var(--text);">Complete the permanent transformation.</td></tr>
+          </tbody>
+        </table>
+        <p>Chromatic dragons who have matured (level 10+) and have not yet remoorted or reclassed may undergo a permanent transformation into their metallic counterpart. Visit a trainer and use the commands above to complete the process.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.75rem;">
+          <tbody>
+            <tr><td style="padding:0.2rem 2rem 0.2rem 0;color:#66ccff;">Red</td><td style="color:var(--text);">→ Gold</td></tr>
+            <tr><td style="padding:0.2rem 2rem 0.2rem 0;color:#66ccff;">Blue</td><td style="color:var(--text);">→ Platinum</td></tr>
+            <tr><td style="padding:0.2rem 2rem 0.2rem 0;color:#66ccff;">White</td><td style="color:var(--text);">→ Silver</td></tr>
+            <tr><td style="padding:0.2rem 2rem 0.2rem 0;color:#66ccff;">Green</td><td style="color:var(--text);">→ Copper</td></tr>
+            <tr><td style="padding:0.2rem 2rem 0.2rem 0;color:#66ccff;">Black</td><td style="color:var(--text);">→ Iron</td></tr>
+          </tbody>
+        </table>
+        <p>This change is permanent and cannot be undone by unremort. Dragons who have already remoorted, reclassed, or who are already metallic cannot use this command.</p>
+      </div>
+
+      <div class="help-entry" id="entry-race-kirre">
+        <div class="help-entry-title">Kirre</div>
+        <hr>
+        <p>Hidden deep in the forests of Dominia, a race of intelligent felines has flourished in total seclusion for centuries. These creatures, who identify themselves simply as "Kirre", resemble none of the known races of Dominia. Their history and origins remain shrouded in mystery and legend.</p>
+        <p>Kirre are six-legged felines, roughly 6–8 feet in length, ranging in colour from white to sable. Long tufted ears, six legs with razor sharp claws, and a prehensile tail give them a fearsome appearance. They strike quickly and without mercy. Kirre have infravision and a natural resistance to lightning, though they are vulnerable to cold.</p>
+        <p>Over time the Kirre have organized into small tribes, led by the strongest male among many females. Every seven moons their tribal leaders gather in secret. Recent discussions have centered on the "Outsiders" — other Dominian races encroaching on their ancestral hunting grounds. Rather than reveal their intelligence, the Kirre observed and planned from behind a bestial guise. Some have since chosen to reveal their true nature; a bold few have even called outsiders "friend."</p>
+        <p>Although many warriors exist among them, Kirre are also adept in subtle magic, and many show a natural aptitude for rune magic. All Kirre prefer whip-like weapons for their similarity to their own tails, and begin with the <strong style="color:var(--text-lt);">whip</strong>, <strong style="color:var(--text-lt);">disarm</strong>, and <strong style="color:var(--text-lt);">hand to hand</strong> skills.</p>
+        <p style="color:var(--text-lt);font-size:0.85rem;">Creation point cost: <span style="color:#66ccff;">12</span></p>
+      </div>
+
+      <div class="help-entry" id="entry-race-remort">
+        <div class="help-entry-title">Remort Options</div>
+        <hr>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;">RACE REMORTS REMORTING</div>
+        <p>Once you reach level <span style="color:#66ccff;">51</span> you can remort your character and pick a new sub-race, which provides new skills and spells along with new limitations. You must have a certain number of quest points — type <code>remort</code> to see the requirement.</p>
+        <p>Remorting removes all worn equipment to your inventory, sets you back to level <span style="color:#66ccff;">1</span> (<span style="color:#66ccff;">20hp 100mana 50mv</span>), resets all skills/spells to <span style="color:#66ccff;">1%</span> (weapon resets to <span style="color:#66ccff;">40%</span>), and gives you the main weapon for your class. Hours reset to 0, wimpy to 0, and you receive <span style="color:#66ccff;">3 trains</span> and <span style="color:#66ccff;">5 practices</span>. You keep your clan affiliation and can be pkilled at level 1. Killer/thief flags are removed. Any skills or spells gained after creation are added to your remort CP.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);vertical-align:top;">Red Dragon</td><td style="padding:0.15rem 0;color:var(--text);">Ruby or Fire</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);vertical-align:top;">Blue Dragon</td><td style="padding:0.15rem 0;color:var(--text);">Sapphire or Sky</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);vertical-align:top;">Green Dragon</td><td style="padding:0.15rem 0;color:var(--text);">Emerald or Malachite</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);vertical-align:top;">White Dragon</td><td style="padding:0.15rem 0;color:var(--text);">Pearl or Mist</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);vertical-align:top;">Black Dragon</td><td style="padding:0.15rem 0;color:var(--text);">Onyx or Shadow</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);vertical-align:top;">Elves</td><td style="padding:0.15rem 0;color:var(--text);">Forest or Drow</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);vertical-align:top;">Dwarves</td><td style="padding:0.15rem 0;color:var(--text);">Mountain or Grey</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);vertical-align:top;">Giant</td><td style="padding:0.15rem 0;color:var(--text);">Hill or Cave</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);vertical-align:top;">Human</td><td style="padding:0.15rem 0;color:var(--text);">Doppleganger or Medusa</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);vertical-align:top;">Troll</td><td style="padding:0.15rem 0;color:var(--text);">Two-Headed or Spectral</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);vertical-align:top;">Sliver</td><td style="padding:0.15rem 0;color:var(--text);">Stinging or Abyssal</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);vertical-align:top;">Gargoyle</td><td style="padding:0.15rem 0;color:var(--text);">Sentinel or Haunting</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);vertical-align:top;">Kirre</td><td style="padding:0.15rem 0;color:var(--text);">Dark or Sabre</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);vertical-align:top;">Marid</td><td style="padding:0.15rem 0;color:var(--text);">Nereid or Befouler</td></tr>
+          </tbody>
+        </table>
+        <p>All dragon remorts gain the ability to use their tails in attacks, and their scales harden on hands, feet, and legs — making armor unnecessary in those slots and improving natural AC and damage rates.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">RUBY RED DRAGON REMORT</div>
+        <p>Ruby dragons are wise and regal, but also snobbish. They can <span style="color:#66ccff;">thrust</span> — an extra attack triggered on a successful parry. They also have the spell <span style="color:#66ccff;">loneliness</span>, which prevents the target from using the <code>where</code> command.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">FIRE RED DRAGON REMORT</div>
+        <p>Fire dragons are greedy, vain, and confident. They have <span style="color:#66ccff;">dragon bite</span> — an extra attack triggered on a successful dodge. They can also cast <span style="color:#66ccff;">scalemail</span> to lower their armor class.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">SAPPHIRE BLUE DRAGON REMORT</div>
+        <p>Sapphire dragons are usually peaceful and non-militant. They can cast <span style="color:#66ccff;">cone of fear</span> to force an enemy to flee. They also have <span style="color:#66ccff;">gemology</span>, which converts gems into throwing objects.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">SKY BLUE DRAGON REMORT</div>
+        <p>Sky dragons are unpredictable in combat. They can cast <span style="color:#66ccff;">lightning spear</span> to strike an opponent several rooms away. They also have <span style="color:#66ccff;">presence</span>, which alerts them when an enemy enters their area.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">EMERALD GREEN DRAGON REMORT</div>
+        <p>Emerald dragons are curious and paranoid. Their <span style="color:#66ccff;">wail</span> spell deafens the enemy, inflicting save and dex penalties with minor damage. They also have <span style="color:#66ccff;">loneliness</span>, which prevents the target from using <code>where</code>.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">MALACHITE GREEN DRAGON REMORT</div>
+        <p>Malachite dragons are level-headed and calculating. They can cast <span style="color:#66ccff;">drakor</span> to shift a target's alignment toward evil, and can call down <span style="color:#66ccff;">acid rain</span> — corrosive precipitation that drenches the entire room. Acid rain only works outdoors.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">PEARL WHITE DRAGON REMORT</div>
+        <p>Pearl dragons are friendly and charming. They have <span style="color:#66ccff;">presence</span> to detect enemies entering their area, the skill <span style="color:#66ccff;">shed</span> to pluck scales off and use them as throwing objects, and can cast <span style="color:#66ccff;">aurora</span> to significantly increase mana regeneration for a short time.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">MIST WHITE DRAGON REMORT</div>
+        <p>Mist dragons are solitary and philosophical. Their <span style="color:#66ccff;">melior</span> spell shifts a mob or character's alignment to good. They can cast <span style="color:#66ccff;">discordance</span> to turn a group of attacking charmies against their owner. They can also wrap themselves and allies in <span style="color:#66ccff;">misty cloak</span>, making them harder to hit.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">ONYX BLACK DRAGON REMORT</div>
+        <p>Onyx dragons are selfish, erratic, and unfriendly. They have <span style="color:#66ccff;">cloud of poison</span>, a protective cloak that poisons attackers on each successful hit. They also have <span style="color:#66ccff;">retreat</span>, which halts combat and makes them appear to have fled the room.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">SHADOW BLACK DRAGON REMORT</div>
+        <p>Shadow dragons are sly and devious. They can <span style="color:#66ccff;">create shadow</span> — a charmie with the same name and short description as the dragon. They also have the <span style="color:#66ccff;">hide</span> skill, especially effective at night.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">DROW ELF REMORT</div>
+        <p>All elven remorts gain <span style="color:#66ccff;">reflection</span>, which throws damage spells back at the caster. This heightened self-reliance makes them unwilling to group with anyone more than <span style="color:#66ccff;">250</span> alignment points away from themselves.</p>
+        <p>Drow elves are aggressive fighters who can cast <span style="color:#66ccff;">primal rage</span> on themselves for a level-based bonus to hit and damage. Their time underground has enhanced their infravision into true dark vision — they can see clearly even in complete darkness.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">FOREST ELF REMORT</div>
+        <p>All elven remorts gain <span style="color:#66ccff;">reflection</span>, which throws damage spells back at the caster, and are unwilling to group with anyone more than <span style="color:#66ccff;">250</span> alignment points away.</p>
+        <p>Forest elves are in tune with the natural world. They have mastered the art of mixing ingredients to <span style="color:#66ccff;">brew</span> four different potions.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">MOUNTAIN DWARF REMORT</div>
+        <p>All dwarven remorts gain the <span style="color:#66ccff;">wild swing</span> skill, which strikes multiple opponents in a single blow. Their time in deep mines expands their infravision into permanent <span style="color:#66ccff;">dark vision</span>.</p>
+        <p>Mountain dwarves are greedy and resourceful. They have <span style="color:#66ccff;">conversion</span>, which melts down equipment into gold. Their fondness for drink has also sharpened their fighting instincts — when drunk, they deal bonus damage through the passive <span style="color:#66ccff;">drunken master</span> style.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">GREY DWARF REMORT</div>
+        <p>All dwarven remorts gain <span style="color:#66ccff;">wild swing</span> and permanent <span style="color:#66ccff;">dark vision</span>.</p>
+        <p>Grey dwarves are malicious and hostile. They can use <span style="color:#66ccff;">turn magic</span> to seize control of charmies summoned by other characters. They also protect themselves with <span style="color:#66ccff;">enlargement</span>, which temporarily increases saves and hit points at the cost of dexterity.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">HILL GIANT REMORT</div>
+        <p>All giant remorts gain great strength surges. They can sometimes <span style="color:#66ccff;">behead</span> opponents outright, and can <span style="color:#66ccff;">carve boulders</span> from the ground in forests, fields, hills, mountains, and deserts. Giant remorts are too aggressive to flee — wimpy is disabled.</p>
+        <p>Hill giants can <span style="color:#66ccff;">block exit</span> to prevent others from leaving a room. They also know <span style="color:#66ccff;">robustness</span>, which temporarily raises their maximum hit points.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">CAVE GIANT REMORT</div>
+        <p>All giant remorts gain <span style="color:#66ccff;">beheading</span>, <span style="color:#66ccff;">carve boulder</span>, and disabled wimpy.</p>
+        <p>Cave giants have grey, rock-like skin and can tame wild bears as guards. The <span style="color:#66ccff;">cave bears</span> spell summons 1–4 bears for protection, but cannot be used while charmies are already present. They also gain the ability to wear <span style="color:#66ccff;">animal skins</span> as protection.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">DOPPLEGANGER HUMAN REMORT</div>
+        <p>All human remorts have mutated into new forms, requiring food and water twice as fast as normal. They all gain permanent <span style="color:#66ccff;">water walk</span>.</p>
+        <p>Dopplegangers gain <span style="color:#66ccff;">shapeshift</span>, which changes their short description to that of a mob in the same room. They can only hold this form briefly and revert if attacked. Dopplegangers are also resistant to charm.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">MEDUSA HUMAN REMORT</div>
+        <p>All human remorts gain permanent <span style="color:#66ccff;">water walk</span> and increased hunger/thirst.</p>
+        <p>Medusas gain <span style="color:#66ccff;">snake bite</span>, which does minor damage, poisons the victim, and can act as a 3rd or 4th attack. They also have <span style="color:#66ccff;">granite stare</span>, which turns a single mob to stone — the mob crumbles to dust along with its equipment and gold. Medusas are resistant to poison.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">SPECTRAL TROLL REMORT</div>
+        <p>All troll remorts gain an improved regeneration system and the <span style="color:#66ccff;">regrowth</span> ability to reattach cleaved body parts. However, they take damage from sunlight when outdoors during noontime hours.</p>
+        <p>Spectral trolls are permanently invisible and permanently <span style="color:#66ccff;">oculary</span> — visible to those with detect invisibility even while unseen. They can summon a <span style="color:#66ccff;">familiar</span> spirit to guard them and announce all who pass by. Their ghostly presence lets them inflict <span style="color:#66ccff;">fear</span> on victims, limiting their ability to deal damage.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">TWO-HEADED TWOHEADED TROLL REMORT</div>
+        <p>All troll remorts gain <span style="color:#66ccff;">regrowth</span> and sunlight weakness.</p>
+        <p>Two-headed trolls have grown an extra head, allowing them to wear an additional piece of headgear and <span style="color:#66ccff;">speak</span> through it, acting like the say channel. They can also <span style="color:#66ccff;">bite</span> opponents in combat — troll bites are known to cause the plague.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">STINGING SLIVER REMORT</div>
+        <p>All sliver remorts gain a deeper connection to their powers. They retain their own sliver ability and gain <span style="color:#66ccff;">telepathy</span>, alerting them whenever another sliver enters the realm. Rain weakens them — water collecting on their frames slows them down.</p>
+        <p>Stinging slivers can weave a <span style="color:#66ccff;">web</span> across a room to ensnare prey. They can also use <span style="color:#66ccff;">corpse drain</span> to absorb nutrients from a slain enemy, restoring their own health.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">ABYSSAL SLIVER REMORT</div>
+        <p>All sliver remorts gain <span style="color:#66ccff;">telepathy</span> and weakness to rain.</p>
+        <p>Abyssal slivers command powerful storms. Non-clanners gain <span style="color:#66ccff;">hailstorm</span>, which strikes mobs only. Clanners instead gain <span style="color:#66ccff;">rain of tears</span>, which strikes both mobs and clanners in the room.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">SENTINEL GARGOYLE REMORT</div>
+        <p>All gargoyle remorts gain <span style="color:#66ccff;">mass protect</span>, bestowing protective magic upon themselves, and <span style="color:#66ccff;">stone sleep</span>, which accelerates healing while sleeping.</p>
+        <p>Sentinel gargoyles are protective and combat-oriented. Their horns grow long enough to <span style="color:#66ccff;">gore</span> opponents. They can also create a <span style="color:#66ccff;">homonculus</span> to fight alongside them.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">HAUNTING GARGOYLE REMORT</div>
+        <p>All gargoyle remorts gain <span style="color:#66ccff;">mass protect</span> and <span style="color:#66ccff;">stone sleep</span>.</p>
+        <p>Haunting gargoyles are eerie and unsettling. They can emit a <span style="color:#66ccff;">shriek</span> that deals damage to all who hear it. They can also <span style="color:#66ccff;">displace</span> themselves, teleporting by switching places with another being in the area.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">FIRST REMORT SKILLS SPELLS</div>
+        <p>All classes gain the following skills upon remorting:</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Throw</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Taste</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Butcher</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Recall</td>
+              <td style="padding:0.15rem 0;color:var(--text);">Rub</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong style="color:var(--text-lt);">Magic-users</strong> (Mage, Conjurer, Enchanter, Invoker) also gain:</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Detonation</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Mutate</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Call to Arms</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Confusion</td>
+              <td style="padding:0.15rem 0;color:var(--text);">Weaponsmith</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong style="color:var(--text-lt);">Religious classes</strong> (Druid, Cleric) also gain:</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Call to Arms</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Wrath</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Transferance</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Substitution</td>
+              <td style="padding:0.15rem 0;color:var(--text);">Materialize</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong style="color:var(--text-lt);">Thieves</strong> also gain:</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Confusion</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Weaponsmith</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Substitution</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Hunt</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Bribe</td>
+              <td style="padding:0.15rem 0;color:var(--text);">Smokebomb</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong style="color:var(--text-lt);">Runists</strong> also gain:</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Substitution</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Hunt</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Materialize</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Confusion</td>
+              <td style="padding:0.15rem 0;color:var(--text);">Envenom</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong style="color:var(--text-lt);">Fighters</strong> (Paladin, Ranger, Warrior) also gain:</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Bashdoor</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Hunt</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Substitution</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Drag</td>
+              <td style="padding:0.15rem 0;color:var(--text);">Tame Animal</td>
+            </tr>
+            <tr>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Retribution</td>
+              <td style="padding:0.15rem 0;color:var(--text);">Rescue</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong style="color:var(--text-lt);">Monks</strong> also gain:</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Bashdoor</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Hunt</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Substitution</td>
+              <td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--text);">Rescue</td>
+              <td style="padding:0.15rem 0;color:var(--text);">Confusion</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">SABRE KIRRE REMORT</div>
+        <p>All remort Kirre expand their mastery of natural weapons. They gain the <span style="color:#66ccff;">hand to hand</span> skill and can extend their <span style="color:#66ccff;">razor claws</span> to inflict severe wounds that continue to bleed. They also learn <span style="color:#66ccff;">tail trip</span>, using their long prehensile tail to knock opponents off balance. Remort Kirre are nocturnal hunters and may be blinded by sunlight when outdoors during the day.</p>
+        <p>Only the most elite hunters become Sabre Kirre. They bear massive tusks resembling those of ancient sabre-tooth cats. Sabre Kirre can <span style="color:#66ccff;">ambush</span> their victims, greatly increasing initial damage by exploiting surprise. By moving with great care, they can also use <span style="color:#66ccff;">concealment</span> to avoid detection entirely.</p>
+        <p style="color:var(--text-lt);font-size:0.85rem;">Skills gained — All Kirre remorts: hand to hand, razor claws, tail trip &nbsp;|&nbsp; Sabre Kirre: ambush, concealment</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">DARK KIRRE REMORT</div>
+        <p>All remort Kirre expand their mastery of natural weapons. They gain the <span style="color:#66ccff;">hand to hand</span> skill and can extend their <span style="color:#66ccff;">razor claws</span> to inflict severe wounds that continue to bleed. They also learn <span style="color:#66ccff;">tail trip</span>, using their long prehensile tail to knock opponents off balance. Remort Kirre are nocturnal hunters and may be blinded by sunlight when outdoors during the day.</p>
+        <p>Dark Kirre have undergone painful rituals that have imbued them with preternatural powers. Their senses have been sharpened beyond normal infravision into true dark vision, letting them see in complete darkness. Reciting a dark dirge grants them <span style="color:#66ccff;">quill armor</span>, a defensive shell that damages attackers. Dark Kirre can also heal themselves by drinking the blood of their victims using <span style="color:#66ccff;">dark feast</span>.</p>
+        <p style="color:var(--text-lt);font-size:0.85rem;">Skills gained — All Kirre remorts: hand to hand, razor claws, tail trip &nbsp;|&nbsp; Dark Kirre: quill armor, dark feast, dark vision (permanent)</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">NEREID MARID REMORT</div>
+        <p>All remort Marid have deepened their command of the sea. They can <span style="color:#66ccff;">flood</span> a room, temporarily submerging it so all within must swim and risk drowning — the Marid itself suffers no penalty. Remort Marid also learn <span style="color:#66ccff;">condensation</span>, speeding their healing while submerged. However, they become entirely dependent on water; without it they will quickly die. Remort Marid can drink only water and thirst far more rapidly than normal — severe thirst will deal damage as their physical form begins to evaporate.</p>
+        <p>Nereid are mythical figures famous for luring sailors to their deaths with beauty and magical song. A Nereid can <span style="color:#66ccff;">lure</span> nearby targets toward them against their will. Their soul is said to reside within a magical <span style="color:#66ccff;">shawl</span> they can wear for protection. They can also freely grant <span style="color:#66ccff;">water breathing</span> to others.</p>
+        <p style="color:var(--text-lt);font-size:0.85rem;">Skills/Spells gained — All Marid remorts: flood, condensation &nbsp;|&nbsp; Nereid: lure, shawl, water breathing</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">BEFOULER MARID REMORT</div>
+        <p>All remort Marid have deepened their command of the sea. They can <span style="color:#66ccff;">flood</span> a room, temporarily submerging it so all within must swim and risk drowning — the Marid itself suffers no penalty. Remort Marid also learn <span style="color:#66ccff;">condensation</span>, speeding their healing while submerged. However, they become entirely dependent on water; without it they will quickly die. Remort Marid can drink only water and thirst far more rapidly than normal — severe thirst will deal damage as their physical form begins to evaporate.</p>
+        <p>Befoulers are twisted outcasts shunned by Marid society. These slime-covered wretches haunt sunken ships and prey on treasure hunters. With <span style="color:#66ccff;">corruption</span> they can harm their prey and ruin any potions, pills, food, or drink the target carries — a devastating effect for the unwary. They can also use <span style="color:#66ccff;">dissolution</span> to prevent the target from recovering hit points in any way for a short time.</p>
+        <p style="color:var(--text-lt);font-size:0.85rem;">Skills/Spells gained — All Marid remorts: flood, condensation &nbsp;|&nbsp; Befouler: corruption, dissolution</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">DIAMOND PLATINUM DRAGON REMORT</div>
+        <p>All dragon remorts have a better affinity with their bodies. They gain the ability to use their tails in attacks, and their scales harden on the hands, feet, and legs, improving their natural AC and damage rates.</p>
+        <p>Diamond dragons are the pinnacle of divine power — channels of pure sunlight willing to sacrifice themselves for others. They can unleash a <span style="color:#66ccff;">nova</span> burst of radiant energy at all foes, and with <span style="color:#66ccff;">defiance</span> become immune to sleep, charm, and domination magic.</p>
+        <p style="color:var(--text-lt);font-size:0.85rem;">Skills/Spells gained — All dragon remorts: tail attack &nbsp;|&nbsp; Diamond: nova, defiance</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">ADAMANTITE PLATINUM DRAGON REMORT</div>
+        <p>All dragon remorts have a better affinity with their bodies. They gain the ability to use their tails in attacks, and their scales harden on the hands, feet, and legs, improving their natural AC and damage rates.</p>
+        <p>Adamantite dragons are powerful combatants with scales as hard as the metal they're named for. They can cast <span style="color:#66ccff;">dullness</span> to blunt the effectiveness of an enemy's weapons, and <span style="color:#66ccff;">judgement</span> to deliver a powerful divine strike.</p>
+        <p style="color:var(--text-lt);font-size:0.85rem;">Skills/Spells gained — All dragon remorts: tail attack &nbsp;|&nbsp; Adamantite: dullness, judgement</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">AMBER GOLD DRAGON REMORT</div>
+        <p>All dragon remorts have a better affinity with their bodies. They gain the ability to use their tails in attacks, and their scales harden on the hands, feet, and legs, improving their natural AC and damage rates.</p>
+        <p>Amber dragons are wind-wielders who can trap foes and command the air around them. They can <span style="color:#66ccff;">encase</span> an enemy in hardened material to immobilize them, and call up a devastating <span style="color:#66ccff;">gale</span> to blast everything in the room.</p>
+        <p style="color:var(--text-lt);font-size:0.85rem;">Skills/Spells gained — All dragon remorts: tail attack &nbsp;|&nbsp; Amber: encase, gale</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">MITHRIL GOLD DRAGON REMORT</div>
+        <p>All dragon remorts have a better affinity with their bodies. They gain the ability to use their tails in attacks, and their scales harden on the hands, feet, and legs, improving their natural AC and damage rates.</p>
+        <p>Mithril dragons are relentless wind warriors who can strip armor and devastate groups. They can <span style="color:#66ccff;">shear</span> a foe's defenses away, and call up a <span style="color:#66ccff;">cyclone</span> to batter everything in the room.</p>
+        <p style="color:var(--text-lt);font-size:0.85rem;">Skills/Spells gained — All dragon remorts: tail attack &nbsp;|&nbsp; Mithril: shear, cyclone</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">CRYSTAL SILVER DRAGON REMORT</div>
+        <p>All dragon remorts have a better affinity with their bodies. They gain the ability to use their tails in attacks, and their scales harden on the hands, feet, and legs, improving their natural AC and damage rates.</p>
+        <p>Crystal dragons live most of their lives beneath the ocean surface. They permanently gain the ability to walk on water and breathe underwater. While in a flooded or underwater room, they can use <span style="color:#66ccff;">absorption</span> to inhale the water around them and restore a spent breath weapon charge.</p>
+        <p style="color:var(--text-lt);font-size:0.85rem;">Skills/Spells gained — All dragon remorts: tail attack &nbsp;|&nbsp; Crystal: absorption, water walk (passive), water breathing (passive)</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">MERCURY SILVER DRAGON REMORT</div>
+        <p>All dragon remorts have a better affinity with their bodies. They gain the ability to use their tails in attacks, and their scales harden on the hands, feet, and legs, improving their natural AC and damage rates.</p>
+        <p>Mercury dragons are the fastest of all dragon varieties — quick, merciless, and fiercely protective. They can cast <span style="color:#66ccff;">reduce</span> on themselves to shrink their profile, making them considerably harder to hit in combat. Their speed is so extreme that their bodies passively generate a <span style="color:#66ccff;">quicksilver</span> aura, granting bursts of supernatural dexterity and attack speed.</p>
+        <p style="color:var(--text-lt);font-size:0.85rem;">Skills/Spells gained — All dragon remorts: tail attack &nbsp;|&nbsp; Mercury: reduce, quicksilver (passive)</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">BRONZE COPPER DRAGON REMORT</div>
+        <p>All dragon remorts have a better affinity with their bodies. They gain the ability to use their tails in attacks, and their scales harden on the hands, feet, and legs, improving their natural AC and damage rates.</p>
+        <p>Bronze dragons spend most of their days basking in the desert sun. They are fierce and powerful warriors, able to emit a <span style="color:#66ccff;">battleroar</span> that encourages their friends to fight better. They are also comfortable living in the very sands of the desert, and can <span style="color:#66ccff;">burrow</span> underground anywhere outdoors to hide themselves from enemies.</p>
+        <p style="color:var(--text-lt);font-size:0.85rem;">Skills/Spells gained — All dragon remorts: tail attack &nbsp;|&nbsp; Bronze: battleroar, burrow</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">JADE COPPER DRAGON REMORT</div>
+        <p>All dragon remorts have a better affinity with their bodies. They gain the ability to use their tails in attacks, and their scales harden on the hands, feet, and legs, improving their natural AC and damage rates.</p>
+        <p>Jade dragons are mysterious and elusive. They can invoke the <span style="color:#66ccff;">jade mantle</span> to call up an orbiting jade stone shield that absorbs incoming damage, and use <span style="color:#66ccff;">stoneguard</span> to passively improve their parry in combat.</p>
+        <p style="color:var(--text-lt);font-size:0.85rem;">Skills/Spells gained — All dragon remorts: tail attack &nbsp;|&nbsp; Jade: jade mantle, stoneguard</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">OBSIDIAN IRON DRAGON REMORT</div>
+        <p>All dragon remorts have a better affinity with their bodies. They gain the ability to use their tails in attacks, and their scales harden on the hands, feet, and legs, improving their natural AC and damage rates.</p>
+        <p>Obsidian dragons are found near volcanic craters, comfortable in both fire and earth. They can use <span style="color:#66ccff;">consume</span> to devour magical effects around them, and can coat a weapon with obsidian shards using <span style="color:#66ccff;">edge</span> to greatly enhance its damage — at the cost of the weapon's longevity.</p>
+        <p style="color:var(--text-lt);font-size:0.85rem;">Skills/Spells gained — All dragon remorts: tail attack &nbsp;|&nbsp; Obsidian: consume, edge</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">STEEL IRON DRAGON REMORT</div>
+        <p>All dragon remorts have a better affinity with their bodies. They gain the ability to use their tails in attacks, and their scales harden on the hands, feet, and legs, improving their natural AC and damage rates.</p>
+        <p>Steel dragons are defensive powerhouses, wrapping themselves in shadow to outlast any foe. They can cast <span style="color:#66ccff;">umbral shell</span> to encase themselves in a protective shroud of shadow energy, and <span style="color:#66ccff;">umbral resilience</span> to further strengthen their resistance to damage.</p>
+        <p style="color:var(--text-lt);font-size:0.85rem;">Skills/Spells gained — All dragon remorts: tail attack &nbsp;|&nbsp; Steel: umbral shell, umbral resilience</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">UNREMORT UNRECLASS</div>
+        <p>It is said that somewhere deep at the bottom of an abyss lies a special place where you can forsake your current remort or reclass, should you be willing to give up a part of your soul to do so.</p>
+        <p>Those who wish to do this must first find the location where it must be done. From there, the location itself will tell you how to find the item you may need to prove you are willing to give up a portion of your soul.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;">remort forsake</td><td style="color:var(--text);">Forsake your current remort.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;">reclass forsake</td><td style="color:var(--text);">Forsake your current reclass.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="help-entry" id="entry-race-aasimar">
+        <div class="help-entry-title">Aasimar</div>
+        <div class="help-entry-aliases">HELP AASIMAR</div>
+        <hr>
+        <p>Aasimar are the descendants of celestial beings — mortals touched by divine blood in ages past. Though most live unremarkable lives, some are called to a greater destiny, manifesting the power of their heritage through remort.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;margin-top:0.5rem;">
+          <tbody>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;">Size</td><td style="padding:0.15rem 0;color:var(--text);">Medium</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;">Intrinsics</td><td style="padding:0.15rem 0;color:var(--text);">Dark vision, Flight</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;">Resistances</td><td style="padding:0.15rem 0;color:var(--text);">Light damage</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;">Vulnerabilities</td><td style="padding:0.15rem 0;color:var(--text);">Energy damage</td></tr>
+            <tr><td style="padding:0.15rem 1.5rem 0.15rem 0;color:var(--gold);white-space:nowrap;">Starting Skills</td><td style="padding:0.15rem 0;color:var(--text);">Sword, Flurry, Guide</td></tr>
+          </tbody>
+        </table>
+        <p style="color:var(--gold);font-style:italic;">Creation cost: <span style="color:#66ccff;">6</span> points</p>
+        <p>Aasimar begin their lives as capable fighters with an innate connection to the divine. Their true potential is unlocked at remort, when they choose to embrace either their angelic heritage or fall from grace.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">RISEN AASIMAR REMORT</div>
+        <p>Risen have embraced their celestial heritage, ascending toward their divine origin. Risen are aligned <strong style="color:var(--text-lt);">good</strong> and gain a <strong style="color:var(--text-lt);">25% bonus</strong> to divine and holy damage spells.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">transform</td><td style="padding:0.2rem 0;color:var(--text);">Become a towering angelic war form. Grants hitroll, damroll, and +2 WIS. Costs HP each round; breaks below 10% max HP. Grants temporary HP on activation repaid on exit. Hits return 20% of damage as healing while active.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">glare</td><td style="padding:0.2rem 0;color:var(--text);">Fire a divine light beam at a target. Requires active transform. Chance to apply divine effects.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">guide</td><td style="padding:0.2rem 0;color:var(--text);">Summon a celestial companion with haste, sanctuary, and flight. Scales with level.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">angelic restore</td><td style="padding:0.2rem 0;color:var(--text);">Heals a portion of max HP each tick for 10 rounds. Scales with level. Mana cost: 30.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">FALLEN AASIMAR REMORT</div>
+        <p>Fallen have abandoned their celestial birthright, giving themselves over to darkness. Fallen are aligned <strong style="color:var(--text-lt);">evil</strong> and gain a <strong style="color:var(--text-lt);">25% bonus</strong> to negative and shadow damage spells.</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:0.5rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">transform</td><td style="padding:0.2rem 0;color:var(--text);">Become a towering demonic war form. Grants hitroll, damroll, and +2 STR. Drains mana each round; breaks below 10 mana. Grants temporary HP on activation repaid on exit. Hits steal mana from target while active.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">glare</td><td style="padding:0.2rem 0;color:var(--text);">Fire a shadow beam at a target. Requires active transform. Chance to blind the target.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">guide</td><td style="padding:0.2rem 0;color:var(--text);">Summon a demonic companion with haste, sanctuary, and flight. Scales with level.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">demonic drain</td><td style="padding:0.2rem 0;color:var(--text);">Afflicts target with negative damage over time for 10 rounds. CON save resists. Mana cost: 30.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="help-entry" id="entry-race-marid">
+        <div class="help-entry-title">Marid</div>
+        <hr>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;">MARID</div>
+        <p>From deep beneath the Dragon Sea, the Marid have emerged with stories told of horrific destruction — their precious coral cities destroyed by an unknown evil. Unseen on the surface of Terra and Dominia for hundreds of years, the Marid are attempting to salvage what is left of their civilization and find a role in the societies of the land dwellers. As scattered refugees they are still few in number, but more emerge from the sea every week, drawing stares wherever they go.</p>
+        <p>Marid could almost pass themselves off as human, but for their odd coloration. Their features include pale white, fish-colored skin and hair ranging from deep sea blue to seaweed green. Their eyes are double-lidded but otherwise humanoid. Their ears are long and pointed — similar to elves but even larger, to help detect changes in water pressure. Marid are generally thin and rarely exceed 5 feet in height. They are considered small size, and despite their lives beneath the waves they have no fins, tail, or gills.</p>
+        <p>Marid are highly magical creatures attuned to the elements that form the world, and make powerful magic users. Despite their frail appearance their nature makes them largely resistant to damage and they tend to have high hit points for their class. All Marid are especially skilled in elemental magic and begin with the <span onclick="showEntry('skills-general')" style="color:var(--gold);cursor:pointer;">essence</span> skill, which causes their elemental spells to have additional effects. Their command of the sea also gives all Marid the ability to cast the hurricane spell, and they begin the game knowing how to use flails.</p>
+        <p>As creatures of water, Marid enjoy a resistance to both fire damage and drowning, however they can be easily stricken down by electricity. They can travel over both land and water with ease and are the only race that can breathe both water and air.</p>
+        <p style="color:var(--text-lt);font-size:0.85rem;margin-top:1rem;">Creation cost: <span style="color:#66ccff;">14</span> points &nbsp;|&nbsp; Remort options: <span onclick="showEntry('race-remort')" style="color:var(--gold);cursor:pointer;">Nereid, Befouler</span></p>
+      </div>

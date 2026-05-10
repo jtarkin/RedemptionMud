@@ -1,0 +1,159 @@
+      <div class="help-entry" id="entry-world-travel">
+        <div class="help-entry-title">Travel</div>
+        <hr>
+        <p>See also: <span onclick="showEntry('gs-newbie', 'NORTH')" style="color:var(--gold);cursor:pointer;">North / South / East / West / Up / Down</span> and <span onclick="showEntry('gs-newbie', 'EXITS')" style="color:var(--gold);cursor:pointer;">Exits</span> under the Newbie section for movement commands and how to find exits.</p>
+        <p>Use <span onclick="showEntry('gs-newbie', 'WHERE')" style="color:var(--gold);cursor:pointer;">Where</span> in the Newbie section to find the location of players or monsters within your current area.</p>
+
+        <div class="help-entry-aliases" style="margin-top:1.5rem;color:var(--gold);opacity:1;">FOLLOW GROUP NOFOLLOW</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">follow &lt;character&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Start following another character. To stop following, type <code>follow &lt;yourself&gt;</code>.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">group</td><td style="padding:0.2rem 0;color:var(--text);">Shows statistics for each character in your group.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">group &lt;character&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Makes a follower a member of your group, or kicks them out if already grouped.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">nofollow</td><td style="padding:0.2rem 0;color:var(--text);">Toggles whether you accept followers. When enabled, no one can follow you and current followers are dropped.</td></tr>
+          </tbody>
+        </table>
+        <p>Group members share experience points from kills and may use the GTELL and SPLIT commands. If anyone in your group is attacked, you will automatically join the fight. This can be toggled using the <code>autoplayerassist</code> and <code>automobassist</code> toggles. You may FOLLOW and GROUP only with characters within eight levels of your own.</p>
+
+        <div class="help-entry-aliases" style="margin-top:1.5rem;color:var(--gold);opacity:1;">RECALL</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">recall</td><td style="padding:0.2rem 0;color:var(--text);">Prays for transportation back to either the Temple of Bosco or the Temple of Selina. <code>/</code> is a synonym.</td></tr>
+          </tbody>
+        </table>
+        <p>If you RECALL during combat, you will lose experience and have a higher chance of failing than fleeing. This chance is based on your recall skill — even 100% does not guarantee success. RECALL costs half of your movement points and does not work in certain god-forsaken rooms. Characters afflicted by a curse may not recall at all.</p>
+
+        <div class="help-entry-aliases" style="margin-top:1.5rem;color:var(--gold);opacity:1;">NORECALL</div>
+        <p>NORECALL is an option that allows you to have the choice to RECALL while link-dead and in the middle of combat. Type <code>auto</code> to see if you have this off or on.</p>
+        <p>See also: <code>help RECALL</code></p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">TRAVEL SPELLS</div>
+        <p>Several spells can be used to move around the world quickly or teleport characters. These include <span onclick="showEntry('spells-general', 'TELEPORT')" style="color:var(--gold);cursor:pointer;">teleport</span>, <span onclick="showEntry('spells-general', 'BLINK')" style="color:var(--gold);cursor:pointer;">blink</span>, <span onclick="showEntry('spells-general', 'WORD OF RECALL')" style="color:var(--gold);cursor:pointer;">word of recall</span>, <span onclick="showEntry('spells-general', 'GATE')" style="color:var(--gold);cursor:pointer;">gate</span>, and portal. See <span onclick="showEntry('spells-general')" style="color:var(--gold);cursor:pointer;">General Spells</span> for full details.</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">CHARTER FERRY</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">charter</td><td style="padding:0.2rem 0;color:var(--text);">Charters the ferry for a small amount of gold, instantly transporting you aboard. You will spend a few game hours at sea before arriving at the next continent. You must be at a ferrymaster at the correct departure time.</td></tr>
+          </tbody>
+        </table>
+        <p>See also: <code>help WARP</code>, <code>help BRIDGE</code></p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">WARP</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">warp</td><td style="padding:0.2rem 0;color:var(--text);">A magical portal located south and east of the recall point on both continents. Instantly transports you to the corresponding portal on the other continent. Cost: your level × 2 gold. You will be briefly disoriented upon arrival.</td></tr>
+          </tbody>
+        </table>
+        <p>See also: <code>help CHARTER</code>, <code>help BRIDGE</code></p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">BRIDGE SELINA'S BRIDGE</div>
+        <p>Selina's Bridge is a physical structure spanning the divide between the continents of Terra and Dominia. Unlike the warp portal, crossing the bridge requires traversing the area on foot. A troll guard demands a toll of 100 gold to pass — or you may fight and kill him instead.</p>
+        <p>The bridge offers two crossing routes:</p>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">Underwater</td><td style="padding:0.2rem 0;color:var(--text);">The lower path passes through water. You will need the ability to breathe underwater to survive this route.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">Air</td><td style="padding:0.2rem 0;color:var(--text);">The upper path requires flight. You must be flying to traverse the aerial section.</td></tr>
+          </tbody>
+        </table>
+        <p>See also: <code>help CHARTER</code>, <code>help WARP</code></p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">WARPSTONES</div>
+        <p>Warpstones are an ancient magic that can be tapped as a power source for some of the more powerful transportation spells. No one quite knows when these items were made or by whom, but some do remain scattered about the world.</p>
+      </div>
+
+      <div class="help-entry" id="entry-world-doors">
+        <div class="help-entry-title">Doors</div>
+        <hr>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;">OPEN CLOSE LOCK UNLOCK PICK</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">open &lt;object|direction&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Opens an object or a door in the given direction.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">close &lt;object|direction&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Closes an object or a door.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">lock &lt;object|direction&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Locks a closed object or door. You must have the requisite key.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">unlock &lt;object|direction&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Unlocks a closed object or door. You must have the requisite key.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">pick &lt;object|direction&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Attempts to open a lock without a key. Requires practice in the pick lock skill. Picked doors cannot be locked again without using a key.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="help-entry" id="entry-world-story">
+        <div class="help-entry-title">Story</div>
+        <hr>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;">STORY</div>
+        <p>In a simpler time, the citizens of Midgaard and the immortals of Valhalla lived in peace under the benevolent rule of Bosco. A kind and fair leader, he was beloved by all his subjects. During Bosco's reign he had 5 children, each of them very different. First there was Taelisan, who was withdrawn, hard, cold and calculating; next was Carnas, who lusted for total control of everything; then there was Bhaal, an individualist who sought his own path; next was Gabriel, who strove for goodness in all he did; the youngest was Chain, who sought to level all hierarchy.</p>
+        <p>As Bosco grew old and weak, his children began to fight among themselves for the leadership of Terra. Not content to just wreak havoc in the heavens, the children began to recruit mortals to back their claims. Eventually, the golden doors of Valhalla were forced open and chaos spilled across the region. Soon the streets of Midgaard were stained with blood.</p>
+        <p>Using the last of his strength, Bosco stripped his children of most of their powers and banished them and their followers from Midgaard. Those faithful mortals who had scorned the violence and refused to take sides mourned the loss of Bosco. These steadfast souls called on immortals from another realm to restore order to their land. Answering the call came Delstar, Maclav, Daisy, and Gothic, who pledged to uphold the ideals of Bosco and bring redemption to Terra.</p>
+        <p>However, order was not easily restored. The first victim of the chaos was the great immortal Gothic, who fell from the heavens and was lost to the world. The next to be claimed was Taelisan, who found himself tottering on the edge of insanity and surrounded by the memories of his dead father. He passed down leadership of Pragmati and retreated from the cares of the land. Then the garden of Eden was surrounded by darkness and overthrown by the strength of a clan of Kindreds. Most recently, the clan of Eclipse fell by the wayside because of weak leadership and a new clan by the name of Harpers has arisen.</p>
+        <p>A new danger now threatens the shores of Terra. A continent named Dominia has been rediscovered across the Dragon Sea. Not only do the inhabitants of Dominia scorn the name of Bosco, but they also despise his most favored race — the dragon. They have recruited the remains of the Pragmati to live on their land and repel any invaders.</p>
+        <p><em>To be continued...</em></p>
+        <p>See also: <code>help Dominia</code></p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">DOMINIA</div>
+        <p>According to legend, Selina and Bosco were made from the same flesh. Bosco was given control of the Western half of the world and Selina ruled the Eastern half. A great body of water separated these lands and allowed Bosco and Selina to develop their empires without interference.</p>
+        <p>On Dominia, Selina's power created a colony of man-like insects. These beings, which she named Slivers, paid homage to her and grew strong and prosperous. While on Terra, Bosco's generous nature spawned a race of dragons whose fierce and powerful skills refused to be contained.</p>
+        <p>Eventually the dragon race learned of the Eastern continent and vowed to rule it. They invaded Dominia to ravage and destroy the inhabitants and gain power over the land. After many bloody victories, it appeared the dragons would dominate the lives of Selina's followers, killing those who would not obey their laws.</p>
+        <p>Selina despaired, for she did not have enough power to defeat the dragon horde alone. It was then she was joined by Gargnath, a mighty troll wizard, and Lawrygould, the King of Dominia. Together they constructed a great wall around the coastal city of Shandalar from within which they could repel the invaders.</p>
+        <p>Guided by the wisdom of Gargnath and the intelligence of Lawrygould, Selina used her magic to unite the trolls and the slivers into a mighty army. Through great effort, such as few have ever seen before, the army of Dominia routed the dragon horde from their continent. They killed the most ruthless and left only a small group of dragons to limp defeated back across the sea.</p>
+        <p>The battle cost Selina much energy and weakened her substantially. She was laid to rest in a crypt only to be disturbed if Dominia was ever again threatened by the rule of dragons. The trolls returned to their forest village and the slivers again prospered. The resulting peace lasted for decades.</p>
+        <p>Unfortunately, efforts are now being made by many races to re-establish contact between the continents. King Lawrygould, fearing another invasion, hired the remains of the clan Pragmati to live on his shores and dedicate themselves to slaying dragons.</p>
+        <blockquote style="border-left:2px solid var(--gold);padding:0.5rem 1rem;margin:1rem 0;font-style:italic;color:var(--text);">"Soon the Dragons will return, and if we are not prepared we will be at their mercy! Non-Dragons Unite! Throw off the chains of oppression! They are numerous and our strong are too few. We must focus our efforts on their destruction, or face our own." — King Lawrygould at the establishment of Clan Venari.</blockquote>
+        <p>Not all the inhabitants agree, however. Some feel that the reconnecting of the continents will be the long sought opportunity to make amends for ancient wrongs. These people, of both worlds, want trade and prosperity for all.</p>
+        <p>See also: <code>help story</code></p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">WAR DRAGONWAR</div>
+        <p>The world is at War. The Children of Bosco and Selina who walk among you have extended their hands and have decided more direct action is needed. During this time of War, they have declared Martial-Law. Some old taboos are now considered practical, but there are also new virtues among those who fight.</p>
+        <ol style="color:var(--text);padding-left:1.5rem;">
+          <li>No one is neutral. Only Non-clanners may take haven in the city of Stoneridge. All clanners or loners alike must choose to support either Bosco or Selina. Trying to play both sides displeases the Gods and risks their wrath.</li>
+          <li>Loyalty is rewarded. Disloyalty is cowardly. If you are part of a clan, leaving that clan for any reason is frowned upon by the Gods and risks their severe wrath. Support your clan, and the Immortals on your side may smile upon you.</li>
+          <li>People who do not support your side cannot be trusted. Clans may only recruit from clans of the same faction (Bosco/Selina). New arrivals may be recruited by anyone, but as per Rule 2, shall not be lonered.</li>
+          <li>An army is only as good as its General. If a Clan Leader Outcasts members from the army of Selina/Bosco, this shall anger their Gods, and they will be held accountable.</li>
+          <li>If your soul inhabits multiple bodies, and in the midst of battle seeks a different form, this will severely anger the Gods. Before two armies meet at a predetermined time to fight, ensure your soul is content to remain in that body for the entirety of that battle.</li>
+        </ol>
+      </div>
+
+      <div class="help-entry" id="entry-world-patron">
+        <div class="help-entry-title">Patron &amp; Vassal</div>
+        <hr>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;">PATRON VASSAL PLEDGE ASSUME</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">pledge &lt;name&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Offer yourself as a vassal to another character.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">assume &lt;name&gt;</td><td style="padding:0.2rem 0;color:var(--text);">Confirm your patronage of a potential vassal.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">droppatron</td><td style="padding:0.2rem 0;color:var(--text);">Free yourself from your patron.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">dropvassal</td><td style="padding:0.2rem 0;color:var(--text);">Withdraw your services as a patron.</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">gain patron</td><td style="padding:0.2rem 0;color:var(--text);">At any trainer — convert accumulated patron points into experience.</td></tr>
+          </tbody>
+        </table>
+        <p>Newcomers to the world need guidance, and those who provide good guidance can be rewarded. The patron and vassal system allows characters to share experience points with each other across large level gaps in a limited way. This is a master and apprentice system where both members have responsibilities.</p>
+        <p>Becoming the vassal of another character should be a major decision. Each hour you spend, you donate 6 minutes of your time to your patron. If your patron is not deserving of your time or effort, feel free to drop them and choose someone more willing to help.</p>
+        <p>Becoming the patron of another character is also a big step — consider yourself a mentor in both role-play and game-play terms. Your vassal provides a steady supply of free experience points, but this should not come without cost. They need equipment and spells to survive, and may need much more to learn about this complex world.</p>
+        <p>Each character may have a single patron and a single vassal simultaneously. When you earn experience points, 10% are converted into patron points and passed to your patron — who may in turn pass them to their own patron, and so on.</p>
+        <p>Patron points are not converted into experience immediately. You must visit any trainer and use <code>gain patron</code> to claim them. There is a limit: you may only claim up to half your experience-per-level from patron points each level. At level 51, the claim limit raises to 10,000 experience points per intelligent weapon level-up.</p>
+        <p>Your patron and vassal information is displayed in your <code>score</code>. If your patron is offline when you earn vassal points, they accumulate and are transferred the next time you are both online together.</p>
+      </div>
+
+      <div class="help-entry" id="entry-world-general">
+        <div class="help-entry-title">General</div>
+        <hr>
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;">AREA ZONE CONTROL</div>
+        <p>Some areas within this world can be claimed and controlled by your guild or clan. Having control of an area will show up on <code>where</code>, and will grant your clan or guild extra regeneration and bonus damage while within that area.</p>
+        <p>Each area is different; how you can gain control changes. Sometimes it may be as easy as killing a key mob, other times it may involve a complicated quest. In some areas there may also be additional bonuses or disadvantages for controlling the area.</p>
+        <p><strong style="color:var(--text-lt);">Current controllable areas:</strong> Gingerbread House, Time (casts free haste), Haon Dor (trees give away location of all but control clan), High Tower (casts free Aurora), Bosco's Breach (control clan gets to cross for free and collect tolls on demand), Sherwood Forest, Atlantis (grants free entry to city and waterbreathing).</p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">ELEMENTAL WHEEL ELEMENTS</div>
+        <p>Dragons are divided into chromatic and metallic forms, each associated with a distinct element. These elements determine the nature of their breath and claw attacks, as well as their resistances and vulnerabilities.</p>
+        <p><strong style="color:var(--text-lt);">Chromatic dragon elements:</strong> Fire (Red), Lightning (Blue), Cold/Ice (White), Poison (Green), Acid (Black). Chromatic dragons may undergo a permanent transformation into their metallic counterpart via <code>dragonchange</code>. When they do, their element shifts to the corresponding metallic element.</p>
+        <p><strong style="color:var(--text-lt);">Metallic dragon elements and the wheel:</strong> Wind (Gold, from Red), Divine (Platinum, from Blue), Water (Silver, from White), Earth (Copper, from Green), Shadow (Iron/Steel, from Black).</p>
+        <p>The five metallic elements form the elemental wheel governing resistances and vulnerabilities. Divine and Shadow are direct opposites — each strong against the other and vulnerable in return. Wind, Earth, and Water form a cycle: Wind beats Earth, Earth beats Water, Water beats Wind. Each metallic dragon is resistant to their own element and vulnerable to the element that counters them on the wheel.</p>
+        <p>See also: <code>help METALLIC DRAGON</code>, <code>help DRAGONCHANGE</code></p>
+
+        <div class="help-entry-aliases" style="color:var(--gold);opacity:1;margin-top:1.5rem;">DOUBLE XP DOUBLE QP</div>
+        <table style="border:none;border-collapse:collapse;font-family:'Courier New',monospace;font-size:0.85rem;margin-bottom:1rem;width:100%;">
+          <tbody>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">quest double xp</td><td style="padding:0.2rem 0;color:var(--text);">Purchase double experience for 100 ticks (costs 10,000 gold).</td></tr>
+            <tr><td style="padding:0.2rem 1.5rem 0.2rem 0;color:#66ccff;white-space:nowrap;vertical-align:top;">quest double qp</td><td style="padding:0.2rem 0;color:var(--text);">Purchase double quest points for 100 ticks (costs 10,000 gold).</td></tr>
+          </tbody>
+        </table>
+        <p>While at the quest master or quest mistress, you can purchase double XP or double QP for 10,000 gold for 100 ticks. Gold is taken automatically from your person; if you don't have enough, a bank note will be checked. Double timers do not stack.</p>
+      </div>
+      </div>

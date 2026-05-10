@@ -1,0 +1,131 @@
+Directions to Firetop Mountain:
+2s, 3w, 4n, 2e, 7n, w, 2n, w, n, w, n, w,
+2n, e, n, w, 3n, 2w, 8n, e, n, e, 7n
+
+                                                              The Dwarf Room    A Minotaur Room
+                                                                       |              |
+                                                                       +              +
+                                                 A Widening in         |              |
+                                       A Bend--+--the Passage-----A Junction-----Another Door
+                                        |                              |              |
+                                        |       (3)                    |              +
+                                        |       /                      |              |
+                N  U                A Creepy Room                     A Bend-----A Junction
+                | /                                                                  /
+                |/                                                                  /
+           W----+----E                                                         A Dragon
+               /|                                                                Cave
+              / |                                                                  |
+             D  S                                                                  +
+                                 -=+MAPPED BY ARSHWANA+=-                          |
+                                                                               A Locked--+--The Warlock's
+          Asterisks (*) indicate a "must recall" room                         Steel Door      Chambers
+
+
+
+
+
+                                        A Bend in the----------------A Hole in-----A Junction-----A Door
+                                         Passageway                  the Wall          |            |
+                                              |                          /             |            +
+                                              |                        (3)             |            |
+                                              |                                        |        Loot Room
+                         A Construction-----A Junction--+--A Crypt                     |
+                             Site             |               |                        |
+                                              |               +                   A Corridor
+                                              |               |                        |
+                                         A Dead End       A Zombie                     +
+                                                            Room                       |
+                                                              |                     A Room
+                                                              +                        |
+                                        Inside the            |                        +
+                            Pantry--+--Shipbuilder's     A Short Dark                  |
+                                         Quarters          Corridor               A Corridor
+                                             |                |                        |
+                                             +                +                        +
+                                             |                |                        |
+                                             Outside-----The Other-----A Door--+--A Shipbuilding
+                                             a Door         Side                      Room
+                                                              |
+                                                              |
+                                                              |
+                A Rocky-----The River-----The River-----A Ferryman and-----The River
+                 Beach     (Crocodile)       |            A Bridge
+                    |                        |                |
+                    |                        |               (2)
+                    |                   On the Banks
+   A Giant       A Long                 of the River-----A Junction-----A Cave
+    Room       Passageway      A Gas                       |
+      |             |          Room!                       |
+      +             |            +                         |
+      |             |            |                         |                              (2)
+   Rat Room--+--A Junction----A Bend                       |                               |
+      |                          |                         |                               +
+      +                          |                         |                               |
+      |                          |                         |                         A Pear-shaped
+   A Rough                       |                   Room of Hands                       Room
+   Cavern                        |                     and Stars                           |
+      |                          |                         |                               +
+      |                          |                         +                               |
+      |                          |                         |                            A Short
+  The Troll                      |                   A Corridor--+--A Bare              Corridor
+     Den                         |                         |         Room                  |
+      |                          |                         |                               +
+     (1)                         |                         |                               |
+                               A Long                 A Fountain                       A Gallery
+                             Passageway                    |                               |
+                                 |                         +                               +
+                                 |                         |                               |
+                                 |                 A Black Corridor                     A Short
+                                 |                         |                            Corridor
+                                 |                         +                               |
+                                 |                         |                               +
+                                 |         A Cavern--+--Outside--+--A Shop                 |
+      A Bend-----A T-Junction---A Bend                 Three Doors                   A Barbarian!
+        \           |                                      |                               |
+          (1)       |                                      |                               +
+                    |                                      |                               |
+   *A Narrow-----A Junction   Ogre Cave                  A Bend--------A Junction-----A Junction-----An Ornate Room
+   Passageway       |            |                                          |
+                    |            |                                          |
+                    |            |                                          |
+                  A Bend-----Entrance to-----A Long-----A Junction-----A Bend in the
+                                a Cave      Passageway        |          Corridor
+                                                              +
+                                                              |
+                                                         A Corridor--+--A Torture
+                                                              |          Chamber
+                                                              |
+                                                              |
+                                                         A Corridor--+--Armory
+                                                              |
+                                                              |
+                                                              |
+                                                         A Corridor--+--A Cell
+                                                              |
+                                                              |
+                                                              |
+        The Chieftain's--+--A Westward-----A Junction-----Another-----Outside--+--The Orc
+            Quarters          Corridor           |        Junction     Kitchen     Kitchen
+                                                 |
+                                                 |
+                                A Party--+--A Corridor
+                                                 |
+                                                 |
+                                                 |
+                                Guards'--+--A Corridor
+                               Quarters          |
+                                                 |
+                                                 |
+                           Orc Sleeping--+--A Corridor
+                             Quarters            |
+                                                 |
+                                                 |
+                                             A Guard-----Inside the-----A Door--+--*A Pit
+                                               Post       Mountain
+                                                              |
+                                                              |
+                                                              |
+                                                        Path to Firetop                                         
+                                                          Mountain
+

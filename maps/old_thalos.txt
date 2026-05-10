@@ -1,0 +1,44 @@
+Thalos (by Cigam) 
+ 
+The north-west                                                                The north-east
+  watchtower                                                                    watchtower
+   \down                                                                             / 
+  up\                                                                               /
+     \                                                                             /
+  Under the                   A Back    A Side              A Back              Under a
+  watchtower ---------------- alley --- Street ------------ alley ------------ watchtower
+      |                                   |                   |                    |
+      |                                   |                   |                    |
+    A Back                   A ruined   A Side     An up   A bath                A Back
+    alley                      clay  -- Street --- right -- house  On the second  alley 
+      |                      dwelling     |        house       _ /    Floor        |
+      |                                   |                     /|                 |
+The tapestry  The jewelry  A Collapsed  A Side             A tall       A small    |
+    Stand   --   Stand        stone  -- Street ---------- dwelling ----- shack     |
+      |            |        dwelling      |                                        |
+      |            |                      |                                        |
+ The market   The market    A Garden  A Garden   A Collapsed                     A Back
+   place   --    place        Path  --  Path        House                         alley
+      |            |            |         |           |                            |
+      |            |            |         |           |                            |
+  The meat    The produce  The Temple  A Garden      Main                         Main     The Grand
+    Stand ----   Stand     of Thalos -- Path  ----- Street --------------------- Street --- Gate of
+      |                                   |           |                            |        Thalos
+      |                                   |           |                            |
+      |                               A Garden     The City  East wing             |
+      |                                 Path         Hall  -- of the               |
+      |                                   |           |      City Hall             |
+      |                                   |           |          |       A Small   |
+      |                       The      A Side    South wing The private  guarded A Back  
+      |                      Smity --- Street --   of the --Garden and    house - alley
+      |                                   |      City Hall  Courtyard              |
+      |                                   |                 of Thalos              |
+    A Back               The Guilded   A Side -- The Tavern                      A Back The south-east 
+     alley The south-west   House  --- Street    of the Sun                       alley   watchtower
+      |      watchtower                   |                                        |    /
+      |        /                          |                                        |   /up
+Under a ruined/up            A Back    A side     A Back                     Under a ruined          
+  watchtower  --------------  alley -- Street ---  alley -------------------   watchtower
+                                          |
+                                          |
+                                   An Abandoned shop

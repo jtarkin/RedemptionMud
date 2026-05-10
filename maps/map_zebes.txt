@@ -1,0 +1,115 @@
+Map by Hexnar                             NOTE: SOUTH OF KITCHNUR ST IS LOCKED, ROOM IS A TRAP, KEY NOT AVAILABLE ON ANY MOB.
+Legend:						ROOM COLLAPSES AND CREATES EXIT SOUTH
++:    closed door
+/+/:  closed and locked
+==>:   One direction only
+
+
+	   (2)																											(4)
+	Outside NW		Inside NW				       Valdur Crescent						Valdur Crescent 					      Inside NE		     Outside NE
+	  gates   -------------  gates	------------- Valdur Crescent ----------- & Ruby Road  ------------ Valdur Crescent ----------- Cordenia North ---------------- Valdur Crescent --------------  Gates ----------------  Gates 
+	    |			    |			    |				|							|			       |			  |			  |
+	    |			    |			    |	       Tiana's ---- Ruby Road ---- Garumn's					|			       |			  |   (3)		  |
+	    |			    +   (1)		    |	     Magic shop		|	   Weapons					|			       |			  +   /			  |
+	    |			    |  /		    |				|							|			       |			  |  /			  |
+	    |			    | /			    |	       Zebian ----- Ruby Road ---- Narkon's					|			     In An		      Inside NE		     Inside NE
+	Inside NW		Inside NW		  Valdur      Chandelry		|	   Armoury				Corner of Cordenia		    Alleyway		      Guardhouse  ------+------ Gates
+	  gates   ------+------ Guardhouse		 Crescent			|			   		------- North and Sterling		       |						  |
+	    |						    |				|			   		|		|			       |						  |
+	    |						    |				|			   		|		|			       |						  |
+	    |						    |	    Pearl     Lazy	|      		   Rathemon's  		|		|			       |						  |
+	    |						    |	   Casino      Elf	|    		  Potion Palace		|		|			       |						  |
+	    |						    |         |		|	|			|		|	    	|		       	       |						  |
+	    |						    |	      |		|	|			|		|		|		       	       |						  |
+	  Valdur		Vauldur			Valdur &  Sterling  Sterling  Market		     Sterling		|	 Cordenia North	     Maridion	   Maridion		     Maridion		    Intersection of
+	 Crescent ------------ Crescent --------------  Sterling-- Street -- Street --Square ---------------  Street ------------	 & Maridion St ------ Street ------ Street ------------------ Street -------------- Morentia Avenue
+	    |							      |		|								|									  and Maridion Street				
+	    |							      |		|								|										  |
+	    |							   National   Slave			Imm Only		Hall of			|									  |
+	    |							     Bank     Trade			 Room -------/+/------	Healers --------- Village Square								  |
+	  Valdur																|									      Morentia
+	 Crescent																|									       Avenue
+	    |																	|										  |
+	    |																	\										  |
+	    |																	 \										  |
+	    |															       Kitchnur	 Cordenia South					 In A Tree			  |
+	    |						The Marina							   Kitchnur St -- St --- & Kitchnur St					     /			      Morentia  
+	    |						    |									|	 /+/		|					    /			       Avenue
+	    |						    |									|   	(8)	 	\				 In A Courtyard				  |
+      Intersecion of		 River			Before The		       River			 River	   River Road	    Inside the 	 \					|			          |
+      Valdur Crescent ---------- Road ----------------- Marina on -------------------- Road -------------------- Road ---- Kitchnur St -/+/-Sweltering	  Cordenia				|			      Morentia
+       & River Road					River Road			 |			   |			    Building	   South ----- Arbur Alley ------- Arbur Alley ----- Arbur Alley ----- Avenue
+	    |			   On the		    |				 |			   |					     |									  |
+	    | (one way) Under The  Naboth		    |			     Before the			   |					     |									  |
+	  Valdur =====> Bridge --- River  --------- On the Naboth River ------------ Old Mill			   |					     |									  |
+	 Crescent 		     ||(one way)	    |							   |					     |									  |
+	  Bridge		      \\		    |						      On a Bridge				     |									  |
+	    |			       \\	      On The Naboth						   |					  Cordenia								  |
+	    |				\=============   River <====== On the					   |					   South								  |
+	    |			    			   ||	       Naboth					   |					     |									  |
+	    |						   \\=========>River					   |					     |									  |
+	    |								 |	     		   		End of      King's    King's St &	King's St &		Before the	      King's 		      Corner of 
+	 Valdur							   On the Naboth			       King's St ---- St ---- Castle Road ---- Cordenia South ------------ Moat	------------- Street ------------- Morentian Avenue
+	Crescent						       River ---				   			   |		     |						 |		     & King's St
+	    |								 	\						   On the Bridge of	     |						 |			  |
+	    |									 \				 <================== Castle Road	     |						 |			  |
+	    |			     (5)					  \				/			   |		     |						 |			  |
+	    |			     /					On the Naboth River ----- On the Naboth River ---- Beneath Castle Road -------- On the Moat ---------- On the Moat --------- On the Moat --------------- Moat
+	    |			    /												 Bridge    |
+	Inside SW	       Inside SW												   |
+	  Gates ------+------- Guardhouse												   |
+	    |			   |												      Castle Road
+	    |			   |													   |
+	    |			   +													   |
+	    |			   |													   |
+	    |			   |													   |
+	    |			   |												       Corner of
+	Outside Sw	       Inside SW		   Drekmar		    Drekmar		    Drekmar		      Castle Road &
+	  Gates ---------------  Gates -------------------- Road ------------------- Road ------------------ Road ------------------- Drekmar Road
+	   (6)
+
+
+
+
+
+	     Above NW	     On the	      On the	       On the		On the		 On the		  On the	 Above NE
+	     Entrance ---- North Wall ----- North Wall ----- North Wall ----- North Wall ----- North Wall ----- North Wall ----- Entrance
+	     /   |		|										    |		  /  |
+	    /	 |		|										    |		 /   |
+	  (2)	 |		|										    |	       (4)   |
+		 |		|										    |		     |
+	      On the 	      In the										  In the	  On the
+	     West Wall ----- Upper NW										 Upper NE ------ East Wall
+		 |	      Tower										  Tower		     |
+		 |	       /(1)										    /(3)	     |
+		 |	      /											   /		     |
+	      On the						    locked door							  On the
+	     West Wall							(8)							 East Wall
+		 |							 |							     |
+		 |						 Inside an Old Building						     |
+		 |						[fall through the floor]					     |
+	      On the						   /								  On the
+	     West Wall						  /								 East Wall
+		 |					An Alchemist's Hidden Lair						     |
+	         |				(room collapses, caves in, south entrance opens)				     |
+		 |						|								     |
+	      On the						|								  On the
+	     West Wall					Darting through								 East Wall
+		 |				     The crack in the wall							     |
+		 |				(Automtically sends you south again)						     |
+		 |						|								     |
+	      On the						|								  On the
+	     West Wall			(Dumps you out onto King's St/Castle road)						 East Wall
+		 |
+		 |
+		 |
+	      On the	     In the
+	     West Wall ---- Upper SW
+		 |	     Tower
+		 |	  (5)/ |
+		 |	    /  |
+		 |	       |
+	     Above SE	     On the	     On the	     On the	     On the	     On the
+	     Entrance ---- South Wall ---- South Wall ---- South Wall ---- South Wall ---- South Wall
+	      /(6)
+	     /

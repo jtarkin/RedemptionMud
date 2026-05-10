@@ -1,0 +1,37 @@
+Map of Mahn-Tor - by Crematia
+        
+  U  N
+   \ |
+    \|
+ W-------E
+     |\
+     | \
+     S  D
+
+
+                Before the Gates
+                of Mahn-Tor
+                      |                                           Guard
+City Streets -- Inside the Gates -- City Streets                  House
+       |        of Mahn-Tor              |                          |
+       |              |                  |                          |
+City Streets --   Square of - - - - - Streets - - - Road to - - Before the - Entryway - The Hall - Grand - - Before the - Secret - - Entry to Royal - - - - Main
+       |          Mahn-Tor               |          The Keep       Keep                            Hall        Throne     Hallway    Chambers            Livingroom
+       |              |                  |                          |                                |           |                      |                    |
+ Inn of the       Equipment           General                     Guard                            Great - - - Great                 Harem Room - - - - - Master
+ Broken Horn        Shop               Store                      House                            Hall        Hall                                       Bedroom
+                                                                                                     |
+                                                                                                 Guard Post
+                                                                                                     |
+                                                                                    Sumaron's - Guarded Hall - Gorak's
+                                                                                    Sanctum          |         Training
+                                                                                       |             |         Room
+                                                                                       |             |           |
+                                                                                    Darkoth's - Guarded Hall - Amyrok's
+                                                                                    Study                      Study
+                                                                                       |             |           |
+                                                                                    Tyrgoth's - Guarded Hall - Nasturn's
+                                                                                    Sanctum          |         Abode
+                                                                                       |             |           |
+                                                                                   Belrak's - - - End of - - - Dorgar's
+                                                                                    Room        Guarded Hall   Domicile

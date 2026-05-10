@@ -1,0 +1,70 @@
+PYRAMID   * - indicate an unmappable "maze"                  #
+          # - No exit screen                                ^
+                                                           /
+                                          #   /---<--Climbing the-->---\    (5)
+                                          ^   |     Great Pyramid      |    ^
+                                           \  ^          /             ^   /
+                                          Climbing      v           Climbing                         #
+       -=+MAPPED BY WAKIZASTA+=-            the        (4)            the(6)                         |
+                                           Great                     Great                #---The Apex of the->-(6)
+                                          Pyramid                   Pyramid                    Great Pyramid
+                                           /  v                        v  \                      /   |
+                                          /   \---<--Climbing the-->---/   v                    +    #
+                        (3)              /          Great Pyramid          (4)                 /
+                         |              /                 /                                A Ladder
+                     The Great         /                 v                                   /
+SANDS OF--Inside a----Eastern----At the Base(4)         (4)                                (1)
+ SORROW  small tent  Desert(3)   of the Pyramid
+                         |
+                        (3)
+
+
+            A Tightening----A Tiny-------A Tiny
+          in the Crawlway  Crawlway     Crawlway (2)                        (2)
+             v       |                      |     ^                          ^                The Tomb of
+            /      The Crawlway             |    /                          /        A Dead   the Pharaohs
+       A Slippery    End                   A Tiny----<--A Dark (2)-->---A Spiral      End \      |
+          Hole                             Crawlway     Chamber         Stairway       |   +     +
+           |                                |                               /          |    \    |
+       A Rough                              | (1)                          /           |    The Tomb
+       Crevasse     The Chamber             | /    A Dust-              A Dust-        |    Entrance
+        /     |        of the---A Fire-+-A Musty---Covered---A Smelly---Covered---A Turn in
+   Down the  A Small   Efreet    Pool    Chamber   Hallway    Chamber   Hallway   the Hallway
+   Crevasse   Fire                          |                                          |
+      /                                A Crack in                                      |
+    At the                              the Wall                                       |
+  Crevasse's                                |                               A Fork     |
+     End     A Stairway--A Demolished---A Looted---A Ransacked---A Tunnel---in the---A Tunnel
+      +           /          Tomb          Tomb       Tomb                  Tunnel
+  The Vault      /                                                            /
+ of the Lamp    /                                                            /
+               /                                                         A Rubble-
+           A Stairway                                                     Strewn
+                /                                                        Hallway          /----<-----\
+           A Stairway                                                       |             v          ^
+                +                                                      A Sandstone---An Arched->-An Arched---A Golden
+            The Ancient                                                   Crypt        Hall        Hall        Crypt
+               Hall                                                         |                        |
+                |                                                       A Massive<---\           An Arched
+            A Raised                                                    Sand Dune    |             Hall
+               Dais                                                         *        |               |
+                \                                                     ************   |           A Shining
+                 +                                       (consists of *A Swirling*   |             Vault
+              The Tomb                                   four screens)*Sandstorm *   ^
+             of Ramses                                                ************   |
+                                                                            *        |
+                                                                        A Massive    |
+                                                                        Sand Dune    |
+                                                                            +        ^
+                                                                            v       /
+                                                                      Through the Hole
+                                                                       in the Sand
+
+
+
+
+
+
+
+
+

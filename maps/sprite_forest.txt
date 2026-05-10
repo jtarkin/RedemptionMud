@@ -1,0 +1,65 @@
+The Sprite Forest - 10e, 11s, w
+Mapped by Cappadocius                | -- exits
+                                    || == doors         N U
+                     Inside                             |/
+                     the Oak                         W--+--E
+                    / Tree                             /|
+                   (1) ||                             D S
+                       ||                                              |
+             In the---In the---In the---In the---In the---By the---A Narrow
+             Forest   Forest   Forest   Forest   Forest  Runestone Dirt Path
+               |                                   |
+    In the---In the                              In the
+    Forest   Forest                              Forest
+      |        |                                   |
+    In the---In the---In the---In the---In the---In the
+    Forest   Forest   Forest   Forest   Forest   Forest
+                                 |
+                            The Entrance
+                            to the Sprite
+                               Forest
+                                 |
+                              OUTSIDE
+
+           Alanna's House                                                   Galin's Room
+                 ||                                                              ||
+The Sprite---The Sprite---The Sprite---The Sprite===In the===The Gathering--The Gathering
+  Glade        Glade        Glade        Glade      Bushes       Place          Place
+    |            |            |            |                       |              |
+The Sprite---The Sprite---The Sprite---The Sprite            The Gathering--The Gathering
+  Glade        Glade        Glade        Glade                   Place          Place
+    |            |            |            |                                      |
+The Sprite---The Sprite---The Sprite---The Sprite                           The Gathering
+  Glade        Glade        Glade        Glade                                  Place
+                ||                        ||
+                || (1)                    ||   (2)
+                || /                      ||    /
+              Inside                    Inside /
+              the Oak                  the Maple
+                Tree                     Tree
+
+
+ Reilla's====The Throne====Zidan's
+Antechamber     Room     Antechamber
+                 |
+            The Castle
+              in the
+              Clouds
+                 |
+            The Castle
+              in the
+              Clouds
+                ||
+            Above the---Above the---Above the
+              Glade       Glade       Glade
+                |           |           |
+            Above the---Above the---Above the---Above the
+              Glade       Glade       Glade       Glade
+                            |           |           |
+                        Above the---Above the---Above the
+                          Glade       Glade       Glade
+                                                   ||
+                                                 Inside
+                                               the Maple
+                                               /  Tree
+                                              (2)

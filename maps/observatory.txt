@@ -1,0 +1,48 @@
+		The Lookout
+		/
+	On a ladder
+	/
+   On a ladder
+	(1)
+
+********************************************************************************
+
+					Plunge into Darkness
+	      Floating			/
+           in the Void    Ascending a Staircase
+		    |   /
+   Floating-----Floating-----Floating
+   in the Void	in the Void  in the void
+		   (2)
+		    |
+		Floating
+		in the Void
+
+********************************************************************************
+
+
+                                  Dead End	On a Ledge----On a Catwalk
+					|            /		    |
+					|	    /		    |
+					|   The Telescope           |
+					|			    |
+				On a Catwalk---On a Catwalk---On a Catwalk
+					       /
+					      /
+				On a Staircase
+		  Scribe's		  /
+		    Room		 /
+		      |	      A Tiny---Nexus		 (2)
+		      |	        Room     |		 /
+		    Scribe's  	 /       |		/
+Library---Library   Chamber  	/    Hallway--Globe of Darkness
+   | 	    | 	      |	     Cellar	 |
+   | 	    | 	      |	      		 |
+Library---Library---Library           Hallway (1)
+	              |	                 |    /
+	              |	                 |   /
+		    Hallway--Hallway---Foyer---Hallway---Hallway---Workshop
+				         |
+					 |
+			    Entrance to Observatory (*Key in Turtle)
+

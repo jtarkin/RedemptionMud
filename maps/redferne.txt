@@ -1,0 +1,27 @@
+Redfern's residence (By Cigam)
+
+                                                                     up N
+                The Larder                        The Balcony          \|
+                    |                               of the          W --|-- E
+                    |                              Redfern's            |\
+               The Kitchen     The                 Residence            S down
+                of Naris  --- Fridge                   |
+                    |                                  | 
+                    |                              Redfern's 
+ The Sitting  The Northen   The Monster             Bedroom
+   Room of  --   end of  ---    pen             down/ 
+    Naris       the hall                           /up
+                    |     (1)up                On the
+ Redfern's    The Southern/    The treasur     stairs 
+  Library ----   end of   ---     room          /
+                the hall                       /
+                    |                       (1)down
+                 Outside
+                Redfern's 
+                residence\down
+                          \
+                           \up
+                        The Mighty 
+                         Chain of
+                           Naris
+               

@@ -1,0 +1,44 @@
+Ogreton (By Ozmo)
+ 
+
+                         Upper Level                                            A dank,dark cell
+                         of the keep                                           in the ogre dungeon
+                             \                                                         |  
+                              \up                                     A dank -- The dark,dank -- A dank
+               The tactical -- Inside ---- The                       ogre cell      dungeon     ogre cell
+          A        room       the keep    stable      A                                |
+      huge stone                 |   \down       huge stone             A dank         |          A dank
+      battlement                 |   (3)         battlement            ogre cell    (3)|         ogre cell
+            up\    A         The path         A  /up         A             |          \|             |            A
+               battlement -- continues -- battlement     dark,dank  The dank,dark   The dank  The dank,dark   dark,dank
+                                 |                      cell in the --- dungeon --- Dungeon ---   Dungeon --- cell in the
+                    A battlement |                      ogre dungeon       |           |             |       ogre dungeon
+                            up\  |                                      A dank         |          A dank
+              The training -- The Ogre  ---- The                       ogre cell       |         ogre cell
+                  room      fortification   armory                                     |
+                                 |                                    A dank -- The dark,dank -- A dank 
+                        An ogre  |                                   ogre cell      dungeon     ogre cell
+                         house   |                                                     |
+                  The     up\The road ---- The ogre                             A dank,dark cell
+                 plain       continue       shack                              in the ogre dungeon
+                   |             |                               An ellegant
+    (2)            |             |                                  room    
+     up\          A small --- The town --- A small                   |
+       The         field       square     ogre shack                 | 
+  stairs leading                 |                      The        Top of     An occupied 
+    to the inn                   |                    lavotory -- the stairs ---  room
+           up\ The dancing - The road ----   The                     |    \down
+              devil tavern   continues    playground                 |    (2)
+                                 |                               A room in
+                          (1)    |                                the inn
+ The teacher    Entrance  up\    |
+ preparation --- of the --- Outskirts of --- An ogre               
+    room       Schoolhouse  the village       shack             up N
+                                                                  \|
+            A clearing in                                      W --|-- E
+           the tall grass                                          |\
+                  |      \down                                     S down
+                  |      (1)
+            A particularly
+            smeylly field
+                  |

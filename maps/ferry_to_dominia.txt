@@ -1,0 +1,40 @@
+THE FERRY TO DOMINIA (there may be some doors missing)    
+
+     U N         -=+MAPPED BY WAKIZASTA+=-
+      \|
+    W--+--E
+       |\           The Port-Side-------The Main------The Port-------The Main-------The Port-Side
+       S D              Deck              Deck          Deck           Deck             Deck
+                          |                                                               |
+                          |                                                               |
+                          |                                                               |
+    The Stern------The Mizzen Mast      A Dining------A Dining-------Orchestra      The Foremast--------The Bow
+        |                                 Table         Table           Pit                                |
+        |                                   |                                                              |
+        |                              (1)  |                                                              |
+        |                                \  |                                                              |
+  Deck of the---+--The First-Class-----The Dining-----A Dining-------The Dance------The First-Class--+--The Forecastle-----The Figurehead
+  Weatherlight          Foyer          Saloon           Table          Floor           Vestibule           |
+        |                                   |                                                              |
+        |                                   |                                                              |
+        |                                   |                                                              |
+    The Stern------The Cargo           The Saloon-----The Valet's----The Kitchen    The Cargo Hole------The Bow
+                    Derrick               Bar           Station                           |
+                         |                                                                |
+                         |                                                                |
+                         |                                                                |
+                   The Starboard-------The Southern---The Mainmast---The Northern---The Starboard-
+                     Side Deck          Promenade                     Promenade       Side Deck
+
+
+
+                              Stateroom 1     Stateroom 3     Stateroom 5
+                                   |              |                |
+             The Weatherlight's    +              +                +
+               Bridge        \     |              |                |
+                              First-Class-----An Elegant------Outside the
+                                 Berth         Hallway        First-Class Cabins
+                                   |  \           |                |
+                                   +   (1)        +                +
+                                   |              |                |
+                              Stateroom 2     Stateroom 4     Stateroom 6

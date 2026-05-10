@@ -1,0 +1,63 @@
+The Abandoned Chateau (by Cigam) - Additions made by Alphabeta
+ 
+              The Terrace
+                   +
+   A large     The Master  The Master                    Up N
+ Sitting Room-+-Bedroom-+>-Bathroom                        \|
+      |            |                                    W --|-- E
+   A large     The Master   A dimly lit   Top of            |\
+ Sitting Room   Bedroom      Hallway-----a Spiral           S Down
+      *                         |        Staircase
+ A Dimly lit  A Dimly lit  A Dimly lit     /
+   Hallway------Hallway------Hallway     (3)
+      +            +
+    Linen         The          The                            KEYS:
+    Closet    Observatory---Observatory                       TOP FLOOR:
+                                                              -to a Large Sitting Room:
+               Linen                                             golden key, on ghost chambermaid, in Linen Closet
+               Closet                                         1RST FLOOR:
+                 +                                            -to Guest Bedroom, Guest suit, Guest Bath:
+  Darkened----Darkened----First Floor                            feather duster, on ghost chambermaid in Linen Closet
+   Hallway     Hallway       Landing                          MAIN FLOOR:
+     +                           \          (3)               -to basement:
+     |                           (1)        /                    teaspoon, on assistant chef
+  Darkened   The Guest's  Darkened-----Bottom of              -to glass bookcase:
+   Hallway       Bath      Hallway     a Spiral                  bookmark, on Bartholomew
+     |           *           |         Staircase              -to billiards table:
+   Darkened    Darkened    Darkened                              billiards stick, on billiards master
+   hallway-----Hallway-----Hallway                            BASEMENT:
+     *           *                                            -to wine cellar:
+  A Guest's   A Guest's----A Guest's                             huge brass key, on angry peasant
+  Dedroom       suit        suit                              -to last room of wine cellar:
+                                                 (2)             corkscrew, on crazy cooper
+                                                   \
+                 The Pantry     (1)               A Darkened
+                     Room \        \               Staircase
+                      |    *    Ground               \ up
+                      |    (2)   Floor           down \
+ The kitchen----The Kitchen     Landing           A Darkened
+       |                          |                Staircase
+       +                          |                     \ up
+  The Dining-----The Dining--+---The------The       down \
+     Hall           Hall       Library  Library        Bottom of
+                      +           |                  The Darkened
+                      |           |                    Staircase   
+    The Main-------The Main  The Billard                  |
+      Hall           Hall       Room                 Entrance to  
+       |                          |                The Wine Cellar 
+    Entrance       Entrance  The Billard                  *
+  Hall of the-----Hall of the   Room       Inside an-+-The Wine-+-Inside a
+    Chateau         Chateau                Oak Cask     Cellar   Cherry Cask       
+                      +                                   |
+                 Outside the                              |
+                  Abandoned                Inside an-+-The Wine-+-Inside a
+                   Chateau                 Oak Cask     Cellar   Cherry Cask
+                      |                                   |
+                   Top of                              The Wine  
+                   a Hill                               Cellar
+                      |                                   |
+                  Middle of                            The Wine
+                   a Hill                               Cellar
+                      |                                   *
+                  Bottom of                            The Wine
+                   a Hill                               Cellar

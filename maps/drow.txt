@@ -1,0 +1,52 @@
+Drow City (by cigam)
+
+
+                             Entrance to
+          Cleric's    City    the Temple    Mage's     4 th     Throne
+          Academy -- Street    of Lloth    Academy     House --- Room
+                       |      /    |          |          |
+                       | down/     |          |          |
+   Main               City  (1)   City       City       City
+  Chamber            Street ---- Street --- Street --- Street
+     |                 |                      |          |               /
+     |                 |                      |          |              /
+  Throne    1 st      Main     Warrior's    Slave       City       City
+   Room --- House --- Gate      Academy     Chamber -- Street --- Entrance
+                       |           |                     |
+                       |           |                     |
+                      City        City       City       City
+                     Street ---- Street --- Street --- Street
+                       |                      |
+                       |                      |
+           Throne    2 nd                   3 rd
+            Room --- House                  House
+                                              |            up N
+                                              |              \|  
+                                            Throne        W --|-- E 
+    The                                      Room             |\
+ Treasury-- Dais                                              S down
+             |
+             |
+     (4)<- Altar ->(5)
+            /|\ \down                                                       Slave
+            (7) _\/                                                          Pen
+                 sacrificial       (7)             (6)             (7)        |
+                     Pit           /|\             \|/             /|\        |
+ Cleric's    Grand               Western          Main           Eastern    Slave
+ Barracks - Hallway              Side of <-(4)<- Chamber ->(5)-> Side of -- Cells
+               |   \down         Chamber            |            Chamber                
+               |    (3)            \|/        (3)   |              \|/   
+             Grand      Mage       (6)        up\ Grand            (6)
+            Hallway -- Barracks                  Stairway                 
+             \                                               
+           up \                                                 
+            Grand            Weaponmaster's
+           Stairway             Chamber
+              |                    |
+              |                    |
+              |        Long       Long       Long       Long       Long       Long
+      (2)- Hallway -- Hallway -- Hallway -- Hallway -- Hallway -- Hallway -- hallway -(2)         
+        (1)   |                                                      |
+        up\   |                                                      |
+          Entrance                                               Warrior's
+             Way                                                  Barracks

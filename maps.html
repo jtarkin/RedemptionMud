@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maps — Redemption MUD</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #c9a84c; --gold-lt: #e8c96a;
+      --red: #8b1a1a; --red-lt: #b03030;
+      --bg: #0a0a0f; --bg2: #10101a; --bg3: #161626;
+      --border: #2a2a3a; --text: #d4d0c8; --text-lt: #f0ece0;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Georgia', serif; line-height: 1.7; }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { color: var(--gold-lt); text-decoration: underline; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,15,0.95); backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--border); padding: 0 1.5rem;
+    }
+    .nav-inner {
+      max-width: 1400px; margin: 0 auto;
+      display: flex; align-items: center; gap: 2rem; height: 62px;
+    }
+    .nav-logo {
+      font-size: 1.5rem; font-weight: bold; color: var(--gold);
+      letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none;
+    }
+    .nav-logo span { color: var(--text-lt); font-weight: normal; font-size: 0.75rem; display: block; letter-spacing: 0.2em; }
+    .nav-links { display: flex; gap: 1.2rem; list-style: none; }
+    .nav-links a { color: var(--text); font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); text-decoration: none; }
+    .nav-play-btn { background: var(--red); color: #fff !important; padding: 0.4rem 1.1rem; border-radius: 3px; border: 1px solid var(--red-lt); transition: background 0.2s; }
+    .nav-play-btn:hover { background: var(--red-lt) !important; }
+
+    .help-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 0;
+      transition: grid-template-columns 0.25s ease;
+    }
+    .help-layout.sidebar-collapsed {
+      grid-template-columns: 32px 1fr;
+    }
+    .help-sidebar {
+      background: var(--bg2);
+      border-right: 1px solid var(--border);
+      padding: 1rem 0;
+      position: sticky;
+      top: 62px;
+      height: calc(100vh - 62px);
+      overflow-y: auto;
+      overflow-x: hidden;
+      transition: padding 0.25s ease;
+    }
+    .help-layout.sidebar-collapsed .help-sidebar {
+      padding: 0;
+      overflow-y: hidden;
+    }
+    .help-layout.sidebar-collapsed .sidebar-filter,
+    .help-layout.sidebar-collapsed .sidebar-section {
+      display: none;
+    }
+    .sidebar-toggle {
+      display: flex; align-items: center; justify-content: center;
+      width: 100%; padding: 0.6rem 0;
+      background: none; border: none; border-bottom: 1px solid var(--border);
+      color: var(--gold); cursor: pointer; font-size: 0.9rem;
+      transition: background 0.15s;
+    }
+    .sidebar-toggle:hover { background: rgba(201,168,76,0.08); }
+    .help-layout.sidebar-collapsed .sidebar-toggle {
+      border-bottom: none;
+      height: 100%;
+      align-items: flex-start;
+      padding-top: 1rem;
+    }
+    .sidebar-filter { padding: 0.5rem 1rem 0.8rem; }
+    .sidebar-filter input {
+      width: 100%; background: var(--bg3); border: 1px solid var(--border);
+      border-radius: 4px; padding: 0.45rem 0.7rem; color: var(--text-lt);
+      font-family: 'Courier New', monospace; font-size: 0.8rem; outline: none;
+    }
+    .sidebar-filter input:focus { border-color: var(--gold); }
+
+    .sidebar-section { margin-bottom: 0.2rem; }
+    .sidebar-section-title {
+      font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); padding: 0.5rem 1rem; cursor: pointer;
+      list-style: none; display: flex; align-items: center; justify-content: space-between;
+    }
+    .sidebar-section-title::-webkit-details-marker { display: none; }
+    .sidebar-section-title::after { content: '\25B6'; font-size: 0.6rem; transition: transform 0.2s; }
+    details[open] > .sidebar-section-title::after { transform: rotate(90deg); }
+
+    .sidebar-link {
+      display: block; padding: 0.25rem 1.5rem; font-size: 0.82rem;
+      color: var(--text); cursor: pointer; transition: background 0.15s, color 0.15s;
+      border-left: 2px solid transparent; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .sidebar-link:hover, .sidebar-link.active {
+      background: rgba(201,168,76,0.08); color: var(--gold);
+      border-left-color: var(--gold); text-decoration: none;
+    }
+
+    .help-main {
+      padding: 2rem;
+      position: sticky; top: 62px;
+      height: calc(100vh - 62px);
+      overflow-y: auto;
+      overflow-x: auto;
+    }
+
+    .map-landing { max-width: 760px; text-align: center; padding: 4rem 2rem; }
+    .map-landing.hidden { display: none; }
+    .map-landing h2 { font-size: 1.5rem; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.6rem; }
+    .map-landing p { font-size: 0.95rem; color: var(--text); opacity: 0.7; }
+
+    .map-entry { display: none; }
+    .map-entry.active { display: block; }
+
+    .entry-back {
+      display: block; font-size: 0.8rem; color: var(--gold); cursor: pointer;
+      margin-bottom: 1.2rem; letter-spacing: 0.05em;
+    }
+    .entry-back:hover { color: var(--gold-lt); }
+
+    .entry-title { font-size: 1.6rem; color: var(--gold); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.3rem; }
+    .entry-meta { font-size: 0.82rem; font-family: 'Courier New', monospace; color: var(--text); opacity: 0.7; margin-bottom: 0.4rem; }
+    .entry-meta .val { color: #66ccff; opacity: 1; }
+    .entry-directions {
+      display: inline-block; font-size: 0.88rem; font-family: 'Courier New', monospace;
+      color: var(--text-lt); background: rgba(0,0,0,0.3);
+      border: 1px solid var(--border); border-radius: 4px;
+      padding: 0.6rem 1rem; margin-bottom: 1.5rem;
+    }
+    .entry-hr { border: none; border-top: 1px solid var(--border); margin-bottom: 1.5rem; }
+
+    .map-display pre {
+      background: rgba(0,0,0,0.35); border: 1px solid var(--border); border-radius: 4px;
+      padding: 1.2rem; font-family: 'Courier New', monospace; font-size: 0.78rem;
+      color: var(--text-lt); overflow-x: auto; white-space: pre; line-height: 1.4;
+    }
+    .map-display img { max-width: 100%; border: 1px solid var(--border); border-radius: 4px; }
+    .map-loading { color: var(--text); opacity: 0.5; font-style: italic; font-size: 0.9rem; }
+    .map-none {
+      background: var(--bg3); border: 1px solid var(--border); border-radius: 4px;
+      padding: 2rem; color: var(--text); opacity: 0.4; font-style: italic; text-align: center;
+    }
+    .map-link-out {
+      background: var(--bg3); border: 1px solid var(--border); border-radius: 4px;
+      padding: 1.5rem; text-align: center; font-size: 0.9rem;
+    }
+    .map-link-out a { color: var(--gold); }
+
+    footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 2rem 1.5rem; text-align: center; }
+    .footer-logo { font-size: 1.3rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .footer-copy { font-size: 0.78rem; color: var(--text); opacity: 0.35; }
+
+    /* Hamburger & mobile drawer — hidden on desktop */
+    .nav-hamburger {
+      display: none; background: none; border: none; cursor: pointer;
+      padding: 0.5rem; margin-left: auto; flex-shrink: 0;
+      color: var(--gold); font-size: 1.5rem; line-height: 1;
+    }
+    .sidebar-backdrop {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.55); z-index: 150;
+    }
+    .sidebar-backdrop.open { display: block; }
+    .mobile-browse-btn {
+      display: none; background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1rem; position: sticky; top: 0; z-index: 10;
+    }
+    .mobile-browse-btn button {
+      background: none; border: 1px solid var(--border);
+      border-radius: 4px; color: var(--gold);
+      font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 0.45rem 1rem; cursor: pointer; font-family: inherit;
+    }
+    .mobile-browse-btn button:hover { border-color: var(--gold); }
+
+    @media (max-width: 700px) {
+      nav { z-index: 300; }
+      .nav-hamburger { display: flex; align-items: center; }
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: fixed; top: 62px; left: 0; right: 0;
+        background: rgba(10,10,15,0.98);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 1.5rem; gap: 0.5rem; z-index: 299;
+      }
+      .nav-links.open a { font-size: 0.95rem; padding: 0.4rem 0; display: block; }
+      /* Override desktop collapse layout for mobile drawer */
+      .help-layout { grid-template-columns: 1fr !important; }
+      .help-sidebar {
+        position: fixed !important; left: -290px; top: 62px;
+        width: 280px; height: calc(100vh - 62px);
+        z-index: 200; transition: left 0.25s ease;
+        overflow-y: auto; overflow-x: hidden;
+        padding: 1rem 0 !important;
+      }
+      .help-sidebar.drawer-open { left: 0; box-shadow: 4px 0 24px rgba(0,0,0,0.5); }
+      .sidebar-toggle { display: none; }
+      .mobile-browse-btn { display: flex; }
+      .sidebar-link { padding: 0.6rem 1.5rem; font-size: 0.88rem; }
+      .sidebar-section-title { padding: 0.7rem 1rem; }
+      .help-main { position: static; height: auto; padding: 1rem; }
+      .map-display pre { font-size: 0.7rem; touch-action: pan-x pan-y; }
+    }
+  </style>
+</head>
+<body>
+
+    <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        Redemption
+        <span>A World at War</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#lore">Lore</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#updates">Updates</a></li>
+        <li><a href="index.html#play">Play</a></li>
+        <li><a href="maps.html">Maps</a></li>
+        <li><a href="newbie.html">New Players</a></li>
+        <li><a href="helpfiles.html">Help Files</a></li>
+        <li><a href="crafting.html">Crafting</a></li>
+        <li><a href="index.html#play" class="nav-play-btn">Play Now</a></li>
+      </ul>
+      <button class="nav-hamburger" onclick="navToggle()" aria-label="Menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="sidebar-backdrop" id="sidebar-backdrop" onclick="closeDrawer()"></div>
+
+  <div class="help-layout">
+    <div class="help-sidebar">
+      <button class="sidebar-toggle" id="sidebar-toggle" onclick="toggleSidebar()" title="Toggle sidebar">&#8249;</button>
+      <div class="sidebar-filter">
+        <input type="text" id="sidebar-search" placeholder="Filter areas..." oninput="filterSidebar()" />
+      </div>
+
+      <div class="sidebar-section">
+        <details>
+          <summary class="sidebar-section-title">Terra</summary>
+          <span class="sidebar-link" onclick="showMapEntry('terra-overview')">Terra (Overview)</span>
+          <span class="sidebar-link" onclick="showMapEntry('abandoned-chateau')">Abandoned Chateau</span>
+          <span class="sidebar-link" onclick="showMapEntry('abyssal-seam')">Abyssal Seam</span>
+          <span class="sidebar-link" onclick="showMapEntry('arachnos')">Arachnos</span>
+          <span class="sidebar-link" onclick="showMapEntry('astral-plane')">Astral Plane</span>
+          <span class="sidebar-link" onclick="showMapEntry('bluetspur')">Bluetspur</span>
+          <span class="sidebar-link" onclick="showMapEntry('boscos-breach')">Bosco's Breach</span>
+          <span class="sidebar-link" onclick="showMapEntry('cantina')">Cantina</span>
+          <span class="sidebar-link" onclick="showMapEntry('chaos-rift')">Chaos Rift</span>
+          <span class="sidebar-link" onclick="showMapEntry('chapel-catacombs')">Chapel Catacombs</span>
+          <span class="sidebar-link" onclick="showMapEntry('coast')">Coast</span>
+          <span class="sidebar-link" onclick="showMapEntry('descent-to-hell')">Descent to Hell</span>
+          <span class="sidebar-link" onclick="showMapEntry('divided-souls')">Divided Souls</span>
+          <span class="sidebar-link" onclick="showMapEntry('dragon-tower')">Dragon Tower</span>
+          <span class="sidebar-link" onclick="showMapEntry('drow-city')">Drow City</span>
+          <span class="sidebar-link" onclick="showMapEntry('dwarven-catacombs')">Dwarven Catacombs</span>
+          <span class="sidebar-link" onclick="showMapEntry('dwarven-daycare')">Dwarven Day Care</span>
+          <span class="sidebar-link" onclick="showMapEntry('dwarven-kingdom')">Dwarven Kingdom</span>
+          <span class="sidebar-link" onclick="showMapEntry('dwarf-forest')">Dwarf Forest</span>
+          <span class="sidebar-link" onclick="showMapEntry('dylans-area')">Dylan's Area</span>
+          <span class="sidebar-link" onclick="showMapEntry('elf-valley')">Elf Valley</span>
+          <span class="sidebar-link" onclick="showMapEntry('elemental-canyon')">Elemental Canyon</span>
+          <span class="sidebar-link" onclick="showMapEntry('ferry-to-dominia')">Ferry to Dominia</span>
+          <span class="sidebar-link" onclick="showMapEntry('firetop-mountain')">Firetop Mountain</span>
+          <span class="sidebar-link" onclick="showMapEntry('galaxy')">Galaxy</span>
+          <span class="sidebar-link" onclick="showMapEntry('gangland')">Gangland</span>
+          <span class="sidebar-link" onclick="showMapEntry('gnome-village')">Gnome Village</span>
+          <span class="sidebar-link" onclick="showMapEntry('goblin-stronghold')">Goblin Stronghold</span>
+          <span class="sidebar-link" onclick="showMapEntry('graveyard')">Graveyard</span>
+          <span class="sidebar-link" onclick="showMapEntry('haon-dor-forest')">Haon Dor Forest</span>
+          <span class="sidebar-link" onclick="showMapEntry('high-tower')">High Tower</span>
+          <span class="sidebar-link" onclick="showMapEntry('holy-grove')">Holy Grove</span>
+          <span class="sidebar-link" onclick="showMapEntry('iliad')">Iliad</span>
+          <span class="sidebar-link" onclick="showMapEntry('in-the-air')">In The Air</span>
+          <span class="sidebar-link" onclick="showMapEntry('istanbul')">Istanbul</span>
+          <span class="sidebar-link" onclick="showMapEntry('ivory-stronghold')">Ivory Stronghold</span>
+          <span class="sidebar-link" onclick="showMapEntry('machine-dreams')">Machine Dreams</span>
+          <span class="sidebar-link" onclick="showMapEntry('mahn-tor')">Mahn Tor</span>
+          <span class="sidebar-link" onclick="showMapEntry('marsh')">Marsh</span>
+          <span class="sidebar-link" onclick="showMapEntry('mega-city-one')">Mega-City One</span>
+          <span class="sidebar-link" onclick="showMapEntry('middennir')">Miden'nir</span>
+          <span class="sidebar-link" onclick="showMapEntry('midgaard')">Midgaard</span>
+          <span class="sidebar-link" onclick="showMapEntry('mirkwood')">Mirkwood</span>
+          <span class="sidebar-link" onclick="showMapEntry('mob-factory')">Mob Factory</span>
+          <span class="sidebar-link" onclick="showMapEntry('moria')">Moria</span>
+          <span class="sidebar-link" onclick="showMapEntry('mud-school')">Mud School</span>
+          <span class="sidebar-link" onclick="showMapEntry('newbie-zone')">Newbie Zone</span>
+          <span class="sidebar-link" onclick="showMapEntry('new-ofcol')">New Ofcol</span>
+          <span class="sidebar-link" onclick="showMapEntry('new-thalos')">New Thalos</span>
+          <span class="sidebar-link" onclick="showMapEntry('nirvana')">Nirvana</span>
+          <span class="sidebar-link" onclick="showMapEntry('north-of-moria')">North of Moria</span>
+          <span class="sidebar-link" onclick="showMapEntry('nova-vessa')">Nova Vessa</span>
+          <span class="sidebar-link" onclick="showMapEntry('ofcol')">Ofcol</span>
+          <span class="sidebar-link" onclick="showMapEntry('old-thalos')">Old Thalos</span>
+          <span class="sidebar-link" onclick="showMapEntry('olympus')">Olympus</span>
+          <span class="sidebar-link" onclick="showMapEntry('orinoco')">Orinoco</span>
+          <span class="sidebar-link" onclick="showMapEntry('pixie-forest')">Pixie Forest</span>
+          <span class="sidebar-link" onclick="showMapEntry('plains-north')">Plains of the North</span>
+          <span class="sidebar-link" onclick="showMapEntry('pyramid')">Pyramid</span>
+          <span class="sidebar-link" onclick="showMapEntry('redfernes')">Redferne's Place</span>
+          <span class="sidebar-link" onclick="showMapEntry('remnants-hall')">Remnants Hall</span>
+          <span class="sidebar-link" onclick="showMapEntry('sands-of-sorrow')">Sands of Sorrow</span>
+          <span class="sidebar-link" onclick="showMapEntry('sea-of-death')">Sea of Death</span>
+          <span class="sidebar-link" onclick="showMapEntry('sewers')">Sewers</span>
+          <span class="sidebar-link" onclick="showMapEntry('shire')">Shire</span>
+          <span class="sidebar-link" onclick="showMapEntry('smugglers-den')">Smuggler's Den</span>
+          <span class="sidebar-link" onclick="showMapEntry('stoneridge')">Stoneridge</span>
+          <span class="sidebar-link" onclick="showMapEntry('stoneridge-ii')">Stoneridge II</span>
+          <span class="sidebar-link" onclick="showMapEntry('swimming-hole')">Swimming Hole</span>
+          <span class="sidebar-link" onclick="showMapEntry('thalos')">Thalos</span>
+          <span class="sidebar-link" onclick="showMapEntry('time')">Time</span>
+          <span class="sidebar-link" onclick="showMapEntry('troll-den')">Troll Den</span>
+          <span class="sidebar-link" onclick="showMapEntry('valhalla')">Valhalla</span>
+          <span class="sidebar-link" onclick="showMapEntry('valley-of-elves')">Valley of the Elves</span>
+          <span class="sidebar-link" onclick="showMapEntry('village-fair')">Village Fair</span>
+          <span class="sidebar-link" onclick="showMapEntry('warp-to-dominia')">Warp to Dominia</span>
+          <span class="sidebar-link" onclick="showMapEntry('waterfall')">Waterfall</span>
+          <span class="sidebar-link" onclick="showMapEntry('wyvern-tower')">Wyvern Tower</span>
+        </details>
+      </div>
+
+      <div class="sidebar-section">
+        <details>
+          <summary class="sidebar-section-title">Dominia</summary>
+          <span class="sidebar-link" onclick="showMapEntry('dominia-overview')">Dominia (Overview)</span>
+          <span class="sidebar-link" onclick="showMapEntry('araknis')">Araknis</span>
+          <span class="sidebar-link" onclick="showMapEntry('atlantis')">Atlantis</span>
+          <span class="sidebar-link" onclick="showMapEntry('aytwa')">Ay'Twa</span>
+          <span class="sidebar-link" onclick="showMapEntry('baskerville')">Baskerville</span>
+          <span class="sidebar-link" onclick="showMapEntry('beach')">Beach</span>
+          <span class="sidebar-link" onclick="showMapEntry('capture-the-flag')">Capture the Flag</span>
+          <span class="sidebar-link" onclick="showMapEntry('chaotic-chessboard')">Chaotic Chessboard</span>
+          <span class="sidebar-link" onclick="showMapEntry('city-of-tears')">City of Tears</span>
+          <span class="sidebar-link" onclick="showMapEntry('crown-of-command')">Crown of Command</span>
+          <span class="sidebar-link" onclick="showMapEntry('cyrics-realm')">Cyric's Realm</span>
+          <span class="sidebar-link" onclick="showMapEntry('death-bloom')">Death Bloom</span>
+          <span class="sidebar-link" onclick="showMapEntry('diggers-bane')">Digger's Bane</span>
+          <span class="sidebar-link" onclick="showMapEntry('dragon-sanctuary')">Dragon Sanctuary</span>
+          <span class="sidebar-link" onclick="showMapEntry('fantasy-land')">Fantasy Land</span>
+          <span class="sidebar-link" onclick="showMapEntry('ferry-to-terra')">Ferry to Terra</span>
+          <span class="sidebar-link" onclick="showMapEntry('fires-of-dis')">Fires of Dis</span>
+          <span class="sidebar-link" onclick="showMapEntry('fishing-hole')">Fishing Hole</span>
+          <span class="sidebar-link" onclick="showMapEntry('gingerbread-house')">Gingerbread House</span>
+          <span class="sidebar-link" onclick="showMapEntry('halls-of-mercy')">Halls of Mercy</span>
+          <span class="sidebar-link" onclick="showMapEntry('hidden-oasis')">Hidden Oasis</span>
+          <span class="sidebar-link" onclick="showMapEntry('kenwood-keep')">Kenwood Keep</span>
+          <span class="sidebar-link" onclick="showMapEntry('kings-way')">King's Way</span>
+          <span class="sidebar-link" onclick="showMapEntry('lair-of-jher')">Lair of Jher</span>
+          <span class="sidebar-link" onclick="showMapEntry('lost-mine')">Lost Mine</span>
+          <span class="sidebar-link" onclick="showMapEntry('mists-of-avalon')">Mists of Avalon</span>
+          <span class="sidebar-link" onclick="showMapEntry('monotheya')">Monotheya</span>
+          <span class="sidebar-link" onclick="showMapEntry('mountain-path')">Mountain Path</span>
+          <span class="sidebar-link" onclick="showMapEntry('mud-college')">Mud College</span>
+          <span class="sidebar-link" onclick="showMapEntry('observatory')">Observatory</span>
+          <span class="sidebar-link" onclick="showMapEntry('ogreton')">Ogreton</span>
+          <span class="sidebar-link" onclick="showMapEntry('playground')">Playground</span>
+          <span class="sidebar-link" onclick="showMapEntry('ruins-of-kujou')">Ruins of Kujou</span>
+          <span class="sidebar-link" onclick="showMapEntry('seven-wands')">Seven Wands</span>
+          <span class="sidebar-link" onclick="showMapEntry('shackled-demon')">Shackled Demon</span>
+          <span class="sidebar-link" onclick="showMapEntry('shandalar')">Shandalar</span>
+          <span class="sidebar-link" onclick="showMapEntry('shandalar-river')">Shandalar River</span>
+          <span class="sidebar-link" onclick="showMapEntry('shandalar-zoo')">Shandalar Zoo</span>
+          <span class="sidebar-link" onclick="showMapEntry('sherwood-forest')">Sherwood Forest</span>
+          <span class="sidebar-link" onclick="showMapEntry('sky-fortress')">Sky Fortress</span>
+          <span class="sidebar-link" onclick="showMapEntry('sprite-forest')">Sprite Forest</span>
+          <span class="sidebar-link" onclick="showMapEntry('temple-of-stupra')">Temple of Stupra</span>
+          <span class="sidebar-link" onclick="showMapEntry('troll-underground')">Troll Underground</span>
+          <span class="sidebar-link" onclick="showMapEntry('utopia')">Utopia</span>
+          <span class="sidebar-link" onclick="showMapEntry('vault')">Vault</span>
+          <span class="sidebar-link" onclick="showMapEntry('warden-hall')">Warden Hall</span>
+          <span class="sidebar-link" onclick="showMapEntry('walls-of-shandalar')">Walls of Shandalar</span>
+          <span class="sidebar-link" onclick="showMapEntry('warp-to-terra')">Warp to Terra</span>
+          <span class="sidebar-link" onclick="showMapEntry('wax-museum')">Wax Museum</span>
+          <span class="sidebar-link" onclick="showMapEntry('zebes')">Zebes</span>
+          <span class="sidebar-link" onclick="showMapEntry('zoso')">Zoso</span>
+        </details>
+      </div>
+
+    </div>
+
+    <div class="help-main">
+      <div class="mobile-browse-btn">
+        <button onclick="openDrawer()">&#9776; Browse Areas</button>
+      </div>
+      <div class="map-landing" id="map-landing">
+        <h2>World Maps</h2>
+        <p>Select an area from the sidebar to view its map and directions from recall.</p>
+      </div>
+
+      <div class="map-entry" id="map-entry">
+        <div class="entry-back" onclick="showLanding()">&#8592; Back to Maps</div>
+        <div class="entry-title" id="entry-title"></div>
+        <div class="entry-meta" id="entry-meta"></div>
+        <div class="entry-directions" id="entry-directions"></div>
+        <hr class="entry-hr">
+        <div class="map-display" id="map-display"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Redemption MUD</div>
+    <div class="footer-copy">&copy; Redemption MUD. Free to play.</div>
+  </footer>
+
+  <script>
+    function navToggle() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    }
+    function isMobile() { return window.innerWidth <= 700; }
+    function openDrawer() {
+      document.querySelector('.help-sidebar').classList.add('drawer-open');
+      document.getElementById('sidebar-backdrop').classList.add('open');
+    }
+    function closeDrawer() {
+      document.querySelector('.help-sidebar').classList.remove('drawer-open');
+      document.getElementById('sidebar-backdrop').classList.remove('open');
+    }
+
+    const areas = {
+      'terra-overview':     { name: 'Terra',                level: 'All',   directions: '2s, 6e, 4s, 2e, s, 2e, d (charter)',                                                                                                                                                                url: 'maps/terra.gif',             type: 'image' },
+      'abandoned-chateau':  { name: 'Abandoned Chateau',    level: '40-51', directions: '2s, 43e, 2n, 4w, n',                                                                                                                                                                                url: 'maps/abandoned_chateau.txt', type: 'text'  },
+      'abyssal-seam':       { name: 'Abyssal Seam',         level: '1-51',  directions: 'Follow Descent to Hell; w, d, 6w, 2d, e, s, 2e, n, 2e, s, 2e, n, e, 2d, s, w, n, 2w, s, 4w, n, 2w, 2d, 2e, s, open e, 2e, n, open e, 2e, s, 2e, n, open e, e, 2s, d',                          url: 'maps/arachnos.txt',          type: 'text'  },
+      'arachnos':           { name: 'Arachnos',             level: '5-20',  directions: '2s, 13w, s, 2w, n, w, u',                                                                                                                                                                          url: 'maps/arachno.txt',           type: 'text'  },
+      'astral-plane':       { name: 'Astral Plane',         level: '10-35', directions: 's, 2u, n, all u, n',                                                                                                                                                                                url: 'maps/astral.txt',            type: 'text'  },
+      'bluetspur':          { name: 'Bluetspur',            level: '1-10',  directions: '2s, 5w, 4n, 7w',                                                                                                                                                                                    url: 'maps/bluetspur.gif',         type: 'image' },
+      'boscos-breach':      { name: "Bosco's Breach",       level: '1-53',  directions: '2s, 33e, 8n, e',                                                                                                                                                                                    url: '',                                type: 'none'  },
+      'cantina':            { name: 'Cantina',              level: '5-15',  directions: '2s, 6e, 3n, 3e',                                                                                                                                                                                    url: 'maps/cantina.txt',           type: 'text'  },
+      'chaos-rift':         { name: 'Chaos Rift',           level: '1-40',  directions: '2s, 6e, 10n, 2e, 9n, 2w, n, w, d',                                                                                                                                                                 url: 'maps/chaos_rift.txt',        type: 'text'  },
+      'chapel-catacombs':   { name: 'Chapel Catacombs',     level: '15-25', directions: '6s, 2e, 2s, w, all south',                                                                                                                                                                          url: 'maps/chapel_catacombs.txt',  type: 'text'  },
+      'coast':              { name: 'Coast',                level: '15-20', directions: '2s, 33e, n',                                                                                                                                                                                         url: 'maps/coast.txt',             type: 'text'  },
+      'descent-to-hell':    { name: 'Descent to Hell',      level: '32-51', directions: '6s, 2e, 2s, w, all south, k priest, unlock d, open d, d, open s, 2s, w, open s, 2s, e, n, open d, d, n, 2e, s, e, s, 3e, s, w, 2s, e, k joe, unlock e, open e, e, d, n, e, s, e, 2s, n',        url: 'maps/descent_to_hell.html',  type: 'html'  },
+      'divided-souls':      { name: 'Divided Souls',        level: '20-51', directions: '3s, 2e, 2s, all e, all s, e',                                                                                                                                                                       url: 'maps/divided_souls.html',    type: 'html'  },
+      'dragon-tower':       { name: 'Dragon Tower',         level: '5-30',  directions: '2s, 13w, s, 2w, 2s, w, s, 4w, n, w, n, wander (hunt dragon hatchling)',                                                                                                                            url: 'maps/dragon_tower.txt',      type: 'text'  },
+      'drow-city':          { name: 'Drow City',            level: '15-25', directions: '2s, 6e, 4s, 2e, s, 2e, d, open w, w, s, d, open d, d',                                                                                                                                             url: 'maps/drow.txt',              type: 'text'  },
+      'dwarven-catacombs':  { name: 'Dwarven Catacombs',    level: '15-25', directions: '2s, 6e, 3n, 2e, 3n, 3w, 2d',                                                                                                                                                                        url: 'maps/dwarven_catacombs.txt', type: 'text'  },
+      'dwarven-daycare':    { name: 'Dwarven Day Care',     level: '1-5',   directions: '2s, 6e, 3n, 2e, 2s',                                                                                                                                                                                url: 'maps/dwarven_daycare.txt',   type: 'text'  },
+      'dwarven-kingdom':    { name: 'Dwarven Kingdom',      level: '10-25', directions: '2s, 6e, 3n, e',                                                                                                                                                                                     url: 'maps/dwarven_kingdom.txt',   type: 'text'  },
+      'dwarf-forest':       { name: 'Dwarf Forest',         level: 'All',   directions: '2s, 6e, s',                                                                                                                                                                                         url: 'maps/dwarf_forest.txt',      type: 'text'  },
+      'dylans-area':        { name: "Dylan's Area",         level: '15-25', directions: 'all s, w, s, 2w, 2s, e, 4u, s, u',                                                                                                                                                                 url: 'maps/dylan.txt',             type: 'text'  },
+      'elf-valley':         { name: 'Elf Valley',           level: '5-20',  directions: '2s, 3w, 4n, 2e, 7n, w, 3n, d',                                                                                                                                                                     url: '',                                type: 'none'  },
+      'elemental-canyon':   { name: 'Elemental Canyon',     level: '5-30',  directions: '2s, 6e, 4s, 2e, s, 2e, d, s',                                                                                                                                                                      url: 'maps/elemental_canyon.txt',  type: 'text'  },
+      'ferry-to-dominia':   { name: 'Ferry to Dominia',     level: 'All',   directions: '2s, 33e, 8n, e',                                                                                                                                                                                    url: 'maps/ferry_to_dominia.txt',  type: 'text'  },
+      'firetop-mountain':   { name: 'Firetop Mountain',     level: '10-20', directions: '2s, 3w, 4n, 2e, 7n, w, 2n, w, n, w, n, w, 2n, e, n, w, 3n, 2w, 8n, e, n, e, 7n',                                                                                                                url: 'maps/firetop.txt',           type: 'text'  },
+      'galaxy':             { name: 'Galaxy',               level: '20-30', directions: '2s, 13w, s, 2w, 2s, w, s, 4w, n, w, n, wander',                                                                                                                                                    url: 'maps/galaxy.gif',            type: 'image' },
+      'gangland':           { name: 'Gangland',             level: '5-15',  directions: '6s, 2e, s, 3w, 2s, e',                                                                                                                                                                             url: 'maps/gangland.txt',          type: 'text'  },
+      'gnome-village':      { name: 'Gnome Village',        level: '5-15',  directions: '2s, 8e, s',                                                                                                                                                                                         url: 'maps/gnome.gif',             type: 'image' },
+      'goblin-stronghold':  { name: 'Goblin Stronghold',    level: '10-20', directions: '2s, 3w, d, e, s, u, all s, 2e, all s, open d',                                                                                                                                                     url: 'maps/gobstron.txt',          type: 'text'  },
+      'graveyard':          { name: 'Graveyard',            level: '5-10',  directions: '6s, 2e, 2s, w, s',                                                                                                                                                                                 url: 'maps/graveyard.txt',         type: 'text'  },
+      'haon-dor-forest':    { name: 'Haon Dor Forest',      level: '5-10',  directions: '2s, 3w, open w, w',                                                                                                                                                                                url: 'maps/haondor.txt',           type: 'text'  },
+      'high-tower':         { name: 'High Tower',           level: '10-30', directions: '2s, 13w, s, 2w, 2s, w, s, 4w, n, w, n, wander (hunt diamond golem)',                                                                                                                               url: 'maps/hightower.jpg',         type: 'image' },
+      'holy-grove':         { name: 'Holy Grove',           level: '5-20',  directions: '2s, 8e, n',                                                                                                                                                                                         url: 'maps/holy_grove.txt',        type: 'text'  },
+      'iliad':              { name: 'Iliad',                level: '1-45',  directions: '3s, 2e, 2s, 7w, 2n, open n, n',                                                                                                                                                                    url: 'maps/iliad.txt',             type: 'text'  },
+      'in-the-air':         { name: 'In The Air',           level: '5-10',  directions: 's, u',                                                                                                                                                                                             url: 'maps/intheair.txt',          type: 'text'  },
+      'istanbul':           { name: 'Istanbul',             level: '30-50', directions: '2s, 3w, 4n, 2e, 7n, w, 2n, w, n, w, n, w, 2n, e, n, w, 3n, 2w, all n, all w, s, w',                                                                                                              url: 'maps/istanbul.jpg',          type: 'image' },
+      'ivory-stronghold':   { name: 'Ivory Stronghold',     level: '40-50', directions: '2s, 6e, 4s, 2e, s, 2e, d, 13e, n',                                                                                                                                                                 url: 'maps/ivory_stronghold.gif',  type: 'image' },
+      'machine-dreams':     { name: 'Machine Dreams',       level: '1-5',   directions: '3s, 3e, s, u, wander',                                                                                                                                                                             url: '',                                type: 'none'  },
+      'mahn-tor':           { name: 'Mahn Tor',             level: '5-35',  directions: '2s, 6e, 4s, 2e, s, 2e, d, 3n, e, 4s, w, s, e, 3s, d, 9s, 2u',                                                                                                                                    url: 'maps/mahn_tor.txt',          type: 'text'  },
+      'marsh':              { name: 'Marsh',                level: '15-25', directions: '2s, 13w, s, 2w, 2s, w, 3s',                                                                                                                                                                        url: 'maps/marsh.gif',             type: 'image' },
+      'mega-city-one':      { name: 'Mega-City One',        level: '5-35',  directions: '2s, 13e, 2s',                                                                                                                                                                                      url: 'maps/mega_city_one.txt',     type: 'text'  },
+      'middennir':          { name: "Miden'nir",            level: '5-15',  directions: '2s, 3w, d, e, s, u, 2s',                                                                                                                                                                           url: 'maps/middennir.txt',         type: 'text'  },
+      'midgaard':           { name: 'Midgaard',             level: 'All',   directions: 'Recall',                                                                                                                                                                                            url: 'maps/midgard.txt',           type: 'text'  },
+      'mirkwood':           { name: 'Mirkwood',             level: '5-15',  directions: '2s, 3w, 4n, 2e, 7n, w, 2n, w, n, w, n, w, 2n, e, n, w',                                                                                                                                          url: 'maps/mirkwood.txt',          type: 'text'  },
+      'mob-factory':        { name: 'Mob Factory',          level: '5-15',  directions: '2s, 3w, 3s, e',                                                                                                                                                                                    url: 'maps/mobfactory.gif',        type: 'image' },
+      'moria':              { name: 'Moria',                level: '5-15',  directions: '2s, 6e, 6n',                                                                                                                                                                                       url: 'maps/moria.txt',             type: 'text'  },
+      'mud-school':         { name: 'Mud School',           level: '1-5',   directions: 'u',                                                                                                                                                                                                url: 'maps/mud_school.png',        type: 'image' },
+      'newbie-zone':        { name: 'Newbie Zone',          level: '1-10',  directions: 'n, w',                                                                                                                                                                                             url: 'maps/newbie.txt',            type: 'text'  },
+      'new-ofcol':          { name: 'New Ofcol',            level: '5-35',  directions: '2s, 3e, 4n, 2w, 7n, 6e, 4n, 2e, 4n',                                                                                                                                                              url: 'maps/new_ofcol.txt',         type: 'text'  },
+      'new-thalos':         { name: 'New Thalos',           level: '10-35', directions: '2s, 14e',                                                                                                                                                                                          url: 'maps/newthal.txt',           type: 'text'  },
+      'nirvana':            { name: 'Nirvana',              level: '30-35', directions: '2s, 8e, 2n, 2e, u',                                                                                                                                                                                url: 'maps/nirvana.txt',           type: 'text'  },
+      'north-of-moria':     { name: 'North of Moria',       level: '5-15',  directions: '2s, 6e, 10n, 2e, 2n',                                                                                                                                                                              url: 'maps/north_of_moria.txt',    type: 'text'  },
+      'nova-vessa':         { name: 'Nova Vessa',           level: '1-50',  directions: '2s, 38e',                                                                                                                                                                                          url: 'maps/nova_vessa.gif',        type: 'image' },
+      'ofcol':              { name: 'Ofcol',                level: '1-53',  directions: '2s, 3e, 4n, 2w, 7n, 6e, 2n',                                                                                                                                                                      url: '',                                type: 'none'  },
+      'old-thalos':         { name: 'Old Thalos',           level: '1-30',  directions: '2s, 6e, 4s, w',                                                                                                                                                                                    url: 'maps/old_thalos.txt',        type: 'text'  },
+      'olympus':            { name: 'Olympus',              level: '5-50',  directions: '2s, 3w, 4n, 2e, 8n',                                                                                                                                                                               url: 'maps/olympus.txt',           type: 'text'  },
+      'orinoco':            { name: 'Orinoco',              level: '1-45',  directions: '2s, 21e, 5s, d, 13w, 4s',                                                                                                                                                                          url: '',                                type: 'none'  },
+      'pixie-forest':       { name: 'Pixie Forest',         level: '1-10',  directions: '2s, 7e, n',                                                                                                                                                                                        url: 'maps/pixies.txt',            type: 'text'  },
+      'plains-north':       { name: 'Plains of the North',  level: '1-20',  directions: '2s, 3w, 4n, 2e, 2n',                                                                                                                                                                               url: 'maps/plains.txt',            type: 'text'  },
+      'pyramid':            { name: 'Pyramid',              level: '5-50',  directions: '2s, 13e, s, 2w, 2n, 2e',                                                                                                                                                                           url: 'maps/pyramid.txt',           type: 'text'  },
+      'redfernes':          { name: "Redferne's Place",     level: '20-30', directions: '6s, 2e, s, 3w, 2s, w, s, u',                                                                                                                                                                      url: 'maps/redferne.txt',          type: 'text'  },
+      'remnants-hall':      { name: 'Remnants Hall',        level: 'All',   directions: '2s, 13w, 2n, e, n',                                                                                                                                                                                url: '',                                type: 'none'  },
+      'sands-of-sorrow':    { name: 'Sands of Sorrow',      level: '10-20', directions: '2s, 13e, s, w',                                                                                                                                                                                    url: 'maps/sands_of_sorrow.txt',   type: 'text'  },
+      'sea-of-death':       { name: 'Sea of Death',         level: '1-55',  directions: '2s, 21e, 5s, d, all w, all n',                                                                                                                                                                     url: 'maps/sea_of_death.gif',      type: 'image' },
+      'sewers':             { name: 'Sewers',               level: '5-30',  directions: '4s, d',                                                                                                                                                                                            url: 'maps/sewer.txt',             type: 'text'  },
+      'shire':              { name: 'Shire',                level: '5-35',  directions: '2s, 5w, 4n',                                                                                                                                                                                       url: 'maps/shire.txt',             type: 'text'  },
+      'smugglers-den':      { name: "Smuggler's Den",       level: '5-25',  directions: '7w, 2s, e, s, e, 2s, w, 2n, open e',                                                                                                                                                               url: 'maps/smuggler.txt',          type: 'text'  },
+      'stoneridge':         { name: 'Stoneridge',           level: '1-51',  directions: '2s, 10e, n',                                                                                                                                                                                       url: 'maps/stoneridge.txt',        type: 'text'  },
+      'stoneridge-ii':      { name: 'Stoneridge II',        level: '1-51',  directions: '2s, 10e, n',                                                                                                                                                                                       url: '',                                type: 'none'  },
+      'swimming-hole':      { name: 'Swimming Hole',        level: '5-15',  directions: '3s, 2e, 2s, 5w, 6s',                                                                                                                                                                               url: 'maps/swimming_hole.txt',     type: 'text'  },
+      'thalos':             { name: 'Thalos',               level: '10-25', directions: '2s, 8e, 2n, 3e, 3n, u',                                                                                                                                                                           url: 'maps/thalos.txt',            type: 'text'  },
+      'time':               { name: 'Time',                 level: '25-51', directions: 's, 2u, n, 2u, e, n',                                                                                                                                                                               url: 'maps/time.txt',              type: 'text'  },
+      'troll-den':          { name: 'Troll Den',            level: '10-15', directions: '2s, 13w, s, 2w, 2s, e, s, w, s, e, s',                                                                                                                                                             url: 'maps/trollden.txt',          type: 'text'  },
+      'valhalla':           { name: 'Valhalla',             level: 'All',   directions: 'n, u',                                                                                                                                                                                             url: 'maps/valhalla.txt',          type: 'text'  },
+      'valley-of-elves':    { name: 'Valley of the Elves',  level: '5-20',  directions: '2s, 3w, 4n, 2e, 7n, w, n',                                                                                                                                                                        url: 'maps/valley_of_the_elves.txt', type: 'text' },
+      'village-fair':       { name: 'Village Fair',         level: '15-35', directions: '2s, 3w, d, s, e, u, 2s, w, n, all w, n',                                                                                                                                                          url: 'maps/villagefair.txt',       type: 'text'  },
+      'warp-to-dominia':    { name: 'Warp to Dominia',      level: 'All',   directions: 's, w, warp',                                                                                                                                                                                       url: '',                                type: 'none'  },
+      'waterfall':          { name: 'Waterfall',            level: 'All',   directions: '2s, 6e, 4s, 2e, s, 2e, d, n',                                                                                                                                                                     url: 'maps/waterfall.txt',         type: 'text'  },
+      'wyvern-tower':       { name: 'Wyvern Tower',         level: '5-30',  directions: '2s, 6e, 4s, 2e, s, 2e, d, e',                                                                                                                                                                     url: 'maps/wyvern_tower.txt',      type: 'text'  },
+
+      'dominia-overview':   { name: 'Dominia',              level: 'All',   directions: '2s, 33e, 8n, e (charter)',                                                                                                                                                                          url: 'maps/dominia.txt',           type: 'text'  },
+      'araknis':            { name: 'Araknis',              level: '15-25', directions: '10e, 6n, 5e, n, 2e, n',                                                                                                                                                                            url: 'maps/araknis.gif',           type: 'image' },
+      'atlantis':           { name: 'Atlantis',             level: '15-25', directions: '11w, u, 2w, n, 4w, s, d, 2w, 4n, w, 3n',                                                                                                                                                          url: 'maps/atlantis.html',         type: 'linkout' },
+      'aytwa':              { name: "Ay'Twa",               level: '40-51', directions: '10e, 17n, 8e, 2s',                                                                                                                                                                                 url: 'maps/map_aytwa.txt',         type: 'text'  },
+      'baskerville':        { name: 'Baskerville',          level: '10-35', directions: '10e, 6n, 16e, 6s, 3e, n',                                                                                                                                                                          url: 'maps/baskerville.gif',       type: 'image' },
+      'beach':              { name: 'Beach',                level: '5-15',  directions: '11w, u, 2w, n, 4w, s, d',                                                                                                                                                                          url: 'maps/beach.txt',             type: 'text'  },
+      'capture-the-flag':   { name: 'Capture the Flag',     level: '1-51',  directions: 'None',                                                                                                                                                                                             url: '',                                type: 'none'  },
+      'chaotic-chessboard': { name: 'Chaotic Chessboard',   level: '25-55', directions: '10e, 15s, 2e, s, e, s, e, 2d',                                                                                                                                                                    url: 'maps/chessboard.gif',        type: 'image' },
+      'city-of-tears':      { name: 'City of Tears',        level: '35-51', directions: '10e, 6n, 16e, 8n',                                                                                                                                                                                url: 'maps/city_of_tears.gif',     type: 'image' },
+      'crown-of-command':   { name: 'Crown of Command',     level: '15-51', directions: '10e, 11s, w, s, 6w, n',                                                                                                                                                                           url: 'maps/crown.txt',             type: 'text'  },
+      'cyrics-realm':       { name: "Cyric's Realm",        level: '40-51', directions: '10e, 6n, 16e, 8s, 4e, s, 2e, n, e, s, 2e, 5s, w, 4s',                                                                                                                                            url: 'maps/cyric.txt',             type: 'text'  },
+      'death-bloom':        { name: 'Death Bloom',          level: '41-51', directions: '10e, 6n, 16e, 8s, 4e, s, 2e, n, e, s, 2e, 2s, 3w',                                                                                                                                               url: 'maps/deathbloom.gif',        type: 'image' },
+      'diggers-bane':       { name: "Digger's Bane",        level: '5-15',  directions: '10e, 17n, 11w',                                                                                                                                                                                    url: '',                                type: 'none'  },
+      'dragon-sanctuary':   { name: 'Dragon Sanctuary',     level: '20-30', directions: '10e, all n, all w, all n, all e, open d, d',                                                                                                                                                       url: 'maps/dragon.txt',            type: 'text'  },
+      'fantasy-land':       { name: 'Fantasy Land',         level: '5-30',  directions: '10e, 6n, 13e, 2s, e, 2s, 3d',                                                                                                                                                                     url: 'maps/fantasy_land.txt',      type: 'text'  },
+      'ferry-to-terra':     { name: 'Ferry to Terra',       level: 'All',   directions: 'all w, u, all w, n, all w, s, d, all w',                                                                                                                                                           url: 'maps/ferry_to_terra.txt',    type: 'text'  },
+      'fires-of-dis':       { name: 'Fires of Dis',         level: '25-51', directions: '10e, 15s, 2e, s, e, n, 5e, 2n, e, u, n, 3e, n, e, 2n, 2e, n, d',                                                                                                                                url: 'maps/firesdis.txt',          type: 'text'  },
+      'fishing-hole':       { name: 'Fishing Hole',         level: '5-20',  directions: '10e, 9s, w',                                                                                                                                                                                       url: 'maps/fishinghole.jpg',       type: 'image' },
+      'gingerbread-house':  { name: 'Gingerbread House',    level: 'All',   directions: '10e, 12s, 3e, 2n',                                                                                                                                                                                 url: 'maps/gbh.txt',               type: 'text'  },
+      'halls-of-mercy':     { name: 'Halls of Mercy',       level: '1-53',  directions: '10e, 6n, 16e, 8s, 2w, s, w, s, 3d, s, d, 2s',                                                                                                                                                    url: 'maps/hallsofmercy.gif',      type: 'image' },
+      'hidden-oasis':       { name: 'Hidden Oasis',         level: '10-15', directions: '10e, 6n, 21e',                                                                                                                                                                                     url: 'maps/map_hidden_oasis.txt',  type: 'text'  },
+      'kenwood-keep':       { name: 'Kenwood Keep',         level: '40-51', directions: '10e, 6n, 16e, 8s, 4e, s, e, 2n',                                                                                                                                                                  url: 'maps/map_kenwood_keep.txt',  type: 'text'  },
+      'kings-way':          { name: "King's Way",           level: 'All',   directions: '10e',                                                                                                                                                                                              url: '',                                type: 'none'  },
+      'lair-of-jher':       { name: 'Lair of Jher',         level: '30-45', directions: '10e, 6n, 16e, 8s, 4e, s, 2e, n, e, s, 2e, 5s, w, 2s, 3e, s, 2e, 2n',                                                                                                                            url: 'maps/jehr.txt',              type: 'text'  },
+      'lost-mine':          { name: 'Lost Mine',            level: '20-30', directions: '7e, 5n, 7w, 3n, e, n, w, 4n, w, 2n, w',                                                                                                                                                           url: 'maps/lost_mine.txt',         type: 'text'  },
+      'mists-of-avalon':    { name: 'Mists of Avalon',      level: '5-15',  directions: '10e, 15s, 2e, s, e, n, 5e, s, e, 2s, 6e, u, n, 4e, n, 2e',                                                                                                                                      url: '',                                type: 'none'  },
+      'monotheya':          { name: 'Monotheya',            level: '20-40', directions: '10e, 6n, 16e, 2n, 2e',                                                                                                                                                                             url: 'maps/monotheya.txt',         type: 'text'  },
+      'mountain-path':      { name: 'Mountain Path',        level: 'All',   directions: '11w, u',                                                                                                                                                                                           url: '',                                type: 'none'  },
+      'mud-college':        { name: 'Mud College',          level: '1-5',   directions: 'u, n',                                                                                                                                                                                             url: '',                                type: 'none'  },
+      'observatory':        { name: 'Observatory',          level: '20-30', directions: '10e, 6n, 11e, 2n, e, 2n, w, n',                                                                                                                                                                   url: 'maps/observatory.txt',       type: 'text'  },
+      'ogreton':            { name: 'Ogreton',              level: '5-10',  directions: '7e, 5n, 7w, 3n, e, n, w, 2n, d',                                                                                                                                                                  url: 'maps/ogreton.txt',           type: 'text'  },
+      'playground':         { name: 'Playground',           level: '1-5',   directions: '13e, 2n',                                                                                                                                                                                          url: '',                                type: 'none'  },
+      'ruins-of-kujou':     { name: 'Ruins of Kujou',       level: '25-35', directions: '11w, u, 2w, n, 4w, s, d, 2w, 3s, e, 2s',                                                                                                                                                         url: 'maps/ruinskujou.txt',        type: 'text'  },
+      'seven-wands':        { name: 'Seven Wands',          level: '20-45', directions: '10e, 17n, 9e',                                                                                                                                                                                     url: 'maps/7wands.txt',            type: 'text'  },
+      'shackled-demon':     { name: 'Shackled Demon',       level: '43-51', directions: '10e, 15s, 2e, s, e, n, 5e, s, e, s, w, 3s, u, 2s, 2d, s, 4e',                                                                                                                                    url: 'maps/shackled_demon.png',    type: 'image' },
+      'shandalar':          { name: 'Shandalar',            level: 'All',   directions: 'Recall',                                                                                                                                                                                            url: 'maps/shandalar.txt',         type: 'text'  },
+      'shandalar-river':    { name: 'Shandalar River',      level: 'All',   directions: '(see in-game)',                                                                                                                                                                                     url: '',                                type: 'none'  },
+      'shandalar-zoo':      { name: 'Shandalar Zoo',        level: '30-51', directions: '10e, 17n, 5e',                                                                                                                                                                                     url: 'maps/shandalar_zoo.txt',     type: 'text'  },
+      'sherwood-forest':    { name: 'Sherwood Forest',      level: '35-45', directions: '10e, 15s, 2e, s, e, n, 5e, s, e, 2s, 6e',                                                                                                                                                         url: 'maps/sherwood.gif',          type: 'image' },
+      'sky-fortress':       { name: 'Sky Fortress',         level: '45-51', directions: '10e, 15s, 2e, s, e, n, 5e, s, e, 2s, e, 3s, 3e, n, u, n, 2u, 3w',                                                                                                                               url: 'maps/skyfortress.gif',       type: 'image' },
+      'sprite-forest':      { name: 'Sprite Forest',        level: '5-15',  directions: '10e, 11s, w',                                                                                                                                                                                      url: 'maps/sprite_forest.txt',     type: 'text'  },
+      'temple-of-stupra':   { name: 'Temple of Stupra',     level: '1-20',  directions: '7e, 5n, 7w, 3n, e, n, w, 4n, w, 3n',                                                                                                                                                              url: 'maps/stupra.txt',            type: 'text'  },
+      'troll-underground':  { name: 'Troll Underground',    level: '5-15',  directions: '10e, 19s, w, open, 2w',                                                                                                                                                                            url: '',                                type: 'none'  },
+      'utopia':             { name: 'Utopia',               level: '1-15',  directions: '2s, 5e, 2s, e',                                                                                                                                                                                    url: '',                                type: 'none'  },
+      'vault':              { name: 'Vault',                level: '43-51', directions: '6w, n, u, 4n, d, n',                                                                                                                                                                               url: '',                                type: 'none'  },
+      'warden-hall':        { name: 'Warden Hall',          level: 'All',   directions: 'all w, n, w',                                                                                                                                                                                      url: '',                                type: 'none'  },
+      'walls-of-shandalar': { name: 'Walls of Shandalar',   level: '20-35', directions: '5w, open n or s, n or s',                                                                                                                                                                          url: '',                                type: 'none'  },
+      'warp-to-terra':      { name: 'Warp to Terra',        level: 'All',   directions: 's, w, warp',                                                                                                                                                                                       url: '',                                type: 'none'  },
+      'wax-museum':         { name: 'Wax Museum',           level: '8-16',  directions: '2s, 3w, s',                                                                                                                                                                                        url: 'maps/waxmuseum.gif',         type: 'image' },
+      'zebes':              { name: 'Zebes',                level: '1-51',  directions: '10e, 31n',                                                                                                                                                                                          url: 'maps/map_zebes.txt',         type: 'text'  },
+      'zoso':               { name: 'Zoso',                 level: '20-30', directions: '11w, u, w, n, u, 2n, 2e, 2n',                                                                                                                                                                     url: 'maps/zoso.gif',              type: 'image' },
+    };
+
+    function toggleSidebar() {
+      const layout = document.querySelector('.help-layout');
+      const btn = document.getElementById('sidebar-toggle');
+      layout.classList.toggle('sidebar-collapsed');
+      btn.innerHTML = layout.classList.contains('sidebar-collapsed') ? '&#8250;' : '&#8249;';
+    }
+
+    function collapseSidebar() {
+      const layout = document.querySelector('.help-layout');
+      const btn = document.getElementById('sidebar-toggle');
+      layout.classList.add('sidebar-collapsed');
+      btn.innerHTML = '&#8250;';
+    }
+
+    function expandSidebar() {
+      const layout = document.querySelector('.help-layout');
+      const btn = document.getElementById('sidebar-toggle');
+      layout.classList.remove('sidebar-collapsed');
+      btn.innerHTML = '&#8249;';
+    }
+
+    function showLanding() {
+      document.getElementById('map-landing').classList.remove('hidden');
+      document.getElementById('map-entry').classList.remove('active');
+      document.querySelectorAll('.sidebar-link').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.help-sidebar details').forEach(el => el.removeAttribute('open'));
+      document.querySelector('.help-main').scrollTo({ top: 0, behavior: 'smooth' });
+      if (!isMobile()) expandSidebar();
+    }
+
+    function showMapEntry(id) {
+      const area = areas[id];
+      if (!area) return;
+
+      document.getElementById('map-landing').classList.add('hidden');
+      document.getElementById('map-entry').classList.add('active');
+
+      document.querySelectorAll('.sidebar-link').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.sidebar-link').forEach(el => {
+        if (el.getAttribute('onclick') === "showMapEntry('" + id + "')") el.classList.add('active');
+      });
+
+      document.getElementById('entry-title').textContent = area.name;
+      document.getElementById('entry-meta').innerHTML = 'Level Range: <span class="val">' + area.level + '</span>';
+      document.getElementById('entry-directions').textContent = 'Directions from Recall: ' + area.directions;
+
+      const display = document.getElementById('map-display');
+
+      if (area.type === 'image') {
+        display.innerHTML = '<img src="' + area.url + '" alt="' + area.name + ' map" />';
+      } else if (area.type === 'text') {
+        if (isMobile()) closeDrawer(); else collapseSidebar();
+        display.innerHTML = '<p class="map-loading">Loading map...</p>';
+        fetch(area.url)
+          .then(r => r.text())
+          .then(content => {
+            const pre = document.createElement('pre');
+            pre.textContent = content;
+            display.innerHTML = '';
+            display.appendChild(pre);
+          })
+          .catch(() => {
+            display.innerHTML = '<div class="map-none">Map could not be loaded.</div>';
+          });
+      } else if (area.type === 'html') {
+        if (isMobile()) closeDrawer(); else collapseSidebar();
+        display.innerHTML = '<p class="map-loading">Loading map...</p>';
+        fetch(area.url)
+          .then(r => r.text())
+          .then(content => {
+            const tmp = document.createElement('div');
+            tmp.innerHTML = content;
+            const pre = tmp.querySelector('pre');
+            const text = pre ? pre.textContent : tmp.innerText;
+            const el = document.createElement('pre');
+            el.textContent = text;
+            display.innerHTML = '';
+            display.appendChild(el);
+          })
+          .catch(() => {
+            display.innerHTML = '<div class="map-none">Map could not be loaded.</div>';
+          });
+      } else if (area.type === 'linkout') {
+        display.innerHTML = '<div class="map-link-out">This map links to external files. <a href="' + area.url + '" target="_blank">View on original site &rarr;</a></div>';
+      } else {
+        display.innerHTML = '<div class="map-none">No map available for this area.</div>';
+      }
+
+      document.querySelector('.help-main').scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function filterSidebar() {
+      const q = document.getElementById('sidebar-search').value.toLowerCase().trim();
+      document.querySelectorAll('.sidebar-link').forEach(el => {
+        el.style.display = (!q || el.textContent.toLowerCase().includes(q)) ? '' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>

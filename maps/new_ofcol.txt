@@ -1,0 +1,55 @@
+New Ofcol (By Cigam)
+
+                                      Bedroom Kitchen                                                    In the Shaft from the
+                                             \up |                                                          Dragon Chamber   
+           Small        Small      Small  down\ Big         Small      Small       Small                        up/
+           House        House      House       House        House      House       House                         /down
+            -|-          -|-        -|-         -|-          -|-        -|-         -|-                       Above the
+Small +- The End of -- Swifest -- Swifest --  The Big   -- Swifest -- Swifest -- The End of -+ Small        Dragon Chamber 
+House   Swifest Way      Way        Way     Intersection     Way        Way     Swifest Way    House          /
+            -|-          -|-        -|-          |           -|-        -|-          |                       /down
+           Small        Small      Small         |          Small      Small       Small                   (9)
+           House        House      House         |          House      House       House
+                                                 |
+                                     House -+- Impy -+- House
+                                       |        Way       |                                                Hallway of                Hallway of                 Hallway of
+                                    Bedroom      |     Bedroom                                             the Golden -------------- the Golden --------------- the Golden
+                                                 |                                                           Citadel                   Citadel  (3)              Citadel
+                                     House -+- Impy -+- House                                                   |                         |     /                   |
+                            Bedroom    |        Way       |    Bedroom                                          |                        The   /                    |
+                                \up Bedroom      |     Bedroom up/                                         Hallway of                Anteroom to                Hallway of
+                             down\               |              /down                                      the golden     (1)        the Golden        (2)      the Golden
+                      Kitchen -- Big House -+- Impy -+- Big House -- Kitchen                                 Citadel        \up        Citadel         /up       Citadel
+                                                 |                                                              |            \            |           /             |
+                                                 |                                                              |            The          |          The            |
+         up N                                 The Big                         Outside         Inside        Hallway of    Anteroom to    The      Anteroom to   Hallway of
+           \|                   Towad ---- Intersection -- Raff -- Raff -- the Entrance -- the Entrance --  the golden -- the Golden -- Temple -- the Golden -- the Golden
+        W --|-- E               Ofcol            |         Way     Way     of the Golden   of the Golden      Citadel       Citadel    of Ofcol     Citadel       Citadel
+            |\                                   |                            Citadel         Citadel           |                    (4)  |                         |
+            S down                     The --- Impy --- The Leather                                             |                      \  |                         |
+                                    Blacksmith  Wa        Shop                                              Hallway of                  \The                    Hallway of
+                                                 |                                                          the Golden               Anteroom to                the Golden
+                                                 |                                                            Citadel                the Golden                   Citadel
+                                  The Pawn --- Impy --- The Meat                                                |                      Citadel                      |
+                                    Shop        Way      Store                                                  |                         |                         |
+                                                 |                                                          Hallway of               Hallway of                 Hallway of
+                                                 |                                                          the Golden ------------- the Golden --------------- the Golden
+                                Nyles' house - Impy --- Farmer's                                              Citadel                  Citadel                    Citadel
+                                   of Ale       Way      Market                                                                                            (7)
+                        Gramy's                  |                                                                                                         /up
+                     Still room -+- Fields       |                                                                                                An Upper/
+                                       |         |                                                                                               Chamber of    
+                         Fields --- Fields --- End of --- Dirt Road --- Slaughterhouse                                                           the Golden
+                            |          |      Impy Way        |                                                                             down/  Citadel          (6)
+                         Fields --- Fields                    |                                                                 (5)            (3)    |             /up
+                                            Grass field       |                             A Top Chamber of                    up\                   |            /
+                                     Pig         |            |                       down/the Golden Citadel                      \An Upper     The Hall of    An Upper
+                                     Sty --- Dirt Road -- Dirt Road --- Barn            (7)        |    (9)                        Chamber of -- the Dragon -- Chamber of 
+                                                 |           _|_                                   |    /up                        the Golden       Lord       the Golden
+                                                 |            |           A Top Chamner of -- The Dragon -- A Top Chamber of         Citadel   (8)    |          Citadel
+                                            Grass field  Chicken coop    the Golden Citadel     Chamber    the Golden Citadel      down\       up\    |         down/
+                                                                              \                    |                 /                 (1)        \An Upper       (2)
+                                                                               \down               |                /down                         Chamber of
+                                                                               (5)          A Top Chamber of       (6)                            the Golden
+                                                                                           the Golden Citadel\down                                  Citadel \down
+                                                                                                              (8)                                           (4)

@@ -1,0 +1,74 @@
+Map by Hexnar
+Legend
++   : Door
+=   : Nopass door
+|+| : Locked door
+|=| : Nopass locked door
+
+Stone Road -- Manmade Path -- Forest Path --- End of Path --- Swamp
+				   |		      \		|
+				   |		      (3)	|
+				   |				|
+				Forest ----- Dense Forest	|
+						   |		|
+	       Quicksand! ----- Forest -------- Forest		|
+				   |		   |  \_______	|
+				   |		   |          \ |
+				   |		   |	      Swamp
+				   |		   |		|
+	      Forest Path --- Forest Path --- Forest Path --- Swamp
+		   |		   |		   |		|	  
+	         Forest ------- Forest ---- Swampy Forest --- Swamp --- Swamp --- Swamp - Shamblers - Swamp
+		   |		   |		   |		|	  |	    |	      |		|
+	      Battlefield --- Battlefield --- Battlefield --- Swamp --- Swamp --- Swamp --- Swamp --- Swamp --- Top of Cliff
+		   |		   |		   |		|	  |	    |	      |		|		\
+	      Battlefield --- Battlefield --- Battlefield --- Swamp --- Swamp --- Swamp --- Swamp --- Swamp	   Base of Kenwood Keep -|=|- (4)
+								|							   \
+							      Marsh							    +
+								|							     \
+							      Marsh							     (2)
+								|
+								|
+							      Stump				      Pool of Slime ----- Caves ----- Caves
+								|  \					   |				|
+								|   +					 Caves			      Caves
+								|    \					   |	       Caves And	|
+								|    (1)			       Troll Den	 Water ------ Caves
+								|					   |				|
+							(To Shandalar River)	       (1)	       Troll Den      (3)	      Caves
+											 \	    (2)    |		\		|
+											  +	      \    |		 +		|
+											   \	       +   |		  \		|
+										Inside Hallowed Tree    \  |		Below the --- Caves
+												\      Troll Cave	  Keep
+												 \	   |
+												  \	   |		
+												  Hallowed Tree Base
+													   |
+											    Prison -+- Dark Hall -+- Prison
+													   |
+													   +
+													   |
+													 Prison
+									      (5)
+										\
+									   Bottom of North Stairs	      Throne Room
+				      Smooth Walls				     |				   |
+					   |					     |				   |
+	-|=|- (4) Inside Kenwood Keep --- Hall --- Hall --- Main Level --- Outside the Throne Room --|+|-- Throne Room South
+		        \			    |				     |
+			 +			Mess Hall		      (6)    |
+			  \			    |				\    |
+			  (3)			    +			   Bottom of South Stairs
+						    |
+						Game Room
+										Top of North Stairs
+											|	\
+											|	(5)
+											|
+		Tortola --- Upstairs Hall --- Upstairs Hall --- Upstairs Hall --- Upstairs Hall --- Over the Throne Room
+											|			\\(one way)
+											|			 \\
+										Top of South Stairs		  \\
+											     \			Throne Room South
+											     (6)

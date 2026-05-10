@@ -1,0 +1,64 @@
+Iliad (By Cigam)
+
+ 
+
+     
+                            Western      Eastern                                                  up N
+                             Tent  ------ Tent                                                      \|
+   The King's                  |            |                                                    W --|-- E
+     Chamber                   |            |                                                        |\
+      _|_                   Northern  Northwestern   Northern   Northeastern       Horse             S down
+       |                     Beach        Plain  ---- Plain  ----  Plain        Mindquarter
+  The Queen's                  |            |           |            |               |
+     Chamber                   |            |           |            |               |
+      _|_                   Southern     Western     Central      Eastern          Horse
+       |                     Beach        Plain ----  Plain  ----  Plain        Midsection  Horse
+    Pallace                                 |           |            |      down/    |      /Head
+    Hallway                                 |           |            |        (1)    |     /
+      _|_  \down                         Western     Central      Eastern          Horse  /up
+       |    (2)                           Plain ----  Plain  ----  Plain          Shoulder
+   Paris and                                |           |   (1)      |
+    Helen's                                 |           |  /up       |
+    Chamber                            Southwestern  Southern   Southeastern
+                                          Plain ----  Plain  ----  Plain
+                                                        |
+           Top of                                       |                                    Top of
+         Northwestern                                Northern                              Northeastern
+            Tower                                   City Gate                                 Tower
+             /up                                       _|_                                     /up
+           Base of                                      |                                    Base of
+         Northwestern -+- Apollo ---- Northern      Inside the     Armoury ---- Athena -+- Northeastern 
+            Tower         Avenue      Barracks      North Gate        |         Avenue        Tower
+                            |            |              |             |           |             |
+                            |            |              |             |           |             |
+           Open-air -- Signal Fire ---- City ---- Intersection ----- City ---- Poseidon --+-- City
+            Agora         Park         Street           |  Homer's  Street       Park        Archive
+                            |            |              | Overlook               |             
+ (2)                        |            |              |   /up                  |
+ up\         Northern -+- Apollo -+- Northwest --+--- Center --+- Northeast -+- Athena --+-- Athenian 
+   Grand     Palatial     Avenue       House           City         House       Avenue        Temple
+ Staircase  Antheroom       |                           |                         |         Entry room
+         \      |           |                           |                         |             |
+        up\ King Priam    Apollo ----- Center -------- City ------- Center ---- Athena        Temple
+           Throne room    Avenue        City          Square         City       Avenue       Vestibul
+      down/     |           |                           |                         |             |
+ King Priam's   |           |                           |                         |             |
+  Treasure   Southern -+- Apollo -+- Southwest --+--- Center --+- southeast -+- Athena        Temple
+   Room      Palatial     Avenue       House           City         House       Avenue         Altar
+            Antheroom       |                           |                         |
+                            |                           |                         |
+               City ------ Lion ------- City ----- Intersection ---- City ----- Sudial ------ Public 
+  Top of   Ampitheatre     Park        Street           |           Street       Park          bath    Top of
+Southwestern                |            |              |             |           |                  Southeastern
+   Tower   \up              |            |              |             |           |                 /up Tower 
+            Base of --+-- Apollo        The        Inside the      Southern --- Athena --+-- Base of
+          Southwestern    Avenue       Smity       Lion Gate       Barracks     Avenue     Southwestern
+             Tower                                     _|_                                    Tower
+                                                        |
+                                                    Overgrown
+                                                      Path
+                                                        |
+                                                        |
+                                                    Overgrown
+                                                      Path
+                                                        |

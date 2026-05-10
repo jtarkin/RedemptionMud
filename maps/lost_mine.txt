@@ -1,0 +1,85 @@
+The lost mine (By Cigam)
+
+                                    The end of        Up N
+                                    the plateau         \|
+                                         |           W --|-- E
+                                         |               |\
+                                       On a              S Down
+                                      plateau
+                                         |             
+                          (1)            |            
+                          In a         On a          -V- = Void
+                        small hut --- plateau           
+                        (P->2)          /Up
+                                       /
+                                   Up in the
+                                   mountain
+                                    /
+       V            V            V /Up
+       |            |            |/
+     In the       In the       In the   
+V - blizzard -V- blizzard -V- blizzard -V
+       |            |            |
+       V            V            V
+       |            |            |
+     In the       In the       In the   
+V - blizzard -V- blizzard -V- blizzard -V
+       |            |            |
+       |            V            |
+       |                    In front of
+       |                    the blizzard
+       |                         |
+       |                         |
+       |                       On the
+       |                     snowbridge
+       |                         |
+       |                         |
+   End of the    Along the   In front a
+    crevasse --- crevasse --- crevace
+                                 |
+                                 |
+                              A way to
+                              the north
+              The treasur
+                 room
+                  |
+                  |
+The resting       A        The sumoning          In a
+   room    --- corridor ---   room              galery
+                  |                                |
+                  |                                |
+              The stock      A big               In a                      in a
+                room   -+- dark cave            galery ------------------ galery
+                               |                   |                         |
+                               |                   |                         |
+                               |                 In a                      In a
+                           In an ice            galery                    galery
+                             tunnel                |                         |
+                               |                   |                         |             
+                               |     In a     The end of   In the main  In the main  A big      In a      In the end
+                               |    galery -- main galery -- galery  ---  galery  --- cave --- galery --- of a galery
+                               |                   |                         |         |
+                               |                   |                         |         |
+                               |                 In a                      In a        |
+                            In an ice           galery                    galery       |
+                             tunnel                |                         |         |
+                               |                   |                         |         |
+                              _|_                In a                      In a        |
+                               |                galery ------------------ galery       |
+                               |                                                       |
+                           in a dark                       A                         A dark
+                            tunnel ------------------ biffurcation ----------------- tunnel
+                                                           |
+                                                           |
+                                                        A small
+                                                         tunnel
+                                                           |
+                                                           |
+                                                        A small    A small
+                                                         tunnel ---  cave
+                                                           |
+                                                        (2)|
+                                                       A small
+                                                        tunnel
+                                                        (P->1)
+

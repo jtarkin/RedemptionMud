@@ -1,0 +1,37 @@
+DRAGON SANCTUARY - MAPPED BY ALPHABETA
+* - no passdoor locked door                                                                                                      Greenhouse---Greenhouse
+                                                                                                                                     +
+                                                                                                                                Open Field
+                                                                                                                                /    |
+                                                                                                                               +     Dragon      Dragon
+                                                                                                                              /      Cemetary---Cemetary
+                                                                                                                          Evacuation               +
+                                                                                                                            Room                 Small
+                                                              Waiting---Old Treatment Recovery                                |                  Chapel
+                                                                Room       Room        Room                                Testing
+DOMINIA                                                          |           |          |                                  Facility
+  \                                                          Treatment---Treatment   Recovery                                 |
+   +                           Faculty                         Room 3      Room 4      Room                                Testing---Empty Room
+    \                           Lounge                           |           |          |            (assistant) Coat      Facility      \
+  Down the                        |                          Treatment---Treatment   Recovery                :   Room         |       Director's--+--Director's
+   Ladder         Gallery         +                            Room 1      Room 2      Room                  :     |          |         Office       Safe Room
+      \              |            |                              +                      +                    :    Lab         |
+   Base of the---Sanctuary---Administrative---Long----Long----Healing-----Another----Recovery---Yet ANOTHER--*--Entrance---Testing---Cage---Cage---Strange
+     Ladder      Entrance         Desk       Hallway Hallway    Room      Hallway     Atrium      Hallway                  Facility  Room   Room     Room
+                     |            |                              +                      +           |    \                    |
+                   Guard          *(nurse)                   Surgical---Surgical     Recovery       |    (1)             Lab Storage
+                    Room          |                            Room       Room         Room         |                       Room
+                     +         Storage                                                  |        Cafeteria---Kitchen
+                Guard Room      Closet                                               Recovery
+                  Vault                                                                Room              (1)
+                                                                                        |                  \
+                                                                                     Recovery             Dark
+                                                                                       Room             Stairway   (jailer)
+                                                                                        +                    \      :
+                                                                                    Safe Room              Prison   :
+                                                                                    (no where)            Entrance->*>-Prison
+                                                                                                                        Cell
+
+
+
+

@@ -1,0 +1,41 @@
+                                                                         Map Goblin Stronghold
+                                                                          Path 3w8s2e7s2e4su
+                                                                         (From MS Midgaarda)
+                                             
+                                            
+                                              A Hallway        A Hallway       The Entry           A Hallway       A Hallway
+                A Small     A Small           The Stronghold--The Stronghold------Hall----------The Stronghold--The Stronghold
+                Cell in     Cell in           /     |               |           to Goblin              |                |
+               the Dungeon the Dungeon       =      |               |           Stronghold\            |                |
+                   |           |            /       |               |               |      to Miden`nir|                |
+                   =L          |           /        |               |               =                  |                |
+               L   |           |          /         |               |               |                  |                |
+     A Small<--=-A Hall------A Hall---Dungeon    Goblin          Goblin         North End              |             Goblin
+     Cell in     in the      in the              Barrak         Training---=---of Great Hall----=----Kitchen         Barrak
+    the Dungeon  Dungeon     Dungeon                              Room              |
+        /          |           |                                                 North End
+       =(*)        =L          |                                               of Great Hall
+      /            |           |                                                    |
+    A Tiny       A Small     A Small                         Goblin Shaman's-=-King Grumm`s-=-Goblin mage's
+   Crawlspace    Cell in     Cell in                            Quarters       Throne Room      Quarters
+               the Dungeon the Dungeon                                              |
+                                                                                    =
+                                                                                    |
+                                                                              Hidden Passage
+                                                                                    |
+                                                                                    =L
+                                                                                    |
+                                                                              Hidden Passage
+                                                                                    |
+                                                                                    =L
+                                                                                    |
+                                                                              Hidden Passage
+                                                                                    |
+                                                                                    =L
+                                                                                    |
+                                                                           The Treasure Chamber
+                                                                         of the Goblin Stronghold
+          
+
+(*) - ÁÌÕÃ - ßÁÍÀÍÄÌÍ, ÁÁÅÏÓ - ÐÍÊÝÉÍ pass door (pick ÌÅÊÝÃÚ)
+íßÐÞÊÝÌØÅ ÄÁÅÏÕ ÍÐÉÏØÁÞ×ÐßÚ pick-ÍË Õ ÎÏÍÓÍÄÚÐßÚ pass door-ÍË

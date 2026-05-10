@@ -1,0 +1,29 @@
+The Graveyard (by Cigam)
+
+
+ 
+           up N
+             \|                                               toward Midgaard
+          W --|-- E                                                  | 
+              |\                                                     |
+              S down                  A Gravel Path            A Gravel Road       A Gravel Path
+                                     on the Graveyard ------- in the graveyard -- on the Graveyard
+                                             |    up\down            |                   |
+                                             |     In a Dusty        |                   |
+            A gravel Path             A Gravel Gath   Tomb     A Gravel Road       A Gravel Path           A Gravel Path
+           on the Graveyard -------- on the Graveyard         in the graveyar     on the Graveyard ------ on the Graveyard
+                   |    up\down                   up\down            |                         up\down            |    up\down
+  In a             |     In a Dusty                In a Dusty        |                          In a Dusty        |     In a Dusty
+ shed on    A Gravel Path   Tomb      A Gravel Path   Tomb    A Gravel Road        A Gravel Path    Tomb    A Gravel Path   Tomb
+   the  -- on the Graveyard -------- on the Graveyard        in the Graveyard     on the Graveyard ------ on the Graveyard
+Graveyard               up\down              |    up\down            |                    |    up\down                 up\down
+                         in a Dusty          |     in a Dusty        |                    |     In a Dust               In a Dusty
+                           Tomb      A Gravel Path   Tomb     A Gravel Road        A Gravel Path    Tomb
+                                    in the Graveyard         in the Graveyard     on the Graveyard
+                                             |     up\down           |                    |    up\down
+                                             |      In a Dusty       |                    |     In a Dusty 
+                                     A Gravel Path   Tomb       In front of       A Gravel Path    Tomb
+                                    in the Graveyard ---------- the Chapel ----- on the Graveyard
+                                                                     |                        up\down
+                                                                  toward                       In a Dusty
+                                                              Chapel Catacombe                    Tomb

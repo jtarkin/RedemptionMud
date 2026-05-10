@@ -1,0 +1,107 @@
+CROWN OF COMMAND - MAPPED BY ALPHABETA
+* - indicates no passdoorable locked door
+
+         Behind
+       the altar\
+           +     (1)
+       The altar
+           |
+Western---Pews---Eastern
+  Wing     +       Wing
+        Entrance
+         to the
+         Temple
+           |
+         Black
+         River
+           |
+         Wooded
+          Path
+           |
+       Along the
+          road
+           |
+       The crater
+           |
+        Smashed
+         trees
+Path       |
+through-Edge of
+the     the woods
+woods
+  |
+DOMINIA
+
+------------------------------------------------------------------
+
+                                                 A Cell
+                                                    +
+                                         A Cell-+-Hallway-+-A Cell
+                                                    |
+                                         A cell-+-Hallway-+-A cell
+                                                    +
+A large----Crumbling----The Vault----Corridor----Jailer's
+ tunnel   Entrance                                Room
+   |                                                |
+   |                                                |
+Secret    The corridor--The Kitchen--The corridor  The tunnel
+Passage     continues                  continues    |
+   |           |               (2)        |         |
+   +           |                +         |        Cavern
+A library The corridor  End of /          |         |
+   |        continues   the tunnel-+-A cavern       |
+   |           |                                    Torture
+A wide    A patch of----A small----A wet corridor---Chamber
+corridor   darkness     cavern
+   |                                                    (1)
+   +                                                    /
+Bed Room---Guard Room----A natural cavern---Stairway Down
+                                |
+                         Guard Barracks
+                                \
+                                 v
+                                Sinkhole
+---------------------------------------------------------------------
+
+
+                      Outside---Rolling---An oasis---Dusty---Ruined
+                     the cave    Dunes               desert  temple
+                         |                                     |   \
+                       Runes                                   |   (2)
+                         |                                     |
+                         |                                   A wooded
+                     The Chasm                              depression
+                    /                                          |
+                   /                                           |
+    .--<--Bottom of                                        The monolith
+   /      the Chasm  The Chasm                                 |
+The Lake      |     /    |                                     |
+   \          |    /     |                                  A castle (3)
+    .--<--Bottom of    Runes                                   |     /
+          the Chasm      |                                     |    *(black knight)
+                       Cursed---Hills---Hidden---The Black---Portal/
+                       Glade            Valley     Knigh    of Power
+
+------------------------------------------------------------------------------------
+
+
+
+The Chamber Servants               Crown of Command
+        \    | Room       (yjinn)     /
+         +   +               |       /
+          \  |               |      /
+       The Ebony   The Pits--*--Valley of---The Den
+       Staircase     |             Fire        |
+             \       +                         *(death)
+              \      |                         |
+              Vampire's                     A Date
+                  Tower                   with Death
+                     |                         |
+                     |                         |
+                  The Tunnel---Plains of---The Crypt
+                                 Peril
+                                  /
+                                 (3)
+
+
+
