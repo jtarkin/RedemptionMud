@@ -80,7 +80,6 @@
       color: var(--gold);
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      text-decoration: none;
     }
     .nav-logo span { color: var(--text-lt); font-weight: normal; font-size: 0.75rem; display: block; letter-spacing: 0.2em; }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
@@ -504,12 +503,12 @@
   <!-- Navigation -->
   <nav>
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
+      <div class="nav-logo">
         Redemption
         <span>A World at War</span>
-      </a>
+      </div>
       <ul class="nav-links">
-        <li><a href="lore.html">Lore</a></li>
+        <li><a href="#lore">Lore</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#updates">Updates</a></li>
         <li><a href="newbie.html">New Players</a></li>
@@ -593,9 +592,6 @@
         <p>
           In the middle of all of this stands you. Adventurer. Warrior. Mage. Whatever name the world gives you — the war does not care. It only asks: whose banner will you carry?
         </p>
-        <div style="text-align:center;margin-top:2.5rem;">
-          <a href="lore.html" style="display:inline-block;padding:0.75rem 2.25rem;background:transparent;color:var(--gold);border:1px solid var(--gold);font-family:'Georgia',serif;font-size:0.95rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='var(--gold)';this.style.color='#0a0a0f'" onmouseout="this.style.background='transparent';this.style.color='var(--gold)'">Discover More Lore</a>
-        </div>
       </div>
     </div>
   </section>

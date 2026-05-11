@@ -12,90 +12,31 @@
       --bg: #0a0a0f; --bg2: #10101a; --bg3: #161626;
       --border: #2a2a3a; --text: #d4d0c8; --text-lt: #f0ece0;
     }
-    html { scroll-behavior: smooth; }
+
     body { background: var(--bg); color: var(--text); font-family: 'Georgia', serif; line-height: 1.7; }
     a { color: var(--gold); text-decoration: none; }
     a:hover { color: var(--gold-lt); text-decoration: underline; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
 
+    /* ── Nav ── */
     nav {
       position: sticky; top: 0; z-index: 100;
       background: rgba(10,10,15,0.95); backdrop-filter: blur(6px);
       border-bottom: 1px solid var(--border); padding: 0 1.5rem;
     }
-    .nav-inner {
-      max-width: 1400px; margin: 0 auto;
-      display: flex; align-items: center; gap: 2rem; height: 62px;
-    }
-    .nav-logo {
-      font-size: 1.5rem; font-weight: bold; color: var(--gold);
-      letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none;
-    }
-    .nav-logo span { color: var(--text-lt); font-weight: normal; font-size: 0.75rem; display: block; letter-spacing: 0.2em; }
-    .nav-links { display: flex; gap: 1.2rem; list-style: none; }
-    .nav-links a { color: var(--text); font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-inner { max-width: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 62px; }
+    .nav-logo { font-size: 1.3rem; font-weight: bold; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { color: var(--text); font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; }
     .nav-links a:hover { color: var(--gold); text-decoration: none; }
-    .nav-play-btn { background: var(--red); color: #fff !important; padding: 0.4rem 1.1rem; border-radius: 3px; border: 1px solid var(--red-lt); transition: background 0.2s; }
-    .nav-play-btn:hover { background: var(--red-lt) !important; }
+    .nav-play-btn { background: var(--red); color: #fff !important; padding: 0.35rem 1rem; border-radius: 3px; border: 1px solid var(--red-lt); }
 
-    .page-hero {
-      padding: 5rem 1.5rem 3rem;
-      background: linear-gradient(180deg, #08080e 0%, var(--bg2) 100%);
-      border-bottom: 1px solid var(--border);
-      text-align: center;
-    }
-    .page-eyebrow { font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
-    .page-title { font-size: clamp(2rem, 5vw, 3.5rem); color: var(--text-lt); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem; }
-    .page-sub { font-size: 1rem; font-style: italic; color: var(--text); opacity: 0.8; max-width: 600px; margin: 0 auto 1.5rem; }
-
-    /* Search */
-    .search-bar {
-      max-width: 500px; margin: 0 auto;
-      display: flex; gap: 0;
-    }
-    .search-bar input {
-      flex: 1;
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-right: none;
-      border-radius: 4px 0 0 4px;
-      padding: 0.7rem 1rem;
-      color: var(--text-lt);
-      font-family: 'Courier New', monospace;
-      font-size: 0.9rem;
-      outline: none;
-    }
-    .search-bar input:focus { border-color: var(--gold); }
-    .search-bar button {
-      background: var(--red);
-      border: 1px solid var(--red-lt);
-      border-radius: 0 4px 4px 0;
-      padding: 0.7rem 1.2rem;
-      color: #fff;
-      font-family: inherit;
-      font-size: 0.85rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      cursor: pointer;
-    }
-    .search-bar button:hover { background: var(--red-lt); }
-
-    .search-controls {
-      max-width: 500px; margin: 0.8rem auto 0;
-      display: flex; align-items: center; justify-content: center; gap: 1.2rem;
-    }
-    .search-controls label {
-      font-size: 0.82rem; color: var(--text); cursor: pointer;
-      display: flex; align-items: center; gap: 0.4rem;
-    }
-    .search-controls input[type="checkbox"] { accent-color: var(--gold); }
-
-    /* Layout */
+    /* ── Layout ── */
     .help-layout {
       display: grid;
       grid-template-columns: 280px 1fr;
-      gap: 0;
     }
+
+    /* ── Sidebar ── */
     .help-sidebar {
       background: var(--bg2);
       border-right: 1px solid var(--border);
@@ -105,92 +46,44 @@
       height: calc(100vh - 62px);
       overflow-y: auto;
     }
-
-    .sidebar-filter {
-      padding: 0.5rem 1rem 0.8rem;
-    }
+    .sidebar-filter { padding: 0.5rem 1rem 0.8rem; }
     .sidebar-filter input {
-      width: 100%;
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 0.45rem 0.7rem;
-      color: var(--text-lt);
-      font-family: 'Courier New', monospace;
-      font-size: 0.8rem;
-      outline: none;
+      width: 100%; background: var(--bg3); border: 1px solid var(--border);
+      border-radius: 4px; padding: 0.45rem 0.7rem; color: var(--text-lt);
+      font-family: 'Courier New', monospace; font-size: 0.8rem; outline: none;
     }
     .sidebar-filter input:focus { border-color: var(--gold); }
 
-    .sidebar-section {
-      margin-bottom: 0.2rem;
-    }
-    .sidebar-section details { }
+    .sidebar-section { margin-bottom: 0.2rem; }
     .sidebar-section-title {
-      font-size: 0.72rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-      list-style: none;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); padding: 0.5rem 1rem; cursor: pointer;
+      list-style: none; display: flex; align-items: center; justify-content: space-between;
     }
     .sidebar-section-title::-webkit-details-marker { display: none; }
-    .sidebar-section-title::after {
-      content: '\25B6';
-      font-size: 0.6rem;
-      transition: transform 0.2s;
-    }
-    details[open] > .sidebar-section-title::after {
-      transform: rotate(90deg);
-    }
+    .sidebar-section-title::after { content: '\25B6'; font-size: 0.6rem; transition: transform 0.2s; }
+    details[open] > .sidebar-section-title::after { transform: rotate(90deg); }
 
-    .sidebar-subsection {
-      margin-bottom: 0.3rem;
-    }
+    .sidebar-subsection { margin-bottom: 0.3rem; }
     .sidebar-subsection-title {
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text);
-      opacity: 0.5;
-      padding: 0.3rem 1.2rem;
+      font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--text); opacity: 0.5; padding: 0.3rem 1.2rem;
     }
     .badge {
-      background: rgba(201,168,76,0.15);
-      color: var(--gold);
-      font-size: 0.65rem;
-      padding: 0.1rem 0.4rem;
-      border-radius: 8px;
-      margin-left: 0.4rem;
+      background: rgba(201,168,76,0.15); color: var(--gold);
+      font-size: 0.65rem; padding: 0.1rem 0.4rem; border-radius: 8px; margin-left: 0.4rem;
     }
     .sidebar-link {
-      display: block;
-      padding: 0.25rem 1.5rem;
-      font-size: 0.82rem;
-      color: var(--text);
-      cursor: pointer;
-      transition: background 0.15s, color 0.15s;
-      border-left: 2px solid transparent;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      display: block; padding: 0.25rem 1.5rem; font-size: 0.82rem; color: var(--text);
+      cursor: pointer; transition: background 0.15s, color 0.15s;
+      border-left: 2px solid transparent; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
     .sidebar-link:hover, .sidebar-link.active {
-      background: rgba(201,168,76,0.08);
-      color: var(--gold);
-      border-left-color: var(--gold);
-      text-decoration: none;
+      background: rgba(201,168,76,0.08); color: var(--gold);
+      border-left-color: var(--gold); text-decoration: none;
     }
 
-    .entry-back {
-      display: block; font-size: 0.8rem; color: var(--gold); cursor: pointer;
-      margin-bottom: 1.2rem; letter-spacing: 0.05em;
-    }
-    .entry-back:hover { color: var(--gold-lt); }
+    /* ── Main panel ── */
     .help-main {
       padding: 2rem;
       position: sticky;
@@ -198,117 +91,67 @@
       height: calc(100vh - 62px);
       overflow-y: auto;
     }
-    .help-entry {
-      display: none;
-      max-width: 760px;
+
+    /* ── Back link (injected into entries) ── */
+    .entry-back {
+      display: block; font-size: 0.8rem; color: var(--gold); cursor: pointer;
+      margin-bottom: 1.2rem; letter-spacing: 0.05em;
     }
+    .entry-back:hover { color: var(--gold-lt); }
+
+    /* ── Help entries ── */
+    .help-entry { display: none; max-width: 760px; }
     .help-entry.active { display: block; }
     .help-entry-title {
-      font-size: 2.2rem;
-      color: var(--gold);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: 0.3rem;
+      font-size: 1.6rem; color: var(--gold); letter-spacing: 0.06em;
+      text-transform: uppercase; margin-bottom: 0.3rem;
     }
     .help-entry-aliases {
-      font-size: 1.05rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text);
-      opacity: 0.5;
-      margin-bottom: 0.5rem;
+      font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--text); opacity: 0.5; margin-bottom: 0.5rem;
       font-family: 'Courier New', monospace;
     }
-    .help-entry-level {
-      font-size: 0.75rem;
-      color: var(--red-lt);
-      font-family: 'Courier New', monospace;
-      margin-bottom: 0.5rem;
-    }
-    .help-entry hr {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin-bottom: 1rem;
-    }
+    .help-entry hr { border: none; border-top: 1px solid var(--border); margin-bottom: 1rem; }
     .help-entry p { margin-bottom: 1rem; font-size: 0.95rem; }
     .help-entry pre {
-      background: rgba(0,0,0,0.3);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 1rem;
-      font-family: 'Courier New', monospace;
-      font-size: 0.85rem;
-      color: var(--text-lt);
-      overflow-x: auto;
-      margin-bottom: 1rem;
-      white-space: pre-wrap;
-      line-height: 1.5;
+      background: rgba(0,0,0,0.3); border: 1px solid var(--border); border-radius: 4px;
+      padding: 1rem; font-family: 'Courier New', monospace; font-size: 0.85rem;
+      color: var(--text-lt); overflow-x: auto; margin-bottom: 1rem;
+      white-space: pre-wrap; line-height: 1.5;
     }
     code {
-      font-family: 'Courier New', monospace;
-      background: rgba(201,168,76,0.08);
-      color: var(--gold);
-      padding: 0.1rem 0.4rem;
-      border-radius: 3px;
-      font-size: 0.9em;
+      font-family: 'Courier New', monospace; background: rgba(201,168,76,0.08);
+      color: var(--gold); padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.9em;
     }
 
-    /* Landing panel */
-    .help-landing {
-      max-width: 760px;
-      text-align: center;
-      padding: 4rem 2rem;
-    }
+    /* ── Landing panel ── */
+    .help-landing { max-width: 760px; text-align: center; padding: 4rem 2rem; }
     .help-landing.hidden { display: none; }
     .help-landing h2 {
-      font-size: 1.5rem;
-      color: var(--gold);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 0.6rem;
+      font-size: 1.5rem; color: var(--gold); letter-spacing: 0.08em;
+      text-transform: uppercase; margin-bottom: 0.6rem;
     }
     .help-landing p {
-      font-size: 0.95rem;
-      color: var(--text);
-      opacity: 0.7;
-      margin-bottom: 2rem;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
+      font-size: 0.95rem; color: var(--text); opacity: 0.7; margin-bottom: 2rem;
+      max-width: 500px; margin-left: auto; margin-right: auto;
     }
     .landing-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      text-align: left;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem; text-align: left;
     }
     .landing-card {
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 1.2rem;
-      cursor: pointer;
+      background: var(--bg3); border: 1px solid var(--border); border-radius: 6px;
+      padding: 1.2rem; cursor: pointer;
       transition: border-color 0.2s, background 0.2s;
     }
-    .landing-card:hover {
-      border-color: var(--gold);
-      background: rgba(201,168,76,0.05);
-    }
+    .landing-card:hover { border-color: var(--gold); background: rgba(201,168,76,0.05); }
     .landing-card-title {
-      font-size: 0.85rem;
-      color: var(--gold);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 0.4rem;
+      font-size: 0.85rem; color: var(--gold); letter-spacing: 0.1em;
+      text-transform: uppercase; margin-bottom: 0.4rem;
     }
-    .landing-card-desc {
-      font-size: 0.82rem;
-      color: var(--text);
-      opacity: 0.6;
-      line-height: 1.5;
-    }
+    .landing-card-desc { font-size: 0.82rem; color: var(--text); opacity: 0.6; line-height: 1.5; }
 
-    /* Race/Class browser */
+    /* ── Race/Class browser ── */
     .rc-browser { display: none; max-width: 760px; }
     .rc-browser.active { display: block; }
     .rc-browser h2 {
@@ -323,387 +166,744 @@
     .rc-back:hover { color: var(--gold-lt); }
     .rc-section-label {
       font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--text); opacity: 0.4; margin: 1.8rem 0 0.8rem; padding-bottom: 0.4rem;
-      border-bottom: 1px solid var(--border);
+      color: var(--text); opacity: 0.4; margin: 1.8rem 0 0.8rem;
+      padding-bottom: 0.4rem; border-bottom: 1px solid var(--border);
     }
-    .rc-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
-      gap: 0.8rem;
-    }
+    .rc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 0.8rem; }
     .rc-card {
       background: var(--bg3); border: 1px solid var(--border); border-radius: 6px;
       padding: 1rem 0.8rem; cursor: pointer; text-align: center;
       transition: border-color 0.2s, background 0.2s, transform 0.15s;
       position: relative; overflow: hidden;
     }
-    .rc-card:hover {
-      border-color: var(--gold); background: rgba(201,168,76,0.06);
-      transform: translateY(-2px);
-    }
-    .rc-card-icon {
-      font-size: 2.2rem; margin-bottom: 0.4rem; line-height: 1;
-      filter: drop-shadow(0 0 6px rgba(201,168,76,0.3));
-    }
-    .rc-card-name {
-      font-size: 0.82rem; color: var(--text-lt); letter-spacing: 0.06em;
-      text-transform: uppercase; font-weight: bold; margin-bottom: 0.2rem;
-    }
-    .rc-card-tag {
-      font-size: 0.68rem; color: var(--text); opacity: 0.45;
-      letter-spacing: 0.05em; text-transform: uppercase;
-    }
-    .rc-card-accent {
-      position: absolute; top: 0; left: 0; right: 0; height: 3px;
-    }
+    .rc-card:hover { border-color: var(--gold); background: rgba(201,168,76,0.06); transform: translateY(-2px); }
+    .rc-card-icon { font-size: 2.2rem; margin-bottom: 0.4rem; line-height: 1; filter: drop-shadow(0 0 6px rgba(201,168,76,0.3)); }
+    .rc-card-name { font-size: 0.82rem; color: var(--text-lt); letter-spacing: 0.06em; text-transform: uppercase; font-weight: bold; margin-bottom: 0.2rem; }
+    .rc-card-tag { font-size: 0.68rem; color: var(--text); opacity: 0.45; letter-spacing: 0.05em; text-transform: uppercase; }
+    .rc-card-accent { position: absolute; top: 0; left: 0; right: 0; height: 3px; }
 
-    /* Dragon color sub-page */
-    .rc-dragon-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 1rem;
-    }
+    /* Dragon cards */
+    .rc-dragon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; }
     .rc-dragon-card {
       background: var(--bg3); border: 1px solid var(--border); border-radius: 8px;
       padding: 1.2rem 1rem; cursor: pointer; text-align: center;
       transition: border-color 0.2s, background 0.2s, transform 0.15s, box-shadow 0.2s;
       position: relative; overflow: hidden;
     }
-    .rc-dragon-card:hover {
-      transform: translateY(-3px);
-    }
+    .rc-dragon-card:hover { transform: translateY(-3px); }
     .rc-dragon-card .rc-card-icon { font-size: 2.6rem; }
-    .rc-dragon-card-breath {
-      font-size: 0.72rem; color: var(--text); opacity: 0.5;
-      margin-top: 0.3rem; font-style: italic;
-    }
-    /* Per-color accents */
+    .rc-dragon-card-breath { font-size: 0.72rem; color: var(--text); opacity: 0.5; margin-top: 0.3rem; font-style: italic; }
+
     .dragon-red    { --dc: #b03030; } .dragon-red:hover    { border-color: #b03030; box-shadow: 0 4px 20px rgba(176,48,48,0.25); }
     .dragon-blue   { --dc: #3060c0; } .dragon-blue:hover   { border-color: #3060c0; box-shadow: 0 4px 20px rgba(48,96,192,0.25); }
     .dragon-green  { --dc: #2a8a2a; } .dragon-green:hover  { border-color: #2a8a2a; box-shadow: 0 4px 20px rgba(42,138,42,0.25); }
-    .dragon-black  { --dc: #666; }    .dragon-black:hover  { border-color: #888; box-shadow: 0 4px 20px rgba(100,100,100,0.25); }
-    .dragon-white  { --dc: #ccc; }    .dragon-white:hover  { border-color: #ddd; box-shadow: 0 4px 20px rgba(200,200,200,0.2); }
+    .dragon-black  { --dc: #666;    } .dragon-black:hover  { border-color: #888;    box-shadow: 0 4px 20px rgba(100,100,100,0.25); }
+    .dragon-white  { --dc: #ccc;    } .dragon-white:hover  { border-color: #ddd;    box-shadow: 0 4px 20px rgba(200,200,200,0.2); }
     .dragon-gold   { --dc: #c9a84c; } .dragon-gold:hover   { border-color: #c9a84c; box-shadow: 0 4px 20px rgba(201,168,76,0.3); }
     .dragon-plat   { --dc: #a0b8d0; } .dragon-plat:hover   { border-color: #a0b8d0; box-shadow: 0 4px 20px rgba(160,184,208,0.25); }
     .dragon-silver { --dc: #a0a8b0; } .dragon-silver:hover { border-color: #b0b8c0; box-shadow: 0 4px 20px rgba(160,168,176,0.25); }
     .dragon-copper { --dc: #b87333; } .dragon-copper:hover { border-color: #b87333; box-shadow: 0 4px 20px rgba(184,115,51,0.3); }
     .dragon-iron   { --dc: #6a6a7a; } .dragon-iron:hover   { border-color: #8a8a9a; box-shadow: 0 4px 20px rgba(106,106,122,0.25); }
     .rc-dragon-card .rc-card-accent { background: var(--dc, var(--border)); }
-    .rc-dragon-card .rc-card-icon { color: var(--dc, var(--text)); }
+    .rc-dragon-card .rc-card-icon   { color: var(--dc, var(--text)); }
 
-    /* search results */
-    #search-results {
-      display: none;
-      max-width: 760px;
+    /* ── Entry content styles ── */
+    .help-entry h3 {
+      font-size: 1rem; color: var(--gold); letter-spacing: 0.08em;
+      text-transform: uppercase; margin: 1.4rem 0 0.5rem;
     }
+    .help-entry h3:first-of-type { margin-top: 0; }
+    .help-entry p { font-size: 0.92rem; margin-bottom: 0.9rem; line-height: 1.75; }
+    .help-entry ul { margin: 0 0 1rem 1.2rem; }
+    .help-entry ul li { font-size: 0.92rem; margin-bottom: 0.3rem; line-height: 1.6; }
+    .cmd {
+      display: inline-block; font-family: 'Courier New', monospace;
+      background: rgba(201,168,76,0.1); color: var(--gold);
+      border: 1px solid rgba(201,168,76,0.25); border-radius: 3px;
+      padding: 0.05rem 0.5rem; font-size: 0.88em;
+    }
+    .cmd-block {
+      background: rgba(0,0,0,0.35); border: 1px solid var(--border);
+      border-radius: 4px; padding: 0.8rem 1rem; margin: 0.5rem 0 1rem;
+      font-family: 'Courier New', monospace; font-size: 0.88rem;
+      color: var(--text-lt); line-height: 1.8;
+    }
+    .cmd-block .c-cmd  { color: var(--gold); }
+    .cmd-block .c-note { color: var(--text); opacity: 0.5; font-style: italic; }
+    .tip {
+      background: rgba(201,168,76,0.06); border-left: 3px solid var(--gold);
+      border-radius: 0 4px 4px 0; padding: 0.7rem 1rem;
+      font-size: 0.88rem; margin-bottom: 1rem; line-height: 1.6;
+    }
+    .tip strong { color: var(--gold); }
+
+    /* ── Race entry layout ── */
+    .race-layout {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    .race-img-placeholder {
+      flex-shrink: 0;
+      background: var(--bg3);
+      border: 2px dashed var(--border);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text);
+      opacity: 0.4;
+      font-family: 'Courier New', monospace;
+      font-size: 0.75rem;
+      gap: 0.3rem;
+    }
+    .race-img-placeholder span { font-size: 1.4rem; }
+    .race-body { flex: 1; min-width: 0; }
+    .race-divider {
+      border: none; border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+    .skill-link {
+      font-family: 'Courier New', monospace;
+      background: rgba(201,168,76,0.1); color: var(--gold);
+      border: 1px solid rgba(201,168,76,0.25); border-radius: 3px;
+      padding: 0.05rem 0.5rem; font-size: 0.88em;
+      cursor: pointer; transition: background 0.15s, border-color 0.15s;
+    }
+    .skill-link:hover { background: rgba(201,168,76,0.2); border-color: rgba(201,168,76,0.5); }
+    .back-to-section {
+      display: inline-block; margin-top: 1.5rem; font-size: 0.8rem;
+      color: var(--gold); cursor: pointer; letter-spacing: 0.05em;
+    }
+    .back-to-section:hover { color: var(--gold-lt); }
+
+    /* ── Search results ── */
+    #search-results { display: none; max-width: 760px; }
     #search-results h2 { font-size: 1.2rem; color: var(--gold); margin-bottom: 1rem; }
     .search-result-item {
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 0.8rem 1rem;
-      margin-bottom: 0.6rem;
-      cursor: pointer;
-      transition: border-color 0.15s;
+      background: var(--bg3); border: 1px solid var(--border); border-radius: 4px;
+      padding: 0.8rem 1rem; margin-bottom: 0.6rem; cursor: pointer; transition: border-color 0.15s;
     }
     .search-result-item:hover { border-color: var(--gold); }
     .search-result-name { color: var(--gold); font-size: 0.95rem; margin-bottom: 0.2rem; }
     .search-result-preview { font-size: 0.82rem; color: var(--text); opacity: 0.7; }
-    .search-result-best { border-color: var(--gold); background: #1a1608; }
-    .search-result-best:hover { background: #221d0a; }
 
-    /* Immortal toggle */
-    .imm-entry { display: none !important; }
-    .imm-entry.active { display: none !important; }
-    body.show-imm .imm-entry { display: none; }
-    body.show-imm .imm-entry.active { display: block !important; }
-    body.show-imm .imm-section { display: block; }
-    .imm-section { display: none; }
-
-    footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 2rem 1.5rem; text-align: center; }
-    .footer-logo { font-size: 1.3rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.4rem; }
-    .footer-copy { font-size: 0.78rem; color: var(--text); opacity: 0.35; }
-
-    /* Hamburger & mobile drawer — hidden on desktop */
-    .nav-hamburger {
-      display: none; background: none; border: none; cursor: pointer;
-      padding: 0.5rem; margin-left: auto; flex-shrink: 0;
-      color: var(--gold); font-size: 1.5rem; line-height: 1;
-    }
-    .sidebar-backdrop {
-      display: none; position: fixed; inset: 0;
-      background: rgba(0,0,0,0.55); z-index: 150;
-    }
-    .sidebar-backdrop.open { display: block; }
-    .mobile-browse-btn {
-      display: none; background: var(--bg2);
+    /* ── Page hero ── */
+    .page-hero {
+      padding: 4rem 1.5rem 2.5rem;
+      background: linear-gradient(180deg, #08080e 0%, var(--bg2) 100%);
       border-bottom: 1px solid var(--border);
-      padding: 0.6rem 1rem; position: sticky; top: 0; z-index: 10;
+      text-align: center;
     }
-    .mobile-browse-btn button {
-      background: none; border: 1px solid var(--border);
-      border-radius: 4px; color: var(--gold);
-      font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase;
-      padding: 0.45rem 1rem; cursor: pointer; font-family: inherit;
+    .page-eyebrow { font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+    .page-title { font-size: clamp(2rem, 5vw, 3.5rem); color: var(--text-lt); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .page-sub { font-size: 1rem; font-style: italic; color: var(--text); opacity: 0.8; max-width: 600px; margin: 0 auto 1.5rem; }
+    .search-bar { max-width: 500px; margin: 0 auto; display: flex; }
+    .search-bar input {
+      flex: 1; background: var(--bg3); border: 1px solid var(--border);
+      border-right: none; border-radius: 4px 0 0 4px;
+      padding: 0.7rem 1rem; color: var(--text-lt);
+      font-family: 'Courier New', monospace; font-size: 0.9rem; outline: none;
     }
-    .mobile-browse-btn button:hover { border-color: var(--gold); }
+    .search-bar input:focus { border-color: var(--gold); }
+    .search-bar button {
+      background: var(--red); border: 1px solid var(--red-lt); border-radius: 0 4px 4px 0;
+      padding: 0.7rem 1.2rem; color: #fff; font-family: inherit;
+      font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer;
+    }
+    .search-bar button:hover { background: var(--red-lt); }
 
     @media (max-width: 700px) {
-      nav { z-index: 300; }
-      .nav-hamburger { display: flex; align-items: center; }
-      .nav-links { display: none; }
-      .nav-links.open {
-        display: flex; flex-direction: column;
-        position: fixed; top: 62px; left: 0; right: 0;
-        background: rgba(10,10,15,0.98);
-        border-bottom: 1px solid var(--border);
-        padding: 1rem 1.5rem; gap: 0.5rem; z-index: 299;
-      }
-      .nav-links.open a { font-size: 0.95rem; padding: 0.4rem 0; display: block; }
       .help-layout { grid-template-columns: 1fr; }
-      .help-sidebar {
-        position: fixed; left: -290px; top: 62px;
-        width: 280px; height: calc(100vh - 62px);
-        z-index: 200; transition: left 0.25s ease;
-        overflow-y: auto; overflow-x: hidden;
-      }
-      .help-sidebar.drawer-open { left: 0; box-shadow: 4px 0 24px rgba(0,0,0,0.5); }
-      .mobile-browse-btn { display: flex; }
-      .sidebar-link { padding: 0.6rem 1.5rem; font-size: 0.88rem; }
-      .sidebar-section-title { padding: 0.7rem 1rem; }
-      .help-main { position: static; height: auto; padding: 1rem; }
-      .help-entry-title { font-size: 1.6rem; }
+      .help-sidebar { position: static; height: auto; }
+      .nav-links { display: none; }
     }
   </style>
 </head>
 <body>
 
-    <nav>
+  <nav>
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        Redemption
-        <span>A World at War</span>
-      </a>
+      <a href="index.html" class="nav-logo">Redemption</a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="lore.html">Lore</a></li>
-        <li><a href="index.html#features">Features</a></li>
-        <li><a href="index.html#updates">Updates</a></li>
-        <li><a href="index.html#play">Play</a></li>
-        <li><a href="maps.html">Maps</a></li>
         <li><a href="newbie.html">New Players</a></li>
-        <li><a href="helpfiles.html" class="active">Help Files</a></li>
         <li><a href="crafting.html">Crafting</a></li>
+        <li><a href="announcements.html">News</a></li>
         <li><a href="index.html#play" class="nav-play-btn">Play Now</a></li>
       </ul>
-      <button class="nav-hamburger" onclick="navToggle()" aria-label="Menu">&#9776;</button>
     </div>
   </nav>
 
-  <div class="sidebar-backdrop" id="sidebar-backdrop" onclick="closeDrawer()"></div>
+  <div class="page-hero">
+    <p class="page-eyebrow">Redemption MUD</p>
+    <h1 class="page-title">Help Files</h1>
+    <p class="page-sub">Browse or search the in-game help system.</p>
+    <div class="search-bar">
+      <input type="text" id="help-search" placeholder="Search help topics..." autocomplete="off" />
+      <button onclick="doSearch()">Search</button>
+    </div>
+  </div>
 
   <div class="help-layout">
+
+    <!-- ── Sidebar ── -->
     <div class="help-sidebar">
       <div class="sidebar-filter">
-        <input type="text" id="help-search" placeholder="Search help..." autocomplete="off" oninput="filterSidebar()" />
+        <input type="text" id="sidebar-search" placeholder="Filter menu..." oninput="filterSidebar()" />
       </div>
 
       <div class="sidebar-section">
         <details>
-          <summary class="sidebar-section-title">Getting Started</summary>
-          <span class="sidebar-link" onclick="showEntry('gs-communication')">Communication</span>
-          <span class="sidebar-link" onclick="showEntry('gs-inventory')">Inventory</span>
-          <span class="sidebar-link" onclick="showEntry('gs-macros')">Macros &amp; Aliases</span>
-          <span class="sidebar-link" onclick="showEntry('gs-newbie')">Newbie</span>
-          <span class="sidebar-link" onclick="showEntry('gs-levels')">Levels</span>
-          <span class="sidebar-link" onclick="showEntry('gs-pets')">Pets &amp; Charmed Mobs</span>
-          <span class="sidebar-link" onclick="showEntry('gs-quest')">Questing</span>
-        </details>
-      </div>
-
-      <div class="sidebar-section">
-        <details>
-          <summary class="sidebar-section-title">Combat</summary>
-          <span class="sidebar-link" onclick="showEntry('consider')">General</span>
-          <span class="sidebar-link" onclick="showEntry('combat-death')">Death</span>
-          <span class="sidebar-link" onclick="showEntry('combat-damage')">Damage</span>
-          <span class="sidebar-link" onclick="showEntry('combat-equip-damage')">Equipment Damage</span>
-          <span class="sidebar-link" onclick="showEntry('combat-escaping')">Escaping</span>
-          <span class="sidebar-link" onclick="showEntry('combat-recovery')">Recovery</span>
-        </details>
-      </div>
-
-      <div class="sidebar-section">
-        <details>
-          <summary class="sidebar-section-title">Skills</summary>
-          <span class="sidebar-link" onclick="showEntry('skills-aggressive')">Aggressive Skills</span>
-          <span class="sidebar-link" onclick="showEntry('skills-general')">General Skills</span>
-          <span class="sidebar-link" onclick="showEntry('skills-combat')">Combat Skills</span>
-          <span class="sidebar-link" onclick="showEntry('skills-passive')">Passive Skills</span>
-          <span class="sidebar-link" onclick="showEntry('skills-remort')">Remort Skills</span>
-          <span class="sidebar-link" onclick="showEntry('skills-reclass')">Reclass Skills</span>
-        </details>
-      </div>
-
-      <div class="sidebar-section">
-        <details>
-          <summary class="sidebar-section-title">Spells</summary>
-          <span class="sidebar-link" onclick="showEntry('spells-aggressive')">Aggressive Spells</span>
-          <span class="sidebar-link" onclick="showEntry('spells-buffing')">Buffing Spells</span>
-          <span class="sidebar-link" onclick="showEntry('spells-general')">General Spells</span>
-          <span class="sidebar-link" onclick="showEntry('spells-maledictions')">Maledictions</span>
-          <span class="sidebar-link" onclick="showEntry('spells-restorative')">Restorative Spells</span>
-          <span class="sidebar-link" onclick="showEntry('spells-remort')">Remort Spells</span>
-          <span class="sidebar-link" onclick="showEntry('spells-reclass')">Reclass Spells</span>
-        </details>
-      </div>
-
-      <div class="sidebar-section">
-        <details>
-          <summary class="sidebar-section-title">Character</summary>
-          <span class="sidebar-link" onclick="showEntry('character-equipment')">Equipment</span>
-          <span class="sidebar-link" onclick="showEntry('character-worship')">Worship</span>
-          <span class="sidebar-link" onclick="showEntry('character-wealth')">Wealth</span>
-          <span class="sidebar-link" onclick="showEntry('character-general')">General</span>
-          <span class="sidebar-link" onclick="showEntry('character-description')">Description</span>
-          <span class="sidebar-link" onclick="showEntry('character-creation')">Creation</span>
-        </details>
-      </div>
-
-      <div class="sidebar-section">
-        <details>
-          <summary class="sidebar-section-title">World</summary>
-          <span class="sidebar-link" onclick="showEntry('world-general')">General</span>
-          <span class="sidebar-link" onclick="showEntry('world-areas')">Areas</span>
-          <span class="sidebar-link" onclick="showEntry('world-story')">Story</span>
-          <span class="sidebar-link" onclick="showEntry('world-continents')">Continents</span>
-          <span class="sidebar-link" onclick="showEntry('world-travel')">Travel</span>
-          <span class="sidebar-link" onclick="showEntry('world-doors')">Doors</span>
-        </details>
-      </div>
-
-      <div class="sidebar-section">
-        <details>
-          <summary class="sidebar-section-title">Clans</summary>
-          <span class="sidebar-link" onclick="showEntry('clans-general')">General</span>
-          <span class="sidebar-link" onclick="showEntry('clans-addrecruiter')">Leadership Commands</span>
-          <span class="sidebar-link" onclick="showEntry('clans-clanstats')">Clanstats</span>
-          <span class="sidebar-link" onclick="showEntry('clans-loner')">Loner</span>
-          <span class="sidebar-link" onclick="showEntry('clans-upgrades')">Upgrades</span>
-          <span class="sidebar-link" onclick="showEntry('clans-lore')">Clan Lore</span>
+          <summary class="sidebar-section-title">Basics</summary>
+          <span class="sidebar-link" onclick="showEntry('basics-overview')">Overview</span>
+          <span class="sidebar-link" onclick="showEntry('how-to-connect')">How to Connect</span>
+          <span class="sidebar-link" onclick="showEntry('look')">Look</span>
+          <span class="sidebar-link" onclick="showEntry('moving-around')">Moving Around</span>
+          <span class="sidebar-link" onclick="showEntry('inventory')">Inventory</span>
+          <span class="sidebar-link" onclick="showEntry('equipment')">Equipment</span>
+          <span class="sidebar-link" onclick="showEntry('communication')">Communication</span>
+          <span class="sidebar-link" onclick="showEntry('score')">Score &amp; Stats</span>
+          <span class="sidebar-link" onclick="showEntry('help-cmd')">The Help Command</span>
         </details>
       </div>
 
       <div class="sidebar-section">
         <details>
           <summary class="sidebar-section-title">Races</summary>
-          <span class="sidebar-link" onclick="showEntry('race-general')">General</span>
           <span class="sidebar-link" onclick="showEntry('race-human')">Human</span>
           <span class="sidebar-link" onclick="showEntry('race-elf')">Elf</span>
           <span class="sidebar-link" onclick="showEntry('race-dwarf')">Dwarf</span>
-          <span class="sidebar-link" onclick="showEntry('race-gargoyle')">Gargoyle</span>
           <span class="sidebar-link" onclick="showEntry('race-giant')">Giant</span>
-          <span class="sidebar-link" onclick="showEntry('race-hatchling')">Hatchling</span>
-          <span class="sidebar-link" onclick="showEntry('race-aasimar')">Aasimar</span>
-          <span class="sidebar-link" onclick="showEntry('race-marid')">Marid</span>
-          <span class="sidebar-link" onclick="showEntry('race-kirre')">Kirre</span>
-          <span class="sidebar-link" onclick="showEntry('race-sliver')">Sliver</span>
           <span class="sidebar-link" onclick="showEntry('race-troll')">Troll</span>
-          <span class="sidebar-link" onclick="showEntry('race-remort')">Remort Options</span>
+          <span class="sidebar-link" onclick="showEntry('race-gargoyle')">Gargoyle</span>
+          <span class="sidebar-link" onclick="showEntry('race-hatchling')">Hatchling</span>
+          <span class="sidebar-link" onclick="showEntry('race-sliver')">Sliver</span>
+          <span class="sidebar-link" onclick="showEntry('race-kirre')">Kirre</span>
+          <span class="sidebar-link" onclick="showEntry('race-marid')">Marid</span>
         </details>
       </div>
 
       <div class="sidebar-section">
         <details>
-          <summary class="sidebar-section-title">Classes</summary>
-          <span class="sidebar-link" onclick="showEntry('class-general')">General</span>
-          <span class="sidebar-link" onclick="showEntry('class-mage')">Mage</span>
-          <span class="sidebar-link" onclick="showEntry('class-invoker')">Invoker</span>
-          <span class="sidebar-link" onclick="showEntry('class-conjurer')">Conjurer</span>
-          <span class="sidebar-link" onclick="showEntry('class-enchanter')">Enchanter</span>
-          <span class="sidebar-link" onclick="showEntry('class-warrior')">Warrior</span>
-          <span class="sidebar-link" onclick="showEntry('class-paladin')">Paladin</span>
-          <span class="sidebar-link" onclick="showEntry('class-ranger')">Ranger</span>
-          <span class="sidebar-link" onclick="showEntry('class-thief')">Thief</span>
-          <span class="sidebar-link" onclick="showEntry('class-cleric')">Cleric</span>
-          <span class="sidebar-link" onclick="showEntry('class-druid')">Druid</span>
-          <span class="sidebar-link" onclick="showEntry('class-runist')">Runist</span>
-          <span class="sidebar-link" onclick="showEntry('class-monk')">Monk</span>
-          <span class="sidebar-link" onclick="showEntry('class-elemental')">Elemental</span>
-          <span class="sidebar-link" onclick="showEntry('class-reclass')">Reclass Options</span>
-          <span class="sidebar-link" onclick="showEntry('class-classchange')">Class Change</span>
-        </details>
-      </div>
-
-      <div class="sidebar-section">
-        <details>
-          <summary class="sidebar-section-title">Miscellaneous</summary>
-          <span class="sidebar-link" onclick="showEntry('misc-bard')">Bard / Jukebox</span>
-          <span class="sidebar-link" onclick="showEntry('misc-games')">Games</span>
-          <span class="sidebar-link" onclick="showEntry('misc-other')">Other Commands</span>
-          <span class="sidebar-link" onclick="showEntry('misc-punishments')">Punishments</span>
-        </details>
-      </div>
-
-      <div class="sidebar-section">
-        <details>
-          <summary class="sidebar-section-title">Immortals</summary>
-          <span class="sidebar-link" onclick="showEntry('imm-commands')">Immortal Commands</span>
-          <span class="sidebar-link" onclick="showEntry('imm-hierarchy')">Hierarchy</span>
-          <span class="sidebar-link" onclick="showEntry('imm-duty')">Duty</span>
-          <span class="sidebar-link" onclick="showEntry('imm-building')">Building</span>
-          <span class="sidebar-link" onclick="showEntry('imm-penalties')">Penalties</span>
-          <span class="sidebar-link" onclick="showEntry('imm-tournaments')">Tournaments</span>
+          <summary class="sidebar-section-title">Skills</summary>
+          <span class="sidebar-link" onclick="showEntry('skills-automatic')">Automatic Skills</span>
         </details>
       </div>
 
     </div>
 
+    <!-- ── Main panel ── -->
     <div class="help-main">
-      <div class="mobile-browse-btn">
-        <button onclick="openDrawer()">&#9776; Browse Topics</button>
-      </div>
+
       <div id="search-results">
         <h2 id="search-heading"></h2>
         <div id="search-list"></div>
       </div>
 
+      <!-- Landing -->
       <div class="help-landing" id="help-landing">
-        <h2>Help Files</h2>
-        <p>Browse categories in the sidebar or search to find what you need.</p>
+        <h2>Welcome to the Help System</h2>
+        <p>Browse categories in the sidebar or search above to find what you need.</p>
+        <div class="landing-cards">
+          <div class="landing-card" onclick="showBrowser('rc-main')">
+            <div class="landing-card-title">Races &amp; Classes</div>
+            <div class="landing-card-desc">Learn about the peoples and professions of the realm.</div>
+          </div>
+        </div>
       </div>
 
-      <!-- entries loaded dynamically by JS loader below -->
+      <!-- Race & Class Browser: Main -->
+      <div class="rc-browser" id="rc-main">
+        <span class="rc-back" onclick="showLanding()">&larr; Back to Help</span>
+        <h2>Races &amp; Classes</h2>
+        <p class="rc-sub">Choose a race or class to learn more.</p>
+
+        <div class="rc-section-label">Races</div>
+        <div class="rc-grid">
+          <div class="rc-card" onclick="showEntry('race-human')">
+            <div class="rc-card-accent" style="background:var(--gold)"></div>
+            <div class="rc-card-icon">&#9816;</div>
+            <div class="rc-card-name">Human</div>
+            <div class="rc-card-tag">0 cp &middot; Versatile</div>
+          </div>
+          <div class="rc-card" onclick="showEntry('elf')">
+            <div class="rc-card-accent" style="background:#6a9f6a"></div>
+            <div class="rc-card-icon">&#9752;</div>
+            <div class="rc-card-name">Elf</div>
+            <div class="rc-card-tag">8 cp &middot; Magic</div>
+          </div>
+          <div class="rc-card" onclick="showEntry('dwarf')">
+            <div class="rc-card-accent" style="background:#b87333"></div>
+            <div class="rc-card-icon">&#9874;</div>
+            <div class="rc-card-name">Dwarf</div>
+            <div class="rc-card-tag">8 cp &middot; Resilient</div>
+          </div>
+          <div class="rc-card" onclick="showEntry('giant')">
+            <div class="rc-card-accent" style="background:#7a7a8a"></div>
+            <div class="rc-card-icon">&#9968;</div>
+            <div class="rc-card-name">Giant</div>
+            <div class="rc-card-tag">6 cp &middot; Strength</div>
+          </div>
+          <div class="rc-card" onclick="showEntry('troll')">
+            <div class="rc-card-accent" style="background:#5a8a3a"></div>
+            <div class="rc-card-icon">&#9760;</div>
+            <div class="rc-card-name">Troll</div>
+            <div class="rc-card-tag">6 cp &middot; Regen</div>
+          </div>
+          <div class="rc-card" onclick="showEntry('gargoyle')">
+            <div class="rc-card-accent" style="background:#6a6a7a"></div>
+            <div class="rc-card-icon">&#9670;</div>
+            <div class="rc-card-name">Gargoyle</div>
+            <div class="rc-card-tag">12 cp &middot; Flight</div>
+          </div>
+          <div class="rc-card" onclick="showBrowser('rc-dragons')">
+            <div class="rc-card-accent" style="background:var(--red)"></div>
+            <div class="rc-card-icon">&#9764;</div>
+            <div class="rc-card-name">Dragon</div>
+            <div class="rc-card-tag">20 cp &middot; 10 Colors &rarr;</div>
+          </div>
+        </div>
+
+        <div class="rc-section-label">Base Classes</div>
+        <div class="rc-grid">
+          <div class="rc-card" onclick="showEntry('warrior')">
+            <div class="rc-card-accent" style="background:#b03030"></div>
+            <div class="rc-card-icon">&#9876;</div>
+            <div class="rc-card-name">Warrior</div>
+            <div class="rc-card-tag">Melee &middot; Tank</div>
+          </div>
+          <div class="rc-card" onclick="showEntry('thief')">
+            <div class="rc-card-accent" style="background:#7a6a9a"></div>
+            <div class="rc-card-icon">&#9733;</div>
+            <div class="rc-card-name">Thief</div>
+            <div class="rc-card-tag">Stealth &middot; Cunning</div>
+          </div>
+          <div class="rc-card" onclick="showEntry('mage')">
+            <div class="rc-card-accent" style="background:#4060b0"></div>
+            <div class="rc-card-icon">&#10036;</div>
+            <div class="rc-card-name">Mage</div>
+            <div class="rc-card-tag">Arcane &middot; Offense</div>
+          </div>
+          <div class="rc-card" onclick="showEntry('cleric')">
+            <div class="rc-card-accent" style="background:#c9a84c"></div>
+            <div class="rc-card-icon">&#10014;</div>
+            <div class="rc-card-name">Cleric</div>
+            <div class="rc-card-tag">Healing &middot; Support</div>
+          </div>
+          <div class="rc-card" onclick="showEntry('paladin')">
+            <div class="rc-card-accent" style="background:#d0b060"></div>
+            <div class="rc-card-icon">&#9879;</div>
+            <div class="rc-card-name">Paladin</div>
+            <div class="rc-card-tag">Holy &middot; Hybrid</div>
+          </div>
+          <div class="rc-card" onclick="showEntry('ranger')">
+            <div class="rc-card-accent" style="background:#3a8a3a"></div>
+            <div class="rc-card-icon">&#127981;</div>
+            <div class="rc-card-name">Ranger</div>
+            <div class="rc-card-tag">Nature &middot; Tracking</div>
+          </div>
+          <div class="rc-card" onclick="showEntry('druid')">
+            <div class="rc-card-accent" style="background:#5a9a5a"></div>
+            <div class="rc-card-icon">&#9752;</div>
+            <div class="rc-card-name">Druid</div>
+            <div class="rc-card-tag">Nature &middot; Magic</div>
+          </div>
+          <div class="rc-card" onclick="showEntry('monk')">
+            <div class="rc-card-accent" style="background:#c08040"></div>
+            <div class="rc-card-icon">&#9775;</div>
+            <div class="rc-card-name">Monk</div>
+            <div class="rc-card-tag">Unarmed &middot; Spirit</div>
+          </div>
+          <div class="rc-card" onclick="showEntry('ninja')">
+            <div class="rc-card-accent" style="background:#3a3a5a"></div>
+            <div class="rc-card-icon">&#9884;</div>
+            <div class="rc-card-name">Ninja</div>
+            <div class="rc-card-tag">Stealth &middot; Speed</div>
+          </div>
+          <div class="rc-card" onclick="showEntry('samurai')">
+            <div class="rc-card-accent" style="background:#8a3030"></div>
+            <div class="rc-card-icon">&#9876;</div>
+            <div class="rc-card-name">Samurai</div>
+            <div class="rc-card-tag">Blade &middot; Honor</div>
+          </div>
+          <div class="rc-card" onclick="showEntry('runist')">
+            <div class="rc-card-accent" style="background:#6050a0"></div>
+            <div class="rc-card-icon">&#5765;</div>
+            <div class="rc-card-name">Runist</div>
+            <div class="rc-card-tag">Runes &middot; Hybrid</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Race & Class Browser: Dragon Colors -->
+      <div class="rc-browser" id="rc-dragons">
+        <span class="rc-back" onclick="showBrowser('rc-main')">&larr; Back to Races &amp; Classes</span>
+        <h2>Dragons</h2>
+        <p class="rc-sub">Hatchlings transform at level 10 into a random color. Each color has unique breath weapons, resistances, and two remort paths.</p>
+
+        <div class="rc-section-label">Chromatic Dragons</div>
+        <div class="rc-dragon-grid">
+          <div class="rc-dragon-card dragon-red" onclick="showEntry('red')">
+            <div class="rc-card-accent"></div>
+            <div class="rc-card-icon">&#9766;</div>
+            <div class="rc-card-name">Red</div>
+            <div class="rc-dragon-card-breath">Fire Breath</div>
+            <div class="rc-card-tag">Resist Fire &middot; Weak Cold</div>
+          </div>
+          <div class="rc-dragon-card dragon-blue" onclick="showEntry('blue')">
+            <div class="rc-card-accent"></div>
+            <div class="rc-card-icon">&#9766;</div>
+            <div class="rc-card-name">Blue</div>
+            <div class="rc-dragon-card-breath">Lightning Breath</div>
+            <div class="rc-card-tag">Resist Lightning &middot; Weak Acid</div>
+          </div>
+          <div class="rc-dragon-card dragon-green" onclick="showEntry('green')">
+            <div class="rc-card-accent"></div>
+            <div class="rc-card-icon">&#9766;</div>
+            <div class="rc-card-name">Green</div>
+            <div class="rc-dragon-card-breath">Gas Breath</div>
+            <div class="rc-card-tag">Resist Poison &middot; Weak Lightning</div>
+          </div>
+          <div class="rc-dragon-card dragon-black" onclick="showEntry('black')">
+            <div class="rc-card-accent"></div>
+            <div class="rc-card-icon">&#9766;</div>
+            <div class="rc-card-name">Black</div>
+            <div class="rc-dragon-card-breath">Acid Breath</div>
+            <div class="rc-card-tag">Resist Acid &middot; Weak Fire</div>
+          </div>
+          <div class="rc-dragon-card dragon-white" onclick="showEntry('white')">
+            <div class="rc-card-accent"></div>
+            <div class="rc-card-icon">&#9766;</div>
+            <div class="rc-card-name">White</div>
+            <div class="rc-dragon-card-breath">Frost Breath</div>
+            <div class="rc-card-tag">Resist Cold &middot; Weak Poison</div>
+          </div>
+        </div>
+
+        <div class="rc-section-label">Metallic Dragons</div>
+        <div class="rc-dragon-grid">
+          <div class="rc-dragon-card dragon-gold" onclick="showEntry('gold')">
+            <div class="rc-card-accent"></div>
+            <div class="rc-card-icon">&#9766;</div>
+            <div class="rc-card-name">Gold</div>
+            <div class="rc-dragon-card-breath">Wind Breath</div>
+            <div class="rc-card-tag">Resist Wind &middot; Weak Earth</div>
+          </div>
+          <div class="rc-dragon-card dragon-plat" onclick="showEntry('platinum')">
+            <div class="rc-card-accent"></div>
+            <div class="rc-card-icon">&#9766;</div>
+            <div class="rc-card-name">Platinum</div>
+            <div class="rc-dragon-card-breath">Divine Breath</div>
+            <div class="rc-card-tag">Resist Divine &middot; Weak Shadow</div>
+          </div>
+          <div class="rc-dragon-card dragon-silver" onclick="showEntry('silver')">
+            <div class="rc-card-accent"></div>
+            <div class="rc-card-icon">&#9766;</div>
+            <div class="rc-card-name">Silver</div>
+            <div class="rc-dragon-card-breath">Water Breath</div>
+            <div class="rc-card-tag">Resist Drowning &middot; Weak Wind</div>
+          </div>
+          <div class="rc-dragon-card dragon-copper" onclick="showEntry('copper')">
+            <div class="rc-card-accent"></div>
+            <div class="rc-card-icon">&#9766;</div>
+            <div class="rc-card-name">Copper</div>
+            <div class="rc-dragon-card-breath">Earth Breath</div>
+            <div class="rc-card-tag">Resist Earth &middot; Weak Drowning</div>
+          </div>
+          <div class="rc-dragon-card dragon-iron" onclick="showEntry('iron')">
+            <div class="rc-card-accent"></div>
+            <div class="rc-card-icon">&#9766;</div>
+            <div class="rc-card-name">Iron</div>
+            <div class="rc-dragon-card-breath">Shadow Breath</div>
+            <div class="rc-card-tag">Resist Shadow &middot; Weak Divine</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ RACES ═══ -->
+
+      <div class="help-entry" id="entry-race-human">
+        <div class="help-entry-title">Human</div>
+        <hr>
+
+        <div class="race-layout">
+          <div class="race-img-placeholder" style="width:330px; height:432px;">
+            <span>&#128247;</span>
+            330 &times; 432
+          </div>
+          <div class="race-body">
+            <h3>Human</h3>
+            <p>Humans are the most common race and the most versatile. They have no special resistances or innate abilities, but they excel in every class and can train their primary stats higher than any other race.</p>
+            <p><em>(0 creation points)</em></p>
+          </div>
+        </div>
+
+        <div class="race-divider"></div>
+
+        <h3>Doppleganger &mdash; Human Remort</h3>
+        <p>All human remorts have mutated into new forms. The strain of transformation greatly increases their hunger and thirst, causing them to require food and water twice as fast as normal. All human remorts also gain the permanent ability to walk on water.</p>
+        <p>Dopplegangers gain the <span class="skill-link" onclick="showEntry('skill-shapeshift')">shapeshift</span> skill, which changes their short description to that of a mob in the same room. They can only hold this form for a limited time, and revert to their original form if attacked. Dopplegangers are also resistant to charm.</p>
+        <div class="cmd-block">
+          <span class="c-cmd">All human remorts:</span>  <span class="skill-link" onclick="showEntry('skills-automatic')">water walk</span> (permanent)<br>
+          <span class="c-cmd">Doppleganger:</span>       <span class="skill-link" onclick="showEntry('skill-shapeshift')">shapeshift</span>, <span class="skill-link" onclick="showEntry('skill-charm-resistance')">charm resistance</span>
+        </div>
+
+        <div class="race-divider"></div>
+
+        <h3>Medusa &mdash; Human Remort</h3>
+        <p>All human remorts have mutated into new forms. The strain of transformation greatly increases their hunger and thirst, causing them to require food and water twice as fast as normal. All human remorts also gain the permanent ability to walk on water.</p>
+        <p>Medusas gain the <span class="skill-link" onclick="showEntry('skill-snake-bite')">snake bite</span> skill, which does minor damage but poisons the victim and acts as a possible 3rd or 4th attack. They also gain <span class="skill-link" onclick="showEntry('skill-granite-stare')">granite stare</span>, a spell which turns a single mob to stone — the mob crumbles to dust along with any equipment and gold on it. Medusas are also resistant to poison.</p>
+        <div class="cmd-block">
+          <span class="c-cmd">All human remorts:</span>  <span class="skill-link" onclick="showEntry('skills-automatic')">water walk</span> (permanent)<br>
+          <span class="c-cmd">Medusa:</span>             <span class="skill-link" onclick="showEntry('skill-snake-bite')">snake bite</span>, <span class="skill-link" onclick="showEntry('skill-granite-stare')">granite stare</span>, <span class="skill-link" onclick="showEntry('skill-poison-resistance')">poison resistance</span>
+        </div>
+
+        <div class="race-divider"></div>
+        <span class="back-to-section" onclick="showBrowser('rc-main')">&larr; Back to Races &amp; Classes</span>
+
+      </div>
+
+      <!-- ═══ SKILLS ═══ -->
+
+      <div class="help-entry" id="entry-skills-automatic">
+        <div class="help-entry-title">Automatic Skills</div>
+        <hr>
+        <p>Automatic skills are passive abilities that are always active — they require no command to use and cannot be toggled off. They are typically granted at character creation or upon reclassing.</p>
+
+        <div class="race-divider"></div>
+
+        <div class="race-layout">
+          <div class="race-img-placeholder" style="width:330px; height:432px;">
+            <span>&#128247;</span>
+            330 &times; 432
+          </div>
+          <div class="race-body">
+            <h3>Waterwalk</h3>
+            <p>This ability allows human remorts to walk on water, thereby eliminating the need for a boat or fly spell.</p>
+            <p><strong>Learned by:</strong> <span class="skill-link" onclick="showEntry('race-human')">Doppleganger</span>, <span class="skill-link" onclick="showEntry('race-human')">Medusa</span> (remort only)</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ═══ BASICS ═══ -->
+
+      <div class="help-entry" id="entry-basics-overview">
+        <div class="help-entry-title">Basics</div>
+        <hr>
+        <p>Welcome to Redemption MUD. This section covers the essential commands you'll use from the moment you log in. If you're completely new, start with <strong>How to Connect</strong>, then work through the topics below in order.</p>
+
+        <div class="tip"><strong>Tip:</strong> Type <span class="cmd">help newbie</span> in-game for a guided introduction from the game itself.</div>
+
+        <h3>Topics in this section</h3>
+        <ul>
+          <li><span class="cmd" style="cursor:pointer" onclick="showEntry('how-to-connect')">How to Connect</span> — client setup and server address</li>
+          <li><span class="cmd" style="cursor:pointer" onclick="showEntry('look')">Look</span> — examining your surroundings</li>
+          <li><span class="cmd" style="cursor:pointer" onclick="showEntry('moving-around')">Moving Around</span> — navigation and exits</li>
+          <li><span class="cmd" style="cursor:pointer" onclick="showEntry('inventory')">Inventory</span> — managing what you carry</li>
+          <li><span class="cmd" style="cursor:pointer" onclick="showEntry('equipment')">Equipment</span> — wearing and wielding gear</li>
+          <li><span class="cmd" style="cursor:pointer" onclick="showEntry('communication')">Communication</span> — talking to other players</li>
+          <li><span class="cmd" style="cursor:pointer" onclick="showEntry('score')">Score &amp; Stats</span> — reading your character sheet</li>
+          <li><span class="cmd" style="cursor:pointer" onclick="showEntry('help-cmd')">The Help Command</span> — looking things up in-game</li>
+        </ul>
+      </div>
+
+      <div class="help-entry" id="entry-how-to-connect">
+        <div class="help-entry-title">How to Connect</div>
+        <hr>
+        <p>Redemption MUD is free to play and requires no download — just a MUD client or a plain telnet connection.</p>
+
+        <h3>Connection Details</h3>
+        <div class="cmd-block">
+          <span class="c-cmd">Host:</span>  redemptionmud.com<br>
+          <span class="c-cmd">Port:</span>  4000
+        </div>
+
+        <h3>Recommended Clients</h3>
+        <p>Any MUD client will work. These are popular free options:</p>
+        <ul>
+          <li><strong>Mudlet</strong> — feature-rich, scriptable, recommended for most players</li>
+          <li><strong>MUSHclient</strong> — lightweight, Windows only</li>
+          <li><strong>TinTin++</strong> — terminal-based, for advanced users</li>
+        </ul>
+
+        <h3>First Steps</h3>
+        <p>When you connect you'll be prompted to create a character. Choose a name, a race, and a class. If you're unsure what to pick, <strong>Human</strong> and <strong>Warrior</strong> are forgiving starting choices.</p>
+
+        <div class="tip"><strong>Tip:</strong> Once in-game, type <span class="cmd">help newbie</span> for a guided tour from the game itself.</div>
+      </div>
+
+      <div class="help-entry" id="entry-look">
+        <div class="help-entry-title">Look</div>
+        <hr>
+        <p><span class="cmd">look</span> is your primary way of seeing the world. It shows you the name and description of your current room, the exits available, and any items or characters present.</p>
+
+        <h3>Commands</h3>
+        <div class="cmd-block">
+          <span class="c-cmd">look</span>               <span class="c-note">— describe the current room</span><br>
+          <span class="c-cmd">look &lt;target&gt;</span>    <span class="c-note">— examine a character, item, or object</span><br>
+          <span class="c-cmd">examine &lt;target&gt;</span> <span class="c-note">— look more carefully at an item (shows extra detail)</span>
+        </div>
+
+        <h3>Reading a Room</h3>
+        <p>A typical room display shows:</p>
+        <ul>
+          <li><strong>Room name</strong> — where you are</li>
+          <li><strong>Description</strong> — what the place looks, sounds, or smells like</li>
+          <li><strong>Exits</strong> — directions you can move (e.g. <span class="cmd">[ Exits: north east ]</span>)</li>
+          <li><strong>Items</strong> — objects lying on the ground</li>
+          <li><strong>Characters</strong> — NPCs and other players in the room</li>
+        </ul>
+
+        <div class="tip"><strong>Tip:</strong> You can abbreviate <span class="cmd">look</span> to just <span class="cmd">l</span>.</div>
+      </div>
+
+      <div class="help-entry" id="entry-moving-around">
+        <div class="help-entry-title">Moving Around</div>
+        <hr>
+        <p>Redemption is a world of thousands of rooms connected by exits. You move by typing a direction.</p>
+
+        <h3>Basic Directions</h3>
+        <div class="cmd-block">
+          <span class="c-cmd">north</span>  <span class="c-note">or</span> <span class="c-cmd">n</span><br>
+          <span class="c-cmd">south</span>  <span class="c-note">or</span> <span class="c-cmd">s</span><br>
+          <span class="c-cmd">east</span>   <span class="c-note">or</span> <span class="c-cmd">e</span><br>
+          <span class="c-cmd">west</span>   <span class="c-note">or</span> <span class="c-cmd">w</span><br>
+          <span class="c-cmd">up</span>     <span class="c-note">or</span> <span class="c-cmd">u</span><br>
+          <span class="c-cmd">down</span>   <span class="c-note">or</span> <span class="c-cmd">d</span>
+        </div>
+
+        <h3>Other Useful Movement Commands</h3>
+        <div class="cmd-block">
+          <span class="c-cmd">exits</span>           <span class="c-note">— list available exits in this room</span><br>
+          <span class="c-cmd">recall</span>          <span class="c-note">— teleport back to your home temple</span><br>
+          <span class="c-cmd">where</span>           <span class="c-note">— show your current location</span><br>
+          <span class="c-cmd">open &lt;door&gt;</span>   <span class="c-note">— open a closed door before passing through</span>
+        </div>
+
+        <div class="tip"><strong>Tip:</strong> If you get lost, type <span class="cmd">recall</span> to return safely to the starting area. Some zones block recall — if you're stuck, ask for help on the <span class="cmd">newbie</span> channel.</div>
+      </div>
+
+      <div class="help-entry" id="entry-inventory">
+        <div class="help-entry-title">Inventory</div>
+        <hr>
+        <p>Your inventory is everything you're carrying but not currently wearing or wielding.</p>
+
+        <h3>Commands</h3>
+        <div class="cmd-block">
+          <span class="c-cmd">inventory</span>               <span class="c-note">or</span> <span class="c-cmd">i</span>  <span class="c-note">— list what you're carrying</span><br>
+          <span class="c-cmd">get &lt;item&gt;</span>            <span class="c-note">— pick up an item from the ground</span><br>
+          <span class="c-cmd">get &lt;item&gt; &lt;container&gt;</span> <span class="c-note">— take an item from a bag or chest</span><br>
+          <span class="c-cmd">drop &lt;item&gt;</span>           <span class="c-note">— drop an item on the ground</span><br>
+          <span class="c-cmd">put &lt;item&gt; &lt;container&gt;</span>  <span class="c-note">— place an item into a bag or chest</span><br>
+          <span class="c-cmd">give &lt;item&gt; &lt;player&gt;</span>  <span class="c-note">— hand an item to another character</span>
+        </div>
+
+        <div class="tip"><strong>Tip:</strong> Bags let you carry far more. Pick up a bag early and use <span class="cmd">put</span> to keep things organized.</div>
+      </div>
+
+      <div class="help-entry" id="entry-equipment">
+        <div class="help-entry-title">Equipment</div>
+        <hr>
+        <p>Equipment is gear your character is actively wearing or wielding. Wearing better gear increases your armor, stats, and combat effectiveness.</p>
+
+        <h3>Commands</h3>
+        <div class="cmd-block">
+          <span class="c-cmd">equipment</span>          <span class="c-note">or</span> <span class="c-cmd">eq</span>  <span class="c-note">— show everything you're wearing/wielding</span><br>
+          <span class="c-cmd">wear &lt;item&gt;</span>       <span class="c-note">— put on a piece of armor or clothing</span><br>
+          <span class="c-cmd">wield &lt;weapon&gt;</span>    <span class="c-note">— ready a weapon for combat</span><br>
+          <span class="c-cmd">hold &lt;item&gt;</span>       <span class="c-note">— hold an item in your off-hand</span><br>
+          <span class="c-cmd">remove &lt;item&gt;</span>     <span class="c-note">— take off a piece of equipment</span><br>
+          <span class="c-cmd">compare &lt;item&gt;</span>    <span class="c-note">— compare an item to what you have equipped</span>
+        </div>
+
+        <h3>Equipment Slots</h3>
+        <p>Your character has slots for head, neck, shoulders, chest, arms, hands, waist, legs, feet, two fingers, and more. Type <span class="cmd">eq</span> to see what each slot currently holds.</p>
+
+        <div class="tip"><strong>Tip:</strong> New characters start with basic gear from the <span class="cmd">outfit</span> command. Type <span class="cmd">outfit</span> once at start to get a free set of starter equipment.</div>
+      </div>
+
+      <div class="help-entry" id="entry-communication">
+        <div class="help-entry-title">Communication</div>
+        <hr>
+        <p>Redemption has several channels for talking to other players, ranging from your immediate surroundings to the entire server.</p>
+
+        <h3>Channels</h3>
+        <div class="cmd-block">
+          <span class="c-cmd">say &lt;message&gt;</span>         <span class="c-note">— speak to players in the same room</span><br>
+          <span class="c-cmd">tell &lt;player&gt; &lt;message&gt;</span> <span class="c-note">— send a private message to one player</span><br>
+          <span class="c-cmd">yell &lt;message&gt;</span>        <span class="c-note">— shout to nearby rooms</span><br>
+          <span class="c-cmd">chat &lt;message&gt;</span>        <span class="c-note">— talk on the global chat channel</span><br>
+          <span class="c-cmd">newbie &lt;message&gt;</span>      <span class="c-note">— ask questions on the newbie help channel</span><br>
+          <span class="c-cmd">emote &lt;action&gt;</span>        <span class="c-note">— perform an action (e.g. emote waves hello)</span>
+        </div>
+
+        <div class="tip"><strong>Tip:</strong> The <span class="cmd">newbie</span> channel is friendly and monitored by experienced players. Don't hesitate to ask questions there — everyone was new once.</div>
+      </div>
+
+      <div class="help-entry" id="entry-score">
+        <div class="help-entry-title">Score &amp; Stats</div>
+        <hr>
+        <p>Your character sheet shows your current stats, level, experience, and more.</p>
+
+        <h3>Commands</h3>
+        <div class="cmd-block">
+          <span class="c-cmd">score</span>    <span class="c-note">or</span> <span class="c-cmd">sc</span>  <span class="c-note">— full character sheet</span><br>
+          <span class="c-cmd">affects</span>               <span class="c-note">— list active spells and effects on you</span><br>
+          <span class="c-cmd">worth</span>                 <span class="c-note">— show your gold and bank balance</span>
+        </div>
+
+        <h3>Key Stats</h3>
+        <ul>
+          <li><strong>HP</strong> — Hit Points. Reach 0 and you die.</li>
+          <li><strong>Mana</strong> — Required to cast spells.</li>
+          <li><strong>Move</strong> — Spent when walking. Replenishes when you rest.</li>
+          <li><strong>Str / Int / Wis / Dex / Con / Cha</strong> — Core attributes affecting combat, spells, and skills.</li>
+          <li><strong>Armor Class (AC)</strong> — Lower is better. Better gear = lower AC.</li>
+          <li><strong>Hitroll / Damroll</strong> — Bonus to hit enemies and bonus damage dealt.</li>
+        </ul>
+
+        <div class="tip"><strong>Tip:</strong> Type <span class="cmd">rest</span> to recover HP, Mana, and Move faster. Type <span class="cmd">sleep</span> to recover even faster (but you can't act while sleeping).</div>
+      </div>
+
+      <div class="help-entry" id="entry-help-cmd">
+        <div class="help-entry-title">The Help Command</div>
+        <hr>
+        <p>The in-game help system covers nearly every command, skill, spell, race, and class in Redemption.</p>
+
+        <h3>Usage</h3>
+        <div class="cmd-block">
+          <span class="c-cmd">help</span>                  <span class="c-note">— show a general help overview</span><br>
+          <span class="c-cmd">help &lt;topic&gt;</span>         <span class="c-note">— look up a specific topic</span><br>
+          <span class="c-cmd">help newbie</span>            <span class="c-note">— recommended reading for new players</span><br>
+          <span class="c-cmd">help warrior</span>           <span class="c-note">— example: look up the warrior class</span><br>
+          <span class="c-cmd">help fireball</span>          <span class="c-note">— example: look up a spell</span>
+        </div>
+
+        <p>If a topic has multiple entries (like a class with reclass options), try adding a keyword: <span class="cmd">help mage wizard</span> or <span class="cmd">help mage alchemist</span>.</p>
+
+        <div class="tip"><strong>Tip:</strong> This website mirrors the in-game help files so you can browse and search without being logged in. Use the sidebar or the search bar above to explore.</div>
+      </div>
 
     </div>
   </div>
 
   <script>
-    function navToggle() {
-      document.querySelector('.nav-links').classList.toggle('open');
-    }
-    function openDrawer() {
-      document.querySelector('.help-sidebar').classList.add('drawer-open');
-      document.getElementById('sidebar-backdrop').classList.add('open');
-    }
-    function closeDrawer() {
-      document.querySelector('.help-sidebar').classList.remove('drawer-open');
-      document.getElementById('sidebar-backdrop').classList.remove('open');
-    }
-
     function hideBrowsers() {
       document.querySelectorAll('.rc-browser').forEach(el => el.classList.remove('active'));
     }
 
     function showBrowser(id) {
-      closeDrawer();
       document.querySelectorAll('.help-entry').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.sidebar-link').forEach(el => el.classList.remove('active'));
       document.getElementById('search-results').style.display = 'none';
-      
+      document.getElementById('help-landing').classList.add('hidden');
       hideBrowsers();
       document.getElementById(id).classList.add('active');
-      setTimeout(() => { document.querySelector('.help-main').scrollTop = 0; }, 0);
+      document.querySelector('.help-main').scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function showLanding() {
@@ -711,171 +911,98 @@
       document.querySelectorAll('.sidebar-link').forEach(el => el.classList.remove('active'));
       document.getElementById('search-results').style.display = 'none';
       hideBrowsers();
-      document.querySelectorAll('.help-sidebar details').forEach(el => el.removeAttribute('open'));
       document.getElementById('help-landing').classList.remove('hidden');
-      setTimeout(() => { document.querySelector('.help-main').scrollTop = 0; }, 0);
+      document.querySelector('.help-main').scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    function showEntry(id, keyword) {
-      closeDrawer();
+    function syncSidebar(id) {
+      const activeLink = Array.from(document.querySelectorAll('.sidebar-link'))
+        .find(el => el.getAttribute('onclick') === "showEntry('" + id + "')");
+      if (activeLink) {
+        const parentDetails = activeLink.closest('details');
+        if (parentDetails) {
+          document.querySelectorAll('.help-sidebar details').forEach(d => d.removeAttribute('open'));
+          parentDetails.setAttribute('open', '');
+        }
+      }
+    }
+
+    function showEntry(id) {
       document.querySelectorAll('.help-entry').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.sidebar-link').forEach(el => el.classList.remove('active'));
       document.getElementById('search-results').style.display = 'none';
       document.getElementById('help-landing').classList.add('hidden');
       hideBrowsers();
 
-      // Clear search input and restore all sidebar links before highlighting
-      const searchInput = document.getElementById('help-search');
-      if (searchInput) { searchInput.value = ''; filterSidebar(); }
-
       const entry = document.getElementById('entry-' + id);
       if (entry) {
         entry.classList.add('active');
-        const helpMain = document.querySelector('.help-main');
-        if (keyword) {
-          // Find the alias block whose text contains the keyword and scroll it into view
-          const aliases = entry.querySelectorAll('.help-entry-aliases');
-          let target = null;
-          for (const a of aliases) {
-            if (a.textContent.toLowerCase().includes(keyword.toLowerCase())) {
-              target = a;
-              break;
-            }
-          }
-          if (target) {
-            // Scroll so the matching alias is near the top of the panel
-            setTimeout(() => {
-              const entryTop = entry.getBoundingClientRect().top;
-              const targetTop = target.getBoundingClientRect().top;
-              const mainTop = helpMain.getBoundingClientRect().top;
-              helpMain.scrollTo({ top: helpMain.scrollTop + (targetTop - mainTop) - 16, behavior: 'smooth' });
-            }, 0);
-          } else {
-            setTimeout(() => { helpMain.scrollTop = 0; }, 0);
-          }
-        } else {
-          setTimeout(() => { helpMain.scrollTop = 0; }, 0);
-        }
+        document.querySelector('.help-main').scrollTo({ top: 0, behavior: 'smooth' });
       }
-
-      // Close all sidebar sections, then open the one containing the active entry
-      document.querySelectorAll('.help-sidebar details').forEach(el => el.removeAttribute('open'));
 
       document.querySelectorAll('.sidebar-link').forEach(el => {
         if (el.getAttribute('onclick') === "showEntry('" + id + "')") {
           el.classList.add('active');
-          const details = el.closest('details');
-          if (details) details.setAttribute('open', '');
         }
       });
-    }
 
-    const searchSynonyms = {
-      'dragon': ['hatchling'],
-      'hatchling': ['dragon'],
-    };
+      syncSidebar(id);
+    }
 
     function doSearch() {
       const q = document.getElementById('help-search').value.toLowerCase().trim();
       if (!q) return;
 
-      const terms = [q, ...(searchSynonyms[q] || [])];
-
       document.querySelectorAll('.help-entry').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.sidebar-link').forEach(el => el.classList.remove('active'));
+      document.getElementById('help-landing').classList.add('hidden');
+      hideBrowsers();
 
-      const best = [], other = [];
+      const results = [];
       document.querySelectorAll('.help-entry').forEach(el => {
-        // Skip imm entries if toggle is off
-        if (el.classList.contains('imm-entry') && !document.body.classList.contains('show-imm')) return;
         const text = el.textContent.toLowerCase();
-        if (!terms.some(t => text.includes(t))) return;
-        const id = el.id.replace('entry-', '');
-        const title = el.querySelector('.help-entry-title').textContent;
-        const preEl = el.querySelector('pre');
-        const preText = preEl ? preEl.textContent.trim() : '';
-        const preIsTabular = preEl && !/[.,;]/.test(preText.slice(0, 80));
-        const preview = (preEl && !preIsTabular) ? preText.slice(0, 120) : '';
-        // Check if any alias header contains the term
-        const aliasText = Array.from(el.querySelectorAll('.help-entry-aliases')).map(a => a.textContent.toLowerCase()).join(' ');
-        const isAlias = terms.some(t => aliasText.includes(t));
-        (isAlias ? best : other).push({ id, title, preview });
+        if (text.includes(q)) {
+          const id = el.id.replace('entry-', '');
+          results.push({
+            id,
+            title: el.querySelector('.help-entry-title') ? el.querySelector('.help-entry-title').textContent : id,
+            preview: el.querySelector('p') ? el.querySelector('p').textContent.slice(0, 150) : ''
+          });
+        }
       });
 
-      const total = best.length + other.length;
       const sr = document.getElementById('search-results');
+      document.getElementById('search-heading').textContent = results.length + ' result' + (results.length !== 1 ? 's' : '') + ' for "' + q + '"';
       const sl = document.getElementById('search-list');
-      document.getElementById('search-heading').textContent = total + ' result' + (total !== 1 ? 's' : '') + ' for "' + q + '"';
       sl.innerHTML = '';
-      const qEsc = q.replace(/'/g, "\\'");
-      if (best.length) {
-        sl.innerHTML += '<div style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);opacity:0.7;margin-bottom:0.4rem;">Best match</div>';
-        best.forEach(r => {
-          sl.innerHTML += '<div class="search-result-item search-result-best" onclick="showEntry(\'' + r.id + '\', \'' + qEsc + '\')">' +
-            '<div class="search-result-name">' + r.title + '</div>' +
-            '<div class="search-result-preview">' + r.preview + '</div>' +
-            '</div>';
-        });
-      }
-      if (other.length) {
-        sl.innerHTML += '<div style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text);opacity:0.4;margin:' + (best.length ? '0.8rem' : '0') + ' 0 0.4rem;">Also mentions \u201c' + q + '\u201d</div>';
-        other.forEach(r => {
-          sl.innerHTML += '<div class="search-result-item" onclick="showEntry(\'' + r.id + '\', \'' + qEsc + '\')">' +
-            '<div class="search-result-name">' + r.title + '</div>' +
-            '<div class="search-result-preview">' + r.preview + '</div>' +
-            '</div>';
-        });
-      }
+      results.forEach(r => {
+        sl.innerHTML += '<div class="search-result-item" onclick="showEntry(\'' + r.id + '\')">' +
+          '<div class="search-result-name">' + r.title + '</div>' +
+          '<div class="search-result-preview">' + r.preview + '</div>' +
+          '</div>';
+      });
       sr.style.display = 'block';
     }
-
-
-    function toggleImm() {
-      if (document.getElementById('imm-toggle').checked) {
-        document.body.classList.add('show-imm');
-      } else {
-        document.body.classList.remove('show-imm');
-        // If current active entry is imm, deactivate it
-        const active = document.querySelector('.help-entry.active.imm-entry');
-        if (active) active.classList.remove('active');
-      }
-    }
-
-    // Load entry fragments then inject back-to-help links
-    const _sections = ['getting-started','combat','skills','spells','character',
-                       'world','clans','races','classes','misc','immortals'];
-    const _helpMain = document.querySelector('.help-main');
-    function _injectBackLinks() {
-      document.querySelectorAll('.help-entry').forEach(el => {
-        if (el.querySelector('.entry-back')) return;
-        const back = document.createElement('div');
-        back.className = 'entry-back';
-        back.textContent = '\u2190 Back to Help';
-        back.onclick = showLanding;
-        el.prepend(back);
-      });
-    }
-    Promise.all(_sections.map(s =>
-      fetch('entries/' + s + '.html').then(r => r.text()).catch(() => '')
-    )).then(chunks => {
-      chunks.forEach(html => _helpMain.insertAdjacentHTML('beforeend', html));
-      _injectBackLinks();
-    });
 
     document.getElementById('help-search').addEventListener('keydown', e => {
       if (e.key === 'Enter') doSearch();
     });
 
     function filterSidebar() {
-      const q = document.getElementById('help-search').value.toLowerCase().trim();
+      const q = document.getElementById('sidebar-search').value.toLowerCase().trim();
       document.querySelectorAll('.sidebar-link').forEach(el => {
-        if (!q || el.textContent.toLowerCase().includes(q)) {
-          el.style.display = '';
-        } else {
-          el.style.display = 'none';
-        }
+        el.style.display = (!q || el.textContent.toLowerCase().includes(q)) ? '' : 'none';
       });
     }
+
+    // Inject "← Back to Help" into every help entry
+    document.querySelectorAll('.help-entry').forEach(el => {
+      const back = document.createElement('div');
+      back.className = 'entry-back';
+      back.textContent = '\u2190 Back to Help';
+      back.onclick = showLanding;
+      el.prepend(back);
+    });
   </script>
 
 </body>
