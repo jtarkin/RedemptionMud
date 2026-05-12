@@ -136,78 +136,6 @@
       font-size: 0.95rem; color: var(--text); opacity: 0.7; margin-bottom: 2rem;
       max-width: 500px; margin-left: auto; margin-right: auto;
     }
-    .landing-cards {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem; text-align: left;
-    }
-    .landing-card {
-      background: var(--bg3); border: 1px solid var(--border); border-radius: 6px;
-      padding: 1.2rem; cursor: pointer;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .landing-card:hover { border-color: var(--gold); background: rgba(201,168,76,0.05); }
-    .landing-card-title {
-      font-size: 0.85rem; color: var(--gold); letter-spacing: 0.1em;
-      text-transform: uppercase; margin-bottom: 0.4rem;
-    }
-    .landing-card-desc { font-size: 0.82rem; color: var(--text); opacity: 0.6; line-height: 1.5; }
-
-    /* ── Race/Class browser ── */
-    .rc-browser { display: none; max-width: 760px; }
-    .rc-browser.active { display: block; }
-    .rc-browser h2 {
-      font-size: 1.4rem; color: var(--gold); letter-spacing: 0.08em;
-      text-transform: uppercase; margin-bottom: 0.3rem;
-    }
-    .rc-browser .rc-sub { font-size: 0.9rem; color: var(--text); opacity: 0.6; margin-bottom: 1.5rem; }
-    .rc-back {
-      display: inline-block; font-size: 0.8rem; color: var(--gold); cursor: pointer;
-      margin-bottom: 1.2rem; letter-spacing: 0.05em;
-    }
-    .rc-back:hover { color: var(--gold-lt); }
-    .rc-section-label {
-      font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--text); opacity: 0.4; margin: 1.8rem 0 0.8rem;
-      padding-bottom: 0.4rem; border-bottom: 1px solid var(--border);
-    }
-    .rc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 0.8rem; }
-    .rc-card {
-      background: var(--bg3); border: 1px solid var(--border); border-radius: 6px;
-      padding: 1rem 0.8rem; cursor: pointer; text-align: center;
-      transition: border-color 0.2s, background 0.2s, transform 0.15s;
-      position: relative; overflow: hidden;
-    }
-    .rc-card:hover { border-color: var(--gold); background: rgba(201,168,76,0.06); transform: translateY(-2px); }
-    .rc-card-icon { font-size: 2.2rem; margin-bottom: 0.4rem; line-height: 1; filter: drop-shadow(0 0 6px rgba(201,168,76,0.3)); }
-    .rc-card-name { font-size: 0.82rem; color: var(--text-lt); letter-spacing: 0.06em; text-transform: uppercase; font-weight: bold; margin-bottom: 0.2rem; }
-    .rc-card-tag { font-size: 0.68rem; color: var(--text); opacity: 0.45; letter-spacing: 0.05em; text-transform: uppercase; }
-    .rc-card-accent { position: absolute; top: 0; left: 0; right: 0; height: 3px; }
-
-    /* Dragon cards */
-    .rc-dragon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; }
-    .rc-dragon-card {
-      background: var(--bg3); border: 1px solid var(--border); border-radius: 8px;
-      padding: 1.2rem 1rem; cursor: pointer; text-align: center;
-      transition: border-color 0.2s, background 0.2s, transform 0.15s, box-shadow 0.2s;
-      position: relative; overflow: hidden;
-    }
-    .rc-dragon-card:hover { transform: translateY(-3px); }
-    .rc-dragon-card .rc-card-icon { font-size: 2.6rem; }
-    .rc-dragon-card-breath { font-size: 0.72rem; color: var(--text); opacity: 0.5; margin-top: 0.3rem; font-style: italic; }
-
-    .dragon-red    { --dc: #b03030; } .dragon-red:hover    { border-color: #b03030; box-shadow: 0 4px 20px rgba(176,48,48,0.25); }
-    .dragon-blue   { --dc: #3060c0; } .dragon-blue:hover   { border-color: #3060c0; box-shadow: 0 4px 20px rgba(48,96,192,0.25); }
-    .dragon-green  { --dc: #2a8a2a; } .dragon-green:hover  { border-color: #2a8a2a; box-shadow: 0 4px 20px rgba(42,138,42,0.25); }
-    .dragon-black  { --dc: #666;    } .dragon-black:hover  { border-color: #888;    box-shadow: 0 4px 20px rgba(100,100,100,0.25); }
-    .dragon-white  { --dc: #ccc;    } .dragon-white:hover  { border-color: #ddd;    box-shadow: 0 4px 20px rgba(200,200,200,0.2); }
-    .dragon-gold   { --dc: #c9a84c; } .dragon-gold:hover   { border-color: #c9a84c; box-shadow: 0 4px 20px rgba(201,168,76,0.3); }
-    .dragon-plat   { --dc: #a0b8d0; } .dragon-plat:hover   { border-color: #a0b8d0; box-shadow: 0 4px 20px rgba(160,184,208,0.25); }
-    .dragon-silver { --dc: #a0a8b0; } .dragon-silver:hover { border-color: #b0b8c0; box-shadow: 0 4px 20px rgba(160,168,176,0.25); }
-    .dragon-copper { --dc: #b87333; } .dragon-copper:hover { border-color: #b87333; box-shadow: 0 4px 20px rgba(184,115,51,0.3); }
-    .dragon-iron   { --dc: #6a6a7a; } .dragon-iron:hover   { border-color: #8a8a9a; box-shadow: 0 4px 20px rgba(106,106,122,0.25); }
-    .rc-dragon-card .rc-card-accent { background: var(--dc, var(--border)); }
-    .rc-dragon-card .rc-card-icon   { color: var(--dc, var(--text)); }
-
     /* ── Entry content styles ── */
     .help-entry h3 {
       font-size: 1rem; color: var(--gold); letter-spacing: 0.08em;
@@ -554,220 +482,6 @@
       <div class="help-landing" id="help-landing">
         <h2>Welcome to the Help System</h2>
         <p>Browse categories in the sidebar or search above to find what you need.</p>
-        <div class="landing-cards">
-          <div class="landing-card" onclick="showBrowser('rc-main')">
-            <div class="landing-card-title">Races &amp; Classes</div>
-            <div class="landing-card-desc">Learn about the peoples and professions of the realm.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Race & Class Browser: Main -->
-      <div class="rc-browser" id="rc-main">
-        <span class="rc-back" onclick="showLanding()">&larr; Back to Help</span>
-        <h2>Races &amp; Classes</h2>
-        <p class="rc-sub">Choose a race or class to learn more.</p>
-
-        <div class="rc-section-label">Races</div>
-        <div class="rc-grid">
-          <div class="rc-card" onclick="showEntry('race-human')">
-            <div class="rc-card-accent" style="background:var(--gold)"></div>
-            <div class="rc-card-icon">&#9816;</div>
-            <div class="rc-card-name">Human</div>
-            <div class="rc-card-tag">0 cp &middot; Versatile</div>
-          </div>
-          <div class="rc-card" onclick="showEntry('elf')">
-            <div class="rc-card-accent" style="background:#6a9f6a"></div>
-            <div class="rc-card-icon">&#9752;</div>
-            <div class="rc-card-name">Elf</div>
-            <div class="rc-card-tag">8 cp &middot; Magic</div>
-          </div>
-          <div class="rc-card" onclick="showEntry('dwarf')">
-            <div class="rc-card-accent" style="background:#b87333"></div>
-            <div class="rc-card-icon">&#9874;</div>
-            <div class="rc-card-name">Dwarf</div>
-            <div class="rc-card-tag">8 cp &middot; Resilient</div>
-          </div>
-          <div class="rc-card" onclick="showEntry('giant')">
-            <div class="rc-card-accent" style="background:#7a7a8a"></div>
-            <div class="rc-card-icon">&#9968;</div>
-            <div class="rc-card-name">Giant</div>
-            <div class="rc-card-tag">6 cp &middot; Strength</div>
-          </div>
-          <div class="rc-card" onclick="showEntry('troll')">
-            <div class="rc-card-accent" style="background:#5a8a3a"></div>
-            <div class="rc-card-icon">&#9760;</div>
-            <div class="rc-card-name">Troll</div>
-            <div class="rc-card-tag">6 cp &middot; Regen</div>
-          </div>
-          <div class="rc-card" onclick="showEntry('gargoyle')">
-            <div class="rc-card-accent" style="background:#6a6a7a"></div>
-            <div class="rc-card-icon">&#9670;</div>
-            <div class="rc-card-name">Gargoyle</div>
-            <div class="rc-card-tag">12 cp &middot; Flight</div>
-          </div>
-          <div class="rc-card" onclick="showBrowser('rc-dragons')">
-            <div class="rc-card-accent" style="background:var(--red)"></div>
-            <div class="rc-card-icon">&#9764;</div>
-            <div class="rc-card-name">Dragon</div>
-            <div class="rc-card-tag">20 cp &middot; 10 Colors &rarr;</div>
-          </div>
-        </div>
-
-        <div class="rc-section-label">Base Classes</div>
-        <div class="rc-grid">
-          <div class="rc-card" onclick="showEntry('warrior')">
-            <div class="rc-card-accent" style="background:#b03030"></div>
-            <div class="rc-card-icon">&#9876;</div>
-            <div class="rc-card-name">Warrior</div>
-            <div class="rc-card-tag">Melee &middot; Tank</div>
-          </div>
-          <div class="rc-card" onclick="showEntry('thief')">
-            <div class="rc-card-accent" style="background:#7a6a9a"></div>
-            <div class="rc-card-icon">&#9733;</div>
-            <div class="rc-card-name">Thief</div>
-            <div class="rc-card-tag">Stealth &middot; Cunning</div>
-          </div>
-          <div class="rc-card" onclick="showEntry('mage')">
-            <div class="rc-card-accent" style="background:#4060b0"></div>
-            <div class="rc-card-icon">&#10036;</div>
-            <div class="rc-card-name">Mage</div>
-            <div class="rc-card-tag">Arcane &middot; Offense</div>
-          </div>
-          <div class="rc-card" onclick="showEntry('cleric')">
-            <div class="rc-card-accent" style="background:#c9a84c"></div>
-            <div class="rc-card-icon">&#10014;</div>
-            <div class="rc-card-name">Cleric</div>
-            <div class="rc-card-tag">Healing &middot; Support</div>
-          </div>
-          <div class="rc-card" onclick="showEntry('paladin')">
-            <div class="rc-card-accent" style="background:#d0b060"></div>
-            <div class="rc-card-icon">&#9879;</div>
-            <div class="rc-card-name">Paladin</div>
-            <div class="rc-card-tag">Holy &middot; Hybrid</div>
-          </div>
-          <div class="rc-card" onclick="showEntry('ranger')">
-            <div class="rc-card-accent" style="background:#3a8a3a"></div>
-            <div class="rc-card-icon">&#127981;</div>
-            <div class="rc-card-name">Ranger</div>
-            <div class="rc-card-tag">Nature &middot; Tracking</div>
-          </div>
-          <div class="rc-card" onclick="showEntry('druid')">
-            <div class="rc-card-accent" style="background:#5a9a5a"></div>
-            <div class="rc-card-icon">&#9752;</div>
-            <div class="rc-card-name">Druid</div>
-            <div class="rc-card-tag">Nature &middot; Magic</div>
-          </div>
-          <div class="rc-card" onclick="showEntry('monk')">
-            <div class="rc-card-accent" style="background:#c08040"></div>
-            <div class="rc-card-icon">&#9775;</div>
-            <div class="rc-card-name">Monk</div>
-            <div class="rc-card-tag">Unarmed &middot; Spirit</div>
-          </div>
-          <div class="rc-card" onclick="showEntry('ninja')">
-            <div class="rc-card-accent" style="background:#3a3a5a"></div>
-            <div class="rc-card-icon">&#9884;</div>
-            <div class="rc-card-name">Ninja</div>
-            <div class="rc-card-tag">Stealth &middot; Speed</div>
-          </div>
-          <div class="rc-card" onclick="showEntry('samurai')">
-            <div class="rc-card-accent" style="background:#8a3030"></div>
-            <div class="rc-card-icon">&#9876;</div>
-            <div class="rc-card-name">Samurai</div>
-            <div class="rc-card-tag">Blade &middot; Honor</div>
-          </div>
-          <div class="rc-card" onclick="showEntry('runist')">
-            <div class="rc-card-accent" style="background:#6050a0"></div>
-            <div class="rc-card-icon">&#5765;</div>
-            <div class="rc-card-name">Runist</div>
-            <div class="rc-card-tag">Runes &middot; Hybrid</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Race & Class Browser: Dragon Colors -->
-      <div class="rc-browser" id="rc-dragons">
-        <span class="rc-back" onclick="showBrowser('rc-main')">&larr; Back to Races &amp; Classes</span>
-        <h2>Dragons</h2>
-        <p class="rc-sub">Hatchlings transform at level 10 into a random color. Each color has unique breath weapons, resistances, and two remort paths.</p>
-
-        <div class="rc-section-label">Chromatic Dragons</div>
-        <div class="rc-dragon-grid">
-          <div class="rc-dragon-card dragon-red" onclick="showEntry('red')">
-            <div class="rc-card-accent"></div>
-            <div class="rc-card-icon">&#9766;</div>
-            <div class="rc-card-name">Red</div>
-            <div class="rc-dragon-card-breath">Fire Breath</div>
-            <div class="rc-card-tag">Resist Fire &middot; Weak Cold</div>
-          </div>
-          <div class="rc-dragon-card dragon-blue" onclick="showEntry('blue')">
-            <div class="rc-card-accent"></div>
-            <div class="rc-card-icon">&#9766;</div>
-            <div class="rc-card-name">Blue</div>
-            <div class="rc-dragon-card-breath">Lightning Breath</div>
-            <div class="rc-card-tag">Resist Lightning &middot; Weak Acid</div>
-          </div>
-          <div class="rc-dragon-card dragon-green" onclick="showEntry('green')">
-            <div class="rc-card-accent"></div>
-            <div class="rc-card-icon">&#9766;</div>
-            <div class="rc-card-name">Green</div>
-            <div class="rc-dragon-card-breath">Gas Breath</div>
-            <div class="rc-card-tag">Resist Poison &middot; Weak Lightning</div>
-          </div>
-          <div class="rc-dragon-card dragon-black" onclick="showEntry('black')">
-            <div class="rc-card-accent"></div>
-            <div class="rc-card-icon">&#9766;</div>
-            <div class="rc-card-name">Black</div>
-            <div class="rc-dragon-card-breath">Acid Breath</div>
-            <div class="rc-card-tag">Resist Acid &middot; Weak Fire</div>
-          </div>
-          <div class="rc-dragon-card dragon-white" onclick="showEntry('white')">
-            <div class="rc-card-accent"></div>
-            <div class="rc-card-icon">&#9766;</div>
-            <div class="rc-card-name">White</div>
-            <div class="rc-dragon-card-breath">Frost Breath</div>
-            <div class="rc-card-tag">Resist Cold &middot; Weak Poison</div>
-          </div>
-        </div>
-
-        <div class="rc-section-label">Metallic Dragons</div>
-        <div class="rc-dragon-grid">
-          <div class="rc-dragon-card dragon-gold" onclick="showEntry('gold')">
-            <div class="rc-card-accent"></div>
-            <div class="rc-card-icon">&#9766;</div>
-            <div class="rc-card-name">Gold</div>
-            <div class="rc-dragon-card-breath">Wind Breath</div>
-            <div class="rc-card-tag">Resist Wind &middot; Weak Earth</div>
-          </div>
-          <div class="rc-dragon-card dragon-plat" onclick="showEntry('platinum')">
-            <div class="rc-card-accent"></div>
-            <div class="rc-card-icon">&#9766;</div>
-            <div class="rc-card-name">Platinum</div>
-            <div class="rc-dragon-card-breath">Divine Breath</div>
-            <div class="rc-card-tag">Resist Divine &middot; Weak Shadow</div>
-          </div>
-          <div class="rc-dragon-card dragon-silver" onclick="showEntry('silver')">
-            <div class="rc-card-accent"></div>
-            <div class="rc-card-icon">&#9766;</div>
-            <div class="rc-card-name">Silver</div>
-            <div class="rc-dragon-card-breath">Water Breath</div>
-            <div class="rc-card-tag">Resist Drowning &middot; Weak Wind</div>
-          </div>
-          <div class="rc-dragon-card dragon-copper" onclick="showEntry('copper')">
-            <div class="rc-card-accent"></div>
-            <div class="rc-card-icon">&#9766;</div>
-            <div class="rc-card-name">Copper</div>
-            <div class="rc-dragon-card-breath">Earth Breath</div>
-            <div class="rc-card-tag">Resist Earth &middot; Weak Drowning</div>
-          </div>
-          <div class="rc-dragon-card dragon-iron" onclick="showEntry('iron')">
-            <div class="rc-card-accent"></div>
-            <div class="rc-card-icon">&#9766;</div>
-            <div class="rc-card-name">Iron</div>
-            <div class="rc-dragon-card-breath">Shadow Breath</div>
-            <div class="rc-card-tag">Resist Shadow &middot; Weak Divine</div>
-          </div>
-        </div>
       </div>
 
       <!-- ═══ RACES ═══ -->
@@ -809,7 +523,6 @@
         </div>
 
         <div class="race-divider"></div>
-        <span class="back-to-section" onclick="showBrowser('rc-main')">&larr; Back to Races &amp; Classes</span>
 
       </div>
 
@@ -1039,25 +752,12 @@
   </div>
 
   <script>
-    function hideBrowsers() {
-      document.querySelectorAll('.rc-browser').forEach(el => el.classList.remove('active'));
-    }
-
-    function showBrowser(id) {
-      document.querySelectorAll('.help-entry').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll('.sidebar-link').forEach(el => el.classList.remove('active'));
-      document.getElementById('search-results').style.display = 'none';
-      document.getElementById('help-landing').classList.add('hidden');
-      hideBrowsers();
-      document.getElementById(id).classList.add('active');
-      document.querySelector('.help-main').scrollTo({ top: 0, behavior: 'smooth' });
-    }
 
     function showLanding() {
       document.querySelectorAll('.help-entry').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.sidebar-link').forEach(el => el.classList.remove('active'));
       document.getElementById('search-results').style.display = 'none';
-      hideBrowsers();
+
       document.getElementById('help-landing').classList.remove('hidden');
       document.querySelector('.help-main').scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -1079,7 +779,7 @@
       document.querySelectorAll('.sidebar-link').forEach(el => el.classList.remove('active'));
       document.getElementById('search-results').style.display = 'none';
       document.getElementById('help-landing').classList.add('hidden');
-      hideBrowsers();
+
 
       const entry = document.getElementById('entry-' + id);
       if (entry) {
@@ -1103,7 +803,7 @@
       document.querySelectorAll('.help-entry').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.sidebar-link').forEach(el => el.classList.remove('active'));
       document.getElementById('help-landing').classList.add('hidden');
-      hideBrowsers();
+
 
       const results = [];
       document.querySelectorAll('.help-entry').forEach(el => {
