@@ -144,7 +144,7 @@
       opacity: 0.9;
     }
     .hero-title {
-      font-size: clamp(3.5rem, 10vw, 7rem);
+      font-size: clamp(2rem, 10vw, 7rem);
       color: var(--text-lt);
       letter-spacing: 0.15em;
       text-transform: uppercase;
@@ -487,9 +487,25 @@
     .footer-links a:hover { opacity: 1; color: var(--gold); text-decoration: none; }
     .footer-copy { font-size: 0.78rem; color: var(--text); opacity: 0.35; }
 
+    /* ── Hamburger ── */
+    .nav-hamburger {
+      display: none; background: none; border: none; cursor: pointer;
+      padding: 0.5rem; margin-left: auto; flex-shrink: 0;
+      color: var(--gold); font-size: 1.5rem; line-height: 1;
+    }
+
     /* ── Responsive ── */
     @media (max-width: 768px) {
+      .nav-hamburger { display: flex; align-items: center; }
       .nav-links { display: none; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: fixed; top: 62px; left: 0; right: 0;
+        background: rgba(10,10,15,0.98);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 1.5rem; gap: 0.5rem; z-index: 299;
+      }
+      .nav-links.open a { font-size: 0.95rem; padding: 0.4rem 0; display: block; }
       .lore-grid { grid-template-columns: 1fr; }
       .connect-grid { grid-template-columns: 1fr; }
     }
@@ -503,19 +519,18 @@
   <!-- Navigation -->
   <nav>
     <div class="nav-inner">
-      <div class="nav-logo">
-        Redemption
-        <span>A World at War</span>
-      </div>
+      <a href="index.html" class="nav-logo">Redemption<span>A World at War</span></a>
       <ul class="nav-links">
-        <li><a href="#lore">Lore</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#updates">Updates</a></li>
+        <li><a href="lore.html">Lore</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="announcements.html">Updates</a></li>
         <li><a href="newbie.html">New Players</a></li>
         <li><a href="helpfiles.html">Help Files</a></li>
         <li><a href="crafting.html">Crafting</a></li>
-        <li><a href="#play" class="nav-play-btn">Play Now</a></li>
+        <li><a href="maps.html">Maps</a></li>
+        <li><a href="index.html#play" class="nav-play-btn">Play Now</a></li>
       </ul>
+      <button class="nav-hamburger" onclick="navToggle()" aria-label="Menu">&#9776;</button>
     </div>
   </nav>
 
@@ -592,6 +607,9 @@
         <p>
           In the middle of all of this stands you. Adventurer. Warrior. Mage. Whatever name the world gives you — the war does not care. It only asks: whose banner will you carry?
         </p>
+      </div>
+      <div style="text-align:center; margin-top:2rem;">
+        <a href="lore.html" class="btn btn-secondary">Discover More Lore</a>
       </div>
     </div>
   </section>
@@ -822,7 +840,7 @@
     <div class="footer-logo">Redemption</div>
     <div class="footer-tagline">A World at War — Enter, if you dare.</div>
     <div class="footer-links">
-      <a href="#lore">Lore</a>
+      <a href="lore.html">Lore</a>
       <a href="#features">Features</a>
       <a href="#updates">Updates</a>
       <a href="#play">Play</a>
@@ -831,6 +849,14 @@
   </footer>
 
   <script>
+    function navToggle() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    }
+    // Close mobile nav when an anchor link is clicked
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('open'));
+    });
+
     // Smooth active nav highlighting
     const sections = document.querySelectorAll('section[id], div[id]');
     const navLinks = document.querySelectorAll('.nav-links a');

@@ -185,7 +185,7 @@
     }
     .mobile-browse-btn button:hover { border-color: var(--gold); }
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
       nav { z-index: 300; }
       .nav-hamburger { display: flex; align-items: center; }
       .nav-links { display: none; }
@@ -225,15 +225,13 @@
         <span>A World at War</span>
       </a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#lore">Lore</a></li>
+        <li><a href="lore.html">Lore</a></li>
         <li><a href="index.html#features">Features</a></li>
-        <li><a href="index.html#updates">Updates</a></li>
-        <li><a href="index.html#play">Play</a></li>
-        <li><a href="maps.html">Maps</a></li>
+        <li><a href="announcements.html">Updates</a></li>
         <li><a href="newbie.html">New Players</a></li>
         <li><a href="helpfiles.html">Help Files</a></li>
         <li><a href="crafting.html">Crafting</a></li>
+        <li><a href="maps.html">Maps</a></li>
         <li><a href="index.html#play" class="nav-play-btn">Play Now</a></li>
       </ul>
       <button class="nav-hamburger" onclick="navToggle()" aria-label="Menu">&#9776;</button>
@@ -421,7 +419,7 @@
     function navToggle() {
       document.querySelector('.nav-links').classList.toggle('open');
     }
-    function isMobile() { return window.innerWidth <= 700; }
+    function isMobile() { return window.innerWidth <= 768; }
     function openDrawer() {
       document.querySelector('.help-sidebar').classList.add('drawer-open');
       document.getElementById('sidebar-backdrop').classList.add('open');
